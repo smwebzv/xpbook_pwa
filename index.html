@@ -73,6 +73,8 @@ if ("serviceWorker" in navigator) {
             console.log("Installed new service worker.");
             loadMainDartJs();
           }
+        }).catch((e) => {
+          alert(`CANT ADD SERVICES ${e}`);
         });
       }
 
