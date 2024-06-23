@@ -45,72 +45,75 @@
        https://developers.google.com/web/fundamentals/primers/service-workers -->
     <script>
       const serviceWorkerVersion = "1762334347";
-      let scriptLoaded = false;
+let scriptLoaded = false;
 
-      function loadMainDartJs() {
-        if (scriptLoaded) {
+function loadMainDartJs() {
+  if (scriptLoaded) {
+    return;
+  }
+  scriptLoaded = true;
+  const scriptTag = document.createElement("script");
+  scriptTag.src = "main.dart.js";
+  scriptTag.type = "application/javascript";
+  document.body.append(scriptTag);
+}
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    const serviceWorkerUrl = "flutter_service_worker.js?v=" + serviceWorkerVersion;
+
+    navigator.serviceWorker.register(serviceWorkerUrl).then((reg) => {
+      function waitForActivation(serviceWorker) {
+        if (!serviceWorker) {
           return;
         }
-        scriptLoaded = true;
-        const scriptTag = document.createElement("script");
-        scriptTag.src = "main.dart.js";
-        scriptTag.type = "application/javascript";
-        document.body.append(scriptTag);
+        serviceWorker.addEventListener("statechange", () => {
+          if (serviceWorker.state === "activated") {
+            console.log("Installed new service worker.");
+            loadMainDartJs();
+          } else if (serviceWorker.state === "redundant") {
+            console.warn("Service worker became redundant.");
+            loadMainDartJs(); // Fallback to loading the script
+          }
+        });
       }
 
-      if ("serviceWorker" in navigator) {
-        window.addEventListener("load", function () {
-          const serviceWorkerUrl =
-            "flutter_service_worker.js?v=" + serviceWorkerVersion;
-
-          navigator.serviceWorker.register(serviceWorkerUrl).then((reg) => {
-            function waitForActivation(serviceWorker) {
-              serviceWorker.addEventListener("statechange", () => {
-                if (serviceWorker.state === "activated") {
-                  console.log("Installed new service worker.");
-                  loadMainDartJs();
-                } else if (serviceWorker.state === "redundant") {
-                  console.warn("Service worker became redundant.");
-                }
-              });
-            }
-
-            if (!reg.active && (reg.installing || reg.waiting)) {
-              waitForActivation(reg.installing ?? reg.waiting);
-            } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
-              console.log("New service worker available.");
-              reg.update().then(() => {
-                if (reg.installing) {
-                  waitForActivation(reg.installing);
-                } else {
-                  console.warn("Service worker update failed.");
-                  loadMainDartJs();
-                }
-              });
-            } else {
-              console.log("Loading app from service worker.");
-              loadMainDartJs();
-            }
-
-            reg.addEventListener("updatefound", () => {
-              if (reg.installing) {
-                waitForActivation(reg.installing);
-              }
-            });
-          });
-
-          setTimeout(() => {
-            if (!scriptLoaded) {
-              console.warn(
-                "Failed to load app from service worker. Falling back to plain <script> tag."
-              );
-              loadMainDartJs();
-            }
-          }, 4000);
+      if (!reg.active && (reg.installing || reg.waiting)) {
+        waitForActivation(reg.installing ?? reg.waiting);
+      } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
+        console.log("New service worker available.");
+        reg.update().then(() => {
+          waitForActivation(reg.installing);
+        }).catch(() => {
+          console.warn("Service worker update failed.");
+          loadMainDartJs(); // Fallback to loading the script
         });
       } else {
+        console.log("Loading app from service worker.");
         loadMainDartJs();
       }
+
+      reg.addEventListener("updatefound", () => {
+        if (reg.installing) {
+          waitForActivation(reg.installing);
+        }
+      });
+    }).catch((error) => {
+      console.error("Service worker registration failed:", error);
+      loadMainDartJs(); // Fallback to loading the script
+    });
+
+    setTimeout(() => {
+      if (!scriptLoaded) {
+        console.warn("Failed to load app from service worker. Falling back to plain <script> tag.");
+        loadMainDartJs();
+      }
+    }, 4000);
+  });
+} else {
+  loadMainDartJs();
+}
+
     </script>
   </body>
 </html>
