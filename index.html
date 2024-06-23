@@ -95,12 +95,13 @@
           // fallback to plaint <script> tag.
           setTimeout(() => {
             if (!scriptLoaded) {
+              alert("cannot laad");
               console.warn(
                 "Failed to load app from service worker. Falling back to plain <script> tag."
               );
               loadMainDartJs();
             }
-          }, 4000);
+          }, 1000);
         });
       } else {
         // Service workers not supported. Just drop the <script> tag.
