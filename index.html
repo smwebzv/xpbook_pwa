@@ -91,6 +91,7 @@ if ("serviceWorker" in navigator) {
       } else {
         console.log("Loading app from service worker.");
         loadMainDartJs();
+        
       }
 
       reg.addEventListener("updatefound", () => {
