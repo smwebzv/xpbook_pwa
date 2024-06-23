@@ -68,13 +68,10 @@ if ("serviceWorker" in navigator) {
           return;
         }
         serviceWorker.addEventListener("statechange", () => {
-          alert(serviceWorker.state);
           if (serviceWorker.state === "activated") {
             console.log("Installed new service worker.");
             loadMainDartJs();
           }
-        }).catch((e) => {
-          alert(`CANT ADD SERVICES ${e}`);
         });
       }
 
