@@ -105,12 +105,12 @@ if ("serviceWorker" in navigator) {
       loadMainDartJs(); // Fallback to loading the script
     });
 
-    setTimeout(() => {
-      if (!scriptLoaded) {
-        console.warn("Failed to load app from service worker. Falling back to plain <script> tag.");
-        loadMainDartJs();
-      }
-    }, 4000);
+    // setTimeout(() => {
+    //   if (!scriptLoaded) {
+    //     console.warn("Failed to load app from service worker. Falling back to plain <script> tag.");
+    //     loadMainDartJs();
+    //   }
+    // }, 4000);
   });
 } else {
   loadMainDartJs();
