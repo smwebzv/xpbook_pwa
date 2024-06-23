@@ -89,6 +89,7 @@ if ("serviceWorker" in navigator) {
           loadMainDartJs(); // Fallback to loading the script
         });
       } else {
+        alert("Loading app from service worker.");
         console.log("Loading app from service worker.");
         loadMainDartJs();
 
@@ -100,7 +101,6 @@ if ("serviceWorker" in navigator) {
         }
       });
     }).catch((error) => {
-      alert(error);
       console.error("Service worker registration failed:", error);
       loadMainDartJs(); // Fallback to loading the script
     });
