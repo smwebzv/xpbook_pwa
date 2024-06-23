@@ -58,18 +58,17 @@
       }
 
       if ("serviceWorker" in navigator) {
-        alert("serviceworker available");
         // Service workers are supported. Use them.
         window.addEventListener("load", function () {
           // Wait for registration to finish before dropping the <script> tag.
           // Otherwise, the browser will load the script multiple times,
           // potentially different versions.
-          alert("serviceworker loaded");
           var serviceWorkerUrl =
             "flutter_service_worker.js?v=" + serviceWorkerVersion;
           navigator.serviceWorker.register(serviceWorkerUrl).then((reg) => {
             function waitForActivation(serviceWorker) {
               serviceWorker.addEventListener("statechange", () => {
+                alert(serviceWorker.state);
                 if (serviceWorker.state == "activated") {
                   console.log("Installed new service worker.");
                   loadMainDartJs();
