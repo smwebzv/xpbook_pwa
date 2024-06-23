@@ -68,23 +68,18 @@ if ("serviceWorker" in navigator) {
           return;
         }
         serviceWorker.addEventListener("statechange", () => {
+          alert(serviceWorker.state);
           if (serviceWorker.state === "activated") {
             console.log("Installed new service worker.");
             loadMainDartJs();
-          } else if (serviceWorker.state === "redundant") {
-            console.warn("Service worker became redundant.");
-            loadMainDartJs(); // Fallback to loading the script
           }
         });
       }
 
       if (!reg.active && (reg.installing || reg.waiting)) {
         waitForActivation(reg.installing ?? reg.waiting);
-        alert("New service worker av av");
       } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
         console.log("New service worker available.");
-
-        alert("New service worker available");
         reg.update().then(() => {
           waitForActivation(reg.installing);
         }).catch(() => {
@@ -92,7 +87,6 @@ if ("serviceWorker" in navigator) {
           loadMainDartJs(); // Fallback to loading the script
         });
       } else {
-        console.log("Loading app from service worker.");
         loadMainDartJs();
 
       }
