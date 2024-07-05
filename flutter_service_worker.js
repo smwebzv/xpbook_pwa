@@ -5,9 +5,10 @@ const CACHE_NAME = 'flutter-app-cache';
 
 const RESOURCES = {"focus_helper.js": "f51d87d818a0f0acb49b05e77b42d977",
 "version.json": "ec16a443585e9f667f409f64605d0c6d",
-"index.html": "b21ee74aeb2b530dd3a01764444d5d62",
-"/": "b21ee74aeb2b530dd3a01764444d5d62",
-"main.dart.js": "0cb6889f9cb45d3a6c57f7c7f65852e5",
+"index.html": "3786bb0ff924f0c453b1be68ced701c7",
+"/": "3786bb0ff924f0c453b1be68ced701c7",
+"main.dart.js": "6d3331ac67439e4611c2c318205996f5",
+"flutter.js": "c71a09214cb6f5f8996a531350400a9a",
 "favicon.png": "68cb4ed434ba1a72e39516427fcfff3e",
 "well-known/apple-developer-merchantid-domain-association": "29afa7e1d291721bc64c6c9fe93223b3",
 "well-known/apple-developer-merchantid-domain-association.txt": "c61591af0b20d915a49bb17220887e73",
@@ -29,7 +30,17 @@ const RESOURCES = {"focus_helper.js": "f51d87d818a0f0acb49b05e77b42d977",
 "assets/assets/images/funt_sterling.png": "71daea0de1c4e2cb849ffd3ebcc59f38",
 "assets/assets/images/logo.png": "38020702740ebb03b45e487937333666",
 "assets/assets/fonts/XpressobooksIcons.ttf": "081c437470015ad26e5351301f755c46",
-"apple_pay.js": "6f01be9389a81dd7d58da514553b6b73"};
+"apple_pay.js": "6f01be9389a81dd7d58da514553b6b73",
+"canvaskit/skwasm.js": "445e9e400085faead4493be2224d95aa",
+"canvaskit/skwasm.js.symbols": "741d50ffba71f89345996b0aa8426af8",
+"canvaskit/canvaskit.js.symbols": "38cba9233b92472a36ff011dc21c2c9f",
+"canvaskit/skwasm.wasm": "e42815763c5d05bba43f9d0337fa7d84",
+"canvaskit/chromium/canvaskit.js.symbols": "4525682ef039faeb11f24f37436dca06",
+"canvaskit/chromium/canvaskit.js": "43787ac5098c648979c27c13c6f804c3",
+"canvaskit/chromium/canvaskit.wasm": "f5934e694f12929ed56a671617acd254",
+"canvaskit/canvaskit.js": "c86fbd9e7b17accae76e5ad116583dc4",
+"canvaskit/canvaskit.wasm": "3d2a2d663e8c5111ac61a46367f751ac",
+"canvaskit/skwasm.worker.js": "bfb704a6c714a75da9ef320991e88b03"};
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = ["main.dart.js",
