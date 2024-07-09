@@ -32,16 +32,19 @@
     <input
       type="text"
       id="input-field"
-      autocomplete="off"
+      style="opacity: 0"
+      autocomplete="off" 
       autocapitalize="off"
       spellcheck="false"
+      tabindex="-1"
+      readonly
     />
 
     <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
     <script>
-      const serviceWorkerVersion = "3294697304";
+      const serviceWorkerVersion = "4253284050";
       var scriptLoaded = false;
       function loadMainDartJs() {
         if (scriptLoaded) {
