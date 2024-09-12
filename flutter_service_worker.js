@@ -3,10 +3,10 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
-const RESOURCES = {"focus_helper.js": "f51d87d818a0f0acb49b05e77b42d977",
+const RESOURCES = {"focus_helper.js": "ad3bea2aaeeeaaf78f106f07b0d47f19",
 "version.json": "ec16a443585e9f667f409f64605d0c6d",
-"index.html": "2f30c76a963ced97c9bf4b8667903605",
-"/": "2f30c76a963ced97c9bf4b8667903605",
+"index.html": "5923ef7881bf9e8646bc7e42d404e16d",
+"/": "5923ef7881bf9e8646bc7e42d404e16d",
 "main.dart.js": "a64160406687d46ce3036b3e9df3166f",
 ".well-known/apple-developer-merchantid-domain-association": "29afa7e1d291721bc64c6c9fe93223b3",
 "flutter.js": "c71a09214cb6f5f8996a531350400a9a",
@@ -29,7 +29,7 @@ const RESOURCES = {"focus_helper.js": "f51d87d818a0f0acb49b05e77b42d977",
 "assets/assets/images/funt_sterling.png": "71daea0de1c4e2cb849ffd3ebcc59f38",
 "assets/assets/images/logo.png": "38020702740ebb03b45e487937333666",
 "assets/assets/fonts/XpressobooksIcons.ttf": "081c437470015ad26e5351301f755c46",
-"apple_pay.js": "6f01be9389a81dd7d58da514553b6b73",
+"apple_pay.js": "135978b90d67c02638fc027faf40ca03",
 "canvaskit/skwasm.js": "445e9e400085faead4493be2224d95aa",
 "canvaskit/skwasm.js.symbols": "741d50ffba71f89345996b0aa8426af8",
 "canvaskit/canvaskit.js.symbols": "38cba9233b92472a36ff011dc21c2c9f",
@@ -122,13 +122,7 @@ self.addEventListener("activate", function(event) {
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== 'GET') {
     return;
-  } 
-  const requestUrl = new URL(event.request.url);
-  // Bypass service worker for microphone or media-related requests
-  if (requestUrl.protocol === 'chrome-extension:' || event.request.url.includes('getUserMedia')) {
-    return;  // Do nothing, let it pass to the browser
   }
-
   var origin = self.location.origin;
   var key = event.request.url.substring(origin.length + 1);
   // Redirect URLs to the index.html
