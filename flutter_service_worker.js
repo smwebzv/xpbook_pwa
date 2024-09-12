@@ -122,7 +122,13 @@ self.addEventListener("activate", function(event) {
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== 'GET') {
     return;
+  } 
+  const requestUrl = new URL(event.request.url);
+  // Bypass service worker for microphone or media-related requests
+  if (requestUrl.protocol === 'chrome-extension:' || event.request.url.includes('getUserMedia')) {
+    return;  // Do nothing, let it pass to the browser
   }
+
   var origin = self.location.origin;
   var key = event.request.url.substring(origin.length + 1);
   // Redirect URLs to the index.html
