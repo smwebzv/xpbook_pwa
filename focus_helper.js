@@ -8,6 +8,8 @@ function focusTextInput(elementId) {
 document.addEventListener("DOMContentLoaded", async () => {
   setTimeout(() => {
     console.log("START SPEEEACCHHH");
+    var SpeechRecognition =
+      window.SpeechRecognition || window.webkitSpeechRecognition;
     const recognition = new SpeechRecognition();
     // const speechRecognitionList = new SpeechGrammarList();
     // speechRecognitionList.addFromString(grammar, 1);
