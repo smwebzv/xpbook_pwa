@@ -22,6 +22,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       console.log("Ready to receive a color command.");
     };
 
+    recognition.start();
+
     recognition.onresult = (event) => {
       console.log("WHAT ARE RESULTS HERE", event);
     };
