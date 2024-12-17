@@ -74,7 +74,7 @@ async function createCredential({ data }) {
       },
     };
   } catch (error) {
-    console.error("Error creating credential:", error);
+    console.error("Error creating credential -----:", error);
     return null;
   }
 }
