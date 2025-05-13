@@ -4,10 +4,11 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 
 const RESOURCES = {"webauth.js": "1057c867a13b5f4041dcfe692e2c2989",
-"focus_helper.js": "ac13e66eef3b33703e32558620d2dc60",
+"focus_helper.js": "526cb07fb7b93fccb4fbd84480fba87e",
 "version.json": "ec16a443585e9f667f409f64605d0c6d",
-"index.html": "7e3de13e4937e204328fcacbb7449f16",
-"/": "7e3de13e4937e204328fcacbb7449f16",
+"index.html": "74d65182f4e7775f2c8b5c5b30babada",
+"/": "74d65182f4e7775f2c8b5c5b30babada",
+"css/style.css": "8239fef71729eef97a51081fe600bf59",
 "main.dart.js": "f2c7c7ff2ba77af0c076647c1a5e2f91",
 ".well-known/apple-developer-merchantid-domain-association": "29afa7e1d291721bc64c6c9fe93223b3",
 "flutter.js": "c71a09214cb6f5f8996a531350400a9a",

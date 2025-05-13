@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!--
+
+<head>
+  <!--
     If you are serving your web app in a path other than the root, change the
     href value below to reflect the base path you are serving from.
 
@@ -11,106 +12,114 @@
     For more details:
     * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
   -->
-    <base href="/" />
+  <base href="/" />
 
-    <meta charset="UTF-8" />
-    <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
-    <meta name="description" content="A new Flutter project." />
+  <meta charset="UTF-8" />
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
+  <meta name="description" content="A new Flutter project." />
 
-    <!-- iOS meta tags & icons -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-mobile-web-app-title" content="xpressobooks" />
-    <link rel="apple-touch-icon" href="icons/Icon-192.png" />
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-mobile-web-app-title" content="xpressobooks" />
+  <link rel="apple-touch-icon" href="icons/Icon-192.png" />
 
-    <title>xpressobooks-dev</title>
-    <link rel="manifest" href="manifest.json" />
-    <script src="focus_helper.js"></script>
-    <script src="webauth.js"></script>
-    <script src="https://js.stripe.com/v3/?advancedFraudSignals=false"></script>
-    <style>
-      body {
-        background-color: #007555;
-      }
-    </style>
-  </head>
-  <body>
-    <input
-      type="text"
-      id="input-field"
-      style="opacity: 0"
-      autocomplete="off"
-      autocapitalize="off"
-      spellcheck="false"
-      tabindex="-1"
-    />
+  <title>xpressobooks-dev</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="focus_helper.js"></script>
+  <script src="webauth.js"></script>
+  <script src="https://js.stripe.com/v3/?advancedFraudSignals=false"></script>
+  <style>
+    body {
+      background-color: #007555;
+    }
+  </style>
+</head>
 
-    <!-- This script installs service_worker.js to provide PWA functionality to
+<body>
+  <div id="install-android-element" class="android_install_app">
+    <div class="android-install-holder">
+      <div style="background: #f0f8ff; padding: 1em; border-left: 4px solid #0aa; margin-bottom: 1em;">
+        <strong>Get the best experience:</strong><br>
+        Add this Xpressobooks to your homescreen for easy access every time. Simply click 'Install Xpressobook' below.
+      </div>
+      <div class="button-holder">
+        <button id="android-install-the-app" class="btn">Install Xpressobook</button>
+        <button id="android-close-button" class="btn delete">Close</button>
+      </div>
+    </div>
+  </div>
+  <input type="text" id="input-field" style="opacity: 0" autocomplete="off" autocapitalize="off" spellcheck="false"
+    tabindex="-1" />
+
+  <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
-    <script>
-      const serviceWorkerVersion = "4036228931";
-      var scriptLoaded = false;
-      function loadMainDartJs() {
-        if (scriptLoaded) {
-          return;
-        }
-        scriptLoaded = true;
-        var scriptTag = document.createElement("script");
-        scriptTag.src = "main.dart.js";
-        scriptTag.type = "application/javascript";
-        document.body.append(scriptTag);
+  <script>
+    const serviceWorkerVersion = "1782646152";
+    var scriptLoaded = false;
+    function loadMainDartJs() {
+      if (scriptLoaded) {
+        return;
       }
+      scriptLoaded = true;
+      var scriptTag = document.createElement("script");
+      scriptTag.src = "main.dart.js";
+      scriptTag.type = "application/javascript";
+      document.body.append(scriptTag);
+    }
 
-      if ("serviceWorker" in navigator) {
-        // Service workers are supported. Use them.
-        window.addEventListener("load", function () {
-          // Wait for registration to finish before dropping the <script> tag.
-          // Otherwise, the browser will load the script multiple times,
-          // potentially different versions.
-          var serviceWorkerUrl =
-            "flutter_service_worker.js?v=" + serviceWorkerVersion;
-          navigator.serviceWorker.register(serviceWorkerUrl).then((reg) => {
-            function waitForActivation(serviceWorker) {
-              serviceWorker.addEventListener("statechange", () => {
-                if (serviceWorker.state == "activated") {
-                  console.log("Installed new service worker.");
-                  loadMainDartJs();
-                }
-              });
-            }
-            if (!reg.active && (reg.installing || reg.waiting)) {
-              // No active web worker and we have installed or are installing
-              // one for the first time. Simply wait for it to activate.
-              waitForActivation(reg.installing ?? reg.waiting);
-            } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
-              // When the app updates the serviceWorkerVersion changes, so we
-              // need to ask the service worker to update.
-              console.log("New service worker available.");
-              reg.update();
-              waitForActivation(reg.installing);
-            } else {
-              // Existing service worker is still good.
-              console.log("Loading app from service worker.");
-              loadMainDartJs();
-            }
-          });
-
-          // If service worker doesn't succeed in a reasonable amount of time,
-          // fallback to plaint <script> tag.
-          setTimeout(() => {
-            if (!scriptLoaded) {
-              console.warn(
-                "Failed to load app from service worker. Falling back to plain <script> tag."
-              );
-              loadMainDartJs();
-            }
-          }, 4000);
+    if ("serviceWorker" in navigator) {
+      // Service workers are supported. Use them.
+      window.addEventListener("load", function () {
+        // Wait for registration to finish before dropping the <script> tag.
+        // Otherwise, the browser will load the script multiple times,
+        // potentially different versions.
+        var serviceWorkerUrl =
+          "flutter_service_worker.js?v=" + serviceWorkerVersion;
+        navigator.serviceWorker.register(serviceWorkerUrl).then((reg) => {
+          function waitForActivation(serviceWorker) {
+            serviceWorker.addEventListener("statechange", () => {
+              if (serviceWorker.state == "activated") {
+                console.log("Installed new service worker.");
+                loadMainDartJs();
+              }
+            });
+          }
+          if (!reg.active && (reg.installing || reg.waiting)) {
+            // No active web worker and we have installed or are installing
+            // one for the first time. Simply wait for it to activate.
+            waitForActivation(reg.installing ?? reg.waiting);
+          } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
+            // When the app updates the serviceWorkerVersion changes, so we
+            // need to ask the service worker to update.
+            console.log("New service worker available.");
+            reg.update();
+            waitForActivation(reg.installing);
+          } else {
+            // Existing service worker is still good.
+            console.log("Loading app from service worker.");
+            loadMainDartJs();
+          }
         });
-      } else {
-        // Service workers not supported. Just drop the <script> tag.
-        loadMainDartJs();
-      }
-    </script>
-  </body>
+
+        // If service worker doesn't succeed in a reasonable amount of time,
+        // fallback to plaint <script> tag.
+        setTimeout(() => {
+          if (!scriptLoaded) {
+            console.warn(
+              "Failed to load app from service worker. Falling back to plain <script> tag."
+            );
+            loadMainDartJs();
+          }
+        }, 4000);
+      });
+    } else {
+      // Service workers not supported. Just drop the <script> tag.
+      loadMainDartJs();
+    }
+  </script>
+</body>
+
 </html>

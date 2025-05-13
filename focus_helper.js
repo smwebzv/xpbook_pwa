@@ -5,6 +5,46 @@ function focusTextInput(elementId) {
   }
 }
 
+function isAppInstalled() {
+  return window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone === true;
+}
+
+document.addEventListener("DOMContentLoaded", async () => {
+  let deferredPrompt;
+  const installBtnPopover = document.getElementById('install-android-element');
+  const installAndroidApp = document.getElementById('android-install-the-app');
+
+  document.getElementById("android-close-button").addEventListener("click", () => {
+    installBtnPopover.style.display = 'none';
+  });
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    if (!isAppInstalled()) {
+      installBtnPopover.style.display = 'inline-block';
+    }
+
+    installAndroidApp.addEventListener('click', () => {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('✅ User accepted the install prompt');
+        } else {
+          console.log('❌ User dismissed the install prompt');
+          installBtnPopover.style.display = 'none';
+        }
+        deferredPrompt = null;
+      });
+    });
+  });
+
+  window.addEventListener('appinstalled', () => {
+    console.log('✅ App was successfully installed');
+    installBtnPopover.style.display = 'none';
+  });
+});
+
 // document.addEventListener("DOMContentLoaded", async () => {
 //   setTimeout(() => {
 //     console.log("START SPEEEACCHHH");
