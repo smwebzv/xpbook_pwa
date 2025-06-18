@@ -1,6 +1,32 @@
 var stripe;
 
 document.addEventListener("DOMContentLoaded", async () => {
+  const grammar =
+    "#JSGF V1.0; grammar colors; public <color> = aqua | azure | beige | bisque | black | blue | brown | chocolate | coral | crimson | cyan | fuchsia | ghostwhite | gold | goldenrod | gray | green | indigo | ivory | khaki | lavender | lime | linen | magenta | maroon | moccasin | navy | olive | orange | orchid | peru | pink | plum | purple | red | salmon | sienna | silver | snow | tan | teal | thistle | tomato | turquoise | violet | white | yellow ;";
+  const recognition = new SpeechRecognition();
+  // const speechRecognitionList = new SpeechGrammarList();
+  // speechRecognitionList.addFromString(grammar, 1);
+  // recognition.grammars = speechRecognitionList;
+  recognition.continuous = false;
+  recognition.lang = "en-US";
+  recognition.interimResults = false;
+  recognition.maxAlternatives = 1;
+
+  const diagnostic = document.querySelector(".output");
+  const bg = document.querySelector("html");
+
+  document.body.onclick = () => {
+    recognition.start();
+    console.log("Ready to receive a color command.");
+  };
+
+  recognition.onresult = (event) => {
+    console.log("WHAT ARE RESULTS HERE");
+    const color = event.results[0][0].transcript;
+    diagnostic.textContent = `Result received: ${color}`;
+    bg.style.backgroundColor = color;
+  };
+
   return;
   stripe = Stripe(
     "pk_test_51PQnOqIZbtxi3QJkNRCoR7ZT1zviV5zPC6BYjaqA9K61qQRax2uW9rRxEvIKrEWJfZfhoQznRZ4rxKAVDWYaOPlg00AYBaOUh2",
@@ -39,7 +65,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   paymentRequest.on("paymentmethod", async (e) => {
     fetch(
-      "https://xpbooks-d1b1d282ce49.herokuapp.com/payment/create-payment-intent",
+      "https://api-xpressocashbook.cash/payment/create-payment-intent",
       {
         method: "POST",
         headers: {
@@ -51,20 +77,21 @@ document.addEventListener("DOMContentLoaded", async () => {
           amount: 1000,
         }),
       }
-    ).then(res => res.json())
-    .then(async res => {
-       // Confirm the PaymentIntent without handling potential next actions (yet).
-       let { error, paymentIntent } = await stripe.confirmCardPayment(
-       res.client_secret,
-         {
-           payment_method: e.paymentMethod.id,
-         },
-         {
-           handleActions: false,
-         }
-       );
+    )
+      .then((res) => res.json())
+      .then(async (res) => {
+        // Confirm the PaymentIntent without handling potential next actions (yet).
+        let { error, paymentIntent } = await stripe.confirmCardPayment(
+          res.client_secret,
+          {
+            payment_method: e.paymentMethod.id,
+          },
+          {
+            handleActions: false,
+          }
+        );
 
-       if (error) {
+        if (error) {
           // Report to the browser that the payment failed, prompting it to
           // re-show the payment interface, or show an error message and close
           // the payment interface.
@@ -72,22 +99,22 @@ document.addEventListener("DOMContentLoaded", async () => {
           return;
         }
 
-       e.complete("success");
+        e.complete("success");
 
-       if (paymentIntent.status === "requires_action") {
-         // Let Stripe.js handle the rest of the payment flow.
-        let { error, paymentIntent } = await stripe.confirmCardPayment(
-           res.client_secret
-        );
-      
-        if (error) {
-           // The payment failed -- ask your customer for a new payment method.
-           // addMessage(error.message);
-           return;
+        if (paymentIntent.status === "requires_action") {
+          // Let Stripe.js handle the rest of the payment flow.
+          let { error, paymentIntent } = await stripe.confirmCardPayment(
+            res.client_secret
+          );
+
+          if (error) {
+            // The payment failed -- ask your customer for a new payment method.
+            // addMessage(error.message);
+            return;
+          }
+          //addMessage(`Payment ${paymentIntent.status}: ${paymentIntent.id}`
         }
-         //addMessage(`Payment ${paymentIntent.status}: ${paymentIntent.id}`
-       }
-     });
+      });
   });
 });
 
@@ -122,7 +149,7 @@ function startApplePay() {
 
   paymentRequest.on("paymentmethod", async (e) => {
     const { error: backendError, clientSecret } = await fetch(
-      "https://xpbooks-d1b1d282ce49.herokuapp.com/payment/create-payment-intent",
+      "https://api-xpressocashbook.cash/payment/create-payment-intent",
       {
         method: "POST",
         headers: {
@@ -188,7 +215,7 @@ function startApplePay() {
     session.onvalidatemerchant = async (event) => {
       const validationURL = event.validationURL;
       const response = await fetch(
-        "https://xpbooks-d1b1d282ce49.herokuapp.com/payment/validate-merchant",
+        "https://api-xpressocashbook.cash/payment/validate-merchant",
         {
           method: "POST",
           headers: {
@@ -228,7 +255,7 @@ function startApplePay() {
 
 async function createPaymentIntent(amount) {
   const response = await fetch(
-    "https://xpbooks-d1b1d282ce49.herokuapp.com/payment/create-payment-intent",
+    "https://api-xpressocashbook.cash/payment/create-payment-intent",
     {
       method: "POST",
       headers: {
@@ -248,7 +275,7 @@ async function createPaymentIntent(amount) {
 
 async function confirmPayment(clientSecret, paymentData) {
   const response = await fetch(
-    "https://xpbooks-d1b1d282ce49.herokuapp.com/payment/process-payment",
+    "https://api-xpressocashbook.cash/payment/process-payment",
     {
       method: "POST",
       headers: {

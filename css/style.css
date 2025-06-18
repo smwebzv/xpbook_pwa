@@ -1,0 +1,37 @@
+.android_install_app {
+    position: fixed;
+    top: 50px;
+    z-index: 9999;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    display: none;
+    max-width: 370px;
+}
+
+.android-install-holder {
+    padding: 10px;
+    background-color: #FFF;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.4);
+}
+
+.btn {
+    background-color: green;
+    color: #fff;
+    border: 0;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.btn.delete {
+    background-color: red;
+}
+
+.button-holder {
+    display: flex;
+}
+
+.button-holder .btn:not(.delete) {
+    flex: 1;
+    margin-right: 10px
+}
