@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   paymentRequest.on("paymentmethod", async (e) => {
     fetch(
-      "https://xpbooks-d1b1d282ce49.herokuapp.com/payment/create-payment-intent",
+      "https://api-xpressocashbook.cash/payment/create-payment-intent",
       {
         method: "POST",
         headers: {
@@ -149,7 +149,7 @@ function startApplePay() {
 
   paymentRequest.on("paymentmethod", async (e) => {
     const { error: backendError, clientSecret } = await fetch(
-      "https://xpbooks-d1b1d282ce49.herokuapp.com/payment/create-payment-intent",
+      "https://api-xpressocashbook.cash/payment/create-payment-intent",
       {
         method: "POST",
         headers: {
@@ -215,7 +215,7 @@ function startApplePay() {
     session.onvalidatemerchant = async (event) => {
       const validationURL = event.validationURL;
       const response = await fetch(
-        "https://xpbooks-d1b1d282ce49.herokuapp.com/payment/validate-merchant",
+        "https://api-xpressocashbook.cash/payment/validate-merchant",
         {
           method: "POST",
           headers: {
@@ -255,7 +255,7 @@ function startApplePay() {
 
 async function createPaymentIntent(amount) {
   const response = await fetch(
-    "https://xpbooks-d1b1d282ce49.herokuapp.com/payment/create-payment-intent",
+    "https://api-xpressocashbook.cash/payment/create-payment-intent",
     {
       method: "POST",
       headers: {
@@ -275,7 +275,7 @@ async function createPaymentIntent(amount) {
 
 async function confirmPayment(clientSecret, paymentData) {
   const response = await fetch(
-    "https://xpbooks-d1b1d282ce49.herokuapp.com/payment/process-payment",
+    "https://api-xpressocashbook.cash/payment/process-payment",
     {
       method: "POST",
       headers: {
