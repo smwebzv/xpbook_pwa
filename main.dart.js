@@ -302532,7 +302532,7 @@
         t1 = this._framework$_element;
       t1.toString;
       t1 = A.Theme_of(t1).primaryTextTheme.bodyLarge;
-      return A.Container$(_null, A.Row$(A._setArrayType([A.Text$("App Version 2.0.1(143)", _null, _null, _null, _null, _null, t1 == null ? _null : t1.copyWith$3$fontSize$fontWeight$height($.$get$width() / 414 * 16, B.FontWeight_3_400, 1), _null, _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, _null), B.Clip_0, _null, _null, _null, _null, _null, new A.EdgeInsets(0, 20, 0, 0), _null, _null, _null, _null);
+      return A.Container$(_null, A.Row$(A._setArrayType([A.Text$("App Version 2.0.1(144)", _null, _null, _null, _null, _null, t1 == null ? _null : t1.copyWith$3$fontSize$fontWeight$height($.$get$width() / 414 * 16, B.FontWeight_3_400, 1), _null, _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, _null), B.Clip_0, _null, _null, _null, _null, _null, new A.EdgeInsets(0, 20, 0, 0), _null, _null, _null, _null);
     }
   };
   A._LoginMobileViewState_initState_closure.prototype = {
@@ -314522,7 +314522,7 @@
     call$0() {
       var $async$goto = 0,
         $async$completer = A._makeAsyncAwaitCompleter(type$.void),
-        $async$returnValue, $async$self = this, t4, t1, t2, t3;
+        $async$returnValue, $async$self = this, t1, t2, t3, t4;
       var $async$call$0 = A._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
         if ($async$errorCode === 1)
           return A._asyncRethrow($async$result, $async$completer);
@@ -314531,28 +314531,44 @@
             case 0:
               // Function start
               t1 = $async$self.$this;
-              t2 = $async$self.till;
-              t3 = t2.tillId;
-              t3.toString;
-              if (t1.textControllers.$index(0, t3)._change_notifier$_value.text.length === 0) {
-                t1 = $.$get$AppKeys_scaffoldMessengerKey().get$currentState();
-                if (t1 != null)
-                  t1.showSnackBar$1(A.SnackBar$(null, null, null, B.Color_4289069313, null, B.Clip_1, null, A.Text$("Please enter an amount", null, null, null, null, null, A.TextStyle$(null, null, B.Color_4294967295, null, null, null, null, null, null, null, null, $.$get$width() / 414 * 20, null, null, null, null, null, true, null, null, null, null, null, null, null, null), null, null), null, B.Duration_4000000, null, null, null, null, null, null, null, null, null));
-                // goto return
-                $async$goto = 1;
-                break;
+              t2 = t1.textControllers;
+              t3 = $async$self.till;
+              t4 = t3.tillId;
+              t4.toString;
+              if (t2.$index(0, t4) != null) {
+                t4 = t3.tillId;
+                t4.toString;
+                if (t2.$index(0, t4)._change_notifier$_value.text.length === 0) {
+                  t1 = $.$get$AppKeys_scaffoldMessengerKey().get$currentState();
+                  if (t1 != null)
+                    t1.showSnackBar$1(A.SnackBar$(null, null, null, B.Color_4289069313, null, B.Clip_1, null, A.Text$("Please enter an amount", null, null, null, null, null, A.TextStyle$(null, null, B.Color_4294967295, null, null, null, null, null, null, null, null, $.$get$width() / 414 * 20, null, null, null, null, null, true, null, null, null, null, null, null, null, null), null, null), null, B.Duration_4000000, null, null, null, null, null, null, null, null, null));
+                  // goto return
+                  $async$goto = 1;
+                  break;
+                }
+              } else {
+                A.print("dfsadfsad " + A.S(t3.takingsTillAmount));
+                t2 = t3.takingsTillAmount;
+                if (t2 == null) {
+                  t1 = $.$get$AppKeys_scaffoldMessengerKey().get$currentState();
+                  if (t1 != null)
+                    t1.showSnackBar$1(A.SnackBar$(null, null, null, B.Color_4289069313, null, B.Clip_1, null, A.Text$("Please enter an amount", null, null, null, null, null, A.TextStyle$(null, null, B.Color_4294967295, null, null, null, null, null, null, null, null, $.$get$width() / 414 * 20, null, null, null, null, null, true, null, null, null, null, null, null, null, null), null, null), null, B.Duration_4000000, null, null, null, null, null, null, null, null, null));
+                  // goto return
+                  $async$goto = 1;
+                  break;
+                }
               }
-              t3 = $.WidgetsBinding__instance.WidgetsBinding__buildOwner.focusManager._primaryFocus;
-              if (t3 != null)
-                t3.unfocus$0();
+              t2 = $.WidgetsBinding__instance.WidgetsBinding__buildOwner.focusManager._primaryFocus;
+              if (t2 != null)
+                t2.unfocus$0();
               $.$get$_context().callMethod$2("focusTextInput", ["input-field"]);
-              t3 = $async$self.context;
-              t4 = A.BlocProvider_of(t3, type$.TakingsEntryBloc);
-              t2 = t2.takingsTillId;
-              if (t2 == null)
-                t2 = "";
+              t2 = $async$self.context;
+              t4 = A.BlocProvider_of(t2, type$.TakingsEntryBloc);
+              t3 = t3.takingsTillId;
+              if (t3 == null)
+                t3 = "";
               $async$goto = 3;
-              return A._asyncAwait(A.GoRouterHelper_pushNamed(t3, "/entryNewNote", A.LinkedHashMap_LinkedHashMap$_literal(["bloc", t4, "noteId", t2, "apiEndPoint", "taking-notes", "takingsEntryIndex", $async$self.index, "selectedDate", t1._widget.dateTime], type$.String, type$.Object), type$.nullable_Object), $async$call$0);
+              return A._asyncAwait(A.GoRouterHelper_pushNamed(t2, "/entryNewNote", A.LinkedHashMap_LinkedHashMap$_literal(["bloc", t4, "noteId", t3, "apiEndPoint", "taking-notes", "takingsEntryIndex", $async$self.index, "selectedDate", t1._widget.dateTime], type$.String, type$.Object), type$.nullable_Object), $async$call$0);
             case 3:
               // returning from await.
             case 1:
