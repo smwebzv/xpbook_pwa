@@ -73709,10 +73709,12 @@
     OtherIncomeSelectDate__appBar_closure: function OtherIncomeSelectDate__appBar_closure(t0) {
       this.context = t0;
     },
-    OtherIncomeSelectDate__body_closure: function OtherIncomeSelectDate__body_closure(t0, t1, t2) {
-      this._box_0 = t0;
-      this.state = t1;
-      this.minDate = t2;
+    OtherIncomeSelectDate__body_closure: function OtherIncomeSelectDate__body_closure(t0, t1, t2, t3) {
+      var _ = this;
+      _._box_0 = t0;
+      _.state = t1;
+      _.minDate = t2;
+      _.maxDate = t3;
     },
     OtherIncomeSelectDate__body__closure1: function OtherIncomeSelectDate__body__closure1(t0) {
       this.context = t0;
@@ -73735,11 +73737,13 @@
       this.state = t1;
       this.context = t2;
     },
-    OtherIncomeSelectDate__takingsBody_closure: function OtherIncomeSelectDate__takingsBody_closure(t0) {
+    OtherIncomeSelectDate__takingsBody_closure: function OtherIncomeSelectDate__takingsBody_closure(t0, t1) {
       this.state = t0;
+      this.maxDate = t1;
     },
-    OtherIncomeSelectDate__takingsBody__closure: function OtherIncomeSelectDate__takingsBody__closure(t0) {
+    OtherIncomeSelectDate__takingsBody__closure: function OtherIncomeSelectDate__takingsBody__closure(t0, t1) {
       this.state = t0;
+      this.maxDate = t1;
     },
     OtherIncomeSelectDate__takingsBody___closure: function OtherIncomeSelectDate__takingsBody___closure(t0, t1, t2, t3, t4) {
       var _ = this;
@@ -74066,11 +74070,13 @@
       this.state = t1;
       this.context = t2;
     },
-    PaymentsSelectedScreen__expenseBody_closure: function PaymentsSelectedScreen__expenseBody_closure(t0) {
+    PaymentsSelectedScreen__expenseBody_closure: function PaymentsSelectedScreen__expenseBody_closure(t0, t1) {
       this.state = t0;
+      this.maxDate = t1;
     },
-    PaymentsSelectedScreen__expenseBody__closure: function PaymentsSelectedScreen__expenseBody__closure(t0) {
+    PaymentsSelectedScreen__expenseBody__closure: function PaymentsSelectedScreen__expenseBody__closure(t0, t1) {
       this.state = t0;
+      this.maxDate = t1;
     },
     PaymentsSelectedScreen__expenseBody___closure: function PaymentsSelectedScreen__expenseBody___closure(t0, t1, t2) {
       this.context = t0;
@@ -75701,11 +75707,13 @@
       this.state = t1;
       this.context = t2;
     },
-    SupplierSelectDateScreen__weekListSupplier_closure: function SupplierSelectDateScreen__weekListSupplier_closure(t0) {
+    SupplierSelectDateScreen__weekListSupplier_closure: function SupplierSelectDateScreen__weekListSupplier_closure(t0, t1) {
       this.state = t0;
+      this.maxDate = t1;
     },
-    SupplierSelectDateScreen__weekListSupplier__closure: function SupplierSelectDateScreen__weekListSupplier__closure(t0) {
+    SupplierSelectDateScreen__weekListSupplier__closure: function SupplierSelectDateScreen__weekListSupplier__closure(t0, t1) {
       this.state = t0;
+      this.maxDate = t1;
     },
     SupplierSelectDateScreen__weekListSupplier___closure: function SupplierSelectDateScreen__weekListSupplier___closure(t0, t1, t2) {
       this.context = t0;
@@ -76053,11 +76061,13 @@
       this.state = t1;
       this.context = t2;
     },
-    TakingsScreen__takingsBody_closure: function TakingsScreen__takingsBody_closure(t0) {
+    TakingsScreen__takingsBody_closure: function TakingsScreen__takingsBody_closure(t0, t1) {
       this.state = t0;
+      this.maxDate = t1;
     },
-    TakingsScreen__takingsBody__closure: function TakingsScreen__takingsBody__closure(t0) {
+    TakingsScreen__takingsBody__closure: function TakingsScreen__takingsBody__closure(t0, t1) {
       this.state = t0;
+      this.maxDate = t1;
     },
     TakingsScreen__takingsBody___closure: function TakingsScreen__takingsBody___closure(t0, t1, t2) {
       this.state = t0;
@@ -78273,21 +78283,22 @@
       this.state = t1;
       this.key = t2;
     },
-    Calendar$(backButton, forwardButton, initialDate, minDate, onDatePicked, showOnlyDate) {
-      return new A.Calendar(initialDate, minDate, onDatePicked, backButton, forwardButton, showOnlyDate, null);
+    Calendar$(backButton, forwardButton, initialDate, maxDate, minDate, onDatePicked, showOnlyDate) {
+      return new A.Calendar(initialDate, minDate, maxDate, onDatePicked, backButton, forwardButton, showOnlyDate, null);
     },
     _CalendarState$() {
       return new A._CalendarState(A.OverlayEntry$(new A.Overlays_loading_closure(), false, false), B._StateLifecycle_0);
     },
-    Calendar: function Calendar(t0, t1, t2, t3, t4, t5, t6) {
+    Calendar: function Calendar(t0, t1, t2, t3, t4, t5, t6, t7) {
       var _ = this;
       _.initialDate = t0;
       _.minDate = t1;
-      _.onDatePicked = t2;
-      _.backButton = t3;
-      _.forwardButton = t4;
-      _.showOnlyDate = t5;
-      _.key = t6;
+      _.maxDate = t2;
+      _.onDatePicked = t3;
+      _.backButton = t4;
+      _.forwardButton = t5;
+      _.showOnlyDate = t6;
+      _.key = t7;
     },
     _CalendarState: function _CalendarState(t0, t1) {
       var _ = this;
@@ -78311,15 +78322,14 @@
     },
     __CalendarState_State_Dialogs_Overlays: function __CalendarState_State_Dialogs_Overlays() {
     },
+    CalendarTablet$() {
+      return new A.CalendarTablet(null);
+    },
     _CalendarTabletState$() {
       return new A._CalendarTabletState(A.OverlayEntry$(new A.Overlays_loading_closure(), false, false), B._StateLifecycle_0);
     },
-    CalendarTablet: function CalendarTablet(t0, t1, t2, t3) {
-      var _ = this;
-      _.onDatePicked = t0;
-      _.backButton = t1;
-      _.forwardButton = t2;
-      _.key = t3;
+    CalendarTablet: function CalendarTablet(t0) {
+      this.key = t0;
     },
     _CalendarTabletState: function _CalendarTabletState(t0, t1) {
       var _ = this;
@@ -80672,7 +80682,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 627
+    $signature: 626
   };
   A.AppBootstrap_prepareEngineInitializer_closure0.prototype = {
     call$1(configuration) {
@@ -80708,7 +80718,7 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 385
+    $signature: 320
   };
   A.AppBootstrap__prepareAppRunner_closure.prototype = {
     call$1(params) {
@@ -80745,7 +80755,7 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 385
+    $signature: 320
   };
   A.AppBootstrap__prepareFlutterApp_closure.prototype = {
     call$1(options) {
@@ -81464,7 +81474,7 @@
       }
       return (t1 == null ? "https://www.gstatic.com/flutter-canvaskit/2e4ba9c6fb499ccd4e81420543783cc7267ae406/" : t1) + filename;
     },
-    $signature: 57
+    $signature: 63
   };
   A._downloadCanvasKitJs_loadEventHandler.prototype = {
     call$1(_) {
@@ -82261,43 +82271,43 @@
       var t1 = A.createPlatformViewSlot(this.platformViewId);
       return new A.ViewClipChain(t1, t1);
     },
-    $signature: 488
+    $signature: 487
   };
   A.HtmlViewEmbedder__applyMutators_closure.prototype = {
     call$0() {
       return A.LinkedHashSet_LinkedHashSet$_empty(type$.String);
     },
-    $signature: 381
+    $signature: 318
   };
   A.HtmlViewEmbedder__applyMutators_closure0.prototype = {
     call$0() {
       return A.LinkedHashSet_LinkedHashSet$_empty(type$.String);
     },
-    $signature: 381
+    $signature: 318
   };
   A.HtmlViewEmbedder_submitFrame_closure.prototype = {
     call$1(view) {
       return !B.JSArray_methods.contains$1(this.diffResult.viewsToAdd, view);
     },
-    $signature: 65
+    $signature: 73
   };
   A.HtmlViewEmbedder__updateOverlays_closure.prototype = {
     call$1(group) {
       return B.JSArray_methods.get$last(group.__engine$_group);
     },
-    $signature: 696
+    $signature: 693
   };
   A.HtmlViewEmbedder__updateOverlays_closure0.prototype = {
     call$1(view) {
       return !B.JSArray_methods.contains$1(this.viewsNeedingOverlays, view);
     },
-    $signature: 65
+    $signature: 73
   };
   A.HtmlViewEmbedder__updateOverlays_closure1.prototype = {
     call$1(view) {
       return !this.$this._overlays.containsKey$1(0, view);
     },
-    $signature: 65
+    $signature: 73
   };
   A.OverlayGroup.prototype = {};
   A.ViewClipChain.prototype = {};
@@ -82387,7 +82397,7 @@
       }
       return new A.ViewListDiffResult(B.JSArray_methods.sublist$2(t1, 0, index), B.JSArray_methods.sublist$1(t2, t1.length - index), false, _null);
     },
-    $signature: 380
+    $signature: 243
   };
   A.diffViewList_lookBackwards.prototype = {
     call$1(index) {
@@ -82407,7 +82417,7 @@
       }
       return new A.ViewListDiffResult(B.JSArray_methods.sublist$1(t2, index + 1), B.JSArray_methods.sublist$2(t1, 0, t1.length - 1 - index), true, B.JSArray_methods.get$first(t2));
     },
-    $signature: 380
+    $signature: 243
   };
   A.SkiaFontCollection.prototype = {
     get$fontFallbackManager() {
@@ -82705,13 +82715,13 @@
     call$0() {
       return A._setArrayType([], type$.JSArray_JavaScriptObject);
     },
-    $signature: 379
+    $signature: 216
   };
   A.SkiaFontCollection__registerWithFontProvider_closure0.prototype = {
     call$0() {
       return A._setArrayType([], type$.JSArray_JavaScriptObject);
     },
-    $signature: 379
+    $signature: 216
   };
   A.SkiaFontCollection_registerDownloadedFonts_makeRegisterFont.prototype = {
     call$3(buffer, url, family) {
@@ -82805,7 +82815,7 @@
       A.callMethod(_this.result, "set", [chunk, t1.position]);
       t1.position = t1.position + A._asInt(chunk.length);
     },
-    $signature: 376
+    $signature: 240
   };
   A.CkImage.prototype = {
     _init$0() {
@@ -83529,7 +83539,7 @@
       if (t1._nativeObject != null)
         t1.dispose$0();
     },
-    $signature: 173
+    $signature: 192
   };
   A.NativeMemoryFinalizationRegistry.prototype = {};
   A.UniqueRef.prototype = {
@@ -84382,7 +84392,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 67
+    $signature: 72
   };
   A.SimpleCkShader.prototype = {
     SimpleCkShader$0() {
@@ -84935,7 +84945,7 @@
       }
       return $.__canvasKit._readField$0().TextStyle(properties);
     },
-    $signature: 190
+    $signature: 157
   };
   A.CkStrutStyle.prototype = {
     $eq(_, other) {
@@ -85323,7 +85333,7 @@
     call$1(font) {
       return this.fontFamily === font;
     },
-    $signature: 41
+    $signature: 42
   };
   A.IntlSegmenterGranularity.prototype = {
     _enumToString$0() {
@@ -85360,7 +85370,7 @@
         this._box_0.errorEnvelopeEncoded = true;
       }
     },
-    $signature: 206
+    $signature: 169
   };
   A.ClipboardMessageHandler_setDataMethodCall_closure0.prototype = {
     call$1(_) {
@@ -85380,7 +85390,7 @@
       t1.toString;
       t1.call$1(B.C_JSONMessageCodec.encodeMessage$1([map]));
     },
-    $signature: 24
+    $signature: 23
   };
   A.ClipboardMessageHandler_getDataMethodCall_closure0.prototype = {
     call$1(error) {
@@ -85411,7 +85421,7 @@
       t1.toString;
       t1.call$1(B.C_JSONMessageCodec.encodeMessage$1([map]));
     },
-    $signature: 24
+    $signature: 23
   };
   A.ClipboardMessageHandler_hasStringsMethodCall_closure0.prototype = {
     call$1(error) {
@@ -85739,7 +85749,7 @@
       any.toString;
       return A._asString(any);
     },
-    $signature: 174
+    $signature: 190
   };
   A.HttpFetchResponseImpl.prototype = {
     get$status(_) {
@@ -85860,7 +85870,7 @@
     call$2(entries, observer) {
       this.fn.call$2(B.JSArray_methods.cast$1$0(entries, type$.JavaScriptObject), observer);
     },
-    $signature: 497
+    $signature: 488
   };
   A._ttPolicy_closure.prototype = {
     call$1(url) {
@@ -85870,7 +85880,7 @@
       A.callMethod(self.window.console, "error", ["URL rejected by TrustedTypes policy flutter-engine: " + url + "(download prevented)"]);
       return null;
     },
-    $signature: 504
+    $signature: 497
   };
   A._DomListIterator.prototype = {
     moveNext$0() {
@@ -85999,12 +86009,12 @@
       $._fontChangeScheduled = false;
       $.$get$EnginePlatformDispatcher__instance().invokeOnPlatformMessage$3("flutter/system", $.$get$_fontChangeMessage(), new A.sendFontChangeMessage__closure());
     },
-    $signature: 373
+    $signature: 316
   };
   A.sendFontChangeMessage__closure.prototype = {
     call$1(_) {
     },
-    $signature: 53
+    $signature: 54
   };
   A.FontFallbackManager.prototype = {
     ensureFontsSupportText$2(text, fontFamilies) {
@@ -86193,37 +86203,37 @@
     call$1(font) {
       return font.name === "Noto Sans SC";
     },
-    $signature: 58
+    $signature: 62
   };
   A.FontFallbackManager$__closure0.prototype = {
     call$1(font) {
       return font.name === "Noto Sans TC";
     },
-    $signature: 58
+    $signature: 62
   };
   A.FontFallbackManager$__closure1.prototype = {
     call$1(font) {
       return font.name === "Noto Sans HK";
     },
-    $signature: 58
+    $signature: 62
   };
   A.FontFallbackManager$__closure2.prototype = {
     call$1(font) {
       return font.name === "Noto Sans JP";
     },
-    $signature: 58
+    $signature: 62
   };
   A.FontFallbackManager$__closure3.prototype = {
     call$1(font) {
       return font.name === "Noto Sans KR";
     },
-    $signature: 58
+    $signature: 62
   };
   A.FontFallbackManager$__closure4.prototype = {
     call$1(font) {
       return font.name === "Noto Sans Symbols";
     },
-    $signature: 58
+    $signature: 62
   };
   A.FontFallbackManager_addMissingCodePoints_closure.prototype = {
     call$0() {
@@ -86258,14 +86268,14 @@
     call$1(font) {
       return font.coverCount === 0;
     },
-    $signature: 58
+    $signature: 62
   };
   A.FontFallbackManager__selectFont_closure.prototype = {
     call$1(font) {
       var t1 = this.$this;
       return font === t1._notoSansSC || font === t1._notoSansTC || font === t1._notoSansHK || font === t1._notoSansJP || font === t1._notoSansKR;
     },
-    $signature: 58
+    $signature: 62
   };
   A._UnicodePropertyLookup.prototype = {
     get$length(_) {
@@ -86452,7 +86462,7 @@
     call$1(chunk) {
       return this.inputSink.add$1(0, chunk);
     },
-    $signature: 376
+    $signature: 240
   };
   A.fetchFontManifest_closure1.prototype = {
     call$1(fontFamilyJson) {
@@ -92718,7 +92728,7 @@
     call$2(m1, m2) {
       return B.JSNumber_methods.compareTo$1(m1.matchQuality, m2.matchQuality);
     },
-    $signature: 1247
+    $signature: 1218
   };
   A._PersistedSurfaceMatch.prototype = {
     toString$0(_) {
@@ -93080,7 +93090,7 @@
     call$0() {
       return new A.DateTime(Date.now(), false);
     },
-    $signature: 371
+    $signature: 284
   };
   A.BrowserImageDecoder__getOrCreateWebDecoder_closure.prototype = {
     call$0() {
@@ -93114,7 +93124,7 @@
         $._hotRestartListeners[_i].call$0();
       return A.Future_Future$value(A.ServiceExtensionResponse$result("OK"), type$.ServiceExtensionResponse);
     },
-    $signature: 370
+    $signature: 246
   };
   A.initializeEngineServices_closure0.prototype = {
     call$0() {
@@ -93148,7 +93158,7 @@
         t1._viewsRenderedInCurrentFrame = null;
       }
     },
-    $signature: 373
+    $signature: 316
   };
   A.initializeEngineServices_initializeRendererCallback.prototype = {
     call$0() {
@@ -93199,7 +93209,7 @@
     $defaultValues() {
       return [null];
     },
-    $signature: 362
+    $signature: 245
   };
   A.FlutterEngineInitializer__staticInteropFactoryStub_closure0.prototype = {
     call$0() {
@@ -93219,7 +93229,7 @@
     $defaultValues() {
       return [null];
     },
-    $signature: 362
+    $signature: 245
   };
   A.futureToPromise_closure.prototype = {
     call$2(resolver, rejecter) {
@@ -93240,55 +93250,55 @@
       $.$get$printWarning().call$1("Rejecting promise with error: " + A.S(error));
       this.rejecter.call(null, null);
     },
-    $signature: 16
+    $signature: 17
   };
   A._kLogicalKeyToModifierGetter_closure.prototype = {
     call$1($event) {
       return $event._event.altKey;
     },
-    $signature: 66
+    $signature: 71
   };
   A._kLogicalKeyToModifierGetter_closure0.prototype = {
     call$1($event) {
       return $event._event.altKey;
     },
-    $signature: 66
+    $signature: 71
   };
   A._kLogicalKeyToModifierGetter_closure1.prototype = {
     call$1($event) {
       return $event._event.ctrlKey;
     },
-    $signature: 66
+    $signature: 71
   };
   A._kLogicalKeyToModifierGetter_closure2.prototype = {
     call$1($event) {
       return $event._event.ctrlKey;
     },
-    $signature: 66
+    $signature: 71
   };
   A._kLogicalKeyToModifierGetter_closure3.prototype = {
     call$1($event) {
       return $event._event.shiftKey;
     },
-    $signature: 66
+    $signature: 71
   };
   A._kLogicalKeyToModifierGetter_closure4.prototype = {
     call$1($event) {
       return $event._event.shiftKey;
     },
-    $signature: 66
+    $signature: 71
   };
   A._kLogicalKeyToModifierGetter_closure5.prototype = {
     call$1($event) {
       return $event._event.metaKey;
     },
-    $signature: 66
+    $signature: 71
   };
   A._kLogicalKeyToModifierGetter_closure6.prototype = {
     call$1($event) {
       return $event._event.metaKey;
     },
-    $signature: 66
+    $signature: 71
   };
   A._cached_closure.prototype = {
     call$0() {
@@ -93541,7 +93551,7 @@
     call$0() {
       return new A.KeyData(new A.Duration(this.currentTimeStamp._duration + 2000000), B.KeyEventType_1, this.physicalKey, this.logicalKey, null, true);
     },
-    $signature: 361
+    $signature: 239
   };
   A.KeyboardConverter__startGuardingKey_closure0.prototype = {
     call$0() {
@@ -93583,13 +93593,13 @@
       }
       return B.JSString_methods.get$hashCode(t1) + 98784247808;
     },
-    $signature: 115
+    $signature: 108
   };
   A.KeyboardConverter__handleEvent_closure0.prototype = {
     call$0() {
       return new A.KeyData(this.timeStamp, B.KeyEventType_1, this.physicalKey, this.logicalKey.call$0(), null, true);
     },
-    $signature: 361
+    $signature: 239
   };
   A.KeyboardConverter__handleEvent_closure1.prototype = {
     call$0() {
@@ -93607,7 +93617,7 @@
       if (t2.containsValue$1(0, testeeLogicalKey) && !getModifier.call$1(_this.event))
         t2.removeWhere$1(t2, new A.KeyboardConverter__handleEvent__closure(t1, testeeLogicalKey, _this.timeStamp));
     },
-    $signature: 522
+    $signature: 512
   };
   A.KeyboardConverter__handleEvent__closure.prototype = {
     call$2(physicalKey, logicalRecord) {
@@ -93617,14 +93627,14 @@
       this.$this._dispatchKeyData.call$1(new A.KeyData(this.timeStamp, B.KeyEventType_1, physicalKey, t1, null, true));
       return true;
     },
-    $signature: 529
+    $signature: 528
   };
   A.KeyboardConverter_handleEvent_closure.prototype = {
     call$1(data) {
       this._box_0.sentAnyEvents = true;
       return this.$this.performDispatchKeyData.call$1(data);
     },
-    $signature: 172
+    $signature: 170
   };
   A.ContextMenu.prototype = {
     disable$0(_) {
@@ -93819,7 +93829,7 @@
   A.MultiEntriesBrowserHistory_onPopState_closure.prototype = {
     call$1(_) {
     },
-    $signature: 53
+    $signature: 54
   };
   A.SingleEntryBrowserHistory.prototype = {
     SingleEntryBrowserHistory$1$urlStrategy(urlStrategy) {
@@ -93916,12 +93926,12 @@
   A.SingleEntryBrowserHistory_onPopState_closure.prototype = {
     call$1(_) {
     },
-    $signature: 53
+    $signature: 54
   };
   A.SingleEntryBrowserHistory_onPopState_closure0.prototype = {
     call$1(_) {
     },
-    $signature: 53
+    $signature: 54
   };
   A.NotoFont.prototype = {
     get$name(receiver) {
@@ -93946,7 +93956,7 @@
     call$1(font) {
       return font.enabled;
     },
-    $signature: 58
+    $signature: 62
   };
   A.EnginePictureRecorder.prototype = {
     beginRecording$1(bounds) {
@@ -94413,7 +94423,7 @@
     call$1(_) {
       this.$this.invokeOnMetricsChanged$0();
     },
-    $signature: 19
+    $signature: 20
   };
   A.EnginePlatformDispatcher_invokeOnKeyData_closure.prototype = {
     call$0() {
@@ -94425,7 +94435,7 @@
     call$1(data) {
       this.registrationZone.runUnaryGuarded$2(this.callback, data);
     },
-    $signature: 53
+    $signature: 54
   };
   A.EnginePlatformDispatcher__sendPlatformMessage_closure.prototype = {
     call$1(_) {
@@ -94437,7 +94447,7 @@
     call$1(success) {
       this.$this.replyToPlatformMessage$2(this.callback, B.C_JSONMessageCodec.encodeMessage$1([success]));
     },
-    $signature: 206
+    $signature: 169
   };
   A.EnginePlatformDispatcher__sendPlatformMessage_closure1.prototype = {
     call$1(handled) {
@@ -94447,7 +94457,7 @@
       else if (t1 != null)
         t1.call$1(null);
     },
-    $signature: 206
+    $signature: 169
   };
   A.EnginePlatformDispatcher__addLocaleChangedListener_closure.prototype = {
     call$1(_) {
@@ -94487,7 +94497,7 @@
         }
       }
     },
-    $signature: 550
+    $signature: 549
   };
   A.EnginePlatformDispatcher__addBrightnessMediaQueryListener_closure.prototype = {
     call$1($event) {
@@ -94605,7 +94615,7 @@
       wrapper.append($content);
       return wrapper;
     },
-    $signature: 190
+    $signature: 157
   };
   A.PlatformViewMessageHandler.prototype = {
     _createPlatformView$4$params$platformViewId$platformViewType(callback, params, platformViewId, platformViewType) {
@@ -95122,7 +95132,7 @@
     call$0() {
       return new A._ButtonSanitizer();
     },
-    $signature: 557
+    $signature: 552
   };
   A._PointerAdapter__addPointerEventListener_closure.prototype = {
     call$1($event) {
@@ -95177,7 +95187,7 @@
       t1._convertEventsToPointerData$3$data$details$event(pointerData, sanitizer.sanitizeDownEvent$2$button$buttons(t2, B.JSNumber_methods.toInt$0(t3)), $event);
       t1.__engine$_callback$2($event, pointerData);
     },
-    $signature: 96
+    $signature: 82
   };
   A._PointerAdapter_setup_closure0.prototype = {
     call$1($event) {
@@ -95202,7 +95212,7 @@
       }
       t1.__engine$_callback$2($event, pointerData);
     },
-    $signature: 96
+    $signature: 82
   };
   A._PointerAdapter_setup_closure1.prototype = {
     call$1($event) {
@@ -95218,7 +95228,7 @@
         t1.__engine$_callback$2($event, pointerData);
       }
     },
-    $signature: 96
+    $signature: 82
   };
   A._PointerAdapter_setup_closure2.prototype = {
     call$1($event) {
@@ -95239,7 +95249,7 @@
         }
       }
     },
-    $signature: 96
+    $signature: 82
   };
   A._PointerAdapter_setup_closure3.prototype = {
     call$1($event) {
@@ -95257,7 +95267,7 @@
         t1.__engine$_callback$2($event, pointerData);
       }
     },
-    $signature: 96
+    $signature: 82
   };
   A._PointerAdapter_setup_closure4.prototype = {
     call$1($event) {
@@ -95277,7 +95287,7 @@
     call$0() {
       return new A._PointerDeviceState(this.x, this.y);
     },
-    $signature: 626
+    $signature: 625
   };
   A.PointerDataConverter.prototype = {
     _generateCompletePointerData$26$buttons$change$device$distance$distanceMax$kind$obscured$orientation$physicalX$physicalY$platformData$pressure$pressureMax$pressureMin$radiusMajor$radiusMax$radiusMin$radiusMinor$scale$scrollDeltaX$scrollDeltaY$signalKind$size$tilt$timeStamp$viewId(buttons, change, device, distance, distanceMax, kind, obscured, orientation, physicalX, physicalY, platformData, pressure, pressureMax, pressureMin, radiusMajor, radiusMax, radiusMin, radiusMinor, scale, scrollDeltaX, scrollDeltaY, signalKind, size, tilt, timeStamp, viewId) {
@@ -95509,7 +95519,7 @@
         t1.stopPropagation();
       }
     },
-    $signature: 53
+    $signature: 54
   };
   A.GlProgram.prototype = {};
   A.GlContext.prototype = {
@@ -95751,7 +95761,7 @@
         return true;
       return !roleManager.focusAsRouteDefault$0();
     },
-    $signature: 358
+    $signature: 294
   };
   A.RouteName.prototype = {
     update$0(_) {
@@ -96125,7 +96135,7 @@
     call$1(mode) {
       this.$this.update$0(0);
     },
-    $signature: 355
+    $signature: 297
   };
   A.LabelAndValue.prototype = {
     update$0(_) {
@@ -96416,7 +96426,7 @@
     call$1(_) {
       this.$this._gestureModeDidChange$0();
     },
-    $signature: 355
+    $signature: 297
   };
   A.Scrollable_update_closure1.prototype = {
     call$1(_) {
@@ -97031,7 +97041,7 @@
     call$0() {
       return new A.DateTime(Date.now(), false);
     },
-    $signature: 371
+    $signature: 284
   };
   A.EngineSemantics__getGestureModeClock_closure.prototype = {
     call$0() {
@@ -97309,7 +97319,7 @@
         this.removals.add$1(0, node);
       return true;
     },
-    $signature: 358
+    $signature: 294
   };
   A.EnabledState.prototype = {
     _enumToString$0() {
@@ -98285,7 +98295,7 @@
       t1.writeValue$2(0, t2, key);
       t1.writeValue$2(0, t2, value);
     },
-    $signature: 85
+    $signature: 81
   };
   A.StandardMethodCodec.prototype = {
     decodeMethodCall$1(methodCall) {
@@ -98636,7 +98646,7 @@
     call$1(line) {
       return line.lineMetrics;
     },
-    $signature: 713
+    $signature: 710
   };
   A.ParagraphSpan.prototype = {
     get$style(receiver) {
@@ -101550,7 +101560,7 @@
       t2.toString;
       this.subscriptions.push(A.DomSubscription$(t2, "input", new A.EngineAutofillForm_addInputEventListeners_addSubscriptionForKey_closure(t1, key, t2)));
     },
-    $signature: 37
+    $signature: 36
   };
   A.EngineAutofillForm_addInputEventListeners_addSubscriptionForKey_closure.prototype = {
     call$1(e) {
@@ -102598,7 +102608,7 @@
     call$1(byte) {
       return "0x" + B.JSString_methods.padLeft$2(B.JSInt_methods.toRadixString$1(byte, 16), 2, "0");
     },
-    $signature: 208
+    $signature: 201
   };
   A.LruCache.prototype = {
     get$length(_) {
@@ -103114,7 +103124,7 @@
         t1 = type$.Object._as(t1);
       A.callMethod(this.$this._hostElement, "setAttribute", [entry.key, t1]);
     },
-    $signature: 352
+    $signature: 380
   };
   A.FullPageEmbeddingStrategy.prototype = {
     get$globalEventTarget() {
@@ -103199,7 +103209,7 @@
         t2 = type$.Object._as(t2);
       A.callMethod(t1, "setAttribute", [entry.key, t2]);
     },
-    $signature: 352
+    $signature: 380
   };
   A.FlutterViewManager.prototype = {
     $index(_, viewId) {
@@ -103709,7 +103719,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 70
+    $signature: 69
   };
   A.ViewPadding.prototype = {};
   A._DefaultTextEditingStrategy_Object_CompositionAwareMixin.prototype = {};
@@ -105260,7 +105270,7 @@
     call$0() {
       return A.Future_Future$value(null, type$.Null);
     },
-    $signature: 67
+    $signature: 72
   };
   A.SentinelValue.prototype = {};
   A.EfficientLengthIterable.prototype = {};
@@ -106476,7 +106486,7 @@
     call$0() {
       return B.JSNumber_methods.floor$0(1000 * this.performance.now());
     },
-    $signature: 115
+    $signature: 108
   };
   A.Primitives_functionNoSuchMethod_closure.prototype = {
     call$2($name, argument) {
@@ -106486,7 +106496,7 @@
       this.$arguments.push(argument);
       ++t1.argumentCount;
     },
-    $signature: 43
+    $signature: 41
   };
   A.TypeErrorDecoder.prototype = {
     matchTypeError$1(message) {
@@ -106955,7 +106965,7 @@
     call$1(o) {
       return this.getTag(o);
     },
-    $signature: 42
+    $signature: 44
   };
   A.initHooks_closure0.prototype = {
     call$2(o, tag) {
@@ -106967,7 +106977,7 @@
     call$1(tag) {
       return this.prototypeForTag(tag);
     },
-    $signature: 183
+    $signature: 168
   };
   A._Record.prototype = {
     get$runtimeType(_) {
@@ -107697,13 +107707,13 @@
     call$0() {
       this.callback.call$0();
     },
-    $signature: 12
+    $signature: 13
   };
   A._AsyncRun__scheduleImmediateWithSetImmediate_internalCallback.prototype = {
     call$0() {
       this.callback.call$0();
     },
-    $signature: 12
+    $signature: 13
   };
   A._TimerImpl.prototype = {
     _TimerImpl$2(milliseconds, callback) {
@@ -107757,7 +107767,7 @@
       t1._tick = tick;
       _this.callback.call$1(t1);
     },
-    $signature: 12
+    $signature: 13
   };
   A._AsyncAwaitCompleter.prototype = {
     complete$1(_, value) {
@@ -107832,7 +107842,7 @@
     call$0() {
       A.scheduleMicrotask(new A._AsyncStarStreamController__resumeBody_closure(this.body));
     },
-    $signature: 12
+    $signature: 13
   };
   A._AsyncStarStreamController__resumeBody_closure.prototype = {
     call$0() {
@@ -108367,7 +108377,7 @@
       } else if (t2 === 0 && !_this.eagerError)
         _this._future._completeError$2(_this.error._readLocal$0(), _this.stackTrace._readLocal$0());
     },
-    $signature: 49
+    $signature: 52
   };
   A.Future_wait_closure.prototype = {
     call$1(value) {
@@ -108402,7 +108412,7 @@
       if ((t1.future._state & 30) === 0)
         t1.completeError$2(error, stack);
     },
-    $signature: 49
+    $signature: 52
   };
   A.Future_forEach_closure.prototype = {
     call$0() {
@@ -108744,7 +108754,7 @@
     call$2(error, stackTrace) {
       this.$this._completeError$2(error, stackTrace);
     },
-    $signature: 72
+    $signature: 66
   };
   A._Future__chainForeignFuture_closure1.prototype = {
     call$0() {
@@ -108809,7 +108819,7 @@
     call$1(_) {
       return this.originalSource;
     },
-    $signature: 486
+    $signature: 483
   };
   A._Future__propagateToListeners_handleValueCallback.prototype = {
     call$0() {
@@ -108927,7 +108937,7 @@
           t1._closeUnchecked$0();
       }
     },
-    $signature: 49
+    $signature: 52
   };
   A.Stream_Stream$fromIterable_closure.prototype = {
     call$1(controller) {
@@ -109372,13 +109382,13 @@
       t1._addError$2(e, s);
       t1._close$0();
     },
-    $signature: 72
+    $signature: 66
   };
   A._AddStreamState_cancel_closure.prototype = {
     call$0() {
       this.$this.addStreamFuture._asyncComplete$1(null);
     },
-    $signature: 12
+    $signature: 13
   };
   A._StreamControllerAddStreamState.prototype = {};
   A._BufferingStreamSubscription.prototype = {
@@ -109947,7 +109957,7 @@
     call$2(error, stackTrace) {
       A._cancelAndError(this.subscription, this.future, error, stackTrace);
     },
-    $signature: 49
+    $signature: 52
   };
   A._cancelAndValue_closure.prototype = {
     call$0() {
@@ -110614,7 +110624,7 @@
     call$1(v) {
       return this.K._is(v);
     },
-    $signature: 113
+    $signature: 98
   };
   A._HashMapKeyIterable.prototype = {
     get$length(_) {
@@ -110703,7 +110713,7 @@
     call$1(v) {
       return this.K._is(v);
     },
-    $signature: 113
+    $signature: 98
   };
   A._HashSet.prototype = {
     _newSet$0() {
@@ -111138,7 +111148,7 @@
     call$2(k, v) {
       this.result.$indexSet(0, this.K._as(k), this.V._as(v));
     },
-    $signature: 85
+    $signature: 81
   };
   A.LinkedList.prototype = {
     remove$1(_, entry) {
@@ -111718,7 +111728,7 @@
       t1._contents = t2 + ": ";
       t1._contents += A.S(v);
     },
-    $signature: 180
+    $signature: 208
   };
   A.UnmodifiableMapBase.prototype = {};
   A._MapBaseValueIterable.prototype = {
@@ -112679,7 +112689,7 @@
     call$1(a) {
       return this.K._is(a);
     },
-    $signature: 113
+    $signature: 98
   };
   A._SplayTreeIterator.prototype = {
     get$current(_) {
@@ -112947,7 +112957,7 @@
     call$1(v) {
       return this.E._is(v);
     },
-    $signature: 113
+    $signature: 98
   };
   A.SplayTreeSet__newSet_closure.prototype = {
     call$2(a, b) {
@@ -113010,7 +113020,7 @@
       map._original = t1;
       return map;
     },
-    $signature: 42
+    $signature: 44
   };
   A._JsonMap.prototype = {
     $index(_, key) {
@@ -113133,7 +113143,7 @@
     call$1(each) {
       return this.$this.$index(0, each);
     },
-    $signature: 183
+    $signature: 168
   };
   A._JsonMapKeyIterable.prototype = {
     get$length(_) {
@@ -113180,7 +113190,7 @@
       }
       return null;
     },
-    $signature: 349
+    $signature: 253
   };
   A._Utf8Decoder__decoderNonfatal_closure.prototype = {
     call$0() {
@@ -113192,7 +113202,7 @@
       }
       return null;
     },
-    $signature: 349
+    $signature: 253
   };
   A._UnicodeSubsetEncoder.prototype = {
     convert$1(string) {
@@ -113776,7 +113786,7 @@
       t2.i = i + 1;
       t1[i] = value;
     },
-    $signature: 180
+    $signature: 208
   };
   A._JsonStringStringifier.prototype = {
     get$_partialResult() {
@@ -114247,7 +114257,7 @@
       t1._contents += A.Error_safeToString(value);
       t2.comma = ", ";
     },
-    $signature: 512
+    $signature: 509
   };
   A._Uri__makeQueryFromParameters_closure.prototype = {
     call$2(key, value) {
@@ -114267,7 +114277,7 @@
             A._asStringQ(value);
         }
     },
-    $signature: 43
+    $signature: 41
   };
   A.DateTime.prototype = {
     get$timeZoneOffset() {
@@ -114373,7 +114383,7 @@
         return 0;
       return A.int_parse(matched, null);
     },
-    $signature: 347
+    $signature: 257
   };
   A.DateTime_parse_parseMilliAndMicroseconds.prototype = {
     call$1(matched) {
@@ -114387,7 +114397,7 @@
       }
       return result;
     },
-    $signature: 347
+    $signature: 257
   };
   A.Duration.prototype = {
     $add(_, other) {
@@ -116384,19 +116394,19 @@
       }
       return map;
     },
-    $signature: 526
+    $signature: 523
   };
   A.Uri__parseIPv4Address_error.prototype = {
     call$2(msg, position) {
       throw A.wrapException(A.FormatException$("Illegal IPv4 address, " + msg, this.host, position));
     },
-    $signature: 527
+    $signature: 526
   };
   A.Uri_parseIPv6Address_error.prototype = {
     call$2(msg, position) {
       throw A.wrapException(A.FormatException$("Illegal IPv6 address, " + msg, this.host, position));
     },
-    $signature: 528
+    $signature: 527
   };
   A.Uri_parseIPv6Address_parseHex.prototype = {
     call$2(start, end) {
@@ -116408,7 +116418,7 @@
         this.error.call$2("each part must be in the range of `0x0..0xFFFF`", start);
       return value;
     },
-    $signature: 346
+    $signature: 265
   };
   A._Uri.prototype = {
     get$_text() {
@@ -116777,7 +116787,7 @@
         t1._contents += A._Uri__uriEncode(B.List_M1A, value, B.C_Utf8Codec, true);
       }
     },
-    $signature: 537
+    $signature: 536
   };
   A._Uri__makeQueryFromParametersDefault_closure.prototype = {
     call$2(key, value) {
@@ -116788,7 +116798,7 @@
         for (t1 = J.get$iterator$ax(value), t2 = this.writeParameter; t1.moveNext$0();)
           t2.call$2(key, t1.get$current(t1));
     },
-    $signature: 43
+    $signature: 41
   };
   A._Uri__splitQueryStringAll_parsePair.prototype = {
     call$3(start, equalsIndex, end) {
@@ -116806,7 +116816,7 @@
       }
       J.add$1$ax(this.result.putIfAbsent$2(0, key, A.core__Uri__createList$closure()), value);
     },
-    $signature: 545
+    $signature: 543
   };
   A.UriData.prototype = {
     get$uri() {
@@ -116837,7 +116847,7 @@
       B.NativeUint8List_methods.fillRange$3(t1, 0, 96, defaultTransition);
       return t1;
     },
-    $signature: 549
+    $signature: 545
   };
   A._createTables_setChars.prototype = {
     call$3(target, chars, transition) {
@@ -116845,7 +116855,7 @@
       for (t1 = chars.length, i = 0; i < t1; ++i)
         target[chars.charCodeAt(i) ^ 96] = transition;
     },
-    $signature: 344
+    $signature: 268
   };
   A._createTables_setRange.prototype = {
     call$3(target, range, transition) {
@@ -116853,7 +116863,7 @@
       for (i = range.charCodeAt(0), n = range.charCodeAt(1); i <= n; ++i)
         target[(i ^ 96) >>> 0] = transition;
     },
-    $signature: 344
+    $signature: 268
   };
   A._SimpleUri.prototype = {
     get$hasScheme() {
@@ -117313,7 +117323,7 @@
     call$1(value) {
       this.completer.complete$1(0, value);
     },
-    $signature: 551
+    $signature: 550
   };
   A.CharacterData.prototype = {
     get$length(receiver) {
@@ -118009,7 +118019,7 @@
       else
         t3.completeError$1(e);
     },
-    $signature: 201
+    $signature: 198
   };
   A.HttpRequestEventTarget.prototype = {};
   A.IFrameElement.prototype = {
@@ -118121,13 +118131,13 @@
     call$2(k, v) {
       return this.keys.push(k);
     },
-    $signature: 43
+    $signature: 41
   };
   A.MidiInputMap_values_closure.prototype = {
     call$2(k, v) {
       return this.values.push(v);
     },
-    $signature: 43
+    $signature: 41
   };
   A.MidiOutputMap.prototype = {
     containsKey$1(receiver, key) {
@@ -118190,13 +118200,13 @@
     call$2(k, v) {
       return this.keys.push(k);
     },
-    $signature: 43
+    $signature: 41
   };
   A.MidiOutputMap_values_closure.prototype = {
     call$2(k, v) {
       return this.values.push(v);
     },
-    $signature: 43
+    $signature: 41
   };
   A.MidiPort.prototype = {
     get$name(receiver) {
@@ -118648,13 +118658,13 @@
     call$2(k, v) {
       return this.keys.push(k);
     },
-    $signature: 43
+    $signature: 41
   };
   A.RtcStatsReport_values_closure.prototype = {
     call$2(k, v) {
       return this.values.push(v);
     },
-    $signature: 43
+    $signature: 41
   };
   A.SelectElement.prototype = {
     get$length(receiver) {
@@ -118878,13 +118888,13 @@
     call$2(k, v) {
       return this.keys.push(k);
     },
-    $signature: 202
+    $signature: 194
   };
   A.Storage_values_closure.prototype = {
     call$2(k, v) {
       return this.values.push(v);
     },
-    $signature: 202
+    $signature: 194
   };
   A.StyleSheet.prototype = {$isStyleSheet: 1};
   A.TextAreaElement.prototype = {
@@ -119570,13 +119580,13 @@
     call$1(e) {
       return this.onData.call$1(e);
     },
-    $signature: 52
+    $signature: 51
   };
   A._EventStreamSubscription_onData_closure0.prototype = {
     call$1(e) {
       return this.handleData.call$1(e);
     },
-    $signature: 52
+    $signature: 51
   };
   A.ImmutableListMixin.prototype = {
     get$iterator(receiver) {
@@ -119757,7 +119767,7 @@
       this.map.$indexSet(0, key, t1);
       return t1;
     },
-    $signature: 584
+    $signature: 583
   };
   A._AcceptStructuredCloneDart2Js.prototype = {
     forEachJsField$2(object, action) {
@@ -119860,19 +119870,19 @@
     call$1(n) {
       return type$.Element._is(n);
     },
-    $signature: 605
+    $signature: 602
   };
   A.FilteredElementList__iterable_closure0.prototype = {
     call$1(n) {
       return type$.Element._as(n);
     },
-    $signature: 609
+    $signature: 605
   };
   A.FilteredElementList_removeRange_closure.prototype = {
     call$1(el) {
       return J.remove$0$ax(el);
     },
-    $signature: 625
+    $signature: 624
   };
   A.Database.prototype = {
     get$name(receiver) {
@@ -119967,7 +119977,7 @@
       A._checkForErrorResponse(response, "Cannot retrieve length of file", this.$this._io$_path);
       return response;
     },
-    $signature: 134
+    $signature: 121
   };
   A.FileSystemEntity.prototype = {};
   A.JsObject__convertDataTree__convert.prototype = {
@@ -119992,7 +120002,7 @@
       } else
         return A._convertToJS(o);
     },
-    $signature: 663
+    $signature: 657
   };
   A._convertToJS_closure.prototype = {
     call$1(o) {
@@ -120004,31 +120014,31 @@
       A._defineProperty(jsFunction, $.$get$DART_CLOSURE_PROPERTY_NAME(), o);
       return jsFunction;
     },
-    $signature: 42
+    $signature: 44
   };
   A._convertToJS_closure0.prototype = {
     call$1(o) {
       return new this.ctor(o);
     },
-    $signature: 42
+    $signature: 44
   };
   A._wrapToDart_closure.prototype = {
     call$1(o) {
       return new A.JsFunction(o);
     },
-    $signature: 668
+    $signature: 663
   };
   A._wrapToDart_closure0.prototype = {
     call$1(o) {
       return new A.JsArray(o, type$.JsArray_dynamic);
     },
-    $signature: 675
+    $signature: 671
   };
   A._wrapToDart_closure1.prototype = {
     call$1(o) {
       return new A.JsObject(o);
     },
-    $signature: 692
+    $signature: 688
   };
   A.JsObject.prototype = {
     $index(_, property) {
@@ -120164,7 +120174,7 @@
       } else
         return o;
     },
-    $signature: 136
+    $signature: 134
   };
   A.promiseToFuture_closure.prototype = {
     call$1(r) {
@@ -120223,7 +120233,7 @@
       }
       return o;
     },
-    $signature: 136
+    $signature: 134
   };
   A.NullRejectionException.prototype = {
     toString$0(_) {
@@ -120822,13 +120832,13 @@
     call$0() {
       return new A._Channel(A.ListQueue$(1, type$._StoredMessage), 1);
     },
-    $signature: 336
+    $signature: 301
   };
   A.ChannelBuffers_setListener_closure.prototype = {
     call$0() {
       return new A._Channel(A.ListQueue$(1, type$._StoredMessage), 1);
     },
-    $signature: 336
+    $signature: 301
   };
   A.OffsetBase.prototype = {
     $lt(_, other) {
@@ -121311,13 +121321,13 @@
       }
       return "";
     },
-    $signature: 80
+    $signature: 75
   };
   A.KeyData__quotedCharCode_closure.prototype = {
     call$1(code) {
       return B.JSString_methods.padLeft$2(B.JSInt_methods.toRadixString$1(code, 16), 2, "0");
     },
-    $signature: 208
+    $signature: 201
   };
   A.Color.prototype = {
     computeLuminance$0() {
@@ -121850,7 +121860,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 67
+    $signature: 72
   };
   A.BrowserPlatformLocation.prototype = {
     getOrCreateDomEventListener$1(fn) {
@@ -121861,7 +121871,7 @@
     call$0() {
       return type$.JavaScriptFunction._as(A.allowInterop(this.fn));
     },
-    $signature: 190
+    $signature: 157
   };
   A.HashUrlStrategy.prototype = {
     addPopStateListener$1(fn) {
@@ -122021,13 +122031,13 @@
     call$2(k, v) {
       return this.keys.push(k);
     },
-    $signature: 43
+    $signature: 41
   };
   A.AudioParamMap_values_closure.prototype = {
     call$2(k, v) {
       return this.values.push(v);
     },
-    $signature: 43
+    $signature: 41
   };
   A.AudioScheduledSourceNode.prototype = {};
   A.AudioTrackList.prototype = {
@@ -123875,7 +123885,7 @@
   A._FlatMapStreamTransformer_bind___closure.prototype = {
     call$1(_) {
     },
-    $signature: 334
+    $signature: 317
   };
   A.BlocBase.prototype = {
     get$_stateController() {
@@ -124677,7 +124687,7 @@
     call$1(view) {
       return view.graphicsFactory = this.graphicsFactory;
     },
-    $signature: 55
+    $signature: 57
   };
   A.BaseChart_getSelectionModel_closure.prototype = {
     call$0() {
@@ -124695,14 +124705,14 @@
     call$1(rendererId) {
       return this.$this.getSeriesRenderer$1(rendererId)._drawAreaBounds.containsPoint$1(0, this.chartPosition);
     },
-    $signature: 41
+    $signature: 42
   };
   A.BaseChart_getNearestDatumDetailPerSeries_closure.prototype = {
     call$1(rendererId) {
       var _this = this;
       B.JSArray_methods.addAll$1(_this.details, _this.$this.getSeriesRenderer$1(rendererId).getNearestDatumDetailPerSeries$5$selectExactEventLocation$selectOverlappingPoints(_this.drawAreaPoint, true, _this.boundsOverride, false, false));
     },
-    $signature: 37
+    $signature: 36
   };
   A.BaseChart_getNearestDatumDetailPerSeries_closure0.prototype = {
     call$2(a, b) {
@@ -124794,7 +124804,7 @@
       this.rendererToSeriesList.$indexSet(0, rendererId, t1);
       return t1;
     },
-    $signature: 37
+    $signature: 36
   };
   A.BaseChart_preprocessSeries_closure1.prototype = {
     call$2(rendererId, seriesList) {
@@ -124821,7 +124831,7 @@
       t1 = t1.get$animatingThisDraw() ? t1.animationPercent : 1;
       view.paint$2(this.canvas, t1);
     },
-    $signature: 55
+    $signature: 57
   };
   A.BaseChart_fireOnDraw_closure.prototype = {
     call$1(listener) {
@@ -125352,7 +125362,7 @@
       t2.toString;
       return B.JSInt_methods.compareTo$1(t1, t2);
     },
-    $signature: 331
+    $signature: 326
   };
   A.LayoutManagerImpl_positionOrderedViews_closure.prototype = {
     call$2(v1, v2) {
@@ -125363,13 +125373,13 @@
       t2.toString;
       return B.JSInt_methods.compareTo$1(t1, t2);
     },
-    $signature: 331
+    $signature: 326
   };
   A.LayoutManagerImpl_drawableLayoutAreaBounds_closure.prototype = {
     call$1(view) {
       return true;
     },
-    $signature: 387
+    $signature: 327
   };
   A.LayoutManagerImpl_layout_closure.prototype = {
     call$1(view) {
@@ -125378,7 +125388,7 @@
       view._drawAreaBounds = t1;
       return null;
     },
-    $signature: 55
+    $signature: 57
   };
   A.LayoutManagerImpl__viewsForPositions_closure.prototype = {
     call$1(view) {
@@ -125391,7 +125401,7 @@
         t1 = true;
       return t1;
     },
-    $signature: 387
+    $signature: 327
   };
   A._MeasuredSizes.prototype = {};
   A.SizeList.prototype = {
@@ -125460,7 +125470,7 @@
       t1.preferredSizes.add$1(0, 0);
       t1.minimumSizes.add$1(0, 0);
     },
-    $signature: 55
+    $signature: 57
   };
   A.LeftMarginLayoutStrategy.prototype = {
     layout$4(views, measuredSizes, fullBounds, drawAreaBounds) {
@@ -125484,7 +125494,7 @@
       view._drawAreaBounds = _this.drawAreaBounds;
       ++t1.i;
     },
-    $signature: 55
+    $signature: 57
   };
   A.RightMarginLayoutStrategy.prototype = {
     layout$4(views, measuredSizes, fullBounds, drawAreaBounds) {
@@ -125508,7 +125518,7 @@
       view._drawAreaBounds = _this.drawAreaBounds;
       ++t1.i;
     },
-    $signature: 55
+    $signature: 57
   };
   A.HorizontalMarginStrategy.prototype = {
     measure$4$fullWidth$maxHeight$width(_, views, fullWidth, maxHeight, width) {
@@ -125538,7 +125548,7 @@
       t1.preferredSizes.add$1(0, 0);
       t1.minimumSizes.add$1(0, 0);
     },
-    $signature: 55
+    $signature: 57
   };
   A.TopMarginLayoutStrategy.prototype = {
     layout$4(views, measuredSizes, fullBounds, drawAreaBounds) {
@@ -125562,7 +125572,7 @@
       view._drawAreaBounds = _this.drawAreaBounds;
       ++t1.i;
     },
-    $signature: 55
+    $signature: 57
   };
   A.BottomMarginLayoutStrategy.prototype = {
     layout$4(views, measuredSizes, fullBounds, drawAreaBounds) {
@@ -125586,7 +125596,7 @@
       view._drawAreaBounds = _this.drawAreaBounds;
       ++t1.i;
     },
-    $signature: 55
+    $signature: 57
   };
   A.LayoutPosition.prototype = {
     _enumToString$0() {
@@ -125855,7 +125865,7 @@
     call$1(index) {
       return this.colorPalette[index];
     },
-    $signature: 328
+    $signature: 336
   };
   A.ArcRendererConfig.prototype = {};
   A.ArcRendererElementList.prototype = {};
@@ -126139,7 +126149,7 @@
     call$1(_) {
       return false;
     },
-    $signature: 199
+    $signature: 179
   };
   A.MaterialPalette__orderedPalettes_closure.prototype = {
     call$0() {
@@ -126311,12 +126321,12 @@
   A.Performance_time_closure.prototype = {
     call$1(_) {
     },
-    $signature: 37
+    $signature: 36
   };
   A.Performance_timeEnd_closure.prototype = {
     call$1(_) {
     },
-    $signature: 37
+    $signature: 36
   };
   A.ProxyGestureListener.prototype = {
     onLongPress$1(localPosition) {
@@ -126372,7 +126382,7 @@
       t1 = t1 == null ? null : t1.call$1(this.localPosition);
       return t1 == null ? false : t1;
     },
-    $signature: 107
+    $signature: 100
   };
   A.ProxyGestureListener_onTap_closure.prototype = {
     call$1(listener) {
@@ -126380,7 +126390,7 @@
       t1 = t1 == null ? null : t1.call$1(this.localPosition);
       return t1 == null ? false : t1;
     },
-    $signature: 107
+    $signature: 100
   };
   A.ProxyGestureListener_onDragStart_closure.prototype = {
     call$1(listener) {
@@ -126388,7 +126398,7 @@
       t1 = t1 == null ? null : t1.call$1(this.localPosition);
       return t1 == null ? false : t1;
     },
-    $signature: 107
+    $signature: 100
   };
   A.ProxyGestureListener_onDragUpdate_closure.prototype = {
     call$1(listener) {
@@ -126396,7 +126406,7 @@
       t1 = t1 == null ? null : t1.call$2(this.localPosition, this.scale);
       return t1 == null ? false : t1;
     },
-    $signature: 107
+    $signature: 100
   };
   A.ProxyGestureListener_onDragEnd_closure.prototype = {
     call$1(listener) {
@@ -126404,14 +126414,14 @@
       t1 = t1 == null ? null : t1.call$3(this.localPosition, this.scale, this.pixelsPerSecond);
       return t1 == null ? false : t1;
     },
-    $signature: 107
+    $signature: 100
   };
   A.ProxyGestureListener__cancel_closure.prototype = {
     call$1(listener) {
       if (!B.JSArray_methods.contains$1(this.keep, listener))
         listener.onTapCancel.call$0();
     },
-    $signature: 327
+    $signature: 371
   };
   A.ProxyGestureListener__populateActiveListeners_closure.prototype = {
     call$1(listener) {
@@ -126424,7 +126434,7 @@
       } else if (claimed || !_this._box_0.previouslyClaimed)
         _this.$this._activeListeners.push(listener);
     },
-    $signature: 327
+    $signature: 371
   };
   A.MaterialStyle.prototype = {};
   A.StyleFactory.prototype = {};
@@ -126480,7 +126490,7 @@
     call$1(index) {
       return this.colorFn.call$2(this.data[index], index);
     },
-    $signature: 328
+    $signature: 336
   };
   A.AttributeKey.prototype = {};
   A.SeriesAttributes.prototype = {};
@@ -127026,7 +127036,7 @@
     call$1(child) {
       return child instanceof A.RenderSemanticsGestureHandler;
     },
-    $signature: 321
+    $signature: 355
   };
   A.WidgetLayoutDelegate.prototype = {
     performLayout$1(size) {
@@ -127879,7 +127889,7 @@
       else
         t1.setRequestHeader(key, J.toString$0$(v));
     },
-    $signature: 43
+    $signature: 41
   };
   A.BrowserHttpClientAdapter_fetch_closure0.prototype = {
     call$1(_) {
@@ -127897,7 +127907,7 @@
       t6 = A.Stream_Stream$value(body, type$.Uint8List);
       this.completer.complete$1(0, new A.ResponseBody(t1, t6, t2, t5, t3, A.LinkedHashMap_LinkedHashMap$_empty(t4, type$.dynamic)));
     },
-    $signature: 165
+    $signature: 159
   };
   A.BrowserHttpClientAdapter_fetch__closure.prototype = {
     call$2(k, v) {
@@ -127958,7 +127968,7 @@
       }
       this.watchReceiveTimeout.call$0();
     },
-    $signature: 201
+    $signature: 198
   };
   A.BrowserHttpClientAdapter_fetch_closure2.prototype = {
     call$1(_) {
@@ -127967,7 +127977,7 @@
         t1.cancel$0(0);
       this.completer.completeError$2(A.DioException_DioException$connectionError("The XMLHttpRequest onError callback was called. This typically indicates an error on the network layer.", this.options), A.StackTrace_current());
     },
-    $signature: 165
+    $signature: 159
   };
   A.BrowserHttpClientAdapter_fetch_closure3.prototype = {
     call$1(_) {
@@ -127985,25 +127995,25 @@
           t1.completeError$2(A.DioException_DioException$receiveTimeout(t2, A.Duration$(0, 0, 0, _this.xhrTimeout, 0, 0)), A.StackTrace_current());
       }
     },
-    $signature: 165
+    $signature: 159
   };
   A.BrowserHttpClientAdapter_fetch_closure4.prototype = {
     call$1(bytes) {
       return this.completer.complete$1(0, bytes);
     },
-    $signature: 320
+    $signature: 347
   };
   A.BrowserHttpClientAdapter_fetch_closure5.prototype = {
     call$2(e, s) {
       return this.completer.completeError$2(e, s);
     },
-    $signature: 49
+    $signature: 52
   };
   A.BrowserHttpClientAdapter_fetch_closure6.prototype = {
     call$0() {
       this.$this.xhrs.remove$1(0, this.xhr);
     },
-    $signature: 12
+    $signature: 13
   };
   A.DioForBrowser.prototype = {$isDio: 1};
   A._DioForBrowser_Object_DioMixin.prototype = {};
@@ -128512,7 +128522,7 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 319
+    $signature: 346
   };
   A.DioMixin_fetch_requestInterceptorWrapper__closure.prototype = {
     call$0() {
@@ -128520,13 +128530,13 @@
       this.interceptor.call$2(type$.RequestOptions._as(this.state.data), new A.RequestInterceptorHandler(new A._AsyncCompleter(t1, type$._AsyncCompleter_InterceptorState_dynamic)));
       return t1;
     },
-    $signature: 158
+    $signature: 160
   };
   A.DioMixin_fetch_responseInterceptorWrapper.prototype = {
     call$1(interceptor) {
       return new A.DioMixin_fetch_responseInterceptorWrapper_closure(this._box_0, interceptor);
     },
-    $signature: 1298
+    $signature: 1273
   };
   A.DioMixin_fetch_responseInterceptorWrapper_closure.prototype = {
     call$1(incomingState) {
@@ -128561,7 +128571,7 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 319
+    $signature: 346
   };
   A.DioMixin_fetch_responseInterceptorWrapper__closure.prototype = {
     call$0() {
@@ -128569,13 +128579,13 @@
       this.interceptor.call$2(type$.Response_dynamic._as(this.state.data), new A.ResponseInterceptorHandler(new A._AsyncCompleter(t1, type$._AsyncCompleter_InterceptorState_dynamic)));
       return t1;
     },
-    $signature: 158
+    $signature: 160
   };
   A.DioMixin_fetch_errorInterceptorWrapper.prototype = {
     call$1(interceptor) {
       return new A.DioMixin_fetch_errorInterceptorWrapper_closure(this._box_0, interceptor);
     },
-    $signature: 1320
+    $signature: 1299
   };
   A.DioMixin_fetch_errorInterceptorWrapper_closure.prototype = {
     call$1(error) {
@@ -128593,7 +128603,7 @@
           throw A.wrapException(error);
       }
     },
-    $signature: 1377
+    $signature: 1367
   };
   A.DioMixin_fetch_errorInterceptorWrapper_closure_handleError.prototype = {
     call$0() {
@@ -128620,20 +128630,20 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 158
+    $signature: 160
   };
   A.DioMixin_fetch_closure.prototype = {
     call$0() {
       return new A.InterceptorState(this._box_0.requestOptions, B.InterceptorResultType_0, type$.InterceptorState_RequestOptions);
     },
-    $signature: 1433
+    $signature: 1430
   };
   A.DioMixin_fetch_closure0.prototype = {
     call$2(reqOpt, handler) {
       this._box_0.requestOptions = reqOpt;
       this.$this._dispatchRequest$1$1(reqOpt, this.T).then$1$1(0, new A.DioMixin_fetch__closure(handler), type$.void).catchError$1(new A.DioMixin_fetch__closure0(handler));
     },
-    $signature: 153
+    $signature: 145
   };
   A.DioMixin_fetch__closure.prototype = {
     call$1(value) {
@@ -128683,7 +128693,7 @@
       }
       return false;
     },
-    $signature: 41
+    $signature: 42
   };
   A.InterceptorResultType.prototype = {
     _enumToString$0() {
@@ -128797,19 +128807,19 @@
         t2.header = t2.header + "\r\n" + key + ": " + t3;
       }
     },
-    $signature: 316
+    $signature: 300
   };
   A.FormData_finalize_writeAscii.prototype = {
     call$1(string) {
       this.controller.add$1(0, B.C_Utf8Encoder.convert$1(string));
     },
-    $signature: 37
+    $signature: 36
   };
   A.FormData_finalize_writeUtf8.prototype = {
     call$1(string) {
       return this.controller.add$1(0, B.C_Utf8Encoder.convert$1(string));
     },
-    $signature: 37
+    $signature: 36
   };
   A.FormData_finalize_writeLine.prototype = {
     call$0() {
@@ -128894,7 +128904,7 @@
       for (t1 = J.get$iterator$ax(value), t2 = this.stringBuffer, t3 = key + ": "; t1.moveNext$0();)
         t2._contents += t3 + t1.get$current(t1) + "\n";
     },
-    $signature: 316
+    $signature: 300
   };
   A.ImplyContentTypeInterceptor.prototype = {
     onRequest$2(options, handler) {
@@ -129053,7 +129063,7 @@
         return key;
       return key + "=" + A._Uri__uriEncode(B.List_M1A, J.toString$0$(value), B.C_Utf8Codec, true);
     },
-    $signature: 312
+    $signature: 287
   };
   A.Transformer_urlEncodeQueryMap_closure.prototype = {
     call$2(key, value) {
@@ -129061,7 +129071,7 @@
         return key;
       return key + "=" + A.S(value);
     },
-    $signature: 312
+    $signature: 287
   };
   A.BackgroundTransformer.prototype = {};
   A.SyncTransformer.prototype = {
@@ -129196,13 +129206,13 @@
       t1.finalLength = t1.finalLength + chunk.length;
       this.chunks.push(chunk);
     },
-    $signature: 118
+    $signature: 148
   };
   A.SyncTransformer_transformResponse_closure1.prototype = {
     call$2(error, stackTrace) {
       this.streamCompleter.completeError$2(error, stackTrace);
     },
-    $signature: 72
+    $signature: 66
   };
   A.SyncTransformer_transformResponse_closure0.prototype = {
     call$0() {
@@ -129222,7 +129232,7 @@
         return value;
       return this.encodeComponent.call$1(value);
     },
-    $signature: 136
+    $signature: 134
   };
   A.encodeMap_urlEncode.prototype = {
     call$2(sub, path) {
@@ -129279,19 +129289,19 @@
       else
         t2.call$2(t3.call$1(v), t1 + _this.leftBracket + A.S(t4.call$1(k)) + _this.rightBracket);
     },
-    $signature: 85
+    $signature: 81
   };
   A.caseInsensitiveKeyMap_closure.prototype = {
     call$2(key1, key2) {
       return key1.toLowerCase() === key2.toLowerCase();
     },
-    $signature: 310
+    $signature: 263
   };
   A.caseInsensitiveKeyMap_closure0.prototype = {
     call$1(key) {
       return B.JSString_methods.get$hashCode(key.toLowerCase());
     },
-    $signature: 307
+    $signature: 250
   };
   A.Equatable.prototype = {
     $eq(_, other) {
@@ -129328,7 +129338,7 @@
     call$2(a, b) {
       return J.get$hashCode$(a) - J.get$hashCode$(b);
     },
-    $signature: 56
+    $signature: 60
   };
   A._combine_closure0.prototype = {
     call$1(key) {
@@ -129342,13 +129352,13 @@
     call$2(a, b) {
       return J.get$hashCode$(a) - J.get$hashCode$(b);
     },
-    $signature: 56
+    $signature: 60
   };
   A.mapPropsToString_closure.prototype = {
     call$1(prop) {
       return J.toString$0$(prop);
     },
-    $signature: 174
+    $signature: 190
   };
   A.AnimationStatus.prototype = {
     _enumToString$0() {
@@ -131414,7 +131424,7 @@
       var t1 = this.$this;
       return t1.setState$1(new A._PressableActionButtonState_build__closure(t1));
     },
-    $signature: 61
+    $signature: 55
   };
   A._PressableActionButtonState_build__closure.prototype = {
     call$0() {
@@ -132375,7 +132385,7 @@
       t3.toString;
       return A._wrapWithBackground(t3, t1.borderTween.transform$1(0, t2.get$value(t2)), null, A.SizedBox$(null, t1.heightTween.transform$1(0, t2.get$value(t2)), 1 / 0), false);
     },
-    $signature: 44
+    $signature: 43
   };
   A._NavigationBarComponentsTransition.prototype = {
     positionInTransitionBox$2$from(key, from) {
@@ -132690,7 +132700,7 @@
     call$0() {
       return A.CupertinoRouteTransitionMixin__isPopGestureEnabled(this.route);
     },
-    $signature: 149
+    $signature: 122
   };
   A.CupertinoRouteTransitionMixin_buildPageTransitions_closure0.prototype = {
     call$0() {
@@ -132957,7 +132967,7 @@
       t1.toString;
       return t1;
     },
-    $signature: 142
+    $signature: 141
   };
   A._CupertinoEdgeShadowDecoration_lerp_closure0.prototype = {
     call$1(color) {
@@ -132965,7 +132975,7 @@
       t1.toString;
       return t1;
     },
-    $signature: 142
+    $signature: 141
   };
   A._CupertinoEdgeShadowPainter.prototype = {
     paint$3(canvas, offset, configuration) {
@@ -133135,7 +133145,7 @@
     call$1(_) {
       return A.HapticFeedback_mediumImpact();
     },
-    $signature: 306
+    $signature: 259
   };
   A._TextSelectionHandlePainter0.prototype = {
     paint$2(canvas, size) {
@@ -133457,7 +133467,7 @@
     call$1(child) {
       return A.Center$(child, 1, 1);
     },
-    $signature: 523
+    $signature: 522
   };
   A._LeftCupertinoChevronPainter.prototype = {};
   A._RightCupertinoChevronPainter.prototype = {};
@@ -134219,7 +134229,7 @@
     call$1(color) {
       return A.CupertinoDynamicColor_maybeResolve(color, this.context);
     },
-    $signature: 305
+    $signature: 270
   };
   A.NoDefaultCupertinoThemeData.prototype = {
     resolveFrom$1(context) {
@@ -134258,7 +134268,7 @@
     call$1(color) {
       return A.CupertinoDynamicColor_maybeResolve(color, this.context);
     },
-    $signature: 305
+    $signature: 270
   };
   A._CupertinoThemeDefaults.prototype = {
     resolveFrom$2(context, resolveTextTheme) {
@@ -134283,7 +134293,7 @@
     call$1(color) {
       return color instanceof A.CupertinoDynamicColor ? color.resolveFrom$1(this.context) : color;
     },
-    $signature: 142
+    $signature: 141
   };
   A._CupertinoTextThemeDefaults.prototype = {};
   A._DefaultCupertinoTextThemeData.prototype = {
@@ -134409,7 +134419,7 @@
     call$0() {
       return null;
     },
-    $signature: 530
+    $signature: 529
   };
   A._browserPlatform_closure.prototype = {
     call$0() {
@@ -134427,7 +134437,7 @@
         return B.TargetPlatform_3;
       return B.TargetPlatform_0;
     },
-    $signature: 531
+    $signature: 530
   };
   A._ErrorDiagnostic.prototype = {
     toString$1$minLevel(_, minLevel) {
@@ -134567,25 +134577,25 @@
     call$0() {
       return J.trimLeft$0$s(this.$this.exceptionAsString$0().split("\n")[0]);
     },
-    $signature: 80
+    $signature: 75
   };
   A.FlutterErrorDetails_summary_closure.prototype = {
     call$1(node) {
       return node.get$level(node) === B.DiagnosticLevel_6;
     },
-    $signature: 532
+    $signature: 531
   };
   A.FlutterErrorDetails_summary_closure0.prototype = {
     call$0() {
       return null;
     },
-    $signature: 12
+    $signature: 13
   };
   A.FlutterErrorDetails_debugFillProperties_closure.prototype = {
     call$1(frame) {
       return frame.packageScheme === "dart";
     },
-    $signature: 533
+    $signature: 532
   };
   A.FlutterError.prototype = {
     get$message(_) {
@@ -134605,31 +134615,31 @@
     call$1(line) {
       return A.ErrorDescription$(line);
     },
-    $signature: 536
+    $signature: 533
   };
   A.FlutterError_defaultStackFilter_closure.prototype = {
     call$1(value) {
       return value + 1;
     },
-    $signature: 76
+    $signature: 78
   };
   A.FlutterError_defaultStackFilter_closure0.prototype = {
     call$1(value) {
       return value + 1;
     },
-    $signature: 76
+    $signature: 78
   };
   A.FlutterError_toString_closure.prototype = {
     call$1(node) {
       return B.JSString_methods.trimRight$0(this.renderer._debugRender$4$parentConfiguration$prefixLineOne$prefixOtherLines(node, null, "", null));
     },
-    $signature: 543
+    $signature: 537
   };
   A.debugPrintStack_closure.prototype = {
     call$1(line) {
       return B.JSString_methods.contains$1(line, "StackTrace.current") || B.JSString_methods.contains$1(line, "dart-sdk/lib/_internal") || B.JSString_methods.contains$1(line, "dart:sdk_internal");
     },
-    $signature: 41
+    $signature: 42
   };
   A.DiagnosticsStackTrace.prototype = {
     get$allowTruncate() {
@@ -134742,7 +134752,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 209
+    $signature: 197
   };
   A.BindingBase_initServiceExtensions_closure0.prototype = {
     call$1(uri) {
@@ -134765,7 +134775,7 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 300
+    $signature: 285
   };
   A.BindingBase_initServiceExtensions_closure1.prototype = {
     call$0() {
@@ -134791,7 +134801,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 209
+    $signature: 197
   };
   A.BindingBase_initServiceExtensions_closure2.prototype = {
     call$1(serverAddress) {
@@ -134814,7 +134824,7 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 300
+    $signature: 285
   };
   A.BindingBase_lockEvents_closure.prototype = {
     call$0() {
@@ -134834,7 +134844,7 @@
         }
       }
     },
-    $signature: 12
+    $signature: 13
   };
   A.BindingBase_registerBoolServiceExtension_closure.prototype = {
     call$1(parameters) {
@@ -134884,7 +134894,7 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 101
+    $signature: 103
   };
   A.BindingBase_registerNumericServiceExtension_closure.prototype = {
     call$1(parameters) {
@@ -134941,7 +134951,7 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 101
+    $signature: 103
   };
   A.BindingBase_registerStringServiceExtension_closure.prototype = {
     call$1(parameters) {
@@ -134994,7 +135004,7 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 101
+    $signature: 103
   };
   A.BindingBase_registerServiceExtension_closure.prototype = {
     call$2(method, parameters) {
@@ -135071,7 +135081,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 370
+    $signature: 246
   };
   A.BindingBase_registerServiceExtension__closure.prototype = {
     call$0() {
@@ -135398,7 +135408,7 @@
       }
       return index < t2[t1.currentChunk];
     },
-    $signature: 65
+    $signature: 73
   };
   A._NoDefaultValue.prototype = {};
   A.TextTreeRenderer.prototype = {
@@ -135633,14 +135643,14 @@
         ++t3.lines;
       }
     },
-    $signature: 299
+    $signature: 295
   };
   A.TextTreeRenderer__debugRender_closure.prototype = {
     call$1(n) {
       var t1 = n.get$level(n);
       return t1.index >= this.$this._minLevel.index;
     },
-    $signature: 563
+    $signature: 557
   };
   A.DiagnosticsNode.prototype = {
     get$level(_) {
@@ -136310,7 +136320,7 @@
     call$1(line) {
       return line.length !== 0;
     },
-    $signature: 41
+    $signature: 42
   };
   A.SynchronousFuture.prototype = {
     catchError$2$test(onError, test) {
@@ -136385,7 +136395,7 @@
         return member.toString$0(0) + " (eager winner)";
       return member.toString$0(0);
     },
-    $signature: 568
+    $signature: 563
   };
   A.GestureArenaManager.prototype = {
     add$2(_, pointer, member) {
@@ -136480,7 +136490,7 @@
     call$0() {
       return new A._GestureArena(A._setArrayType([], type$.JSArray_GestureArenaMember));
     },
-    $signature: 569
+    $signature: 568
   };
   A.GestureArenaManager__tryToResolveArena_closure.prototype = {
     call$0() {
@@ -136640,7 +136650,7 @@
     call$1(datum) {
       return datum.signalKind !== B.PointerSignalKind_4;
     },
-    $signature: 591
+    $signature: 584
   };
   A.PointerEventConverter_expand_closure0.prototype = {
     call$1(datum) {
@@ -136696,7 +136706,7 @@
           throw A.wrapException(A.StateError$("Unreachable"));
       }
     },
-    $signature: 592
+    $signature: 591
   };
   A.DragDownDetails.prototype = {
     toString$0(_) {
@@ -137726,7 +137736,7 @@
     call$1(c) {
       return B.JSNumber_methods.toStringAsPrecision$1(c, 3);
     },
-    $signature: 593
+    $signature: 592
   };
   A.LeastSquaresSolver.prototype = {
     solve$1(degree) {
@@ -138069,19 +138079,19 @@
     call$0() {
       return "Could not estimate velocity.";
     },
-    $signature: 80
+    $signature: 75
   };
   A.DragGestureRecognizer__checkEnd_closure0.prototype = {
     call$0() {
       return this.estimate.toString$0(0) + "; fling at " + this._box_0.details.velocity.toString$0(0) + ".";
     },
-    $signature: 80
+    $signature: 75
   };
   A.DragGestureRecognizer__checkEnd_closure1.prototype = {
     call$0() {
       return this.estimate.toString$0(0) + "; judged to not be a fling.";
     },
-    $signature: 80
+    $signature: 75
   };
   A.DragGestureRecognizer__checkEnd_closure2.prototype = {
     call$0() {
@@ -138387,14 +138397,14 @@
     call$0() {
       return A.LinkedHashMap_LinkedHashMap$_empty(type$.void_Function_PointerEvent, type$.nullable_Matrix4);
     },
-    $signature: 598
+    $signature: 597
   };
   A.PointerRouter__dispatchEventToRoutes_closure.prototype = {
     call$2(route, transform) {
       if (J.containsKey$1$x(this.referenceRoutes, route))
         this.$this._dispatch$3(this.event, route, transform);
     },
-    $signature: 602
+    $signature: 598
   };
   A.PointerSignalResolver.prototype = {
     register$2(_, $event, callback) {
@@ -139052,13 +139062,13 @@
     call$1(x) {
       return x._rotation;
     },
-    $signature: 297
+    $signature: 299
   };
   A.ScaleGestureRecognizer__reconfigure_closure0.prototype = {
     call$2(a, b) {
       return a + b;
     },
-    $signature: 97
+    $signature: 109
   };
   A.ScaleGestureRecognizer__reconfigure_closure1.prototype = {
     call$0() {
@@ -139132,13 +139142,13 @@
     call$1(x) {
       return x._rotation;
     },
-    $signature: 297
+    $signature: 299
   };
   A.ScaleGestureRecognizer_acceptGesture_closure0.prototype = {
     call$2(a, b) {
       return a + b;
     },
-    $signature: 97
+    $signature: 109
   };
   A.TapDownDetails.prototype = {};
   A.TapUpDetails.prototype = {};
@@ -139897,7 +139907,7 @@
     call$0() {
       return new A._CombiningGestureArenaMember(this.$this, A._setArrayType([], type$.JSArray_GestureArenaMember), this.pointer);
     },
-    $signature: 624
+    $signature: 609
   };
   A.Velocity.prototype = {
     $sub(_, other) {
@@ -140141,19 +140151,19 @@
     call$1(actionIconTheme) {
       return actionIconTheme == null ? null : actionIconTheme.backButtonIconBuilder;
     },
-    $signature: 117
+    $signature: 124
   };
   A.BackButtonIcon_build_closure0.prototype = {
     call$1(context) {
       return B.IconData_57490_MaterialIcons_null_true;
     },
-    $signature: 124
+    $signature: 126
   };
   A.BackButtonIcon_build_closure1.prototype = {
     call$1(materialLocalization) {
       return materialLocalization.get$backButtonTooltip();
     },
-    $signature: 125
+    $signature: 143
   };
   A.BackButton.prototype = {
     _onPressedCallback$1(context) {
@@ -140174,19 +140184,19 @@
     call$1(actionIconTheme) {
       return actionIconTheme == null ? null : actionIconTheme.closeButtonIconBuilder;
     },
-    $signature: 117
+    $signature: 124
   };
   A.CloseButtonIcon_build_closure0.prototype = {
     call$1(context) {
       return B.IconData_57706_MaterialIcons_null_false;
     },
-    $signature: 124
+    $signature: 126
   };
   A.CloseButtonIcon_build_closure1.prototype = {
     call$1(materialLocalization) {
       return materialLocalization.get$closeButtonTooltip();
     },
-    $signature: 125
+    $signature: 143
   };
   A.CloseButton.prototype = {
     _onPressedCallback$1(context) {
@@ -140207,19 +140217,19 @@
     call$1(actionIconTheme) {
       return actionIconTheme == null ? null : actionIconTheme.drawerButtonIconBuilder;
     },
-    $signature: 117
+    $signature: 124
   };
   A.DrawerButtonIcon_build_closure0.prototype = {
     call$1(context) {
       return B.IconData_58332_MaterialIcons_null_false;
     },
-    $signature: 124
+    $signature: 126
   };
   A.DrawerButtonIcon_build_closure1.prototype = {
     call$1(materialLocalization) {
       return materialLocalization.get$openAppDrawerTooltip();
     },
-    $signature: 125
+    $signature: 143
   };
   A.DrawerButton.prototype = {
     _onPressedCallback$1(context) {
@@ -140254,19 +140264,19 @@
     call$1(actionIconTheme) {
       return actionIconTheme == null ? null : actionIconTheme.endDrawerButtonIconBuilder;
     },
-    $signature: 117
+    $signature: 124
   };
   A.EndDrawerButtonIcon_build_closure0.prototype = {
     call$1(context) {
       return B.IconData_58332_MaterialIcons_null_false;
     },
-    $signature: 124
+    $signature: 126
   };
   A.EndDrawerButtonIcon_build_closure1.prototype = {
     call$1(materialLocalization) {
       return materialLocalization.get$openAppDrawerTooltip();
     },
-    $signature: 125
+    $signature: 143
   };
   A.EndDrawerButton.prototype = {
     _onPressedCallback$1(context) {
@@ -140344,20 +140354,20 @@
     call$1(buttonItem) {
       return A.CupertinoTextSelectionToolbarButton$buttonItem(buttonItem);
     },
-    $signature: 628
+    $signature: 627
   };
   A.AdaptiveTextSelectionToolbar_getAdaptiveButtons_closure0.prototype = {
     call$1(buttonItem) {
       var t1 = this.context;
       return A.DesktopTextSelectionToolbarButton$text(t1, buttonItem.onPressed, A.AdaptiveTextSelectionToolbar_getButtonLabel(t1, buttonItem));
     },
-    $signature: 637
+    $signature: 628
   };
   A.AdaptiveTextSelectionToolbar_getAdaptiveButtons_closure1.prototype = {
     call$1(buttonItem) {
       return A.CupertinoDesktopTextSelectionToolbarButton$text(buttonItem.onPressed, A.AdaptiveTextSelectionToolbar_getButtonLabel(this.context, buttonItem));
     },
-    $signature: 650
+    $signature: 637
   };
   A.ThemeMode.prototype = {
     _enumToString$0() {
@@ -140373,7 +140383,7 @@
     call$2(begin, end) {
       return new A.MaterialRectArcTween(begin, end);
     },
-    $signature: 651
+    $signature: 650
   };
   A.MaterialScrollBehavior.prototype = {
     getPlatform$1(context) {
@@ -140497,7 +140507,7 @@
     call$1(context) {
       return this.$this._widget.builder.call$2(context, this.child);
     },
-    $signature: 23
+    $signature: 22
   };
   A._MaterialAppState_build_closure.prototype = {
     call$2(node, $event) {
@@ -140505,7 +140515,7 @@
         return B.KeyEventResult_1;
       return A.Tooltip_dismissAllToolTips() ? B.KeyEventResult_0 : B.KeyEventResult_1;
     },
-    $signature: 184
+    $signature: 181
   };
   A._ToolbarContainerLayout.prototype = {
     getConstraintsForChild$1(constraints) {
@@ -140553,7 +140563,7 @@
           return t1 == null || t1.length < 2;
       }
     },
-    $signature: 149
+    $signature: 122
   };
   A._AppBarState.prototype = {
     didChangeDependencies$0() {
@@ -141062,7 +141072,7 @@
       t1.toString;
       return 2 * Math.asin(this.distanceFromAtoB / (2 * t1));
     },
-    $signature: 213
+    $signature: 180
   };
   A._CornerId.prototype = {
     _enumToString$0() {
@@ -141174,7 +141184,7 @@
       $length = delta.get$distance();
       return t2._dx * delta._dx / $length + t2._dy * delta._dy / $length;
     },
-    $signature: 685
+    $signature: 675
   };
   A.BadgeThemeData.prototype = {
     get$hashCode(_) {
@@ -141929,7 +141939,7 @@
     call$1(getProperty) {
       return this.call$1$1(getProperty, type$.dynamic);
     },
-    $signature: 687
+    $signature: 685
   };
   A._ButtonStyleState_build_resolve.prototype = {
     call$1$1(getProperty, $T) {
@@ -141938,7 +141948,7 @@
     call$1(getProperty) {
       return this.call$1$1(getProperty, type$.dynamic);
     },
-    $signature: 688
+    $signature: 687
   };
   A._ButtonStyleState_build_resolve_closure.prototype = {
     call$1(style) {
@@ -141953,13 +141963,13 @@
     call$1(style) {
       return style == null ? null : style.get$elevation(style);
     },
-    $signature: 296
+    $signature: 322
   };
   A._ButtonStyleState_build_closure0.prototype = {
     call$1(style) {
       return style == null ? null : style.get$textStyle();
     },
-    $signature: 693
+    $signature: 692
   };
   A._ButtonStyleState_build_closure1.prototype = {
     call$1(style) {
@@ -141989,25 +141999,25 @@
     call$1(style) {
       return style == null ? null : style.get$padding(style);
     },
-    $signature: 698
+    $signature: 696
   };
   A._ButtonStyleState_build_closure6.prototype = {
     call$1(style) {
       return style == null ? null : style.get$minimumSize();
     },
-    $signature: 175
+    $signature: 178
   };
   A._ButtonStyleState_build_closure7.prototype = {
     call$1(style) {
       return style == null ? null : style.fixedSize;
     },
-    $signature: 175
+    $signature: 178
   };
   A._ButtonStyleState_build_closure8.prototype = {
     call$1(style) {
       return style == null ? null : style.get$maximumSize();
     },
-    $signature: 175
+    $signature: 178
   };
   A._ButtonStyleState_build_closure9.prototype = {
     call$1(style) {
@@ -142019,25 +142029,25 @@
     call$1(style) {
       return style == null ? null : style.get$iconSize();
     },
-    $signature: 296
+    $signature: 322
   };
   A._ButtonStyleState_build_closure11.prototype = {
     call$1(style) {
       return style == null ? null : style.get$side();
     },
-    $signature: 700
+    $signature: 699
   };
   A._ButtonStyleState_build_closure12.prototype = {
     call$1(style) {
       return style == null ? null : style.get$shape(style);
     },
-    $signature: 701
+    $signature: 700
   };
   A._ButtonStyleState_build_closure20.prototype = {
     call$1(states) {
       return this.effectiveValue.call$1$1(new A._ButtonStyleState_build__closure0(states), type$.MouseCursor);
     },
-    $signature: 705
+    $signature: 701
   };
   A._ButtonStyleState_build__closure0.prototype = {
     call$1(style) {
@@ -142050,7 +142060,7 @@
       }
       return t1;
     },
-    $signature: 710
+    $signature: 705
   };
   A._ButtonStyleState_build_closure21.prototype = {
     call$1(states) {
@@ -142069,13 +142079,13 @@
       }
       return t1;
     },
-    $signature: 717
+    $signature: 713
   };
   A._ButtonStyleState_build_closure13.prototype = {
     call$1(style) {
       return style == null ? null : style.get$visualDensity();
     },
-    $signature: 721
+    $signature: 717
   };
   A._ButtonStyleState_build_closure14.prototype = {
     call$1(style) {
@@ -143071,7 +143081,7 @@
     call$1(getProperty) {
       return this.call$1$1(getProperty, type$.dynamic);
     },
-    $signature: 169
+    $signature: 173
   };
   A._DayState_build_resolve.prototype = {
     call$1$2(getProperty, states, $T) {
@@ -143080,7 +143090,7 @@
     call$2(getProperty, states) {
       return this.call$1$2(getProperty, states, type$.dynamic);
     },
-    $signature: 167
+    $signature: 172
   };
   A._DayState_build_resolve_closure.prototype = {
     call$1(theme) {
@@ -143100,7 +143110,7 @@
         t1 = theme.get$dayForegroundColor();
       return t1;
     },
-    $signature: 87
+    $signature: 85
   };
   A._DayState_build_closure0.prototype = {
     call$1(theme) {
@@ -143111,7 +143121,7 @@
         t1 = theme.get$dayBackgroundColor();
       return t1;
     },
-    $signature: 87
+    $signature: 85
   };
   A._DayState_build_closure2.prototype = {
     call$1(states) {
@@ -143125,7 +143135,7 @@
       t1 = t1 == null ? null : t1.resolve$1(this.states);
       return t1;
     },
-    $signature: 164
+    $signature: 209
   };
   A._DayState_build_closure1.prototype = {
     call$0() {
@@ -143273,7 +143283,7 @@
     call$1(getProperty) {
       return this.call$1$1(getProperty, type$.dynamic);
     },
-    $signature: 169
+    $signature: 173
   };
   A._YearPickerState__buildYearItem_resolve.prototype = {
     call$1$2(getProperty, states, $T) {
@@ -143282,7 +143292,7 @@
     call$2(getProperty, states) {
       return this.call$1$2(getProperty, states, type$.dynamic);
     },
-    $signature: 167
+    $signature: 172
   };
   A._YearPickerState__buildYearItem_resolve_closure.prototype = {
     call$1(theme) {
@@ -143302,7 +143312,7 @@
         t1 = theme.get$yearForegroundColor();
       return t1;
     },
-    $signature: 87
+    $signature: 85
   };
   A._YearPickerState__buildYearItem_closure0.prototype = {
     call$1(theme) {
@@ -143313,7 +143323,7 @@
         t1 = theme.get$yearBackgroundColor();
       return t1;
     },
-    $signature: 87
+    $signature: 85
   };
   A._YearPickerState__buildYearItem_closure2.prototype = {
     call$1(states) {
@@ -143327,7 +143337,7 @@
       t1 = t1 == null ? null : t1.resolve$1(this.states);
       return t1;
     },
-    $signature: 164
+    $signature: 209
   };
   A._YearPickerState__buildYearItem_closure1.prototype = {
     call$0() {
@@ -143898,7 +143908,7 @@
       t2 = t1._onSurfaceVariant;
       return new A.BorderSide(t2 == null ? t1.onSurface : t2, 2, B.BorderStyle_1, -1);
     },
-    $signature: 161
+    $signature: 207
   };
   A._CheckboxDefaultsM3_fillColor_closure.prototype = {
     call$1(states) {
@@ -143917,7 +143927,7 @@
       }
       return B.Color_0;
     },
-    $signature: 20
+    $signature: 19
   };
   A._CheckboxDefaultsM3_checkColor_closure.prototype = {
     call$1(states) {
@@ -143933,7 +143943,7 @@
       }
       return B.Color_0;
     },
-    $signature: 20
+    $signature: 19
   };
   A._CheckboxDefaultsM3_overlayColor_closure.prototype = {
     call$1(states) {
@@ -143981,7 +143991,7 @@
       }
       return B.Color_0;
     },
-    $signature: 20
+    $signature: 19
   };
   A.__CheckboxState_State_TickerProviderStateMixin.prototype = {
     activate$0() {
@@ -145674,19 +145684,19 @@
     call$1(row) {
       return false;
     },
-    $signature: 160
+    $signature: 193
   };
   A.DataTable_build_closure0.prototype = {
     call$1(row) {
       return false;
     },
-    $signature: 160
+    $signature: 193
   };
   A.DataTable_build_closure1.prototype = {
     call$1(row) {
       return false;
     },
-    $signature: 160
+    $signature: 193
   };
   A.DataTable_build_closure2.prototype = {
     call$1(index) {
@@ -145738,7 +145748,7 @@
     call$1(checked) {
       return this.$this._handleSelectAll$2(checked, this.someChecked);
     },
-    $signature: 71
+    $signature: 65
   };
   A.TableRowInkWell.prototype = {
     getRectCallback$1(referenceBox) {
@@ -145780,7 +145790,7 @@
       }
       return B.Rect_0_0_0_0;
     },
-    $signature: 156
+    $signature: 214
   };
   A._NullTableColumnWidth.prototype = {
     maxIntrinsicWidth$2(cells, containerWidth) {
@@ -145882,7 +145892,7 @@
       var t1 = this.builder.call$2(context, this._box_0.dialog);
       return t1;
     },
-    $signature: 23
+    $signature: 22
   };
   A.DatePickerDialog.prototype = {
     createState$0() {
@@ -146312,7 +146322,7 @@
       var t1 = this._box_0.dialog;
       return t1;
     },
-    $signature: 23
+    $signature: 22
   };
   A.DateRangePickerDialog.prototype = {
     createState$0() {
@@ -146708,7 +146718,7 @@
     call$1(context) {
       return this._box_0.contents;
     },
-    $signature: 23
+    $signature: 22
   };
   A._CalendarRangePickerDialog.prototype = {
     build$1(context) {
@@ -147401,7 +147411,7 @@
     call$1(getProperty) {
       return this.call$1$1(getProperty, type$.dynamic);
     },
-    $signature: 169
+    $signature: 173
   };
   A._DayItemState_build_resolve.prototype = {
     call$1$2(getProperty, states, $T) {
@@ -147410,7 +147420,7 @@
     call$2(getProperty, states) {
       return this.call$1$2(getProperty, states, type$.dynamic);
     },
-    $signature: 167
+    $signature: 172
   };
   A._DayItemState_build_resolve_closure.prototype = {
     call$1(theme) {
@@ -147426,14 +147436,14 @@
       var t1 = theme.get$dayForegroundColor();
       return t1;
     },
-    $signature: 87
+    $signature: 85
   };
   A._DayItemState_build_closure0.prototype = {
     call$1(theme) {
       var t1 = theme.get$dayBackgroundColor();
       return t1;
     },
-    $signature: 87
+    $signature: 85
   };
   A._DayItemState_build_closure2.prototype = {
     call$1(states) {
@@ -147453,7 +147463,7 @@
       }
       return t1;
     },
-    $signature: 164
+    $signature: 209
   };
   A._DayItemState_build_closure1.prototype = {
     call$0() {
@@ -147567,7 +147577,7 @@
         B.JSArray_methods.addAll$1(t3, A._setArrayType([A.Expanded$(_this.$this.picker, 1), _this.actions], t2));
       return A.Column$(t3, B.CrossAxisAlignment_3, B.MainAxisAlignment_0, B.MainAxisSize_0);
     },
-    $signature: 155
+    $signature: 200
   };
   A._InputDateRangePicker.prototype = {
     createState$0() {
@@ -147754,14 +147764,14 @@
       if (!property._restoration0$_disposed)
         property.removeListener$1(0, listener);
     },
-    $signature: 60
+    $signature: 59
   };
   A.__DateRangePickerDialogState_State_RestorationMixin_dispose_closure.prototype = {
     call$2(property, listener) {
       if (!property._restoration0$_disposed)
         property.removeListener$1(0, listener);
     },
-    $signature: 60
+    $signature: 59
   };
   A.__DatePickerDialogState_State_RestorationMixin.prototype = {
     didUpdateWidget$1(oldWidget) {
@@ -148075,7 +148085,7 @@
       }
       return this.$this.get$_date_picker_theme$_colors().onSurface;
     },
-    $signature: 20
+    $signature: 19
   };
   A._DatePickerDefaultsM3_dayBackgroundColor_closure.prototype = {
     call$1(states) {
@@ -148136,7 +148146,7 @@
       }
       return this.$this.get$_date_picker_theme$_colors().primary;
     },
-    $signature: 20
+    $signature: 19
   };
   A._DatePickerDefaultsM3_yearForegroundColor_closure.prototype = {
     call$1(states) {
@@ -148153,7 +148163,7 @@
       t2 = t1._onSurfaceVariant;
       return t2 == null ? t1.onSurface : t2;
     },
-    $signature: 20
+    $signature: 19
   };
   A._DatePickerDefaultsM3_yearBackgroundColor_closure.prototype = {
     call$1(states) {
@@ -148410,7 +148420,7 @@
     },
     "call*": "call$3",
     $requiredArgCount: 3,
-    $signature: 285
+    $signature: 386
   };
   A._DialogDefaultsM3.prototype = {
     get$_dialog$_colors() {
@@ -148738,7 +148748,7 @@
       var t1 = this.route;
       return t1.getItemOffset$1(t1.selectedIndex);
     },
-    $signature: 213
+    $signature: 180
   };
   A._DropdownMenuRouteLayout.prototype = {
     getConstraintsForChild$1(constraints) {
@@ -148844,13 +148854,13 @@
     call$2(total, height) {
       return total + height;
     },
-    $signature: 97
+    $signature: 109
   };
   A._DropdownRoute_getMenuLimits_closure.prototype = {
     call$2(total, height) {
       return total + height;
     },
-    $signature: 97
+    $signature: 109
   };
   A._DropdownRoutePage.prototype = {
     createState$0() {
@@ -149308,7 +149318,7 @@
       else
         return true;
     },
-    $signature: 149
+    $signature: 122
   };
   A.DropdownButtonFormField__closure0.prototype = {
     call$1(context) {
@@ -149523,7 +149533,7 @@
       }
       return this.$this.get$_elevated_button$_colors().surface;
     },
-    $signature: 20
+    $signature: 19
   };
   A._ElevatedButtonDefaultsM3_foregroundColor_closure.prototype = {
     call$1(states) {
@@ -149534,7 +149544,7 @@
       }
       return this.$this.get$_elevated_button$_colors().primary;
     },
-    $signature: 20
+    $signature: 19
   };
   A._ElevatedButtonDefaultsM3_overlayColor_closure.prototype = {
     call$1(states) {
@@ -149567,7 +149577,7 @@
         return 1;
       return 1;
     },
-    $signature: 284
+    $signature: 381
   };
   A._ElevatedButtonDefaultsM3_mouseCursor_closure.prototype = {
     call$1(states) {
@@ -149575,7 +149585,7 @@
         return B.SystemMouseCursor_basic;
       return B.SystemMouseCursor_click;
     },
-    $signature: 92
+    $signature: 91
   };
   A.__ElevatedButtonDefaultColor_MaterialStateProperty_Diagnosticable.prototype = {};
   A.__ElevatedButtonDefaultElevation_MaterialStateProperty_Diagnosticable.prototype = {};
@@ -150303,7 +150313,7 @@
       t2 = t1._onSurfaceVariant;
       return t2 == null ? t1.onSurface : t2;
     },
-    $signature: 20
+    $signature: 19
   };
   A._IconButtonDefaultsM3_overlayColor_closure.prototype = {
     call$1(states) {
@@ -150342,7 +150352,7 @@
       }
       return B.Color_0;
     },
-    $signature: 20
+    $signature: 19
   };
   A._IconButtonDefaultsM3_mouseCursor_closure.prototype = {
     call$1(states) {
@@ -150350,7 +150360,7 @@
         return B.SystemMouseCursor_basic;
       return B.SystemMouseCursor_click;
     },
-    $signature: 92
+    $signature: 91
   };
   A._FilledIconButtonDefaultsM3.prototype = {
     get$_icon_button$_colors() {
@@ -150429,7 +150439,7 @@
       }
       return t1.get$_icon_button$_colors().primary;
     },
-    $signature: 20
+    $signature: 19
   };
   A._FilledIconButtonDefaultsM3_foregroundColor_closure.prototype = {
     call$1(states) {
@@ -150445,7 +150455,7 @@
         return t1.get$_icon_button$_colors().primary;
       return t1.get$_icon_button$_colors().onPrimary;
     },
-    $signature: 20
+    $signature: 19
   };
   A._FilledIconButtonDefaultsM3_overlayColor_closure.prototype = {
     call$1(states) {
@@ -150493,7 +150503,7 @@
       }
       return B.Color_0;
     },
-    $signature: 20
+    $signature: 19
   };
   A._FilledIconButtonDefaultsM3_mouseCursor_closure.prototype = {
     call$1(states) {
@@ -150501,7 +150511,7 @@
         return B.SystemMouseCursor_basic;
       return B.SystemMouseCursor_click;
     },
-    $signature: 92
+    $signature: 91
   };
   A._FilledTonalIconButtonDefaultsM3.prototype = {
     get$_icon_button$_colors() {
@@ -150585,7 +150595,7 @@
       t2 = t1._secondaryContainer;
       return t2 == null ? t1.secondary : t2;
     },
-    $signature: 20
+    $signature: 19
   };
   A._FilledTonalIconButtonDefaultsM3_foregroundColor_closure.prototype = {
     call$1(states) {
@@ -150609,7 +150619,7 @@
       t2 = t1._onSecondaryContainer;
       return t2 == null ? t1.onSecondary : t2;
     },
-    $signature: 20
+    $signature: 19
   };
   A._FilledTonalIconButtonDefaultsM3_overlayColor_closure.prototype = {
     call$1(states) {
@@ -150675,7 +150685,7 @@
       }
       return B.Color_0;
     },
-    $signature: 20
+    $signature: 19
   };
   A._FilledTonalIconButtonDefaultsM3_mouseCursor_closure.prototype = {
     call$1(states) {
@@ -150683,7 +150693,7 @@
         return B.SystemMouseCursor_basic;
       return B.SystemMouseCursor_click;
     },
-    $signature: 92
+    $signature: 91
   };
   A._OutlinedIconButtonDefaultsM3.prototype = {
     get$_icon_button$_colors() {
@@ -150762,7 +150772,7 @@
       }
       return B.Color_0;
     },
-    $signature: 20
+    $signature: 19
   };
   A._OutlinedIconButtonDefaultsM3_foregroundColor_closure.prototype = {
     call$1(states) {
@@ -150780,7 +150790,7 @@
       t2 = t1._onSurfaceVariant;
       return t2 == null ? t1.onSurface : t2;
     },
-    $signature: 20
+    $signature: 19
   };
   A._OutlinedIconButtonDefaultsM3_overlayColor_closure.prototype = {
     call$1(states) {
@@ -150823,7 +150833,7 @@
       }
       return B.Color_0;
     },
-    $signature: 20
+    $signature: 19
   };
   A._OutlinedIconButtonDefaultsM3_side_closure.prototype = {
     call$1(states) {
@@ -150848,7 +150858,7 @@
         return B.SystemMouseCursor_basic;
       return B.SystemMouseCursor_click;
     },
-    $signature: 92
+    $signature: 91
   };
   A.__IconButtonDefaultMouseCursor_MaterialStateProperty_Diagnosticable.prototype = {};
   A.IconButtonThemeData.prototype = {
@@ -151050,7 +151060,7 @@
       var t1 = this.referenceBox.get$size(0);
       return new A.Rect(0, 0, 0 + t1._dx, 0 + t1._dy);
     },
-    $signature: 156
+    $signature: 214
   };
   A._InkRippleFactory.prototype = {
     create$11$borderRadius$color$containedInkWell$controller$customBorder$onRemoved$position$radius$rectCallback$referenceBox$textDirection(_, borderRadius, color, containedInkWell, controller, customBorder, onRemoved, position, radius, rectCallback, referenceBox, textDirection) {
@@ -151202,7 +151212,7 @@
       var t1 = this.referenceBox.get$size(0);
       return new A.Rect(0, 0, 0 + t1._dx, 0 + t1._dy);
     },
-    $signature: 156
+    $signature: 214
   };
   A._InkSplashFactory.prototype = {
     create$11$borderRadius$color$containedInkWell$controller$customBorder$onRemoved$position$radius$rectCallback$referenceBox$textDirection(_, borderRadius, color, containedInkWell, controller, customBorder, onRemoved, position, radius, rectCallback, referenceBox, textDirection) {
@@ -153705,7 +153715,7 @@
       type$.BoxParentData._as(t1).offset = new A.Offset(x, (this.height._readLocal$0() - box.get$size(0)._dy) / 2);
       return box.get$size(0)._dx;
     },
-    $signature: 94
+    $signature: 87
   };
   A._RenderDecoration_performLayout_baselineLayout.prototype = {
     call$2(box, x) {
@@ -153719,7 +153729,7 @@
       t1.offset = new A.Offset(x, t2 - t3);
       return box.get$size(0)._dx;
     },
-    $signature: 94
+    $signature: 87
   };
   A._RenderDecoration_paint_doPaint.prototype = {
     call$1(child) {
@@ -153730,7 +153740,7 @@
         this.context.paintChild$2(child, type$.BoxParentData._as(t1).offset.$add(0, this.offset));
       }
     },
-    $signature: 275
+    $signature: 362
   };
   A._RenderDecoration_hitTestChildren_closure.prototype = {
     call$2(result, transformed) {
@@ -154618,7 +154628,7 @@
         return A.TextStyle$(_null, _null, A.Theme_of(this.$this.context).disabledColor, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null);
       return A.TextStyle$(_null, _null, A.Theme_of(this.$this.context).hintColor, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null);
     },
-    $signature: 81
+    $signature: 84
   };
   A._InputDecoratorDefaultsM3_fillColor_closure.prototype = {
     call$1(states) {
@@ -154631,7 +154641,7 @@
       t2 = t1._surfaceVariant;
       return t2 == null ? t1.surface : t2;
     },
-    $signature: 20
+    $signature: 19
   };
   A._InputDecoratorDefaultsM3_activeIndicatorBorder_closure.prototype = {
     call$1(states) {
@@ -154658,7 +154668,7 @@
       t2 = t1._onSurfaceVariant;
       return new A.BorderSide(t2 == null ? t1.onSurface : t2, 1, B.BorderStyle_1, -1);
     },
-    $signature: 161
+    $signature: 207
   };
   A._InputDecoratorDefaultsM3_outlineBorder_closure.prototype = {
     call$1(states) {
@@ -154685,7 +154695,7 @@
       t2 = t1._outline;
       return new A.BorderSide(t2 == null ? t1.onBackground : t2, 1, B.BorderStyle_1, -1);
     },
-    $signature: 161
+    $signature: 207
   };
   A._InputDecoratorDefaultsM3_prefixIconColor_closure.prototype = {
     call$1(states) {
@@ -154693,7 +154703,7 @@
         t2 = t1._onSurfaceVariant;
       return t2 == null ? t1.onSurface : t2;
     },
-    $signature: 20
+    $signature: 19
   };
   A._InputDecoratorDefaultsM3_suffixIconColor_closure.prototype = {
     call$1(states) {
@@ -154708,7 +154718,7 @@
       t2 = t1._onSurfaceVariant;
       return t2 == null ? t1.onSurface : t2;
     },
-    $signature: 20
+    $signature: 19
   };
   A._InputDecoratorDefaultsM3_labelStyle_closure.prototype = {
     call$1(states) {
@@ -154742,7 +154752,7 @@
       t2 = t1._onSurfaceVariant;
       return textStyle.copyWith$1$color(t2 == null ? t1.onSurface : t2);
     },
-    $signature: 81
+    $signature: 84
   };
   A._InputDecoratorDefaultsM3_floatingLabelStyle_closure.prototype = {
     call$1(states) {
@@ -154776,7 +154786,7 @@
       t2 = t1._onSurfaceVariant;
       return textStyle.copyWith$1$color(t2 == null ? t1.onSurface : t2);
     },
-    $signature: 81
+    $signature: 84
   };
   A._InputDecoratorDefaultsM3_helperStyle_closure.prototype = {
     call$1(states) {
@@ -154793,7 +154803,7 @@
       t2 = t1._onSurfaceVariant;
       return textStyle.copyWith$1$color(t2 == null ? t1.onSurface : t2);
     },
-    $signature: 81
+    $signature: 84
   };
   A._InputDecoratorDefaultsM3_errorStyle_closure.prototype = {
     call$1(states) {
@@ -154803,7 +154813,7 @@
         textStyle = B.TextStyle_SVP;
       return textStyle.copyWith$1$color(t1.get$_input_decorator$_colors().error);
     },
-    $signature: 81
+    $signature: 84
   };
   A._InputDecorationTheme_Object_Diagnosticable.prototype = {};
   A.__BorderContainerState_State_TickerProviderStateMixin.prototype = {
@@ -155406,7 +155416,7 @@
         this.context.paintChild$2(child, type$.BoxParentData._as(t1).offset.$add(0, this.offset));
       }
     },
-    $signature: 275
+    $signature: 362
   };
   A._RenderListTile_hitTestChildren_closure.prototype = {
     call$2(result, transformed) {
@@ -155903,19 +155913,19 @@
     call$1(value) {
       return new A.Tween(A._asDouble(value), null, type$.Tween_double);
     },
-    $signature: 63
+    $signature: 61
   };
   A._MaterialInteriorState_forEachTween_closure0.prototype = {
     call$1(value) {
       return new A.ColorTween(type$.Color._as(value), null);
     },
-    $signature: 145
+    $signature: 125
   };
   A._MaterialInteriorState_forEachTween_closure1.prototype = {
     call$1(value) {
       return new A.ColorTween(type$.Color._as(value), null);
     },
-    $signature: 145
+    $signature: 125
   };
   A._MaterialInteriorState_forEachTween_closure2.prototype = {
     call$1(value) {
@@ -156608,7 +156618,7 @@
     },
     "call*": "call$3",
     $requiredArgCount: 3,
-    $signature: 215
+    $signature: 352
   };
   A._ZoomPageTransition_build_closure0.prototype = {
     call$3(context, animation, child) {
@@ -156616,7 +156626,7 @@
     },
     "call*": "call$3",
     $requiredArgCount: 3,
-    $signature: 270
+    $signature: 351
   };
   A._ZoomPageTransition_build_closure1.prototype = {
     call$3(context, animation, child) {
@@ -156624,7 +156634,7 @@
     },
     "call*": "call$3",
     $requiredArgCount: 3,
-    $signature: 215
+    $signature: 352
   };
   A._ZoomPageTransition_build_closure2.prototype = {
     call$3(context, animation, child) {
@@ -156632,7 +156642,7 @@
     },
     "call*": "call$3",
     $requiredArgCount: 3,
-    $signature: 270
+    $signature: 351
   };
   A._ZoomEnterTransition.prototype = {
     createState$0() {
@@ -157185,7 +157195,7 @@
       t3 === $ && A.throwUnnamedLateFieldNI();
       return t1._buildMaterialIndicator$5(context, t2.transform$1(0, t3.get$value(0)), $.$get$_CircularProgressIndicatorState__strokeTailTween().transform$1(0, t1.___CircularProgressIndicatorState__controller_A.get$value(0)), $.$get$_CircularProgressIndicatorState__offsetTween().transform$1(0, t1.___CircularProgressIndicatorState__controller_A.get$value(0)), $.$get$_CircularProgressIndicatorState__rotationTween().transform$1(0, t1.___CircularProgressIndicatorState__controller_A.get$value(0)));
     },
-    $signature: 44
+    $signature: 43
   };
   A._CircularProgressIndicatorDefaultsM3.prototype = {
     get$color(_) {
@@ -158078,7 +158088,7 @@
       if (!property._restoration0$_disposed)
         property.removeListener$1(0, listener);
     },
-    $signature: 60
+    $signature: 59
   };
   A._ScaffoldMessengerState_State_TickerProviderStateMixin.prototype = {
     activate$0() {
@@ -158438,7 +158448,7 @@
       t1.toString;
       return t1;
     },
-    $signature: 20
+    $signature: 19
   };
   A._MaterialScrollbarState__trackColor_closure.prototype = {
     call$1(states) {
@@ -158456,7 +158466,7 @@
       }
       return B.Color_0;
     },
-    $signature: 20
+    $signature: 19
   };
   A._MaterialScrollbarState__trackBorderColor_closure.prototype = {
     call$1(states) {
@@ -158474,7 +158484,7 @@
       }
       return B.Color_0;
     },
-    $signature: 20
+    $signature: 19
   };
   A._MaterialScrollbarState__thickness_closure.prototype = {
     call$1(states) {
@@ -158503,7 +158513,7 @@
         t1 = t2;
       return t1;
     },
-    $signature: 284
+    $signature: 381
   };
   A._MaterialScrollbarState_initState_closure.prototype = {
     call$0() {
@@ -159223,13 +159233,13 @@
     call$2(context, child) {
       return new A.Align(B.AlignmentDirectional_m1_1, null, this.heightM3Animation.get$value(0), child, null);
     },
-    $signature: 267
+    $signature: 329
   };
   A._SnackBarState_build_closure2.prototype = {
     call$2(context, child) {
       return new A.Align(B.AlignmentDirectional_m1_m1, null, this.heightAnimation.get$value(0), child, null);
     },
-    $signature: 267
+    $signature: 329
   };
   A._SnackbarDefaultsM3.prototype = {
     get$_snack_bar$_colors() {
@@ -159320,7 +159330,7 @@
       t2 = t1._inversePrimary;
       return t2 == null ? t1.onPrimary : t2;
     },
-    $signature: 20
+    $signature: 19
   };
   A.SnackBarBehavior.prototype = {
     _enumToString$0() {
@@ -159716,7 +159726,7 @@
       t2.toString;
       return t2;
     },
-    $signature: 20
+    $signature: 19
   };
   A._TabLabelBarRenderer.prototype = {
     performLayout$0() {
@@ -160773,7 +160783,7 @@
       }
       return this.$this.get$_text_button$_colors().primary;
     },
-    $signature: 20
+    $signature: 19
   };
   A._TextButtonDefaultsM3_overlayColor_closure.prototype = {
     call$1(states) {
@@ -160800,7 +160810,7 @@
         return B.SystemMouseCursor_basic;
       return B.SystemMouseCursor_click;
     },
-    $signature: 92
+    $signature: 91
   };
   A.__TextButtonDefaultMouseCursor_MaterialStateProperty_Diagnosticable.prototype = {};
   A.TextButtonThemeData.prototype = {
@@ -161583,13 +161593,13 @@
     call$1($event) {
       return this.$this._handleHover$1(true);
     },
-    $signature: 79
+    $signature: 80
   };
   A._TextFieldState_build_closure8.prototype = {
     call$1($event) {
       return this.$this._handleHover$1(false);
     },
-    $signature: 68
+    $signature: 64
   };
   A._TextFieldState_build_closure6.prototype = {
     call$2(context, child) {
@@ -161622,14 +161632,14 @@
       }
       return A.TextStyle$(_null, _null, A.Theme_of(this.context).textTheme.bodyLarge.color, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null);
     },
-    $signature: 81
+    $signature: 84
   };
   A.__TextFieldState_State_RestorationMixin_dispose_closure.prototype = {
     call$2(property, listener) {
       if (!property._restoration0$_disposed)
         property.removeListener$1(0, listener);
     },
-    $signature: 60
+    $signature: 59
   };
   A.__TextFieldState_State_RestorationMixin.prototype = {
     didUpdateWidget$1(oldWidget) {
@@ -161700,7 +161710,7 @@
     call$1(value) {
       this.field.didChange$1(value);
     },
-    $signature: 37
+    $signature: 36
   };
   A._TextFormFieldState.prototype = {
     get$_text_form_field$_effectiveController() {
@@ -163100,7 +163110,7 @@
         return "0" + value;
       return B.JSInt_methods.toString$0(value);
     },
-    $signature: 208
+    $signature: 201
   };
   A.TimePickerThemeData.prototype = {
     get$dayPeriodColor() {
@@ -163138,7 +163148,7 @@
       }
       return B.Color_0;
     },
-    $signature: 20
+    $signature: 19
   };
   A._TimePickerThemeData_Object_Diagnosticable.prototype = {};
   A.ToggleButtonsThemeData.prototype = {
@@ -164149,13 +164159,13 @@
         throw A.wrapException(A.NetworkImageLoadException$($status, this.resolved));
       }
     },
-    $signature: 96
+    $signature: 82
   };
   A.NetworkImage__loadAsync_closure0.prototype = {
     call$1(e) {
       return this.completer.completeError$1(e);
     },
-    $signature: 177
+    $signature: 161
   };
   A.NetworkImage__loadAsync_closure1.prototype = {
     call$2(bytes, total) {
@@ -165993,7 +166003,7 @@
     call$1(s) {
       return s <= this.t;
     },
-    $signature: 1176
+    $signature: 1175
   };
   A._interpolateColorsAndStops_closure.prototype = {
     call$1($stop) {
@@ -166002,7 +166012,7 @@
       t1.toString;
       return t1;
     },
-    $signature: 1179
+    $signature: 1177
   };
   A.Gradient0.prototype = {
     _impliedStops$0() {
@@ -166076,7 +166086,7 @@
       t1.toString;
       return t1;
     },
-    $signature: 142
+    $signature: 141
   };
   A.ImageCache.prototype = {
     clear$0(_) {
@@ -166245,7 +166255,7 @@
     call$0() {
       return A._LiveImage$(this.completer, new A.ImageCache__trackLiveImage__closure(this.$this, this.key));
     },
-    $signature: 1210
+    $signature: 1180
   };
   A.ImageCache__trackLiveImage__closure.prototype = {
     call$0() {
@@ -166527,7 +166537,7 @@
     call$2(exception, stack) {
       return this.$call$body$ImageProvider__createErrorHandlerAndKey_handleError(exception, stack);
     },
-    $signature: 1217
+    $signature: 1212
   };
   A.ImageProvider__createErrorHandlerAndKey_closure.prototype = {
     call$1(key) {
@@ -166551,7 +166561,7 @@
       t1.toString;
       return t1;
     },
-    $signature: 264
+    $signature: 325
   };
   A.ImageProvider_resolveStreamForKey_closure0.prototype = {
     call$0() {
@@ -166560,7 +166570,7 @@
         result = t1.loadImage$2(t2, $.PaintingBinding__instance.get$instantiateImageCodecWithSize());
       return result instanceof A._AbstractImageStreamCompleter ? t1.loadBuffer$2(t2, $.PaintingBinding__instance.get$instantiateImageCodecFromBuffer()) : result;
     },
-    $signature: 264
+    $signature: 325
   };
   A._AbstractImageStreamCompleter.prototype = {};
   A.AssetBundleImageKey.prototype = {
@@ -166866,13 +166876,13 @@
       else
         t1.result = new A.SynchronousFuture(key, type$.SynchronousFuture_AssetBundleImageKey);
     },
-    $signature: 1272
+    $signature: 1248
   };
   A.AssetImage_obtainKey_closure0.prototype = {
     call$2(error, stack) {
       this._box_0.completer.completeError$2(error, stack);
     },
-    $signature: 72
+    $signature: 66
   };
   A.ImageInfo.prototype = {
     clone$0(_) {
@@ -167096,7 +167106,7 @@
     call$1(listener) {
       return listener.onChunk;
     },
-    $signature: 1365
+    $signature: 1322
   };
   A.MultiFrameImageStreamCompleter.prototype = {
     MultiFrameImageStreamCompleter$5$chunkEvents$codec$debugLabel$informationCollector$scale(chunkEvents, codec, debugLabel, informationCollector, scale) {
@@ -167267,13 +167277,13 @@
     call$2(error, stack) {
       this.$this.reportError$5$context$exception$informationCollector$silent$stack(A.ErrorDescription$("resolving an image codec"), error, this.informationCollector, true, stack);
     },
-    $signature: 72
+    $signature: 66
   };
   A.MultiFrameImageStreamCompleter_closure0.prototype = {
     call$2(error, stack) {
       this.$this.reportError$5$context$exception$informationCollector$silent$stack(A.ErrorDescription$("loading an image"), error, this.informationCollector, true, stack);
     },
-    $signature: 72
+    $signature: 66
   };
   A.MultiFrameImageStreamCompleter__handleAppFrame_closure.prototype = {
     call$0() {
@@ -167344,7 +167354,7 @@
       this._box_0.result = result;
       return result == null;
     },
-    $signature: 103
+    $signature: 114
   };
   A.InlineSpan_codeUnitAt_closure.prototype = {
     call$1(span) {
@@ -167352,7 +167362,7 @@
       this._box_0.result = result;
       return result == null;
     },
-    $signature: 103
+    $signature: 114
   };
   A.PlaceholderSpan0.prototype = {
     computeToPlainText$3$includePlaceholders$includeSemanticsLabels(buffer, includePlaceholders, includeSemanticsLabels) {
@@ -167819,19 +167829,19 @@
     call$1(shadow) {
       return shadow.toPaint$0();
     },
-    $signature: 1396
+    $signature: 1378
   };
   A._ShapeDecorationPainter__precache_closure0.prototype = {
     call$1(shadow) {
       return this.rect.shift$1(shadow.offset).inflate$1(shadow.spreadRadius);
     },
-    $signature: 1401
+    $signature: 1397
   };
   A._ShapeDecorationPainter__precache_closure1.prototype = {
     call$1(shadow) {
       return this.$this._shape_decoration$_decoration.shape.getOuterPath$2$textDirection(this.rect.shift$1(shadow.offset).inflate$1(shadow.spreadRadius), this.textDirection);
     },
-    $signature: 1415
+    $signature: 1402
   };
   A.StadiumBorder.prototype = {
     scale$1(_, t) {
@@ -168927,13 +168937,13 @@
     call$1(box) {
       return A.TextPainter__shiftTextBox(box, this.offset);
     },
-    $signature: 182
+    $signature: 162
   };
   A.TextPainter_getBoxesForSelection_closure.prototype = {
     call$1(box) {
       return A.TextPainter__shiftTextBox(box, this.offset);
     },
-    $signature: 182
+    $signature: 162
   };
   A.TextPainter_computeLineMetrics_closure.prototype = {
     call$1(metrics) {
@@ -169178,7 +169188,7 @@
     call$1(child) {
       return A.DiagnosticableTreeNode$(null, null, child);
     },
-    $signature: 389
+    $signature: 1435
   };
   A.TextStyle.prototype = {
     get$fontFamilyFallback() {
@@ -169461,7 +169471,7 @@
       var t1 = this.$this._package;
       return "packages/" + (t1 == null ? A._asString(t1) : t1) + "/" + str;
     },
-    $signature: 57
+    $signature: 63
   };
   A._TextStyle_Object_Diagnosticable.prototype = {};
   A.FrictionSimulation.prototype = {
@@ -169991,7 +170001,7 @@
       if (t1 != null)
         t1._view.get$semantics().updateSemantics$1(update);
     },
-    $signature: 256
+    $signature: 319
   };
   A.RendererBinding_pipelineOwner_closure0.prototype = {
     call$0() {
@@ -170465,7 +170475,7 @@
     call$0() {
       return this.computer.call$1(this.argument);
     },
-    $signature: 213
+    $signature: 180
   };
   A.RenderBox_getDryLayout_closure.prototype = {
     call$0() {
@@ -172315,7 +172325,7 @@
       var t1 = this.$this;
       return new A.TextBox(textBox.left + t1.get$_paintOffset()._dx, textBox.top + t1.get$_paintOffset()._dy, textBox.right + t1.get$_paintOffset()._dx, textBox.bottom + t1.get$_paintOffset()._dy, textBox.direction);
     },
-    $signature: 182
+    $signature: 162
   };
   A.RenderEditable_describeSemanticsConfiguration_closure.prototype = {
     call$1(info) {
@@ -172343,13 +172353,13 @@
     call$2(child, constraints) {
       return new A.Size(child._computeIntrinsicDimension$3(B._IntrinsicDimension_0, 1 / 0, child.get$computeMinIntrinsicWidth()), 0);
     },
-    $signature: 84
+    $signature: 96
   };
   A.RenderEditable_computeMaxIntrinsicWidth_closure.prototype = {
     call$2(child, constraints) {
       return new A.Size(child._computeIntrinsicDimension$3(B._IntrinsicDimension_1, 1 / 0, child.get$computeMaxIntrinsicWidth()), 0);
     },
-    $signature: 84
+    $signature: 96
   };
   A.RenderEditable__canComputeDryLayoutForInlineWidgets_closure.prototype = {
     call$1(span) {
@@ -172371,7 +172381,7 @@
         t1 = true;
       return t1;
     },
-    $signature: 103
+    $signature: 114
   };
   A._RenderEditableCustomPaint.prototype = {
     get$parent(_) {
@@ -173203,25 +173213,25 @@
     call$2(child, extent) {
       return child._computeIntrinsicDimension$3(B._IntrinsicDimension_0, extent, child.get$computeMinIntrinsicWidth());
     },
-    $signature: 94
+    $signature: 87
   };
   A.RenderFlex_computeMaxIntrinsicWidth_closure.prototype = {
     call$2(child, extent) {
       return child._computeIntrinsicDimension$3(B._IntrinsicDimension_1, extent, child.get$computeMaxIntrinsicWidth());
     },
-    $signature: 94
+    $signature: 87
   };
   A.RenderFlex_computeMinIntrinsicHeight_closure.prototype = {
     call$2(child, extent) {
       return child._computeIntrinsicDimension$3(B._IntrinsicDimension_2, extent, child.get$computeMinIntrinsicHeight());
     },
-    $signature: 94
+    $signature: 87
   };
   A.RenderFlex_computeMaxIntrinsicHeight_closure.prototype = {
     call$2(child, extent) {
       return child._computeIntrinsicDimension$3(B._IntrinsicDimension_3, extent, child.get$computeMaxIntrinsicHeight());
     },
-    $signature: 94
+    $signature: 87
   };
   A._LayoutSizes.prototype = {};
   A._RenderFlex_RenderBox_ContainerRenderObjectMixin.prototype = {
@@ -174729,25 +174739,25 @@
     call$2(a, b) {
       return a._depth - b._depth;
     },
-    $signature: 132
+    $signature: 144
   };
   A.PipelineOwner_flushCompositingBits_closure.prototype = {
     call$2(a, b) {
       return a._depth - b._depth;
     },
-    $signature: 132
+    $signature: 144
   };
   A.PipelineOwner_flushPaint_closure.prototype = {
     call$2(a, b) {
       return b._depth - a._depth;
     },
-    $signature: 132
+    $signature: 144
   };
   A.PipelineOwner_flushSemantics_closure.prototype = {
     call$2(a, b) {
       return a._depth - b._depth;
     },
-    $signature: 132
+    $signature: 144
   };
   A.RenderObject.prototype = {
     RenderObject$0() {
@@ -175498,21 +175508,21 @@
       }
       return fragment;
     },
-    $signature: 252
+    $signature: 307
   };
   A.RenderObject__getSemanticsForParent_closure1.prototype = {
     call$1(config) {
       var t1 = this.configToFragment.$index(0, config);
       return t1 == null ? new A._IncompleteSemanticsFragment(config, A._setArrayType([this.$this], type$.JSArray_RenderObject), false) : t1;
     },
-    $signature: 252
+    $signature: 307
   };
   A.RenderObject_toStringDeep_closure.prototype = {
     call$0() {
       var _this = this;
       return _this.$this.super$DiagnosticableTreeMixin$toStringDeep(_this.minLevel, _this.prefixLineOne, _this.prefixOtherLines);
     },
-    $signature: 80
+    $signature: 75
   };
   A.RenderObjectWithChildMixin.prototype = {
     set$child(value) {
@@ -176895,13 +176905,13 @@
     call$2(child, constraints) {
       return new A.Size(child._computeIntrinsicDimension$3(B._IntrinsicDimension_0, 1 / 0, child.get$computeMinIntrinsicWidth()), 0);
     },
-    $signature: 84
+    $signature: 96
   };
   A.RenderParagraph_computeMaxIntrinsicWidth_closure.prototype = {
     call$2(child, constraints) {
       return new A.Size(child._computeIntrinsicDimension$3(B._IntrinsicDimension_1, 1 / 0, child.get$computeMaxIntrinsicWidth()), 0);
     },
-    $signature: 84
+    $signature: 96
   };
   A.RenderParagraph__canComputeDryLayoutForInlineWidgets_closure.prototype = {
     call$1(span) {
@@ -176923,7 +176933,7 @@
         t1 = true;
       return t1;
     },
-    $signature: 103
+    $signature: 114
   };
   A.RenderParagraph__createShowOnScreenFor_closure.prototype = {
     call$0() {
@@ -180595,7 +180605,7 @@
     call$1(result) {
       return this.child.hitTest$2$position(result, this._box_0.transformedPosition);
     },
-    $signature: 249
+    $signature: 306
   };
   A._SliverGeometry_Object_Diagnosticable.prototype = {};
   A._SliverLogicalContainerParentData_SliverLogicalParentData_ContainerParentDataMixin.prototype = {
@@ -181352,7 +181362,7 @@
       t1.endScrollOffset = t5 + t4.paintExtentOf$1(t2);
       return true;
     },
-    $signature: 149
+    $signature: 122
   };
   A.KeepAliveParentDataMixin.prototype = {$isParentData: 1};
   A.RenderSliverWithKeepAliveMixin.prototype = {
@@ -181684,7 +181694,7 @@
       } else
         t1._childManager.createChild$2$after(t3, t4);
     },
-    $signature: 248
+    $signature: 305
   };
   A.RenderSliverMultiBoxAdaptor_collectGarbage_closure.prototype = {
     call$1(constraints) {
@@ -181705,7 +181715,7 @@
       t3 = A._instanceType(t1)._eval$1("WhereIterable<Iterable.E>");
       B.JSArray_methods.forEach$1(A.List_List$of(new A.WhereIterable(t1, new A.RenderSliverMultiBoxAdaptor_collectGarbage__closure(), t3), true, t3._eval$1("Iterable.E")), t2._childManager.get$removeChild());
     },
-    $signature: 248
+    $signature: 305
   };
   A.RenderSliverMultiBoxAdaptor_collectGarbage__closure.prototype = {
     call$1(child) {
@@ -181713,7 +181723,7 @@
       t1.toString;
       return !type$.SliverMultiBoxAdaptorParentData._as(t1).KeepAliveParentDataMixin_keepAlive;
     },
-    $signature: 321
+    $signature: 355
   };
   A._RenderSliverMultiBoxAdaptor_RenderSliver_ContainerRenderObjectMixin.prototype = {
     attach$1(owner) {
@@ -182193,25 +182203,25 @@
     call$1(child) {
       return child._computeIntrinsicDimension$3(B._IntrinsicDimension_0, this.height, child.get$computeMinIntrinsicWidth());
     },
-    $signature: 73
+    $signature: 68
   };
   A.RenderStack_computeMaxIntrinsicWidth_closure.prototype = {
     call$1(child) {
       return child._computeIntrinsicDimension$3(B._IntrinsicDimension_1, this.height, child.get$computeMaxIntrinsicWidth());
     },
-    $signature: 73
+    $signature: 68
   };
   A.RenderStack_computeMinIntrinsicHeight_closure.prototype = {
     call$1(child) {
       return child._computeIntrinsicDimension$3(B._IntrinsicDimension_2, this.width, child.get$computeMinIntrinsicHeight());
     },
-    $signature: 73
+    $signature: 68
   };
   A.RenderStack_computeMaxIntrinsicHeight_closure.prototype = {
     call$1(child) {
       return child._computeIntrinsicDimension$3(B._IntrinsicDimension_3, this.width, child.get$computeMaxIntrinsicHeight());
     },
-    $signature: 73
+    $signature: 68
   };
   A.RenderIndexedStack.prototype = {
     visitChildrenForSemantics$1(visitor) {
@@ -182980,7 +182990,7 @@
     call$2(a, b) {
       return a + b;
     },
-    $signature: 97
+    $signature: 109
   };
   A.RenderTable_hitTestChildren_closure.prototype = {
     call$2(result, transformed) {
@@ -183705,7 +183715,7 @@
         t3 = _this.$this.computeChildMainAxisPosition$2(t1, t2.mainAxisPosition);
       return t1.hitTest$3$crossAxisPosition$mainAxisPosition(_this.sliverResult, t2.crossAxisPosition, t3);
     },
-    $signature: 249
+    $signature: 306
   };
   A.RenderViewport.prototype = {
     setupParentData$1(child) {
@@ -185811,7 +185821,7 @@
       t1.thickness = Math.max(t1.thickness, node._semantics$_thickness + node._semantics$_elevation);
       return true;
     },
-    $signature: 214
+    $signature: 165
   };
   A.SemanticsNode__childrenInTraversalOrder_closure.prototype = {
     call$1(sortNode) {
@@ -185918,7 +185928,7 @@
     call$1(group) {
       return group.sortedWithinKnot$0();
     },
-    $signature: 244
+    $signature: 289
   };
   A._SemanticsSortGroup_sortedWithinKnot_closure.prototype = {
     call$2(a, b) {
@@ -185932,7 +185942,7 @@
         return -verticalDiff;
       return -B.JSNumber_methods.compareTo$1(aTopLeft._dx, bTopLeft._dx);
     },
-    $signature: 195
+    $signature: 166
   };
   A._SemanticsSortGroup_sortedWithinKnot_search.prototype = {
     call$1(id) {
@@ -185949,7 +185959,7 @@
       }
       _this.sortedIds.push(id);
     },
-    $signature: 19
+    $signature: 20
   };
   A._SemanticsSortGroup_sortedWithinKnot_closure0.prototype = {
     call$1(node) {
@@ -185969,7 +185979,7 @@
     call$1(group) {
       return group.sortedWithinVerticalGroup$0();
     },
-    $signature: 244
+    $signature: 289
   };
   A._TraversalSortNode.prototype = {
     compareTo$1(_, other) {
@@ -186084,19 +186094,19 @@
     call$1(node) {
       return !this.$this._detachedNodes.contains$1(0, node);
     },
-    $signature: 214
+    $signature: 165
   };
   A.SemanticsOwner_sendSemanticsUpdate_closure0.prototype = {
     call$2(a, b) {
       return a._semantics$_depth - b._semantics$_depth;
     },
-    $signature: 195
+    $signature: 166
   };
   A.SemanticsOwner_sendSemanticsUpdate_closure1.prototype = {
     call$2(a, b) {
       return a._semantics$_depth - b._semantics$_depth;
     },
-    $signature: 195
+    $signature: 166
   };
   A.SemanticsOwner__getSemanticsActionHandlerForId_closure.prototype = {
     call$1(node) {
@@ -186106,7 +186116,7 @@
       }
       return true;
     },
-    $signature: 214
+    $signature: 165
   };
   A.SemanticsConfiguration.prototype = {
     _addAction$2(action, handler) {
@@ -186577,7 +186587,7 @@
     call$0() {
       return this.$this.super$AssetBundle$loadString(this.key, true);
     },
-    $signature: 209
+    $signature: 197
   };
   A.CachingAssetBundle_loadStructuredData_closure.prototype = {
     call$1(value) {
@@ -186599,7 +186609,7 @@
       this.$this._structuredDataCache.remove$1(0, this.key);
       this._box_0.completer.completeError$2(error, stack);
     },
-    $signature: 72
+    $signature: 66
   };
   A.PlatformAssetBundle.prototype = {
     load$1(_, key) {
@@ -187058,7 +187068,7 @@
         A.FlutterError_reportError(new A.FlutterErrorDetails(exception, stack, "services library", t1, null, false));
       }
     },
-    $signature: 53
+    $signature: 54
   };
   A._DefaultBinaryMessenger_setMessageHandler_closure.prototype = {
     call$2(data, callback) {
@@ -187829,7 +187839,7 @@
       t1.writeValue$2(0, t2, key);
       t1.writeValue$2(0, t2, value);
     },
-    $signature: 180
+    $signature: 208
   };
   A.StandardMethodCodec0.prototype = {
     encodeMethodCall$1(methodCall) {
@@ -188172,7 +188182,7 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 242
+    $signature: 280
   };
   A.MethodChannel.prototype = {
     get$binaryMessenger() {
@@ -188384,7 +188394,7 @@
     call$1(message) {
       return this.$this._handleAsMethodCall$2(message, this.handler);
     },
-    $signature: 242
+    $signature: 280
   };
   A.OptionalMethodChannel.prototype = {
     invokeMethod$1$2(method, $arguments, $T) {
@@ -189224,14 +189234,14 @@
       var t1 = type$.nullable_Object;
       return A.LinkedHashMap_LinkedHashMap$_empty(t1, t1);
     },
-    $signature: 238
+    $signature: 271
   };
   A.RestorationBucket__rawValues_closure.prototype = {
     call$0() {
       var t1 = type$.nullable_Object;
       return A.LinkedHashMap_LinkedHashMap$_empty(t1, t1);
     },
-    $signature: 238
+    $signature: 271
   };
   A.RestorationBucket__addChildData_closure.prototype = {
     call$0() {
@@ -189710,7 +189720,7 @@
         replacedLength = originalIndex <= t1 && originalIndex < _this.regionEnd ? 0 : _this.replacementString.length;
       return replacedLength - (B.JSInt_methods.clamp$2(originalIndex, t1, _this.regionEnd) - t1);
     },
-    $signature: 76
+    $signature: 78
   };
   A.LengthLimitingTextInputFormatter.prototype = {
     formatEditUpdate$2(oldValue, newValue) {
@@ -189887,7 +189897,7 @@
         replacedLength = originalIndex <= t2 && originalIndex < t1.end ? 0 : this.replacementString.length;
       return originalIndex + replacedLength - (B.JSInt_methods.clamp$2(originalIndex, t2, t1.end) - t2);
     },
-    $signature: 76
+    $signature: 78
   };
   A.SelectionChangedCause.prototype = {
     _enumToString$0() {
@@ -190365,7 +190375,7 @@
         t1 = true;
       return !t1;
     },
-    $signature: 41
+    $signature: 42
   };
   A.TextInput__handleTextInputInvocation_closure1.prototype = {
     call$1(elementIdentifier) {
@@ -190580,7 +190590,7 @@
       this.parent.set$finalLocalValue(ancestor);
       return false;
     },
-    $signature: 39
+    $signature: 38
   };
   A.Intent.prototype = {};
   A.Action.prototype = {
@@ -190660,7 +190670,7 @@
       type$._ActionsScope._as(element.get$widget());
       return false;
     },
-    $signature: 110
+    $signature: 113
   };
   A.Actions_maybeFind_closure.prototype = {
     call$1(element) {
@@ -190673,7 +190683,7 @@
       }
       return false;
     },
-    $signature: 110
+    $signature: 113
   };
   A.Actions__maybeFindWithoutDependingOn_closure.prototype = {
     call$1(element) {
@@ -190684,7 +190694,7 @@
       }
       return false;
     },
-    $signature: 110
+    $signature: 113
   };
   A.Actions_invoke_closure.prototype = {
     call$1(element) {
@@ -190696,7 +190706,7 @@
         _this._box_0.returnValue = A.Actions__findDispatcher(element).invokeAction$3(result, t1, _this.context);
       return t2;
     },
-    $signature: 110
+    $signature: 113
   };
   A.Actions_maybeInvoke_closure.prototype = {
     call$1(element) {
@@ -190708,7 +190718,7 @@
         _this._box_0.returnValue = A.Actions__findDispatcher(element).invokeAction$3(result, t1, _this.context);
       return t2;
     },
-    $signature: 110
+    $signature: 113
   };
   A._ActionsState.prototype = {
     initState$0() {
@@ -190939,7 +190949,7 @@
       var t1 = this.$this;
       return t1._actions$_hovering && target.enabled && t1._canShowHighlight;
     },
-    $signature: 204
+    $signature: 167
   };
   A._FocusableActionDetectorState__mayTriggerCallback_canRequestFocus.prototype = {
     call$1(target) {
@@ -190955,14 +190965,14 @@
           return true;
       }
     },
-    $signature: 204
+    $signature: 167
   };
   A._FocusableActionDetectorState__mayTriggerCallback_shouldShowFocusHighlight.prototype = {
     call$1(target) {
       var t1 = this.$this;
       return t1._focused && t1._canShowHighlight && this.canRequestFocus.call$1(target);
     },
-    $signature: 204
+    $signature: 167
   };
   A._FocusableActionDetectorState_didUpdateWidget_closure.prototype = {
     call$1(duration) {
@@ -191659,7 +191669,7 @@
     call$1(context) {
       return this.$this._widget.builder.call$2(context, this._box_0.routing);
     },
-    $signature: 23
+    $signature: 22
   };
   A.__WidgetsAppState_State_WidgetsBindingObserver.prototype = {};
   A.StreamBuilderBase.prototype = {
@@ -191746,7 +191756,7 @@
       var t1 = this.$this;
       t1.setState$1(new A._StreamBuilderBaseState__subscribe__closure(t1, error, stackTrace));
     },
-    $signature: 72
+    $signature: 66
   };
   A._StreamBuilderBaseState__subscribe__closure.prototype = {
     call$0() {
@@ -192958,7 +192968,7 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 112
+    $signature: 99
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_PaintingBinding_SemanticsBinding_RendererBinding_initServiceExtensions_closure0.prototype = {
     call$1(parameters) {
@@ -192986,7 +192996,7 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 112
+    $signature: 99
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_PaintingBinding_SemanticsBinding_RendererBinding_initServiceExtensions_closure1.prototype = {
     call$1(parameters) {
@@ -193014,7 +193024,7 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 112
+    $signature: 99
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_PaintingBinding_SemanticsBinding_RendererBinding_initServiceExtensions_closure2.prototype = {
     call$0() {
@@ -193039,7 +193049,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 70
+    $signature: 69
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_PaintingBinding_SemanticsBinding_RendererBinding_initServiceExtensions_closure3.prototype = {
     call$1(value) {
@@ -193063,7 +193073,7 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 90
+    $signature: 94
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_PaintingBinding_SemanticsBinding_RendererBinding_initServiceExtensions_closure4.prototype = {
     call$0() {
@@ -193088,7 +193098,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 70
+    $signature: 69
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_PaintingBinding_SemanticsBinding_RendererBinding_initServiceExtensions_closure5.prototype = {
     call$1(value) {
@@ -193112,13 +193122,13 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 90
+    $signature: 94
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_initInstances_closure.prototype = {
     call$1(timings) {
       J.forEach$1$ax(timings, this.$this.get$_profileFramePostEvent());
     },
-    $signature: 191
+    $signature: 164
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_initServiceExtensions_closure.prototype = {
     call$0() {
@@ -193173,14 +193183,14 @@
       var t1 = message == null ? type$.Object._as(message) : message;
       return this.$this.handleSystemMessage$1(t1);
     },
-    $signature: 95
+    $signature: 88
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_initInstances_closure0.prototype = {
     call$1(message) {
       var t1 = message == null ? type$.Object._as(message) : message;
       return this.$this._handleAccessibilityMessage$1(t1);
     },
-    $signature: 95
+    $signature: 88
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_initServiceExtensions_closure.prototype = {
     call$0() {
@@ -193205,7 +193215,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 70
+    $signature: 69
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_initServiceExtensions_closure0.prototype = {
     call$1(value) {
@@ -193228,7 +193238,7 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 90
+    $signature: 94
   };
   A.WidgetsBindingObserver.prototype = {
     didPopRoute$0() {
@@ -193523,7 +193533,7 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 112
+    $signature: 99
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_PaintingBinding_SemanticsBinding_RendererBinding_WidgetsBinding_initServiceExtensions_closure0.prototype = {
     call$1(parameters) {
@@ -193552,7 +193562,7 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 112
+    $signature: 99
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_PaintingBinding_SemanticsBinding_RendererBinding_WidgetsBinding_initServiceExtensions_closure1.prototype = {
     call$1(_) {
@@ -193580,7 +193590,7 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 101
+    $signature: 103
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_PaintingBinding_SemanticsBinding_RendererBinding_WidgetsBinding_initServiceExtensions_closure2.prototype = {
     call$1(_) {
@@ -193608,7 +193618,7 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 101
+    $signature: 103
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_PaintingBinding_SemanticsBinding_RendererBinding_WidgetsBinding_initServiceExtensions_closure3.prototype = {
     call$0() {
@@ -193633,7 +193643,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 70
+    $signature: 69
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_PaintingBinding_SemanticsBinding_RendererBinding_WidgetsBinding_initServiceExtensions_closure4.prototype = {
     call$1(value) {
@@ -193656,7 +193666,7 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 90
+    $signature: 94
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_PaintingBinding_SemanticsBinding_RendererBinding_WidgetsBinding_initServiceExtensions_closure5.prototype = {
     call$0() {
@@ -193681,7 +193691,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 70
+    $signature: 69
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_PaintingBinding_SemanticsBinding_RendererBinding_WidgetsBinding_initServiceExtensions_closure6.prototype = {
     call$1(value) {
@@ -193704,7 +193714,7 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 90
+    $signature: 94
   };
   A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_PaintingBinding_SemanticsBinding_RendererBinding_WidgetsBinding_drawFrame_closure.prototype = {
     call$1(timings) {
@@ -193723,7 +193733,7 @@
       t2.firstFrameCallback = null;
       this.$this.WidgetsBinding__firstFrameCompleter.complete$0(0);
     },
-    $signature: 191
+    $signature: 164
   };
   A.WidgetsBinding_scheduleAttachRootWidget_closure.prototype = {
     call$0() {
@@ -194206,7 +194216,7 @@
     call$1(context) {
       return new A._CaptureAll(this.capturedThemes._themes, this.contextMenuBuilder.call$1(context), null);
     },
-    $signature: 23
+    $signature: 22
   };
   A.DefaultSelectionStyle.prototype = {
     wrap$2(_, context, child) {
@@ -194223,7 +194233,7 @@
         t1 = B.DefaultSelectionStyle_mt1;
       return A.DefaultSelectionStyle$(this.child, t1.cursorColor, this.key, this.mouseCursor, t1.selectionColor);
     },
-    $signature: 481
+    $signature: 389
   };
   A._NullWidget2.prototype = {
     build$1(context) {
@@ -194708,7 +194718,7 @@
         t1 = true;
       return t1;
     },
-    $signature: 234
+    $signature: 241
   };
   A.DisplayFeatureSubScreen_avoidBounds_closure0.prototype = {
     call$1(d) {
@@ -197547,7 +197557,7 @@
     call$1(context) {
       return this.contextMenuBuilder.call$2(context, this.$this);
     },
-    $signature: 23
+    $signature: 22
   };
   A.EditableTextState__scheduleShowCaretOnScreen_closure.prototype = {
     call$1(_) {
@@ -197622,7 +197632,7 @@
     call$1(timer) {
       this.$this._onCursorTick$0();
     },
-    $signature: 329
+    $signature: 233
   };
   A.EditableTextState__onCursorTick_closure.prototype = {
     call$0() {
@@ -197640,7 +197650,7 @@
     call$1(timer) {
       this.$this._onCursorTick$0();
     },
-    $signature: 329
+    $signature: 233
   };
   A.EditableTextState__didChangeTextEditingValue_closure.prototype = {
     call$0() {
@@ -197660,7 +197670,7 @@
       t2 === $ && A.throwUnnamedLateFieldNI();
       return t2.spellCheckSuggestionsToolbarBuilder.call$2(context, t1);
     },
-    $signature: 23
+    $signature: 22
   };
   A.EditableTextState_insertTextPlaceholder_closure.prototype = {
     call$0() {
@@ -198689,13 +198699,13 @@
     call$1(node) {
       return !node.get$skipTraversal() && node.get$canRequestFocus();
     },
-    $signature: 47
+    $signature: 46
   };
   A.FocusNode__removeChild_closure.prototype = {
     call$1(descendant) {
       return descendant.get$enclosingScope() === this.nodeScope;
     },
-    $signature: 47
+    $signature: 46
   };
   A.FocusNode_debugDescribeChildren_closure.prototype = {
     call$1(child) {
@@ -199284,7 +199294,7 @@
       }
       return true;
     },
-    $signature: 39
+    $signature: 38
   };
   A._FocusTraversalGroupInfo.prototype = {};
   A.TraversalDirection.prototype = {
@@ -199421,7 +199431,7 @@
     call$1(node) {
       return node.get$canRequestFocus() && !node.get$skipTraversal();
     },
-    $signature: 47
+    $signature: 46
   };
   A.FocusTraversalPolicy__sortAllDescendants_visitGroups.prototype = {
     call$1(info) {
@@ -199447,7 +199457,7 @@
         t1 = false;
       return t1;
     },
-    $signature: 47
+    $signature: 46
   };
   A._DirectionalPolicyDataEntry.prototype = {};
   A._DirectionalPolicyData.prototype = {};
@@ -199685,7 +199695,7 @@
       else
         return B.JSNumber_methods.compareTo$1(b.get$rect(0).right, a.get$rect(0).right);
     },
-    $signature: 75
+    $signature: 76
   };
   A.DirectionalFocusTraversalPolicyMixin__sortByDistancePreferVertical_closure.prototype = {
     call$2(nodeA, nodeB) {
@@ -199697,7 +199707,7 @@
         return A.DirectionalFocusTraversalPolicyMixin__horizontalCompare(t1, a, b);
       return vertical;
     },
-    $signature: 75
+    $signature: 76
   };
   A.DirectionalFocusTraversalPolicyMixin__sortByDistancePreferHorizontal_closure.prototype = {
     call$2(nodeA, nodeB) {
@@ -199709,7 +199719,7 @@
         return A.DirectionalFocusTraversalPolicyMixin__verticalCompare(t1, a, b);
       return horizontal;
     },
-    $signature: 75
+    $signature: 76
   };
   A.DirectionalFocusTraversalPolicyMixin__sortClosestEdgesByDistancePreferHorizontal_closure.prototype = {
     call$2(nodeA, nodeB) {
@@ -199729,7 +199739,7 @@
         return A.DirectionalFocusTraversalPolicyMixin__verticalCompare(t1, nodeA.get$rect(0).get$center(), nodeB.get$rect(0).get$center());
       return horizontal;
     },
-    $signature: 75
+    $signature: 76
   };
   A.DirectionalFocusTraversalPolicyMixin__sortClosestEdgesByDistancePreferVertical_closure.prototype = {
     call$2(nodeA, nodeB) {
@@ -199749,47 +199759,47 @@
         return A.DirectionalFocusTraversalPolicyMixin__horizontalCompare(t1, nodeA.get$rect(0).get$center(), nodeB.get$rect(0).get$center());
       return vertical;
     },
-    $signature: 75
+    $signature: 76
   };
   A.DirectionalFocusTraversalPolicyMixin__sortAndFilterHorizontally_closure.prototype = {
     call$1(node) {
       var t1 = this.target;
       return !node.get$rect(0).$eq(0, t1) && node.get$rect(0).get$center()._dx <= t1.left;
     },
-    $signature: 47
+    $signature: 46
   };
   A.DirectionalFocusTraversalPolicyMixin__sortAndFilterHorizontally_closure0.prototype = {
     call$1(node) {
       var t1 = this.target;
       return !node.get$rect(0).$eq(0, t1) && node.get$rect(0).get$center()._dx >= t1.right;
     },
-    $signature: 47
+    $signature: 46
   };
   A.DirectionalFocusTraversalPolicyMixin__sortAndFilterHorizontally_closure1.prototype = {
     call$2(a, b) {
       return B.JSNumber_methods.compareTo$1(a.get$rect(0).get$center()._dx, b.get$rect(0).get$center()._dx);
     },
-    $signature: 75
+    $signature: 76
   };
   A.DirectionalFocusTraversalPolicyMixin__sortAndFilterVertically_closure.prototype = {
     call$1(node) {
       var t1 = this.target;
       return !node.get$rect(0).$eq(0, t1) && node.get$rect(0).get$center()._dy <= t1.top;
     },
-    $signature: 47
+    $signature: 46
   };
   A.DirectionalFocusTraversalPolicyMixin__sortAndFilterVertically_closure0.prototype = {
     call$1(node) {
       var t1 = this.target;
       return !node.get$rect(0).$eq(0, t1) && node.get$rect(0).get$center()._dy >= t1.bottom;
     },
-    $signature: 47
+    $signature: 46
   };
   A.DirectionalFocusTraversalPolicyMixin__sortAndFilterVertically_closure1.prototype = {
     call$2(a, b) {
       return B.JSNumber_methods.compareTo$1(a.get$rect(0).get$center()._dy, b.get$rect(0).get$center()._dy);
     },
-    $signature: 75
+    $signature: 76
   };
   A.DirectionalFocusTraversalPolicyMixin__popPolicyDataIfNeeded_popOrInvalidate.prototype = {
     call$1(direction) {
@@ -199830,13 +199840,13 @@
       t1.toString;
       return A.Scrollable_maybeOf(t1, null) === this.focusedScrollable;
     },
-    $signature: 47
+    $signature: 46
   };
   A.DirectionalFocusTraversalPolicyMixin_inDirection_closure0.prototype = {
     call$1(node) {
       return !node.get$rect(0).intersect$1(this.band).get$isEmpty(0);
     },
-    $signature: 47
+    $signature: 46
   };
   A.DirectionalFocusTraversalPolicyMixin_inDirection_closure1.prototype = {
     call$1(node) {
@@ -199844,13 +199854,13 @@
       t1.toString;
       return A.Scrollable_maybeOf(t1, null) === this.focusedScrollable;
     },
-    $signature: 47
+    $signature: 46
   };
   A.DirectionalFocusTraversalPolicyMixin_inDirection_closure2.prototype = {
     call$1(node) {
       return !node.get$rect(0).intersect$1(this.band).get$isEmpty(0);
     },
-    $signature: 47
+    $signature: 46
   };
   A._ReadingOrderSortData.prototype = {
     get$directionalAncestors() {
@@ -199880,7 +199890,7 @@
           return B.JSNumber_methods.compareTo$1(b.rect.right, a.rect.right);
       }
     },
-    $signature: 217
+    $signature: 218
   };
   A._ReadingOrderSortData_directionalAncestors_getDirectionalityAncestors.prototype = {
     call$1(context) {
@@ -200008,7 +200018,7 @@
     call$2(a, b) {
       return B.JSNumber_methods.compareTo$1(a.rect.top, b.rect.top);
     },
-    $signature: 217
+    $signature: 218
   };
   A.ReadingOrderTraversalPolicy__pickNext_inBand.prototype = {
     call$2(current, candidates) {
@@ -200339,7 +200349,7 @@
       if (!property._restoration0$_disposed)
         property.removeListener$1(0, listener);
     },
-    $signature: 60
+    $signature: 59
   };
   A._FormFieldState_State_RestorationMixin.prototype = {
     didUpdateWidget$1(oldWidget) {
@@ -201207,7 +201217,7 @@
       this.ancestors.push(element);
       return true;
     },
-    $signature: 39
+    $signature: 38
   };
   A.Element_describeElements_closure.prototype = {
     call$1(element) {
@@ -201692,7 +201702,7 @@
     call$1(child) {
       return !this.$this._forgottenChildren.contains$1(0, child);
     },
-    $signature: 39
+    $signature: 38
   };
   A.RenderTreeRootElement.prototype = {
     attachRenderObject$1(newSlot) {
@@ -201796,7 +201806,7 @@
     call$0() {
       return A.TapGestureRecognizer$(this.$this, null);
     },
-    $signature: 218
+    $signature: 219
   };
   A.GestureDetector_build_closure0.prototype = {
     call$1(instance) {
@@ -201813,7 +201823,7 @@
       instance.gestureSettings = this.gestureSettings;
       instance.supportedDevices = null;
     },
-    $signature: 219
+    $signature: 220
   };
   A.GestureDetector_build_closure1.prototype = {
     call$0() {
@@ -201837,7 +201847,7 @@
     call$0() {
       return A.LongPressGestureRecognizer$(this.$this, null, null);
     },
-    $signature: 220
+    $signature: 221
   };
   A.GestureDetector_build_closure4.prototype = {
     call$1(instance) {
@@ -201847,13 +201857,13 @@
       instance.gestureSettings = this.gestureSettings;
       instance.supportedDevices = null;
     },
-    $signature: 221
+    $signature: 222
   };
   A.GestureDetector_build_closure5.prototype = {
     call$0() {
       return A.VerticalDragGestureRecognizer$(this.$this, null);
     },
-    $signature: 222
+    $signature: 223
   };
   A.GestureDetector_build_closure6.prototype = {
     call$1(instance) {
@@ -201868,13 +201878,13 @@
       instance.gestureSettings = this.gestureSettings;
       instance.supportedDevices = null;
     },
-    $signature: 223
+    $signature: 224
   };
   A.GestureDetector_build_closure7.prototype = {
     call$0() {
       return A.HorizontalDragGestureRecognizer$(this.$this, null);
     },
-    $signature: 224
+    $signature: 225
   };
   A.GestureDetector_build_closure8.prototype = {
     call$1(instance) {
@@ -201888,13 +201898,13 @@
       instance.gestureSettings = this.gestureSettings;
       instance.supportedDevices = null;
     },
-    $signature: 225
+    $signature: 226
   };
   A.GestureDetector_build_closure9.prototype = {
     call$0() {
       return A.PanGestureRecognizer$(this.$this, null);
     },
-    $signature: 226
+    $signature: 227
   };
   A.GestureDetector_build_closure10.prototype = {
     call$1(instance) {
@@ -201908,7 +201918,7 @@
       instance.gestureSettings = this.gestureSettings;
       instance.supportedDevices = null;
     },
-    $signature: 227
+    $signature: 228
   };
   A.GestureDetector_build_closure11.prototype = {
     call$0() {
@@ -201937,7 +201947,7 @@
     call$0() {
       return A.ForcePressGestureRecognizer$(this.$this, null);
     },
-    $signature: 228
+    $signature: 229
   };
   A.GestureDetector_build_closure14.prototype = {
     call$1(instance) {
@@ -201945,7 +201955,7 @@
       instance.gestureSettings = this.gestureSettings;
       instance.supportedDevices = null;
     },
-    $signature: 229
+    $signature: 230
   };
   A.RawGestureDetector.prototype = {
     createState$0() {
@@ -202160,7 +202170,7 @@
       if (t1 != null)
         t1.call$1(new A.DragEndDetails(B.Velocity_Offset_0_0, 0));
     },
-    $signature: 31
+    $signature: 32
   };
   A._DefaultSemanticsGestureDelegate__getHorizontalDragUpdateHandler_closure0.prototype = {
     call$1(details) {
@@ -202178,7 +202188,7 @@
       if (t1 != null)
         t1.call$1(new A.DragEndDetails(B.Velocity_Offset_0_0, null));
     },
-    $signature: 31
+    $signature: 32
   };
   A._DefaultSemanticsGestureDelegate__getHorizontalDragUpdateHandler_closure1.prototype = {
     call$1(details) {
@@ -202189,7 +202199,7 @@
       if (t1 != null)
         t1.call$1(details);
     },
-    $signature: 31
+    $signature: 32
   };
   A._DefaultSemanticsGestureDelegate__getVerticalDragUpdateHandler_closure.prototype = {
     call$1(details) {
@@ -202207,7 +202217,7 @@
       if (t1 != null)
         t1.call$1(new A.DragEndDetails(B.Velocity_Offset_0_0, 0));
     },
-    $signature: 31
+    $signature: 32
   };
   A._DefaultSemanticsGestureDelegate__getVerticalDragUpdateHandler_closure0.prototype = {
     call$1(details) {
@@ -202225,7 +202235,7 @@
       if (t1 != null)
         t1.call$1(new A.DragEndDetails(B.Velocity_Offset_0_0, null));
     },
-    $signature: 31
+    $signature: 32
   };
   A._DefaultSemanticsGestureDelegate__getVerticalDragUpdateHandler_closure1.prototype = {
     call$1(details) {
@@ -202236,7 +202246,7 @@
       if (t1 != null)
         t1.call$1(details);
     },
-    $signature: 31
+    $signature: 32
   };
   A.HeroFlightDirection.prototype = {
     _enumToString$0() {
@@ -202845,7 +202855,7 @@
       t1 = _this.flightDirection === B.HeroFlightDirection_0 ? new A.EdgeInsetsTween(t1, t2).transform$1(0, t3.get$value(t3)) : new A.EdgeInsetsTween(t2, t1).transform$1(0, t3.get$value(t3));
       return A.MediaQuery$(_this.toHero.child, _this.toMediaQueryData.copyWith$1$padding(t1), null);
     },
-    $signature: 231
+    $signature: 232
   };
   A.Icon.prototype = {
     build$1(context) {
@@ -203434,7 +203444,7 @@
       this.$this._updateTween$2(tween, targetValue);
       return tween;
     },
-    $signature: 232
+    $signature: 387
   };
   A.ImplicitlyAnimatedWidgetState__constructTweens_closure.prototype = {
     call$3(tween, targetValue, $constructor) {
@@ -203451,7 +203461,7 @@
         tween = null;
       return tween;
     },
-    $signature: 232
+    $signature: 387
   };
   A.AnimatedWidgetBaseState.prototype = {
     initState$0() {
@@ -203529,25 +203539,25 @@
     call$1(value) {
       return new A.AlignmentGeometryTween(type$.AlignmentGeometry._as(value), null);
     },
-    $signature: 233
+    $signature: 234
   };
   A._AnimatedContainerState_forEachTween_closure0.prototype = {
     call$1(value) {
       return new A.EdgeInsetsGeometryTween(type$.EdgeInsetsGeometry._as(value), null);
     },
-    $signature: 210
+    $signature: 213
   };
   A._AnimatedContainerState_forEachTween_closure1.prototype = {
     call$1(value) {
       return new A.DecorationTween(type$.Decoration._as(value), null);
     },
-    $signature: 235
+    $signature: 236
   };
   A._AnimatedContainerState_forEachTween_closure2.prototype = {
     call$1(value) {
       return new A.DecorationTween(type$.Decoration._as(value), null);
     },
-    $signature: 235
+    $signature: 236
   };
   A._AnimatedContainerState_forEachTween_closure3.prototype = {
     call$1(value) {
@@ -203559,7 +203569,7 @@
     call$1(value) {
       return new A.EdgeInsetsGeometryTween(type$.EdgeInsetsGeometry._as(value), null);
     },
-    $signature: 210
+    $signature: 213
   };
   A._AnimatedContainerState_forEachTween_closure5.prototype = {
     call$1(value) {
@@ -203571,7 +203581,7 @@
     call$1(value) {
       return new A.AlignmentGeometryTween(type$.AlignmentGeometry._as(value), null);
     },
-    $signature: 233
+    $signature: 234
   };
   A.AnimatedPadding.prototype = {
     createState$0() {
@@ -203592,7 +203602,7 @@
     call$1(value) {
       return new A.EdgeInsetsGeometryTween(type$.EdgeInsetsGeometry._as(value), null);
     },
-    $signature: 210
+    $signature: 213
   };
   A.AnimatedPositioned.prototype = {
     createState$0() {
@@ -203639,37 +203649,37 @@
     call$1(value) {
       return new A.Tween(A._asDouble(value), null, type$.Tween_double);
     },
-    $signature: 63
+    $signature: 61
   };
   A._AnimatedPositionedState_forEachTween_closure0.prototype = {
     call$1(value) {
       return new A.Tween(A._asDouble(value), null, type$.Tween_double);
     },
-    $signature: 63
+    $signature: 61
   };
   A._AnimatedPositionedState_forEachTween_closure1.prototype = {
     call$1(value) {
       return new A.Tween(A._asDouble(value), null, type$.Tween_double);
     },
-    $signature: 63
+    $signature: 61
   };
   A._AnimatedPositionedState_forEachTween_closure2.prototype = {
     call$1(value) {
       return new A.Tween(A._asDouble(value), null, type$.Tween_double);
     },
-    $signature: 63
+    $signature: 61
   };
   A._AnimatedPositionedState_forEachTween_closure3.prototype = {
     call$1(value) {
       return new A.Tween(A._asDouble(value), null, type$.Tween_double);
     },
-    $signature: 63
+    $signature: 61
   };
   A._AnimatedPositionedState_forEachTween_closure4.prototype = {
     call$1(value) {
       return new A.Tween(A._asDouble(value), null, type$.Tween_double);
     },
-    $signature: 63
+    $signature: 61
   };
   A.AnimatedOpacity.prototype = {
     createState$0() {
@@ -203696,7 +203706,7 @@
     call$1(value) {
       return new A.Tween(A._asDouble(value), null, type$.Tween_double);
     },
-    $signature: 63
+    $signature: 61
   };
   A.AnimatedDefaultTextStyle.prototype = {
     createState$0() {
@@ -203768,19 +203778,19 @@
     call$1(value) {
       return new A.Tween(A._asDouble(value), null, type$.Tween_double);
     },
-    $signature: 63
+    $signature: 61
   };
   A._AnimatedPhysicalModelState_forEachTween_closure1.prototype = {
     call$1(value) {
       return new A.ColorTween(type$.Color._as(value), null);
     },
-    $signature: 145
+    $signature: 125
   };
   A._AnimatedPhysicalModelState_forEachTween_closure2.prototype = {
     call$1(value) {
       return new A.ColorTween(type$.Color._as(value), null);
     },
-    $signature: 145
+    $signature: 125
   };
   A._ImplicitlyAnimatedWidgetState_State_SingleTickerProviderStateMixin.prototype = {
     dispose$0() {
@@ -203902,7 +203912,7 @@
       }
       return true;
     },
-    $signature: 39
+    $signature: 38
   };
   A.CapturedThemes.prototype = {};
   A._CaptureAll.prototype = {
@@ -204669,7 +204679,7 @@
     call$1(value) {
       return this._box_0.completedValue = value;
     },
-    $signature: 42
+    $signature: 44
   };
   A._loadAll_closure0.prototype = {
     call$1(p) {
@@ -204816,7 +204826,7 @@
       }
       return A.getRuntimeTypeOfDartObject(ancestor.get$widget()) !== B.Type_LookupBoundary_SxG;
     },
-    $signature: 39
+    $signature: 38
   };
   A.LookupBoundary_findRootAncestorStateOfType_closure.prototype = {
     call$1(ancestor) {
@@ -204824,7 +204834,7 @@
         this._box_0.target = ancestor;
       return A.getRuntimeTypeOfDartObject(ancestor.get$widget()) !== B.Type_LookupBoundary_SxG;
     },
-    $signature: 39
+    $signature: 38
   };
   A.LookupBoundary_findAncestorRenderObjectOfType_closure.prototype = {
     call$1(ancestor) {
@@ -204834,7 +204844,7 @@
       }
       return A.getRuntimeTypeOfDartObject(ancestor.get$widget()) !== B.Type_LookupBoundary_SxG;
     },
-    $signature: 39
+    $signature: 38
   };
   A.MagnifierInfo.prototype = {
     $eq(_, other) {
@@ -204984,7 +204994,7 @@
     call$1(context) {
       return new A._CaptureAll(this.capturedThemes._themes, this.builder.call$1(context), null);
     },
-    $signature: 23
+    $signature: 22
   };
   A.MagnifierDecoration.prototype = {
     $eq(_, other) {
@@ -205245,7 +205255,7 @@
     call$1(displayFeature) {
       return this.subScreen.overlaps$1(displayFeature.get$bounds(displayFeature));
     },
-    $signature: 234
+    $signature: 241
   };
   A.MediaQuery.prototype = {
     updateShouldNotify$1(oldWidget) {
@@ -205345,14 +205355,14 @@
     call$1(context) {
       return A.MediaQuery$(this.child, A.InheritedModel_inheritFrom(context, null, type$.MediaQuery).data.copyWith$1$textScaler(B._LinearTextScaler_1), null);
     },
-    $signature: 237
+    $signature: 238
   };
   A.MediaQuery_withClampedTextScaling_closure.prototype = {
     call$1(context) {
       var data = A.InheritedModel_inheritFrom(context, null, type$.MediaQuery).data;
       return A.MediaQuery$(this.child, data.copyWith$1$textScaler(data.get$textScaler().clamp$2$maxScaleFactor$minScaleFactor(0, this.maxScaleFactor, this.minScaleFactor)), null);
     },
-    $signature: 237
+    $signature: 238
   };
   A.NavigationMode.prototype = {
     _enumToString$0() {
@@ -206159,7 +206169,7 @@
     call$1(entry) {
       return entry.route === this.route;
     },
-    $signature: 108
+    $signature: 104
   };
   A._NavigatorObservation.prototype = {};
   A._NavigatorPushObservation.prototype = {
@@ -207154,37 +207164,37 @@
       entry.route.dispose$0();
       return true;
     },
-    $signature: 108
+    $signature: 104
   };
   A.NavigatorState__updatePages_closure.prototype = {
     call$0() {
       return A._setArrayType([], type$.JSArray__RouteEntry);
     },
-    $signature: 141
+    $signature: 120
   };
   A.NavigatorState__updatePages_closure0.prototype = {
     call$0() {
       return A.List_List$from(this.unattachedPagelessRoutes, true, type$._RouteEntry);
     },
-    $signature: 141
+    $signature: 120
   };
   A.NavigatorState__updatePages_closure1.prototype = {
     call$0() {
       return A._setArrayType([], type$.JSArray__RouteEntry);
     },
-    $signature: 141
+    $signature: 120
   };
   A.NavigatorState__updatePages_closure2.prototype = {
     call$0() {
       return A._setArrayType([], type$.JSArray__RouteEntry);
     },
-    $signature: 141
+    $signature: 120
   };
   A.NavigatorState__afterNavigation_closure.prototype = {
     call$1(object) {
       return A.S(object);
     },
-    $signature: 174
+    $signature: 190
   };
   A.NavigatorState__cancelActivePointers_closure.prototype = {
     call$0() {
@@ -207201,7 +207211,7 @@
       this.context.dispatchNotification$1(B.NavigationNotification_true);
       return true;
     },
-    $signature: 236
+    $signature: 249
   };
   A._RouteRestorationType.prototype = {
     _enumToString$0() {
@@ -207404,7 +207414,7 @@
       if (!property._restoration0$_disposed)
         property.removeListener$1(0, listener);
     },
-    $signature: 60
+    $signature: 59
   };
   A._NavigatorState_State_TickerProviderStateMixin.prototype = {
     activate$0() {
@@ -208755,25 +208765,25 @@
     call$1(child) {
       return child._computeIntrinsicDimension$3(B._IntrinsicDimension_0, this.height, child.get$computeMinIntrinsicWidth());
     },
-    $signature: 73
+    $signature: 68
   };
   A._RenderTheater_computeMaxIntrinsicWidth_closure.prototype = {
     call$1(child) {
       return child._computeIntrinsicDimension$3(B._IntrinsicDimension_1, this.height, child.get$computeMaxIntrinsicWidth());
     },
-    $signature: 73
+    $signature: 68
   };
   A._RenderTheater_computeMinIntrinsicHeight_closure.prototype = {
     call$1(child) {
       return child._computeIntrinsicDimension$3(B._IntrinsicDimension_2, this.width, child.get$computeMinIntrinsicHeight());
     },
-    $signature: 73
+    $signature: 68
   };
   A._RenderTheater_computeMaxIntrinsicHeight_closure.prototype = {
     call$1(child) {
       return child._computeIntrinsicDimension$3(B._IntrinsicDimension_3, this.width, child.get$computeMaxIntrinsicHeight());
     },
-    $signature: 73
+    $signature: 68
   };
   A._RenderTheater_debugDescribeChildren_closure.prototype = {
     call$1(renderObject) {
@@ -209919,7 +209929,7 @@
     call$1(element) {
       return A.PageStorageBucket__maybeAddKey(element, this.keys);
     },
-    $signature: 39
+    $signature: 38
   };
   A.PageStorage.prototype = {
     build$1(context) {
@@ -210280,7 +210290,7 @@
       }
       return false;
     },
-    $signature: 74
+    $signature: 79
   };
   A._PageViewState_build_closure0.prototype = {
     call$2(context, position) {
@@ -210854,7 +210864,7 @@
       if (!property._restoration0$_disposed)
         property.removeListener$1(0, listener);
     },
-    $signature: 60
+    $signature: 59
   };
   A.__RestorationScopeState_State_RestorationMixin.prototype = {
     didUpdateWidget$1(oldWidget) {
@@ -210996,7 +211006,7 @@
       if (!property._restoration0$_disposed)
         property.removeListener$1(0, listener);
     },
-    $signature: 60
+    $signature: 59
   };
   A.RouteInformation.prototype = {
     get$uri() {
@@ -211352,7 +211362,7 @@
       }
       return _this.$this.super$_CallbackHookProvider$invokeCallback(_this.defaultValue);
     },
-    $signature: 241
+    $signature: 242
   };
   A.RootBackButtonDispatcher.prototype = {
     addCallback$1(callback) {
@@ -211846,7 +211856,7 @@
         t5 = new A.ValueNotifier(false, $.$get$ChangeNotifier__emptyListeners(), type$.ValueNotifier_bool);
       return t2.buildTransitions$4(context, t3, t4, A.AnimatedBuilder$(t5, new A._ModalScopeState_build___closure(t1), child));
     },
-    $signature: 44
+    $signature: 43
   };
   A._ModalScopeState_build___closure.prototype = {
     call$2(context, child) {
@@ -211867,7 +211877,7 @@
       t3.toString;
       return t1.buildPage$3(context, t2, t3);
     },
-    $signature: 23
+    $signature: 22
   };
   A.ModalRoute.prototype = {
     setState$1(fn) {
@@ -212652,7 +212662,7 @@
     call$1($event) {
       return new A.VelocityTracker($event.get$kind($event), A.List_List$filled(20, null, false, type$.nullable__PointAtTime));
     },
-    $signature: 243
+    $signature: 244
   };
   A._WrappedScrollBehavior.prototype = {
     get$dragDevices() {
@@ -213245,14 +213255,14 @@
       this.$this._notifyListeners$1(notification.asScrollUpdate$0());
       return false;
     },
-    $signature: 192
+    $signature: 206
   };
   A.ScrollNotificationObserverState_build_closure0.prototype = {
     call$1(notification) {
       this.$this._notifyListeners$1(notification);
       return false;
     },
-    $signature: 74
+    $signature: 79
   };
   A.ScrollDecelerationRate.prototype = {
     _enumToString$0() {
@@ -214471,7 +214481,7 @@
       if (!property._restoration0$_disposed)
         property.removeListener$1(0, listener);
     },
-    $signature: 60
+    $signature: 59
   };
   A.Scrollable.prototype = {
     createState$0() {
@@ -214487,7 +214497,7 @@
     call$1(_) {
       return null;
     },
-    $signature: 334
+    $signature: 317
   };
   A._ScrollableScope.prototype = {
     updateShouldNotify$1(old) {
@@ -214938,7 +214948,7 @@
       t1 === $ && A.throwUnnamedLateFieldNI();
       return A.VerticalDragGestureRecognizer$(null, t1.get$dragDevices());
     },
-    $signature: 222
+    $signature: 223
   };
   A.ScrollableState_setCanDrag_closure0.prototype = {
     call$1(instance) {
@@ -214965,7 +214975,7 @@
       instance.gestureSettings = t1._mediaQueryGestureSettings;
       instance.supportedDevices = t1.__ScrollableState__configuration_A.get$dragDevices();
     },
-    $signature: 223
+    $signature: 224
   };
   A.ScrollableState_setCanDrag_closure1.prototype = {
     call$0() {
@@ -214973,7 +214983,7 @@
       t1 === $ && A.throwUnnamedLateFieldNI();
       return A.HorizontalDragGestureRecognizer$(null, t1.get$dragDevices());
     },
-    $signature: 224
+    $signature: 225
   };
   A.ScrollableState_setCanDrag_closure2.prototype = {
     call$1(instance) {
@@ -215000,7 +215010,7 @@
       instance.gestureSettings = t1._mediaQueryGestureSettings;
       instance.supportedDevices = t1.__ScrollableState__configuration_A.get$dragDevices();
     },
-    $signature: 225
+    $signature: 226
   };
   A._ScrollableSelectionHandler.prototype = {
     createState$0() {
@@ -215356,13 +215366,13 @@
     call$2(key, value) {
       return !this.selectableSet.contains$1(0, key);
     },
-    $signature: 246
+    $signature: 247
   };
   A._ScrollableSelectionContainerDelegate_didChangeSelectables_closure0.prototype = {
     call$2(key, value) {
       return !this.selectableSet.contains$1(0, key);
     },
-    $signature: 246
+    $signature: 247
   };
   A._ScrollSemantics.prototype = {
     createRenderObject$1(context) {
@@ -215572,7 +215582,7 @@
       if (value != null)
         this.description.push(prefix + value.toString$0(0));
     },
-    $signature: 247
+    $signature: 248
   };
   A.EdgeDraggingAutoScroller.prototype = {
     _offsetExtent$2(offset, scrollDirection) {
@@ -216967,19 +216977,19 @@
     call$1(details) {
       return this.$this.handleThumbPressStart$1(details.localPosition);
     },
-    $signature: 98
+    $signature: 110
   };
   A.RawScrollbarState__gestures__closure0.prototype = {
     call$1(details) {
       return this.$this.handleThumbPressUpdate$1(details.localPosition);
     },
-    $signature: 143
+    $signature: 127
   };
   A.RawScrollbarState__gestures__closure1.prototype = {
     call$1(details) {
       return this.$this.handleThumbPressEnd$2(details.localPosition, details.velocity);
     },
-    $signature: 189
+    $signature: 205
   };
   A.RawScrollbarState__gestures_closure1.prototype = {
     call$0() {
@@ -217013,7 +217023,7 @@
           break;
       }
     },
-    $signature: 68
+    $signature: 64
   };
   A.RawScrollbarState_build_closure0.prototype = {
     call$1($event) {
@@ -217032,7 +217042,7 @@
           break;
       }
     },
-    $signature: 188
+    $signature: 203
   };
   A._ThumbPressGestureRecognizer.prototype = {
     isPointerAllowed$1($event) {
@@ -217939,7 +217949,7 @@
     $defaultValues() {
       return [null];
     },
-    $signature: 216
+    $signature: 237
   };
   A.MultiSelectableSelectionContainerDelegate_getSelectionGeometry_closure.prototype = {
     call$1(selectionRect) {
@@ -217966,25 +217976,25 @@
     call$1(target) {
       return target !== this.$this.selectables[this.skipIndex];
     },
-    $signature: 250
+    $signature: 251
   };
   A.MultiSelectableSelectionContainerDelegate__flushInactiveSelections_closure0.prototype = {
     call$1(target) {
       return this.$this.dispatchSelectionEventToChild$2(target, B.ClearSelectionEvent_SelectionEventType_2);
     },
-    $signature: 86
+    $signature: 89
   };
   A.MultiSelectableSelectionContainerDelegate_handleSelectWord_closure.prototype = {
     call$1(target) {
       return target !== this.$this.selectables[this.index];
     },
-    $signature: 250
+    $signature: 251
   };
   A.MultiSelectableSelectionContainerDelegate_handleSelectWord_closure0.prototype = {
     call$1(target) {
       return this.$this.dispatchSelectionEventToChild$2(target, B.ClearSelectionEvent_SelectionEventType_2);
     },
-    $signature: 86
+    $signature: 89
   };
   A._MultiSelectableSelectionContainerDelegate_SelectionContainerDelegate_ChangeNotifier.prototype = {};
   A.SelectionContainer.prototype = {
@@ -219026,13 +219036,13 @@
         t2.remove$1(0, index);
       }
     },
-    $signature: 19
+    $signature: 20
   };
   A.SliverMultiBoxAdaptorElement_performRebuild_closure.prototype = {
     call$0() {
       return null;
     },
-    $signature: 12
+    $signature: 13
   };
   A.SliverMultiBoxAdaptorElement_performRebuild_closure0.prototype = {
     call$0() {
@@ -220491,21 +220501,21 @@
     call$1(_) {
       return this.builtMagnifier;
     },
-    $signature: 23
+    $signature: 22
   };
   A.SelectionOverlay_showToolbar_closure.prototype = {
     call$1(context) {
       var t1 = A.MatrixUtils_transformPoint(this.renderBox.getTransformTo$1(0, null), B.Offset_0_0);
       return new A._SelectionToolbarWrapper(this.contextMenuBuilder.call$1(context), new A.Offset(-t1._dx, -t1._dy), this.$this.toolbarLayerLink, null, null);
     },
-    $signature: 251
+    $signature: 252
   };
   A.SelectionOverlay_showSpellCheckSuggestionsToolbar_closure.prototype = {
     call$1(context) {
       var t1 = A.MatrixUtils_transformPoint(this.renderBox.getTransformTo$1(0, null), B.Offset_0_0);
       return new A._SelectionToolbarWrapper(this.builder.call$1(context), new A.Offset(-t1._dx, -t1._dy), this.$this.toolbarLayerLink, null, null);
     },
-    $signature: 251
+    $signature: 252
   };
   A.SelectionOverlay_markNeedsBuild_closure.prototype = {
     call$1(duration) {
@@ -220538,7 +220548,7 @@
       this.$this.selectionControls.toString;
       return B.SizedBox_0_0_null_null;
     },
-    $signature: 23
+    $signature: 22
   };
   A._SelectionToolbarWrapper.prototype = {
     createState$0() {
@@ -220678,7 +220688,7 @@
     call$0() {
       return A.PanGestureRecognizer$(this.$this, A.LinkedHashSet_LinkedHashSet$_literal([B.PointerDeviceKind_0, B.PointerDeviceKind_2, B.PointerDeviceKind_5], type$.PointerDeviceKind));
     },
-    $signature: 226
+    $signature: 227
   };
   A._SelectionHandleOverlayState_build_closure0.prototype = {
     call$1(instance) {
@@ -220688,7 +220698,7 @@
       instance.onUpdate = t1.onSelectionHandleDragUpdate;
       instance.onEnd = t1.onSelectionHandleDragEnd;
     },
-    $signature: 227
+    $signature: 228
   };
   A.TextSelectionGestureDetectorBuilder.prototype = {
     _showMagnifierIfSupportedByPlatform$1(positionToShow) {
@@ -221764,7 +221774,7 @@
     call$0() {
       return A.TapGestureRecognizer$(this.$this, null);
     },
-    $signature: 218
+    $signature: 219
   };
   A._TextSelectionGestureDetectorState_build_closure0.prototype = {
     call$1(instance) {
@@ -221772,13 +221782,13 @@
       instance.onSecondaryTap = t1.onSecondaryTap;
       instance.onSecondaryTapDown = t1.onSecondaryTapDown;
     },
-    $signature: 219
+    $signature: 220
   };
   A._TextSelectionGestureDetectorState_build_closure1.prototype = {
     call$0() {
       return A.LongPressGestureRecognizer$(this.$this, null, A.LinkedHashSet_LinkedHashSet$_literal([B.PointerDeviceKind_0], type$.PointerDeviceKind));
     },
-    $signature: 220
+    $signature: 221
   };
   A._TextSelectionGestureDetectorState_build_closure2.prototype = {
     call$1(instance) {
@@ -221787,7 +221797,7 @@
       instance.onLongPressMoveUpdate = t1.get$_handleLongPressMoveUpdate();
       instance.onLongPressEnd = t1.get$_handleLongPressEnd();
     },
-    $signature: 221
+    $signature: 222
   };
   A._TextSelectionGestureDetectorState_build_closure3.prototype = {
     call$0() {
@@ -221843,7 +221853,7 @@
     call$0() {
       return A.ForcePressGestureRecognizer$(this.$this, null);
     },
-    $signature: 228
+    $signature: 229
   };
   A._TextSelectionGestureDetectorState_build_closure8.prototype = {
     call$1(instance) {
@@ -221852,7 +221862,7 @@
       instance.onStart = t2.onForcePressStart != null ? t1.get$_forcePressStarted() : null;
       instance.onEnd = t2.onForcePressEnd != null ? t1.get$_forcePressEnded() : null;
     },
-    $signature: 229
+    $signature: 230
   };
   A.ClipboardStatusNotifier.prototype = {
     addListener$1(_, listener) {
@@ -222903,7 +222913,7 @@
       this._box_0.ancestorContext = $parent;
       return false;
     },
-    $signature: 39
+    $signature: 38
   };
   A._VisibilityScope.prototype = {
     updateShouldNotify$1(old) {
@@ -223052,7 +223062,7 @@
         _this.fontSizeStack.pop();
       return true;
     },
-    $signature: 103
+    $signature: 114
   };
   A._WidgetSpanParentData.prototype = {
     applyParentData$1(renderObject) {
@@ -223772,7 +223782,7 @@
       var t1 = this.kv.get$values(0);
       return t1._f.call$1(J.get$single$ax(t1.__internal$_iterable));
     },
-    $signature: 80
+    $signature: 75
   };
   A.Parser_interpolate_closure.prototype = {
     call$1(m) {
@@ -223791,7 +223801,7 @@
         return t1;
       }
     },
-    $signature: 135
+    $signature: 131
   };
   A.FlutterImageCompressPlatform.prototype = {};
   A.UnsupportedFlutterImageCompress.prototype = {
@@ -223866,7 +223876,7 @@
     call$1($event) {
       return A._asInt($event) === 1;
     },
-    $signature: 113
+    $signature: 98
   };
   A.FlutterKeyboardVisibilityPlugin.prototype = {
     get$onChange(_) {
@@ -238963,7 +238973,7 @@
         A.FlutterError_reportError(new A.FlutterErrorDetails(exception, stack, "flutter web plugins", t1, null, false));
       }
     },
-    $signature: 53
+    $signature: 54
   };
   A.PluginRegistry.prototype = {};
   A._ServiceFactoryType.prototype = {
@@ -239302,13 +239312,13 @@
     call$1(context) {
       return this.builder.call$2(context, this.state);
     },
-    $signature: 23
+    $signature: 22
   };
   A._CustomNavigatorState__buildPageForShellRoute_closure.prototype = {
     call$1(context) {
       return this.match.route.buildWidget$3(context, this.state, this.shellRouteContext);
     },
-    $signature: 23
+    $signature: 22
   };
   A._CustomNavigatorState__cacheAppType_closure.prototype = {
     call$2(c, s) {
@@ -239544,20 +239554,20 @@
       t1 = new A.RouteConfiguration_redirect_processRedirect_processTopLevelRedirect_processRouteLevelRedirect(t1, _this.prevLocation, t2, _this.redirectHistory, t3).call$1(t1._getRouteLevelRedirect$4(t3, t2, routeMatches, 0));
       return t1;
     },
-    $signature: 323
+    $signature: 388
   };
   A.RouteConfiguration_redirect_processRedirect_processTopLevelRedirect_processRouteLevelRedirect.prototype = {
     call$1(routeRedirectLocation) {
       return this.prevMatchList;
     },
-    $signature: 323
+    $signature: 388
   };
   A.RouteConfiguration_redirect_processRedirect_processTopLevelRedirect_closure.prototype = {
     call$1(match) {
       match.get$route();
       return true;
     },
-    $signature: 102
+    $signature: 106
   };
   A.RouteConfiguration__getRouteLevelRedirect_processRouteRedirect.prototype = {
     call$1(newLocation) {
@@ -239816,7 +239826,7 @@
         this.currentGoRouteMatches.push(match);
       return true;
     },
-    $signature: 102
+    $signature: 106
   };
   A.GoRouterDelegate_setNewRoutePath_closure0.prototype = {
     call$1(match) {
@@ -239824,7 +239834,7 @@
         this.newGoRouteMatches.push(match);
       return true;
     },
-    $signature: 102
+    $signature: 106
   };
   A.GoRouterDelegate_setNewRoutePath_closure1.prototype = {
     call$1(exit) {
@@ -239832,7 +239842,7 @@
         return new A.SynchronousFuture(null, type$.SynchronousFuture_void);
       return this.$this._setCurrentConfiguration$1(this.configuration);
     },
-    $signature: 90
+    $signature: 94
   };
   A.GoRouterDelegate__callOnExitStartsAt_handleOnExitResult.prototype = {
     call$1(exit) {
@@ -239841,7 +239851,7 @@
         return _this.$this._callOnExitStartsAt$3$context$matches(_this.index - 1, _this.context, _this.matches);
       return new A.SynchronousFuture(false, type$.SynchronousFuture_bool);
     },
-    $signature: 241
+    $signature: 242
   };
   A._GoRouterDelegate_RouterDelegate_ChangeNotifier.prototype = {};
   A.NavigatingType.prototype = {
@@ -239925,7 +239935,7 @@
     call$0() {
       return A._setArrayType([], type$.JSArray_RouteMatchBase);
     },
-    $signature: 259
+    $signature: 260
   };
   A.RouteMatchBase__matchByNavigatorKeyForGoRoute_closure.prototype = {
     call$2(key, value) {
@@ -239937,7 +239947,7 @@
     call$0() {
       return A._setArrayType([], type$.JSArray_RouteMatchBase);
     },
-    $signature: 259
+    $signature: 260
   };
   A.RouteMatch.prototype = {
     $eq(_, other) {
@@ -240086,7 +240096,7 @@
     call$1(match) {
       return !(match instanceof A.ImperativeRouteMatch);
     },
-    $signature: 102
+    $signature: 106
   };
   A.RouteMatchList_remove_closure.prototype = {
     call$1(value) {
@@ -240145,7 +240155,7 @@
         this.imperativeMatches.push(match);
       return true;
     },
-    $signature: 102
+    $signature: 106
   };
   A._RouteMatchListEncoder_convert_closure0.prototype = {
     call$1(e) {
@@ -240405,7 +240415,7 @@
         return this.$this.onParserException.call$2(this.context, value);
       return value;
     },
-    $signature: 260
+    $signature: 261
   };
   A.GoRouteInformationParser_parseRouteInformationWithDependencies_closure0.prototype = {
     call$1(matchList) {
@@ -240415,13 +240425,13 @@
       t1 = _this.state;
       return _this.$this._updateRouteMatchList$4$baseRouteMatchList$completer$type(matchList, t1.baseRouteMatchList, t1.completer, t1.type);
     },
-    $signature: 260
+    $signature: 261
   };
   A._escapeGroup_closure.prototype = {
     call$1(match) {
       return "\\" + A.S(match._match[0]);
     },
-    $signature: 135
+    $signature: 131
   };
   A.RouteBase.prototype = {};
   A.GoRoute.prototype = {
@@ -240725,13 +240735,13 @@
     call$2(key1, key2) {
       return key1.toLowerCase() === key2.toLowerCase();
     },
-    $signature: 310
+    $signature: 263
   };
   A.BaseRequest_closure0.prototype = {
     call$1(key) {
       return B.JSString_methods.get$hashCode(key.toLowerCase());
     },
-    $signature: 307
+    $signature: 250
   };
   A.BaseResponse.prototype = {
     BaseResponse$7$contentLength$headers$isRedirect$persistentConnection$reasonPhrase$request(statusCode, contentLength, headers, isRedirect, persistentConnection, reasonPhrase, request) {
@@ -240848,13 +240858,13 @@
       t2.BaseResponse$7$contentLength$headers$isRedirect$persistentConnection$reasonPhrase$request(t3, t4, t6, false, true, t1, t5);
       _this.completer.complete$1(0, t2);
     },
-    $signature: 173
+    $signature: 192
   };
   A.BrowserClient_send_closure0.prototype = {
     call$1(_) {
       this.completer.completeError$2(new A.ClientException("XMLHttpRequest error.", this.request.url), A.StackTrace_current());
     },
-    $signature: 173
+    $signature: 192
   };
   A.ByteStream.prototype = {
     toBytes$0() {
@@ -240869,7 +240879,7 @@
     call$1(bytes) {
       return this.completer.complete$1(0, new Uint8Array(A._ensureNativeList(bytes)));
     },
-    $signature: 320
+    $signature: 347
   };
   A.ClientException.prototype = {
     toString$0(_) {
@@ -240887,7 +240897,7 @@
     call$1(key) {
       return key.toLowerCase();
     },
-    $signature: 57
+    $signature: 63
   };
   A.MediaType.prototype = {
     toString$0(_) {
@@ -240979,13 +240989,13 @@
       } else
         t1._contents = t3 + value;
     },
-    $signature: 202
+    $signature: 194
   };
   A.MediaType_toString__closure.prototype = {
     call$1(match) {
       return "\\" + A.S(match.$index(0, 0));
     },
-    $signature: 135
+    $signature: 131
   };
   A.expectQuotedString_closure.prototype = {
     call$1(match) {
@@ -240993,7 +241003,7 @@
       t1.toString;
       return t1;
     },
-    $signature: 135
+    $signature: 131
   };
   A.Channel.prototype = {
     _enumToString$0() {
@@ -242075,7 +242085,7 @@
       this.$this.directories.$indexSet(0, key, t1);
       return t1;
     },
-    $signature: 261
+    $signature: 262
   };
   A.IfdDirectory.prototype = {
     get$isEmpty(_) {
@@ -242151,7 +242161,7 @@
       this.$this.sub.directories.$indexSet(0, tag, t1);
       return t1;
     },
-    $signature: 261
+    $signature: 262
   };
   A.IfdValueType.prototype = {
     _enumToString$0() {
@@ -245919,7 +245929,7 @@
         code |= 8;
       return code;
     },
-    $signature: 346
+    $signature: 265
   };
   A.ImageException.prototype = {
     toString$0(_) {
@@ -246540,7 +246550,7 @@
         t1.complete$1(0, A.List_List$of(new A.MappedListIterable(files, new A.ImagePickerPlugin__getSelectedXFiles__closure(), t2), true, t2._eval$1("ListIterable.E")));
       }
     },
-    $signature: 179
+    $signature: 202
   };
   A.ImagePickerPlugin__getSelectedXFiles__closure.prototype = {
     call$1(file) {
@@ -246563,7 +246573,7 @@
     call$1(_) {
       this.completer.complete$1(0, A._setArrayType([], type$.JSArray_XFile));
     },
-    $signature: 179
+    $signature: 202
   };
   A.ImagePickerPlugin__getSelectedXFiles_closure1.prototype = {
     call$1($event) {
@@ -246571,7 +246581,7 @@
       if ((t1.future._state & 30) === 0)
         t1.completeError$1($event);
     },
-    $signature: 179
+    $signature: 202
   };
   A.ImageResizer.prototype = {
     resizeImageIfNeeded$4(file, maxWidth, maxHeight, imageQuality) {
@@ -246732,14 +246742,14 @@
     call$1($event) {
       this.imageLoadCompleter.complete$1(0, this.imageElement);
     },
-    $signature: 52
+    $signature: 51
   };
   A.ImageResizer_loadImage_closure0.prototype = {
     call$1($event) {
       B.ImageElement_methods.remove$0(this.imageElement);
       this.imageLoadCompleter.completeError$1("Error while loading image.");
     },
-    $signature: 52
+    $signature: 51
   };
   A.MethodChannelImagePicker.prototype = {
     _getMultiImagePath$4$imageQuality$maxHeight$maxWidth$requestFullMetadata(imageQuality, maxHeight, maxWidth, requestFullMetadata) {
@@ -246898,7 +246908,7 @@
       t1 = this.completer;
       A.Future_wait(J.map$1$1$ax(files, new A.ImagePickerWeb__pickFile_changeEventListener_closure(t1), type$.Future_File), type$.File).then$1$1(0, t1.get$complete(t1), type$.void);
     },
-    $signature: 52
+    $signature: 51
   };
   A.ImagePickerWeb__pickFile_changeEventListener_closure.prototype = {
     call$1(file) {
@@ -246929,7 +246939,7 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 263
+    $signature: 264
   };
   A.ImagePickerWeb__pickFile_cancelledEventListener.prototype = {
     call$1(e) {
@@ -246938,7 +246948,7 @@
       B.Window_methods.removeEventListener$2(t1, "focus", this);
       A.Future_Future$delayed(B.Duration_500000, null, type$.void).whenComplete$1(new A.ImagePickerWeb__pickFile_cancelledEventListener_closure(this._box_0, this.completer));
     },
-    $signature: 52
+    $signature: 51
   };
   A.ImagePickerWeb__pickFile_cancelledEventListener_closure.prototype = {
     call$0() {
@@ -246948,7 +246958,7 @@
         this.completer.complete$1(0, null);
       }
     },
-    $signature: 12
+    $signature: 13
   };
   A.ImagePickerWeb__pickMultiFiles_changeEventListener.prototype = {
     call$1(e) {
@@ -246963,7 +246973,7 @@
       t1 = this.completer;
       A.Future_wait(J.map$1$1$ax(files, new A.ImagePickerWeb__pickMultiFiles_changeEventListener_closure(t1), type$.Future_File), type$.File).then$1$1(0, t1.get$complete(t1), type$.void);
     },
-    $signature: 52
+    $signature: 51
   };
   A.ImagePickerWeb__pickMultiFiles_changeEventListener_closure.prototype = {
     call$1(file) {
@@ -246994,7 +247004,7 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 263
+    $signature: 264
   };
   A.ImagePickerWeb__pickMultiFiles_cancelledEventListener.prototype = {
     call$1(e) {
@@ -247003,7 +247013,7 @@
       B.Window_methods.removeEventListener$2(t1, "focus", this);
       A.Future_Future$delayed(B.Duration_500000, null, type$.void).whenComplete$1(new A.ImagePickerWeb__pickMultiFiles_cancelledEventListener_closure(this._box_0, this.completer));
     },
-    $signature: 52
+    $signature: 51
   };
   A.ImagePickerWeb__pickMultiFiles_cancelledEventListener_closure.prototype = {
     call$0() {
@@ -247013,7 +247023,7 @@
         this.completer.complete$1(0, null);
       }
     },
-    $signature: 12
+    $signature: 13
   };
   A._extension_0_asBytes_closure.prototype = {
     call$1(_) {
@@ -247024,7 +247034,7 @@
       }
       this.bytesFile.complete$1(0, result);
     },
-    $signature: 201
+    $signature: 198
   };
   A.MediaInfo.prototype = {
     toJson$0() {
@@ -247041,7 +247051,7 @@
     call$1(locale) {
       return "default";
     },
-    $signature: 57
+    $signature: 63
   };
   A.CompositeMessageLookup.prototype = {
     addLocale$2(localeName, findLocale) {
@@ -247452,13 +247462,13 @@
     call$1(i) {
       return i;
     },
-    $signature: 76
+    $signature: 78
   };
   A.DateFormat__initDigitMatcher_closure0.prototype = {
     call$1(i) {
       return this.$this.get$localeZeroCodeUnit() + i;
     },
-    $signature: 76
+    $signature: 78
   };
   A.DateFormat__fieldConstructors_closure.prototype = {
     call$2(pattern, $parent) {
@@ -247844,7 +247854,7 @@
     call$1(x) {
       return x;
     },
-    $signature: 19
+    $signature: 20
   };
   A.NumberFormat.prototype = {
     format$1(number) {
@@ -248323,19 +248333,19 @@
     call$1(locale) {
       return A.deprecatedLocale(A.shortLocale(locale));
     },
-    $signature: 25
+    $signature: 24
   };
   A.verifiedLocale_closure0.prototype = {
     call$1(locale) {
       return A.deprecatedLocale(A.canonicalizedLocale(locale));
     },
-    $signature: 25
+    $signature: 24
   };
   A.verifiedLocale_closure1.prototype = {
     call$1(_) {
       return "fallback";
     },
-    $signature: 25
+    $signature: 24
   };
   A.PluralCase.prototype = {
     _enumToString$0() {
@@ -248585,7 +248595,7 @@
         this.$this.SingleChildWidgetElementMixin__parent = $parent;
       return false;
     },
-    $signature: 39
+    $signature: 38
   };
   A._SingleChildStatelessElement_StatelessElement_SingleChildWidgetElementMixin_activate_closure.prototype = {
     call$1($parent) {
@@ -248593,7 +248603,7 @@
         this.$this.SingleChildWidgetElementMixin__parent = $parent;
       return false;
     },
-    $signature: 39
+    $signature: 38
   };
   A.__NestedElement_StatelessElement_SingleChildWidgetElementMixin_activate_closure.prototype = {
     call$1($parent) {
@@ -248601,7 +248611,7 @@
         this.$this.SingleChildWidgetElementMixin__parent = $parent;
       return false;
     },
-    $signature: 39
+    $signature: 38
   };
   A.SingleChildStatelessWidget.prototype = {
     build$1(context) {
@@ -248868,19 +248878,19 @@
     call$1(part) {
       return part !== "";
     },
-    $signature: 41
+    $signature: 42
   };
   A.Context_split_closure.prototype = {
     call$1(part) {
       return part.length !== 0;
     },
-    $signature: 41
+    $signature: 42
   };
   A._validateArgList_closure.prototype = {
     call$1(arg) {
       return arg == null ? "null" : '"' + arg + '"';
     },
-    $signature: 265
+    $signature: 266
   };
   A.InternalStyle.prototype = {
     getRoot$1(path) {
@@ -249515,7 +249525,7 @@
       }
       return t1;
     },
-    $signature: 23
+    $signature: 22
   };
   A._PinCodeTextFieldState_build_closure0.prototype = {
     call$0() {
@@ -249573,7 +249583,7 @@
         return A.SlideTransition$(child, new A._AnimatedEvaluation(animation, new A.Tween(B.Offset_chs, B.Offset_0_0, t1), t1._eval$1("_AnimatedEvaluation<Animatable.T>")), null, true);
       }
     },
-    $signature: 266
+    $signature: 267
   };
   A._PinCodeTextFieldState__onFocus_closure.prototype = {
     call$0() {
@@ -249828,7 +249838,7 @@
       this._box_0.inheritedElement = $parent.getElementForInheritedWidgetOfExactType$1$0(this.InheritedWidgetType);
       return false;
     },
-    $signature: 39
+    $signature: 38
   };
   A._InheritedProviderScopeElement_updateDependencies_closure.prototype = {
     call$0() {
@@ -249836,7 +249846,7 @@
       t1.shouldClearMutationScheduled = false;
       t1.shouldClearSelectors = true;
     },
-    $signature: 12
+    $signature: 13
   };
   A._Delegate.prototype = {};
   A._DelegateState.prototype = {
@@ -250375,25 +250385,25 @@
     call$1(control) {
       return control.markAsPristine$1$updateParent(false);
     },
-    $signature: 137
+    $signature: 136
   };
   A.AbstractControl_markAllAsTouched_closure.prototype = {
     call$1(control) {
       return control.markAllAsTouched$1$updateParent(false);
     },
-    $signature: 137
+    $signature: 136
   };
   A.AbstractControl_markAsUntouched_closure.prototype = {
     call$1(control) {
       return control.markAsUntouched$1$updateParent(false);
     },
-    $signature: 137
+    $signature: 136
   };
   A.AbstractControl_removeError_closure.prototype = {
     call$2(errorKey, value) {
       return errorKey === this.key;
     },
-    $signature: 268
+    $signature: 269
   };
   A.AbstractControl__runAsyncValidators_closure.prototype = {
     call$0() {
@@ -250428,19 +250438,19 @@
     call$1(control) {
       control.unfocus$1$touched(this.touched);
     },
-    $signature: 137
+    $signature: 136
   };
   A.AbstractControl__anyControlsTouched_closure.prototype = {
     call$1(control) {
       return control._touched;
     },
-    $signature: 99
+    $signature: 107
   };
   A.AbstractControl__anyControlsDirty_closure.prototype = {
     call$1(control) {
       return !control._pristine;
     },
-    $signature: 99
+    $signature: 107
   };
   A.FormControl.prototype = {
     unfocus$1$touched(touched) {
@@ -250641,25 +250651,25 @@
       if (control._models$_status !== B.ControlStatus_3 || this.$this._models$_status === B.ControlStatus_3)
         this.map.$indexSet(0, key, control.get$value(control));
     },
-    $signature: 144
+    $signature: 117
   };
   A.FormGroup_addAll_closure.prototype = {
     call$2($name, control) {
       control.parent = this.$this;
     },
-    $signature: 144
+    $signature: 117
   };
   A.FormGroup_allControlsDisabled_closure.prototype = {
     call$1(control) {
       return control._models$_status === B.ControlStatus_3;
     },
-    $signature: 99
+    $signature: 107
   };
   A.FormGroup_anyControlsHaveStatus_closure.prototype = {
     call$1(control) {
       return control._models$_status === this.status;
     },
-    $signature: 99
+    $signature: 107
   };
   A.FormGroup_errors_closure.prototype = {
     call$2($name, control) {
@@ -250674,19 +250684,19 @@
         t1.update$3$ifAbsent(t1, $name, new A.FormGroup_errors__closure(control), new A.FormGroup_errors__closure0(control));
       }
     },
-    $signature: 144
+    $signature: 117
   };
   A.FormGroup_errors__closure.prototype = {
     call$1(_) {
       return this.control.get$errors();
     },
-    $signature: 271
+    $signature: 272
   };
   A.FormGroup_errors__closure0.prototype = {
     call$0() {
       return this.control.get$errors();
     },
-    $signature: 272
+    $signature: 273
   };
   A.FormGroup_patchValue_closure.prototype = {
     call$2($name, value) {
@@ -250694,19 +250704,19 @@
       if (t1.containsKey$1(0, $name))
         t1.$index(0, $name).patchValue$3$emitEvent$updateParent(value, this.emitEvent, false);
     },
-    $signature: 247
+    $signature: 248
   };
   A.FormGroup_forEachChild_closure.prototype = {
     call$2($name, control) {
       return this.callback.call$1(control);
     },
-    $signature: 144
+    $signature: 117
   };
   A.FormGroup_anyControls_closure.prototype = {
     call$1(control) {
       return control._models$_status !== B.ControlStatus_3 && this.condition.call$1(control);
     },
-    $signature: 99
+    $signature: 107
   };
   A.FormArray.prototype = {
     get$rawValue(_) {
@@ -250895,13 +250905,13 @@
     call$1(_) {
       return this.control.get$errors();
     },
-    $signature: 271
+    $signature: 272
   };
   A.FormArray_errors__closure0.prototype = {
     call$0() {
       return this.control.get$errors();
     },
-    $signature: 272
+    $signature: 273
   };
   A.FormArray_updateValue_closure.prototype = {
     call$1(entry) {
@@ -251487,7 +251497,7 @@
     call$1(_) {
       return this.onSubmitted.call$0();
     },
-    $signature: 37
+    $signature: 36
   };
   A._ReactiveTextFieldState.prototype = {
     initState$0() {
@@ -251870,7 +251880,7 @@
     call$0() {
       return this.call$1(null);
     },
-    $signature: 274
+    $signature: 275
   };
   A._forwardMulti__closure.prototype = {
     call$0() {
@@ -251923,7 +251933,7 @@
     call$0() {
       return this.call$1(null);
     },
-    $signature: 274
+    $signature: 275
   };
   A._forward__listenToUpstream_closure.prototype = {
     call$0() {
@@ -252212,7 +252222,7 @@
   A.SignatureState_build_closure3.prototype = {
     call$1(details) {
     },
-    $signature: 31
+    $signature: 32
   };
   A.SignatureState_build_closure0.prototype = {
     call$1($event) {
@@ -252227,7 +252237,7 @@
         t1._addPoint$2($event, B.PointType_0);
       }
     },
-    $signature: 83
+    $signature: 86
   };
   A.SignatureState_build_closure2.prototype = {
     call$1($event) {
@@ -252439,25 +252449,25 @@
     call$1(p) {
       return p.offset._dx;
     },
-    $signature: 147
+    $signature: 153
   };
   A.SignatureController_maxYValue_closure.prototype = {
     call$1(p) {
       return p.offset._dy;
     },
-    $signature: 147
+    $signature: 153
   };
   A.SignatureController_minXValue_closure.prototype = {
     call$1(p) {
       return p.offset._dx;
     },
-    $signature: 147
+    $signature: 153
   };
   A.SignatureController_minYValue_closure.prototype = {
     call$1(p) {
       return p.offset._dy;
     },
-    $signature: 147
+    $signature: 153
   };
   A.SignatureController__translatePoints_closure.prototype = {
     call$1(p) {
@@ -252930,7 +252940,7 @@
       t2.upgrading = false;
       t2.flush$0(0);
     },
-    $signature: 12
+    $signature: 13
   };
   A.Socket_probe_freezeTransport.prototype = {
     call$0() {
@@ -252942,7 +252952,7 @@
       t1.transport.close$0(0);
       t1.transport = null;
     },
-    $signature: 12
+    $signature: 13
   };
   A.Socket_probe_onerror.prototype = {
     call$1(err) {
@@ -252999,7 +253009,7 @@
       t1.off$2("close", _this.onclose);
       t1.off$2("upgrading", _this.onupgrade);
     },
-    $signature: 12
+    $signature: 13
   };
   A.Socket_probe_closure0.prototype = {
     call$0() {
@@ -253025,7 +253035,7 @@
       $.$get$_logger1().log$4(B.Level_FINE_500, "socket closing - telling transport to close", null, null);
       t1.transport.close$0(0);
     },
-    $signature: 12
+    $signature: 13
   };
   A.Socket_close_cleanupAndClose.prototype = {
     call$1(_) {
@@ -253044,7 +253054,7 @@
       t1.once$2("upgrade", t2);
       t1.once$2("upgradeError", t2);
     },
-    $signature: 12
+    $signature: 13
   };
   A.Socket_close_closure.prototype = {
     call$1(_) {
@@ -253059,7 +253069,7 @@
     call$1(transport) {
       return J.contains$1$asx(this.upgrades, transport);
     },
-    $signature: 41
+    $signature: 42
   };
   A.Transport.prototype = {
     Transport$1(opts) {
@@ -253146,7 +253156,7 @@
       else
         t1.$indexSet(0, key, B.C_JsonCodec.encode$2$toEncodable(value, null));
     },
-    $signature: 43
+    $signature: 41
   };
   A.PollingTransport.prototype = {
     doOpen$0() {
@@ -253266,7 +253276,7 @@
       this.self.readyState = "paused";
       this.onPause.call$0();
     },
-    $signature: 12
+    $signature: 13
   };
   A.PollingTransport_pause_closure.prototype = {
     call$1(_) {
@@ -253322,7 +253332,7 @@
     $defaultValues() {
       return [null];
     },
-    $signature: 276
+    $signature: 277
   };
   A.PollingTransport_write_closure.prototype = {
     call$1(data) {
@@ -253474,7 +253484,7 @@
       } else
         A.Timer_Timer(B.Duration_0, new A.Request_create__closure(t3, t1));
     },
-    $signature: 52
+    $signature: 51
   };
   A.Request_create__closure.prototype = {
     call$0() {
@@ -253562,7 +253572,7 @@
     call$1(_) {
       return this.$this.onOpen$0(0);
     },
-    $signature: 52
+    $signature: 51
   };
   A.WebSocketTransport_addEventListeners_closure0.prototype = {
     call$1(closeEvent) {
@@ -253588,7 +253598,7 @@
     call$1(e) {
       this.$this.onError$2(0, "websocket error", e);
     },
-    $signature: 52
+    $signature: 51
   };
   A.WebSocketTransport_write_closure.prototype = {
     call$1(data) {
@@ -253916,7 +253926,7 @@
     call$0() {
       this.$this._event_emitter$_emit$2("packet", this.packet);
     },
-    $signature: 12
+    $signature: 13
   };
   A.Manager_reconnect_closure0.prototype = {
     call$0() {
@@ -253956,7 +253966,7 @@
     call$0() {
       return this.call$1(null);
     },
-    $signature: 276
+    $signature: 277
   };
   A.Manager_reconnect_closure.prototype = {
     call$0() {
@@ -254277,7 +254287,7 @@
       t1.$indexSet(0, "pending", false);
       return t2._drainQueue$0();
     },
-    $signature: 85
+    $signature: 81
   };
   A.Socket__registerAckCallback_closure0.prototype = {
     call$0() {
@@ -254349,7 +254359,7 @@
     call$2(k, v) {
       this.newData.$indexSet(0, k, A.Binary__deconstructPacket(J.$index$asx(this._data, k), this.buffers));
     },
-    $signature: 85
+    $signature: 81
   };
   A.Binary__reconstructPacket_closure.prototype = {
     call$1(v) {
@@ -254361,7 +254371,7 @@
     call$2(key, value) {
       J.$indexSet$ax(this._data, key, A.Binary__reconstructPacket(value, this.buffers));
     },
-    $signature: 85
+    $signature: 81
   };
   A.Encoder.prototype = {
     encode$1(obj) {
@@ -254494,7 +254504,7 @@
     call$0() {
       return A._setArrayType([], type$.JSArray_of_dynamic_Function_dynamic);
     },
-    $signature: 278
+    $signature: 296
   };
   A.EventEmitter_on_closure0.prototype = {
     call$0() {
@@ -254506,7 +254516,7 @@
     call$0() {
       return A._setArrayType([], type$.JSArray_of_dynamic_Function_dynamic);
     },
-    $signature: 278
+    $signature: 296
   };
   A.SourceFile.prototype = {
     get$length(_) {
@@ -254945,7 +254955,7 @@
       t1 = t1.get$end(t1);
       return t2 !== t1.get$line(t1);
     },
-    $signature: 162
+    $signature: 199
   };
   A.Highlighter$__closure0.prototype = {
     call$1(line) {
@@ -255017,13 +255027,13 @@
       t1 = t1.get$end(t1);
       return t1.get$line(t1) < this.line.number;
     },
-    $signature: 162
+    $signature: 199
   };
   A.Highlighter_highlight_closure.prototype = {
     call$1(highlight) {
       return true;
     },
-    $signature: 162
+    $signature: 199
   };
   A.Highlighter__writeFileStart_closure.prototype = {
     call$0() {
@@ -255037,14 +255047,14 @@
       var t1 = this.startLine === this.line.number ? "\u250c" : "\u2514";
       this.$this._highlighter$_buffer._contents += t1;
     },
-    $signature: 12
+    $signature: 13
   };
   A.Highlighter__writeMultilineHighlights_closure0.prototype = {
     call$0() {
       var t1 = this.highlight == null ? "\u2500" : "\u253c";
       this.$this._highlighter$_buffer._contents += t1;
     },
-    $signature: 12
+    $signature: 13
   };
   A.Highlighter__writeMultilineHighlights_closure1.prototype = {
     call$0() {
@@ -255083,20 +255093,20 @@
         }
       }
     },
-    $signature: 12
+    $signature: 13
   };
   A.Highlighter__writeMultilineHighlights__closure.prototype = {
     call$0() {
       var t1 = this._box_0.openedOnThisLine ? "\u252c" : "\u250c";
       this.$this._highlighter$_buffer._contents += t1;
     },
-    $signature: 12
+    $signature: 13
   };
   A.Highlighter__writeMultilineHighlights__closure0.prototype = {
     call$0() {
       this.$this._highlighter$_buffer._contents += this.vertical;
     },
-    $signature: 12
+    $signature: 13
   };
   A.Highlighter__writeHighlightedText_closure.prototype = {
     call$0() {
@@ -255122,7 +255132,7 @@
       t2 = t2._contents += B.JSString_methods.$mul("^", Math.max(endColumn + (tabsBefore + tabsInside) * 3 - startColumn, 1));
       return t2.length - t3.length;
     },
-    $signature: 115
+    $signature: 108
   };
   A.Highlighter__writeIndicator_closure0.prototype = {
     call$0() {
@@ -255145,7 +255155,7 @@
       }
       return t2._contents.length - t3.length;
     },
-    $signature: 115
+    $signature: 108
   };
   A.Highlighter__writeSidebar_closure.prototype = {
     call$0() {
@@ -255158,7 +255168,7 @@
       t3 = this.end;
       t2._contents = t1 + (t3 == null ? "\u2502" : t3);
     },
-    $signature: 12
+    $signature: 13
   };
   A._Highlight.prototype = {
     toString$0(_) {
@@ -256005,7 +256015,7 @@
       var t1 = this._box_0;
       return child.layout$2$parentUsesSize(new A.BoxConstraints(0, t1.width, 0, t1.height), true);
     },
-    $signature: 42
+    $signature: 44
   };
   A._DefaultLocalizations.prototype = {$isSfLocalizations: 1};
   A.SfBarcodeThemeData.prototype = {
@@ -258115,25 +258125,25 @@
       }
       t1._updateCalendarTapCallbackForHeader$0();
     },
-    $signature: 61
+    $signature: 55
   };
   A._SfDateRangePickerState__addChildren_closure.prototype = {
     call$1(details) {
       this.$this._updateCalendarTapCallbackForHeader$0();
     },
-    $signature: 61
+    $signature: 55
   };
   A._SfDateRangePickerState__addChildren_closure0.prototype = {
     call$1(details) {
       this.$this._getPickerStateValues$1(details);
     },
-    $signature: 93
+    $signature: 83
   };
   A._SfDateRangePickerState__addChildren_closure1.prototype = {
     call$1(details) {
       this.$this._updatePickerStateValues$1(details);
     },
-    $signature: 93
+    $signature: 83
   };
   A._SfDateRangePickerState__updatePickerStateValues_closure.prototype = {
     call$0() {
@@ -258474,7 +258484,7 @@
         return;
       t1.setState$1(new A._PickerHeaderViewState__getHeaderText__closure1(t1));
     },
-    $signature: 79
+    $signature: 80
   };
   A._PickerHeaderViewState__getHeaderText__closure1.prototype = {
     call$0() {
@@ -258494,7 +258504,7 @@
         return;
       t1.setState$1(new A._PickerHeaderViewState__getHeaderText__closure(t1));
     },
-    $signature: 188
+    $signature: 203
   };
   A._PickerHeaderViewState__getHeaderText__closure.prototype = {
     call$0() {
@@ -258507,7 +258517,7 @@
       var t1 = this.$this;
       t1.setState$1(new A._PickerHeaderViewState__getHeaderText__closure0(t1));
     },
-    $signature: 68
+    $signature: 64
   };
   A._PickerHeaderViewState__getHeaderText__closure0.prototype = {
     call$0() {
@@ -258582,7 +258592,7 @@
         t1 = this.$this._headerText;
       return A._setArrayType([new A.CustomPainterSemantics(new A.Rect(0, 0, 0 + size._dx, 0 + size._dy), A.SemanticsProperties$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, A.stringReplaceAllUnchecked(t1, "-", "to"), _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, B.TextDirection_1, _null, _null, _null, _null))], type$.JSArray_CustomPainterSemantics);
     },
-    $signature: 185
+    $signature: 156
   };
   A._PickerViewHeaderPainter.prototype = {
     paint$2(canvas, size) {
@@ -258724,7 +258734,7 @@
     call$1(size) {
       return this.$this._getSemanticsBuilder$1(size);
     },
-    $signature: 185
+    $signature: 156
   };
   A._PickerScrollView.prototype = {
     createState$0() {
@@ -260501,7 +260511,7 @@
       details.selectedRanges = t1.selectedRanges;
       details.view = t1.view;
     },
-    $signature: 93
+    $signature: 83
   };
   A._PickerScrollViewState__getView_closure0.prototype = {
     call$1(details) {
@@ -260515,7 +260525,7 @@
       t2.view = details.view;
       t1._widget.updatePickerStateValues$1(t2);
     },
-    $signature: 93
+    $signature: 83
   };
   A._PickerScrollViewState__animationListener_closure.prototype = {
     call$0() {
@@ -264084,7 +264094,7 @@
     call$1(y) {
       return B.JSInt_methods.$mod(y + B.JSInt_methods._tdivFast$1(y, 4) - B.JSInt_methods._tdivFast$1(y, 100) + B.JSInt_methods._tdivFast$1(y, 400), 7);
     },
-    $signature: 76
+    $signature: 78
   };
   A.HoveringDetails.prototype = {};
   A.PickerStateArgs.prototype = {};
@@ -267013,13 +267023,13 @@
     call$1(e) {
       return this.onData.call$1(e);
     },
-    $signature: 177
+    $signature: 161
   };
   A._EventStreamSubscription_onData_closure.prototype = {
     call$1(e) {
       return this.handleData.call$1(e);
     },
-    $signature: 177
+    $signature: 161
   };
   A.main_closure1.prototype = {
     call$1(details) {
@@ -267137,13 +267147,13 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 152
+    $signature: 119
   };
   A.AppRouter_router_closure2.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.MenuScreen(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure3.prototype = {
     call$2(context, state) {
@@ -267153,31 +267163,31 @@
       t1 = errorWithPayment == null ? "" : errorWithPayment;
       return A.NoSwipeTransitionPage$(new A.IapScreen(t1, sessionId == null ? "" : sessionId, null), false, state.pageKey, true, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure4.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.TakingsScreen(A.PageController$(54, 1), null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure5.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.AddTakingsScreen(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure6.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.ControlAccountsScreen(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure7.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.MessagesScreen(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure8.prototype = {
     call$2(context, state) {
@@ -267185,13 +267195,13 @@
         t2 = J.getInterceptor$asx(t1);
       return A.NoSwipeTransitionPage$(new A.TakingsOnlineAccEntryScreen(t2.$index(t1, "till"), t2.$index(t1, "date"), null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure9.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.OtherIncomeScreen(J.$index$asx(type$.Map_dynamic_dynamic._as(state.extra), "date"), B.List_empty29, null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure10.prototype = {
     call$2(context, state) {
@@ -267219,7 +267229,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 152
+    $signature: 119
   };
   A.AppRouter_router_closure11.prototype = {
     call$2(context, state) {
@@ -267238,7 +267248,7 @@
       t3 = t4 == null ? "" : t4;
       return A.NoSwipeTransitionPage$(new A.TakingsWeeklyReportScreen(t2, t3, t1 == null ? "" : t1, null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure12.prototype = {
     call$2(context, state) {
@@ -267266,7 +267276,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 152
+    $signature: 119
   };
   A.AppRouter_router_closure13.prototype = {
     call$2(context, state) {
@@ -267285,7 +267295,7 @@
       t3 = t4 == null ? "" : t4;
       return A.NoSwipeTransitionPage$(new A.WeeklyReportScreen(t2, t3, t1 == null ? "" : t1, null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure14.prototype = {
     call$2(context, state) {
@@ -267313,7 +267323,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 152
+    $signature: 119
   };
   A.AppRouter_router_closure15.prototype = {
     call$2(context, state) {
@@ -267322,13 +267332,13 @@
       A.print("THIS IS WHEN YOU GO BACK HERE WE SHOULD HAVE AN DATE " + A.S(t2.$index(t1, "date")));
       return A.NoSwipeTransitionPage$(A.TakingsEntryScreen$(t2.$index(t1, "date")), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure16.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.OtherIncomeSelectDate(A.PageController$(54, 1), null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure17.prototype = {
     call$2(context, state) {
@@ -267340,19 +267350,19 @@
       }
       return A.NoSwipeTransitionPage$(new A.ChangePasswordScreen(false, null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure18.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.ForgotPasswordScreen(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure19.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.StripeOtherPaymentsScreen(state.uri.get$queryParameters().$index(0, "redirect_status"), null), false, state.pageKey, true, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure20.prototype = {
     call$2(context, state) {
@@ -267374,7 +267384,7 @@
         t1 = new A.DateTime(Date.now(), false);
       return A.NoSwipeTransitionPage$(A.AddNoteScreen$(apiEndPoint, bloc, noteId, t1, takingsEntryIndex, t3, type$.dynamic), true, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure21.prototype = {
     call$2(context, state) {
@@ -267386,13 +267396,13 @@
       t3 = t2.$index(t1, "noteId");
       return A.NoSwipeTransitionPage$(A.TakingsEntryNoteScreen$(t2.$index(t1, "apiEndPoint"), t3), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure22.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.EditDeleteItem(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure23.prototype = {
     call$2(context, state) {
@@ -267400,13 +267410,13 @@
         t2 = J.getInterceptor$asx(t1);
       return A.NoSwipeTransitionPage$(new A.ApplyPayment(t2.$index(t1, "customer"), t2.$index(t1, "applyType"), t2.$index(t1, "applyPayment"), t2.$index(t1, "total"), null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure24.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.SupplierStockScreen(J.$index$asx(type$.Map_dynamic_dynamic._as(state.extra), "date"), A.PageController$(2, 1), null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure25.prototype = {
     call$2(context, state) {
@@ -267416,7 +267426,7 @@
         t4 = t2.$index(t1, "supplier");
       return A.NoSwipeTransitionPage$(A.SupplierEntryScreen$(t2.$index(t1, "editExisting"), t3, t4, t2.$index(t1, "supplierList")), false, state.pageKey, true, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure26.prototype = {
     call$2(context, state) {
@@ -267429,31 +267439,31 @@
       t1 = t2 == null ? new A.DateTime(Date.now(), false) : t2;
       return A.NoSwipeTransitionPage$(new A.AddNewSupplierScreen(t1, t3 === true, null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure27.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.EditSuppliersScreen(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure28.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.EditBankNamesScreen(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure29.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.DateRange(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure30.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.ReceiptsSelectCustomer(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure31.prototype = {
     call$2(context, state) {
@@ -267463,13 +267473,13 @@
       t2.$index(t1, "paymentsSelectDateBloc");
       return A.NoSwipeTransitionPage$(new A.ExpensePaymentsScreen(t3, A.PageController$(54, 1), null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure32.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.VatScreen(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure33.prototype = {
     call$2(context, state) {
@@ -267491,7 +267501,7 @@
       t1 = J.map$1$1$ax(rawOtherIncomeList, new A.AppRouter_router__closure(), type$.OtherIncomeModel);
       return A.NoSwipeTransitionPage$(A.IncomeEntryScreen$(editExisting, fromNewEntryPage, A.List_List$of(t1, true, A._instanceType(t1)._eval$1("ListIterable.E")), selectedDate), false, state.pageKey, true, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router__closure.prototype = {
     call$1(item) {
@@ -267503,25 +267513,25 @@
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.BankSelectDateScreen(A.PageController$(2, 1), null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure35.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.PaymentsSelectedScreen(A.PageController$(54, 1), null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure36.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.SupplierSelectDateScreen(A.PageController$(0, 1), null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure37.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.BankingScreen(J.$index$asx(type$.Map_dynamic_dynamic._as(state.extra), "date"), null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure38.prototype = {
     call$2(context, state) {
@@ -267534,13 +267544,13 @@
       t1 = t2 == null ? new A.DateTime(Date.now(), false) : t2;
       return A.NoSwipeTransitionPage$(new A.ExpenseTypeScreen(t1, t3 === true, null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure39.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.EditPaymentsTypeScreen(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure40.prototype = {
     call$2(context, state) {
@@ -267549,13 +267559,13 @@
         t3 = t2.$index(t1, "date");
       return A.NoSwipeTransitionPage$(A.BankDepositScreen$(t2.$index(t1, "bankDeposit"), t3, t2.$index(t1, "editExisting")), false, state.pageKey, true, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure41.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.BalancesScreen(J.$index$asx(type$.Map_dynamic_dynamic._as(state.extra), "date"), null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure42.prototype = {
     call$2(context, state) {
@@ -267566,13 +267576,13 @@
         t5 = t2.$index(t1, "expenseList");
       return A.NoSwipeTransitionPage$(A.ExpensePaymentEntryScreen$(t3, t2.$index(t1, "editExisting"), t4, t5), false, state.pageKey, true, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure43.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(A.EditOtherIncomeScreen$(), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure44.prototype = {
     call$2(context, state) {
@@ -267585,7 +267595,7 @@
       t1 = t2 == null ? new A.DateTime(Date.now(), false) : t2;
       return A.NoSwipeTransitionPage$(new A.SelectIncomeTypeScreen(t1, t3 === true, null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure45.prototype = {
     call$2(context, state) {
@@ -267595,37 +267605,37 @@
         t4 = t2.$index(t1, "apiEndPoint");
       return A.NoSwipeTransitionPage$(new A.EntryEditDeleteScreen(t3, t2.$index(t1, "transactionId"), t4, null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure46.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.AddInvoiceScreen(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure47.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.EditCustomerScreen(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure48.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.AddNewItem(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure49.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.AddNewCustomerScreen(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure50.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.FilterScreen(J.$index$asx(type$.Map_dynamic_dynamic._as(state.extra), "filterBloc"), A._setArrayType([], type$.JSArray_String), A._setArrayType([], type$.JSArray_Customer), new A.LabeledGlobalKey(null, type$.LabeledGlobalKey_FilterExpansionTileState_dynamic), null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure51.prototype = {
     call$2(context, state) {
@@ -267635,13 +267645,13 @@
         t4 = t2.$index(t1, "type");
       return A.NoSwipeTransitionPage$(new A.InvoiceCustomScreen(t3, t2.$index(t1, "dateTime"), t2.$index(t1, "editing"), t4, t2.$index(t1, "invoice"), null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure52.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.EditCustomerInvoiceScreen(J.$index$asx(type$.Map_dynamic_dynamic._as(state.extra), "customer"), null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure53.prototype = {
     call$2(context, state) {
@@ -267649,73 +267659,73 @@
         t2 = J.getInterceptor$asx(t1);
       return A.NoSwipeTransitionPage$(new A.StatementScreen(t2.$index(t1, "customer"), t2.$index(t1, "applyPayment"), null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure54.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.UserStaffScreen(A._setArrayType([new A.StaffModel("Todd Fabacher", "0.00")], type$.JSArray_StaffModel), null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure55.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.SelectOptionScreen(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure56.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.AddStaffScreen(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure57.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.PersonalDetailsScreen(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure58.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.EditPayroll(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure59.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.AddPayrollChange(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure60.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.EditPersonalDetails(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure61.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.ReviewPlansScreen(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure62.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.EditDeletePayroll(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure63.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(A.SignatureDialog$(), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure64.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.PersonalDetailsMobile(J.$index$asx(type$.Map_dynamic_dynamic._as(state.extra), "signature"), null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure65.prototype = {
     call$2(context, state) {
@@ -267723,139 +267733,139 @@
         t2 = J.getInterceptor$asx(t1);
       return A.NoSwipeTransitionPage$(new A.DashboardScreen(t2.$index(t1, "pageTitle"), t2.$index(t1, "bankId"), null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure66.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.ViewPeriodByWeek(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure67.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.ViewPeriodOtherIncome(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure68.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.ViewTakingsDialog(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure69.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.ViewPeriodExpenses(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure70.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.SeeMoreMobile(A._setArrayType([new A.DashboardDialogModel("France", 3, A.ColorUtil_fromDartColor(B.Color_4278298233)), new A.DashboardDialogModel("rent 444", 47, A.ColorUtil_fromDartColor(B.Color_4278220117)), new A.DashboardDialogModel("Introduced", 21, A.ColorUtil_fromDartColor(new A.Color(4278293862))), new A.DashboardDialogModel("interestreceviable", 3, A.ColorUtil_fromDartColor(new A.Color(4278296177))), new A.DashboardDialogModel("rent 123", 7, A.ColorUtil_fromDartColor(new A.Color(4278298233))), new A.DashboardDialogModel("ASDA", 4, A.ColorUtil_fromDartColor(new A.Color(4280791949))), new A.DashboardDialogModel("rent 5 upper lichfield st", 5, A.ColorUtil_fromDartColor(new A.Color(4283285921))), new A.DashboardDialogModel("vat refund 4/21", 6, A.ColorUtil_fromDartColor(new A.Color(4289979607)))], type$.JSArray_DashboardDialogModel), null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure71.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.ViewSupplier(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure72.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.ViewYearlyExpensesScreen(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure73.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.ViewYearlyExpensesScreen(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure74.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.ViewYearlySupplier(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure75.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.ViewYearlyTakings(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure76.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.MoreScreen(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure77.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.ReportsScreen(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure78.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.ReportCustomers(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure79.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.ReportSalesReceipts(J.$index$asx(type$.Map_dynamic_dynamic._as(state.extra), "customer"), null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure80.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.ProductsServices(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure81.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.ProductServiceSold(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure82.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.CompleteInvoices(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure83.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.CustomerBalance(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure84.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.DraftInvoices(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure85.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.CreditNoteInvoices(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure86.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.SeeMoreTablet(A._setArrayType([new A.DashboardDialogModel("France", 3, A.ColorUtil_fromDartColor(B.Color_4278298233)), new A.DashboardDialogModel("rent 444", 47, A.ColorUtil_fromDartColor(B.Color_4278220117)), new A.DashboardDialogModel("Introduced", 21, A.ColorUtil_fromDartColor(new A.Color(4278293862))), new A.DashboardDialogModel("interestreceviable", 3, A.ColorUtil_fromDartColor(new A.Color(4278296177))), new A.DashboardDialogModel("rent 123", 7, A.ColorUtil_fromDartColor(new A.Color(4278298233))), new A.DashboardDialogModel("ASDA", 4, A.ColorUtil_fromDartColor(new A.Color(4280791949))), new A.DashboardDialogModel("rent 5 upper lichfield st", 5, A.ColorUtil_fromDartColor(new A.Color(4283285921))), new A.DashboardDialogModel("vat refund 4/21", 6, A.ColorUtil_fromDartColor(new A.Color(4289979607)))], type$.JSArray_DashboardDialogModel), null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure87.prototype = {
     call$2(context, state) {
       return A.NoSwipeTransitionPage$(new A.StatementCustomerListScreen(null), false, state.pageKey, false, type$.void);
     },
-    $signature: 3
+    $signature: 4
   };
   A.AppRouter_router_closure88.prototype = {
     call$2(context, state) {
@@ -267885,7 +267895,7 @@
     },
     "call*": "call$3",
     $requiredArgCount: 3,
-    $signature: 285
+    $signature: 386
   };
   A.NoSwipeTransitionPage_createRoute_closure0.prototype = {
     call$4(context, animation, secondaryAnimation, child) {
@@ -267893,7 +267903,7 @@
     },
     "call*": "call$4",
     $requiredArgCount: 4,
-    $signature: 154
+    $signature: 196
   };
   A.StorageService.prototype = {};
   A.DateProvider.prototype = {};
@@ -267901,19 +267911,19 @@
     call$0() {
       return A.Future_Future$value(null, type$.dynamic);
     },
-    $signature: 114
+    $signature: 102
   };
   A.initializeMessages_closure.prototype = {
     call$1(locale) {
       return $.$get$_deferredLibraries().$index(0, locale) != null;
     },
-    $signature: 41
+    $signature: 42
   };
   A.initializeMessages_closure0.prototype = {
     call$1(_) {
       return null;
     },
-    $signature: 24
+    $signature: 23
   };
   A.initializeMessages_closure1.prototype = {
     call$0() {
@@ -267925,7 +267935,7 @@
     call$1(_) {
       return null;
     },
-    $signature: 24
+    $signature: 23
   };
   A.MessageLookup.prototype = {};
   A.AppLocalizations.prototype = {};
@@ -269010,7 +269020,7 @@
     call$1(till) {
       return till.takingsTillAmount != null;
     },
-    $signature: 69
+    $signature: 70
   };
   A.TakingsService_handleTakinsEntry_closure0.prototype = {
     call$1(e) {
@@ -269411,7 +269421,7 @@
     call$1(v) {
       return v.toJson$0();
     },
-    $signature: 36
+    $signature: 37
   };
   A.ApplePayModel.prototype = {
     toJson$0() {
@@ -270016,13 +270026,13 @@
     call$1(x) {
       return x;
     },
-    $signature: 42
+    $signature: 44
   };
   A.NoteData_toJson_closure.prototype = {
     call$1(x) {
       return x;
     },
-    $signature: 57
+    $signature: 63
   };
   A.OtherIncomeModel.prototype = {
     toJson$0() {
@@ -278966,7 +278976,7 @@
     call$2(key, value) {
       return value == null;
     },
-    $signature: 268
+    $signature: 269
   };
   A.Login_getClientBanksByClientId_closure.prototype = {
     call$1(e) {
@@ -279112,12 +279122,12 @@
     call$1(route) {
       return false;
     },
-    $signature: 129
+    $signature: 123
   };
   A.Login_unAuthorized_closure0.prototype = {
     call$1(value) {
     },
-    $signature: 16
+    $signature: 17
   };
   A.Login_getPaymentsList_closure.prototype = {
     call$1(e) {
@@ -279595,14 +279605,14 @@
       t2 = type$.nullable_Object;
       A.GoRouterHelper_pushNamed(this.context, "/invoiceCustom", A.LinkedHashMap_LinkedHashMap$_literal(["customer", t1, "type", type, "dateTime", new A.DateTime(Date.now(), false), "editing", false, "invoice", t1.invoice], type$.String, t2), t2);
     },
-    $signature: 19
+    $signature: 20
   };
   A.AddInvoiceScreen__bottom_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.AddInvoiceScreen__bottom__closure(context), new A.AddInvoiceScreen__bottom__closure0(context), false, "Reports", "Edit/Add Customers");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.AddInvoiceScreen__bottom__closure.prototype = {
     call$0() {
@@ -279615,7 +279625,7 @@
     call$1(value) {
       J.add$1$ax(A.Provider_of(this.context, false, type$.AddInvoiceBloc), new A.GetCustomerData0());
     },
-    $signature: 16
+    $signature: 17
   };
   A.AddInvoiceScreen__bottom__closure0.prototype = {
     call$0() {
@@ -279628,7 +279638,7 @@
     call$1(value) {
       J.add$1$ax(A.Provider_of(this.context, false, type$.AddInvoiceBloc), new A.GetCustomerData0());
     },
-    $signature: 16
+    $signature: 17
   };
   A._AddInvoiceScreen_StatelessWidget_Dialogs.prototype = {};
   A.AddInvoiceListMobile.prototype = {
@@ -279697,7 +279707,7 @@
       var t1 = this.$this._search_customer$_mobile$1$context(context);
       return t1;
     },
-    $signature: 18
+    $signature: 16
   };
   A.SearchCustomers__mobile_closure.prototype = {
     call$1(e) {
@@ -279775,7 +279785,7 @@
       t1 = t1 < 0 ? t1 : 50;
       return new A.Padding(new A.EdgeInsets(0, 0, 0, t1), new A.AddNewCustomerTileMobile(A.Provider_of(context, false, type$.AddNewCustomerBloc).form, this.state, null), null);
     },
-    $signature: 18
+    $signature: 16
   };
   A.AddNewCustomerScreen_bottom_closure.prototype = {
     call$1(v) {
@@ -279787,7 +279797,7 @@
     call$2(context, sizingInformation) {
       return new A.BottomBarSaveMobile(new A.AddNewCustomerScreen_bottom__closure(this.state, this.form, context), null);
     },
-    $signature: 22
+    $signature: 25
   };
   A.AddNewCustomerScreen_bottom__closure.prototype = {
     call$0() {
@@ -279955,7 +279965,7 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A.AddNewCustomerTileMobile_build_closure.prototype = {
     call$0() {
@@ -279968,7 +279978,7 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A.AddNewCustomerTileMobile_build_closure1.prototype = {
     call$0() {
@@ -279981,7 +279991,7 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A.AddNewCustomerTileMobile_build_closure3.prototype = {
     call$0() {
@@ -280000,7 +280010,7 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A.AddNewCustomerTileMobile_build_closure6.prototype = {
     call$0() {
@@ -280013,7 +280023,7 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A.AddNewCustomerTileMobile_build_closure8.prototype = {
     call$0() {
@@ -280026,7 +280036,7 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A.AddNewCustomerTileMobile_build_closure10.prototype = {
     call$0() {
@@ -280039,7 +280049,7 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A.AddNewCustomerTileMobile_build_closure12.prototype = {
     call$0() {
@@ -280052,7 +280062,7 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["email", "Invalid email", "required", "This field is required"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A.AddNewCustomerTileMobile_build_closure14.prototype = {
     call$0() {
@@ -280227,7 +280237,7 @@
     call$1(value) {
       return value == null ? null : value.get$itemCategoryId();
     },
-    $signature: 42
+    $signature: 44
   };
   A.AddNewItemBloc_closure2.prototype = {
     call$2($event, emit) {
@@ -280355,7 +280365,7 @@
     call$1(v) {
       return v.form;
     },
-    $signature: 78
+    $signature: 74
   };
   A.AddNewItem__appBar_closure0.prototype = {
     call$0() {
@@ -280370,13 +280380,13 @@
     call$1(v) {
       return v.form;
     },
-    $signature: 78
+    $signature: 74
   };
   A.AddNewItem__itemList_closure.prototype = {
     call$2(context, sizingInformation) {
       return new A.ItemList(this.state, new A.AddNewItem__itemList__closure(), null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.AddNewItem__itemList__closure.prototype = {
     call$1(item) {
@@ -280390,14 +280400,14 @@
     call$1(v) {
       return v.itemFrom;
     },
-    $signature: 78
+    $signature: 74
   };
   A.AddNewItem__bottom_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.AddNewItem__bottom__closure(this.$this, this.form, context), new A.AddNewItem__bottom__closure0(context), true, "Add New Product", "Edit/Delete Product");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.AddNewItem__bottom__closure0.prototype = {
     call$0() {
@@ -280410,7 +280420,7 @@
     call$1(value) {
       J.add$1$ax(A.Provider_of(this.context, false, type$.AddNewItemBloc), new A.GetItem());
     },
-    $signature: 16
+    $signature: 17
   };
   A.AddNewItem__bottom__closure.prototype = {
     call$0() {
@@ -280640,7 +280650,7 @@
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.AddPayrollChange__bottom__closure(), new A.AddPayrollChange__bottom__closure0(), false, "", "");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.AddPayrollChange__bottom__closure0.prototype = {
     call$0() {
@@ -280899,7 +280909,7 @@
       else
         return new A.HorizontalMobile(t2, A.SelectContext_select(context, new A.AddStaffScreen_build___closure0(), t3, t4), null);
     },
-    $signature: 22
+    $signature: 25
   };
   A.AddStaffScreen_build___closure.prototype = {
     call$1(v) {
@@ -280948,7 +280958,7 @@
     call$1(value) {
       return value._bloc$_state.selectedDate;
     },
-    $signature: 211
+    $signature: 189
   };
   A.DateInput_build_closure4.prototype = {
     call$0() {
@@ -281101,19 +281111,19 @@
     call$1(val) {
       return val.text;
     },
-    $signature: 25
+    $signature: 24
   };
   A.PageOnePersonalMobile_build_closure0.prototype = {
     call$1(val) {
       return val.text;
     },
-    $signature: 25
+    $signature: 24
   };
   A.PageOnePersonalMobile_build_closure1.prototype = {
     call$1(val) {
       return val.text;
     },
-    $signature: 25
+    $signature: 24
   };
   A.PageOnePersonalMobile__inputText_closure.prototype = {
     call$0() {
@@ -281248,19 +281258,19 @@
     call$1(val) {
       return val.text;
     },
-    $signature: 25
+    $signature: 24
   };
   A.PageOnePersonalTablet_build_closure0.prototype = {
     call$1(val) {
       return val.text;
     },
-    $signature: 25
+    $signature: 24
   };
   A.PageOnePersonalTablet_build_closure1.prototype = {
     call$1(val) {
       return val.text;
     },
-    $signature: 25
+    $signature: 24
   };
   A.PageOnePersonalTablet__inputText_closure.prototype = {
     call$0() {
@@ -281332,7 +281342,7 @@
     call$1(value) {
       return value._bloc$_state.selectedDate;
     },
-    $signature: 211
+    $signature: 189
   };
   A.PageThreePayrollMobile__dateInput_closure1.prototype = {
     call$0() {
@@ -281441,7 +281451,7 @@
     call$1(value) {
       return value._bloc$_state.selectedDate;
     },
-    $signature: 211
+    $signature: 189
   };
   A.PageThreePayrollTablet__dateInput_closure1.prototype = {
     call$0() {
@@ -281568,25 +281578,25 @@
     call$1(val) {
       return val.text;
     },
-    $signature: 25
+    $signature: 24
   };
   A.PageTwoPlanMobile_build_closure0.prototype = {
     call$1(val) {
       return val.text;
     },
-    $signature: 25
+    $signature: 24
   };
   A.PageTwoPlanMobile_build_closure1.prototype = {
     call$1(val) {
       return val.text;
     },
-    $signature: 25
+    $signature: 24
   };
   A.PageTwoPlanMobile_build_closure2.prototype = {
     call$1(val) {
       return val.text;
     },
-    $signature: 25
+    $signature: 24
   };
   A.PageTwoPlanMobile__declaration_closure.prototype = {
     call$0() {
@@ -281618,7 +281628,7 @@
       if (value != null)
         this.$this.onSignatureSubmitted.call$1(value);
     },
-    $signature: 207
+    $signature: 188
   };
   A.PageTwoPlanMobile__inputText_closure.prototype = {
     call$0() {
@@ -281699,25 +281709,25 @@
     call$1(val) {
       return val.text;
     },
-    $signature: 25
+    $signature: 24
   };
   A.PageTwoPlanTablet_build_closure0.prototype = {
     call$1(val) {
       return val.text;
     },
-    $signature: 25
+    $signature: 24
   };
   A.PageTwoPlanTablet_build_closure1.prototype = {
     call$1(val) {
       return val.text;
     },
-    $signature: 25
+    $signature: 24
   };
   A.PageTwoPlanTablet_build_closure2.prototype = {
     call$1(val) {
       return val.text;
     },
-    $signature: 25
+    $signature: 24
   };
   A.PageTwoPlanTablet__declaration_closure.prototype = {
     call$0() {
@@ -281749,7 +281759,7 @@
       if (value != null)
         this.$this.onSignatureSubmitted.call$1(value);
     },
-    $signature: 207
+    $signature: 188
   };
   A.PageTwoPlanTablet__inputText_closure.prototype = {
     call$0() {
@@ -281920,7 +281930,7 @@
         t1.setState$1(new A._EditPlanAddStaffMobileState__planBody__closure(t1, val));
       }
     },
-    $signature: 71
+    $signature: 65
   };
   A._EditPlanAddStaffMobileState__planBody__closure.prototype = {
     call$0() {
@@ -281943,7 +281953,7 @@
       t1 = A.Theme_of(t1).textTheme.bodySmall;
       return A.Container$(_null, A.Row$(A._setArrayType([t5, A.SizedBox$(A.Text$(t2, _null, _null, _null, _null, _null, t1 == null ? _null : t1.copyWith$3$color$fontSize$fontWeight(B.Color_4281413937, $.$get$width() / 414 * 15, B.FontWeight_6_700), _null, _null), _null, t3 * 250)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, _null), B.Clip_0, _null, _null, _null, _null, _null, _null, new A.EdgeInsets(t4, t4, t4, t4), _null, _null, _null);
     },
-    $signature: 170
+    $signature: 187
   };
   A.__EditPlanAddStaffMobileState_State_TickerProviderStateMixin.prototype = {
     activate$0() {
@@ -282109,7 +282119,7 @@
         t1.setState$1(new A._EditPlanAddStaffTabletState__planBody__closure(t1, val));
       }
     },
-    $signature: 71
+    $signature: 65
   };
   A._EditPlanAddStaffTabletState__planBody__closure.prototype = {
     call$0() {
@@ -282132,7 +282142,7 @@
       t1 = A.Theme_of(t1).textTheme.bodySmall;
       return A.Container$(_null, A.Row$(A._setArrayType([t5, A.SizedBox$(A.Text$(t2, _null, _null, _null, _null, _null, t1 == null ? _null : t1.copyWith$3$color$fontSize$fontWeight(B.Color_4281413937, $.$get$width() / 414 * 13, B.FontWeight_4_500), _null, _null), _null, t3 * 250)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, _null), B.Clip_0, _null, _null, _null, _null, _null, _null, new A.EdgeInsets(t4, t4, t4, t4), _null, _null, _null);
     },
-    $signature: 170
+    $signature: 187
   };
   A.__EditPlanAddStaffTabletState_State_TickerProviderStateMixin.prototype = {
     activate$0() {
@@ -282200,7 +282210,7 @@
     call$1(value) {
       return value._bloc$_state.marriedSingle;
     },
-    $signature: 309
+    $signature: 349
   };
   A.AddCustomRadioButtomMobile_build_closure1.prototype = {
     call$0() {
@@ -282281,7 +282291,7 @@
     call$1(value) {
       return value._bloc$_state.marriedSingle;
     },
-    $signature: 309
+    $signature: 349
   };
   A.AddCustomRadioButtonTablet_build_closure1.prototype = {
     call$0() {
@@ -282448,7 +282458,7 @@
         t1.setState$1(new A._AddStatementMobileState__planBody__closure(t1, val));
       }
     },
-    $signature: 71
+    $signature: 65
   };
   A._AddStatementMobileState__planBody__closure.prototype = {
     call$0() {
@@ -282470,7 +282480,7 @@
       t1 = A.Theme_of(t1).textTheme.bodySmall;
       return A.Row$(A._setArrayType([t4, A.SizedBox$(A.Text$(t2, _null, _null, _null, _null, _null, t1 == null ? _null : t1.copyWith$3$color$fontSize$fontWeight(B.Color_4281413937, $.$get$width() / 414 * 16, B.FontWeight_5_600), _null, _null), _null, t3 * 300)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, _null);
     },
-    $signature: 166
+    $signature: 185
   };
   A.__AddStatementMobileState_State_TickerProviderStateMixin.prototype = {
     activate$0() {
@@ -282619,7 +282629,7 @@
         t1.setState$1(new A._AddStatementTabletState__planBody__closure(t1, val));
       }
     },
-    $signature: 71
+    $signature: 65
   };
   A._AddStatementTabletState__planBody__closure.prototype = {
     call$0() {
@@ -282641,7 +282651,7 @@
       t1 = A.Theme_of(t1).textTheme.bodySmall;
       return A.Row$(A._setArrayType([t4, A.SizedBox$(A.Text$(t2, _null, _null, _null, _null, _null, t1 == null ? _null : t1.copyWith$3$color$fontSize$fontWeight(B.Color_4281413937, $.$get$width() / 414 * 16, B.FontWeight_5_600), _null, _null), _null, t3 * 300)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, _null);
     },
-    $signature: 166
+    $signature: 185
   };
   A.__AddStatementTabletState_State_TickerProviderStateMixin.prototype = {
     activate$0() {
@@ -282722,7 +282732,7 @@
         t10.push(new A.PageThreePayrollMobile(t1.form, _null));
       return A.Column$(t10, B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1);
     },
-    $signature: 155
+    $signature: 200
   };
   A._HorizontalMobileState__body__closure.prototype = {
     call$0() {
@@ -282744,7 +282754,7 @@
       var _null = null;
       return A.Container$(_null, _null, B.Clip_0, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null);
     },
-    $signature: 163
+    $signature: 184
   };
   A._HorizontalMobileState__body__closure0.prototype = {
     call$2(_, index) {
@@ -282793,7 +282803,7 @@
   A._HorizontalMobileState__body__closure5.prototype = {
     call$1(signature) {
     },
-    $signature: 118
+    $signature: 148
   };
   A.HorizontalTablet.prototype = {
     createState$0() {
@@ -282859,7 +282869,7 @@
       }
       return A.Column$(t3, B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1);
     },
-    $signature: 155
+    $signature: 200
   };
   A._HorizontalTabletState__body__closure.prototype = {
     call$0() {
@@ -282881,7 +282891,7 @@
       var _null = null;
       return A.Container$(_null, _null, B.Clip_0, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null);
     },
-    $signature: 163
+    $signature: 184
   };
   A._HorizontalTabletState__body__closure0.prototype = {
     call$2(_, index) {
@@ -282929,7 +282939,7 @@
   A._HorizontalTabletState__body__closure5.prototype = {
     call$1(signature) {
     },
-    $signature: 118
+    $signature: 148
   };
   A.CustomYesOrNoButtonTablet.prototype = {
     build$1(context) {
@@ -283329,7 +283339,7 @@
         t2 = t1.form.control$1(0, "amount")._valueChanges;
       new A._BroadcastStream(t2, A._instanceType(t2)._eval$1("_BroadcastStream<1>")).listen$1(new A.ApplyPaymentScreen_build__closure(t1));
     },
-    $signature: 12
+    $signature: 13
   };
   A.ApplyPaymentScreen_build__closure.prototype = {
     call$1(val) {
@@ -283364,7 +283374,7 @@
       t2 = A.Theme_of(context).textTheme.bodySmall;
       return A.Text$(t1, _null, _null, _null, _null, _null, t2 == null ? _null : t2.copyWith$3$color$fontSize$fontWeight(B.Color_4278298233, $.$get$width() / 414 * 20, B.FontWeight_5_600), _null, _null);
     },
-    $signature: 150
+    $signature: 130
   };
   A.ApplyPaymentScreen__switch_closure.prototype = {
     call$1(index) {
@@ -283733,10 +283743,10 @@
   A.BalancesScreen__body_closure0.prototype = {
     call$2(context, sizingInformation) {
       var t1 = this.state;
-      t1 = A.Calendar$(new A.BalancesScreen__body__closure(t1, context), new A.BalancesScreen__body__closure0(t1, context), t1.dateTime, null, new A.BalancesScreen__body__closure1(context), false);
+      t1 = A.Calendar$(new A.BalancesScreen__body__closure(t1, context), new A.BalancesScreen__body__closure0(t1, context), t1.dateTime, null, null, new A.BalancesScreen__body__closure1(context), false);
       return t1;
     },
-    $signature: 22
+    $signature: 25
   };
   A.BalancesScreen__body__closure1.prototype = {
     call$1(val) {
@@ -283764,7 +283774,7 @@
     call$2(context, sizingInformation) {
       return new A.BalancesMobile(this.state0, null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.BalancesMobile.prototype = {
     build$1(context) {
@@ -283896,7 +283906,7 @@
     call$1(e) {
       return e.bankName === "Cash";
     },
-    $signature: 104
+    $signature: 111
   };
   A.BankDepositBloc_closure0.prototype = {
     call$2($event, emit) {
@@ -284183,7 +284193,7 @@
     call$1(e) {
       return e.bankDepositId == this.$this.bankDeposit.bankDepositId;
     },
-    $signature: 105
+    $signature: 112
   };
   A.BankDepositScreen_build___closure0.prototype = {
     call$0() {
@@ -284191,13 +284201,13 @@
       t1.toString;
       return t1;
     },
-    $signature: 159
+    $signature: 183
   };
   A.BankDepositScreen_build___closure1.prototype = {
     call$1(e) {
       return e.bankDepositId == this.$this.bankDeposit.bankDepositId;
     },
-    $signature: 105
+    $signature: 112
   };
   A.BankDepositScreen_build___closure2.prototype = {
     call$0() {
@@ -284239,7 +284249,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 67
+    $signature: 72
   };
   A.BankDepositScreen_build____closure.prototype = {
     call$1(bank) {
@@ -284247,7 +284257,7 @@
         t2 = this.$this.bankDeposit;
       return t1 == (t2 == null ? null : t2.bankDepositId);
     },
-    $signature: 105
+    $signature: 112
   };
   A.BankDepositScreen_build____closure0.prototype = {
     call$0() {
@@ -284255,7 +284265,7 @@
       t1.toString;
       return J.get$first$ax(t1);
     },
-    $signature: 159
+    $signature: 183
   };
   A.BankDepositScreen_build____closure1.prototype = {
     call$1(bank) {
@@ -284263,7 +284273,7 @@
         t2 = this.$this.bankDeposit;
       return t1 == (t2 == null ? null : t2.bankDepositId);
     },
-    $signature: 105
+    $signature: 112
   };
   A.BankDepositScreen_build____closure2.prototype = {
     call$0() {
@@ -284271,7 +284281,7 @@
       t1.toString;
       return J.get$first$ax(t1);
     },
-    $signature: 159
+    $signature: 183
   };
   A.BankDepositScreen_build_closure.prototype = {
     call$2(context, state) {
@@ -284354,10 +284364,10 @@
   A.BankDepositScreen__body_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = this.state;
-      t1 = A.Calendar$(new A.BankDepositScreen__body__closure(t1, context), new A.BankDepositScreen__body__closure0(t1, context), t1.date, this.minDate, new A.BankDepositScreen__body__closure1(context), false);
+      t1 = A.Calendar$(new A.BankDepositScreen__body__closure(t1, context), new A.BankDepositScreen__body__closure0(t1, context), t1.date, null, this.minDate, new A.BankDepositScreen__body__closure1(context), false);
       return t1;
     },
-    $signature: 22
+    $signature: 25
   };
   A.BankDepositScreen__body__closure1.prototype = {
     call$1(val) {
@@ -284480,7 +284490,7 @@
       t5 = A.Theme_of(context).textTheme.bodySmall;
       return new A.Padding(new A.EdgeInsets(0, 0, 0, t1), A.InkWell$(false, _null, true, A.Container$(B.Alignment_0_0, A.Text$("+  Add New Entry", _null, _null, _null, _null, _null, t5 == null ? _null : t5.copyWith$3$color$fontSize$fontWeight(B.Color_4294967295, $.$get$width() / 414 * 15, B.FontWeight_6_700), _null, _null), B.Clip_0, _null, _null, new A.BoxDecoration(B.Color_4278298233, _null, t3, t4, _null, _null, B.BoxShape_0), _null, t2 * 50, _null, _null, _null, _null, t2 * 380), _null, true, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, new A.BankDepositScreen__addNewEntry__closure(this.$this, context), _null, _null, _null, _null, _null, _null, _null), _null);
     },
-    $signature: 126
+    $signature: 133
   };
   A.BankDepositScreen__addNewEntry__closure.prototype = {
     call$0() {
@@ -284511,7 +284521,7 @@
         t1.animateTo$3$curve$duration(t2, B.C__DecelerateCurve, A.Duration$(0, 0, 0, 300, 0, 0));
       }
     },
-    $signature: 12
+    $signature: 13
   };
   A.BankDepositScreen_bottom_closure.prototype = {
     call$2(context, sizingInformation) {
@@ -284519,7 +284529,7 @@
       t1 = A.BottomBarHomeMobile$(true, true, t1.savingEntry, null, new A.BankDepositScreen_bottom__closure(), new A.BankDepositScreen_bottom__closure0(t1, context), false, "", "Save");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.BankDepositScreen_bottom__closure.prototype = {
     call$0() {
@@ -284623,13 +284633,13 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A.BankDepositEntryState__bankDepositBody_closure0.prototype = {
     call$1(control) {
       this.$this.controller = control;
     },
-    $signature: 46
+    $signature: 47
   };
   A.BankDepositEntryState__bankDepositBody_closure.prototype = {
     call$0() {
@@ -284648,7 +284658,7 @@
     call$1(control) {
       this.$this.amountController = control;
     },
-    $signature: 46
+    $signature: 47
   };
   A.BankDepositEntryState__bankDepositBody_closure4.prototype = {
     call$1(a) {
@@ -284762,7 +284772,7 @@
         t3 = t2._widget.bankDeposit;
       return t1 == (t3 == null ? null : t3.bankDepositId) && (A.Primitives_objectHashCode(A.getRuntimeTypeOfDartObject(e)) ^ A.mapPropsToHashCode(e.get$props())) >>> 0 === J.get$hashCode$(t2._widget.bankDeposit);
     },
-    $signature: 105
+    $signature: 112
   };
   A.BankDepositEntryState__bankDepositBody_closure7.prototype = {
     call$1(index) {
@@ -284785,7 +284795,7 @@
         isSelected = J.$eq$(t3 ? _null : t2.bank, bank);
       return A.Expanded$(new A.Padding(new A.EdgeInsets(5, 0, 5, 0), new A._BankList0(new A.BankDepositEntryState__bankDepositBody__closure(t1, bank, this.context), isSelected, bank, _null), _null), 1);
     },
-    $signature: 128
+    $signature: 135
   };
   A.BankDepositEntryState__bankDepositBody__closure.prototype = {
     call$0() {
@@ -285006,7 +285016,7 @@
     call$1(element) {
       return element.bankId !== "6009798964793049101";
     },
-    $signature: 104
+    $signature: 111
   };
   A.BankDepositSelectDateBloc__closure0.prototype = {
     call$1(e) {
@@ -285040,7 +285050,7 @@
       bankId.toString;
       return new A.BankTotal(t1, bankId, total);
     },
-    $signature: 82
+    $signature: 90
   };
   A.BankDepositSelectDateEvent.prototype = {
     get$props() {
@@ -285111,7 +285121,7 @@
       else {
         t1 = state.weekDays;
         t1.toString;
-        return A.Column$(A._setArrayType([A.Calendar$(new A.BankSelectDateScreen__body_closure(state, context), new A.BankSelectDateScreen__body_closure0(state, context), B.JSArray_methods.get$first(t1), minDate, new A.BankSelectDateScreen__body_closure1(context), false), this._bankDepositList$2$context$state(context, state), new A.Builder(new A.BankSelectDateScreen__body_closure2(state), _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1);
+        return A.Column$(A._setArrayType([A.Calendar$(new A.BankSelectDateScreen__body_closure(state, context), new A.BankSelectDateScreen__body_closure0(state, context), B.JSArray_methods.get$first(t1), _null, minDate, new A.BankSelectDateScreen__body_closure1(context), false), this._bankDepositList$2$context$state(context, state), new A.Builder(new A.BankSelectDateScreen__body_closure2(state), _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1);
       }
     },
     _bankDepositList$2$context$state(context, state) {
@@ -285198,7 +285208,7 @@
         J.add$1$ax(A.Provider_of(_this.context, false, type$.BankDepositSelectDateBloc), new A.WeekListOfBankDeposit(date, false));
       }
     },
-    $signature: 19
+    $signature: 20
   };
   A.BankSelectDateScreen__bankDepositList_closure.prototype = {
     call$2(context, index) {
@@ -285256,7 +285266,7 @@
     call$1(value) {
       J.add$1$ax(A.Provider_of(this.context, false, type$.BankDepositSelectDateBloc), new A.WeekListOfBankDeposit(this.state.selectedDay, true));
     },
-    $signature: 16
+    $signature: 17
   };
   A.BankSelectDateScreen__bankDepositList___closure0.prototype = {
     call$0() {
@@ -285275,7 +285285,7 @@
     call$1(v) {
       J.add$1$ax(A.Provider_of(this.context, false, type$.BankDepositSelectDateBloc), new A.WeekListOfBankDeposit(this.state.selectedDay, true));
     },
-    $signature: 16
+    $signature: 17
   };
   A.BankSelectDateScreen__bottom_closure.prototype = {
     call$0() {
@@ -285552,10 +285562,10 @@
       }
       minDate = minDateString == null ? _null : A.DateTime_parse(minDateString[0]);
       t1 = this.state;
-      t1 = A.Calendar$(new A.BankingScreen__body__closure(t1, context), new A.BankingScreen__body__closure0(t1, context), t1.selectedDate, minDate, new A.BankingScreen__body__closure1(context), false);
+      t1 = A.Calendar$(new A.BankingScreen__body__closure(t1, context), new A.BankingScreen__body__closure0(t1, context), t1.selectedDate, _null, minDate, new A.BankingScreen__body__closure1(context), false);
       return t1;
     },
-    $signature: 22
+    $signature: 25
   };
   A.BankingScreen__body__closure1.prototype = {
     call$1(date) {
@@ -285622,26 +285632,26 @@
     call$1(value) {
       J.add$1$ax(A.Provider_of(this.context, false, type$.BankingBloc), new A.GetBankDeposits(this.state.selectedDate, true));
     },
-    $signature: 16
+    $signature: 17
   };
   A.BankingScreen__bankingBody__closure0.prototype = {
     call$1(v) {
       J.add$1$ax(A.Provider_of(this.context, false, type$.BankingBloc), new A.GetBankDeposits(this.state.selectedDate, true));
     },
-    $signature: 16
+    $signature: 17
   };
   A.BankingScreen__bankingBody__closure1.prototype = {
     call$1(value) {
       J.add$1$ax(A.Provider_of(this.context, false, type$.BankingBloc), new A.GetBankDeposits(this.state.selectedDate, true));
     },
-    $signature: 16
+    $signature: 17
   };
   A.BankingScreen_bottom_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.BankingScreen_bottom__closure(), new A.BankingScreen_bottom__closure0(), false, "", "");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.BankingScreen_bottom__closure0.prototype = {
     call$0() {
@@ -285920,7 +285930,7 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field must not be empty"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A.ChangePasswordMobile__emailInputFields_closure.prototype = {
     call$0() {
@@ -285944,7 +285954,7 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["mustMatch", "Passwords do not match", "required", "This field must not be empty"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A.ChangePasswordMobile__emailInputFields_closure2.prototype = {
     call$0() {
@@ -286166,7 +286176,7 @@
     call$1(context) {
       return A.FilterBloc$();
     },
-    $signature: 127
+    $signature: 137
   };
   A.CompleteInvoices_build_closure1.prototype = {
     call$2(context, state) {
@@ -286180,7 +286190,7 @@
         t2 = this.state;
       return A.Scaffold$(t1._complete_invoices_screen$_mobilesTabletUi$1(context), null, t1._complete_invoices_screen$_body$3$context$filterState$state(0, context, filterState, t2), t1._complete_invoices_screen$_bottom$2$context$state(0, context, t2), null, null);
     },
-    $signature: 106
+    $signature: 115
   };
   A.CompleteInvoices__mobilesTabletUi_closure.prototype = {
     call$2(context, sizingInformation) {
@@ -286236,19 +286246,19 @@
     call$2(context, sizingInformation) {
       return new A.CompleteInvoicesListMobile(new A.CompleteInvoices__listComplete__closure(), this.state0, null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.CompleteInvoices__listComplete__closure.prototype = {
     call$1(invoice) {
     },
-    $signature: 123
+    $signature: 139
   };
   A.CompleteInvoices__bottom_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.CompleteInvoices__bottom__closure(), null, false, "", "");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.CompleteInvoices__bottom__closure.prototype = {
     call$0() {
@@ -286384,7 +286394,7 @@
         t5 = A.Theme_of(t4).textTheme.bodySmall;
       return new A.Padding(new A.EdgeInsets(t2 / 414 * 10, 0, 0, 0), A.Chip$(B.Color_4278298233, B.Color_4294967295, A.Text$(t3, _null, _null, _null, _null, _null, t5 == null ? _null : t5.copyWith$3$color$fontSize$fontWeight(B.Color_4294967295, $.$get$width() / 414 * 14, B.FontWeight_3_400), _null, _null), new A.FilterCompleteMobile__filterChips__closure0(t1, current, t4)), _null);
     },
-    $signature: 121
+    $signature: 140
   };
   A.FilterCompleteMobile__filterChips__closure0.prototype = {
     call$0() {
@@ -286400,7 +286410,7 @@
     call$1(e) {
       return e === this.current;
     },
-    $signature: 194
+    $signature: 175
   };
   A.FilterCompleteMobile__filterChips_closure0.prototype = {
     call$1(index) {
@@ -286411,7 +286421,7 @@
         t3 = A.Theme_of(t2).textTheme.bodySmall;
       return new A.Padding(new A.EdgeInsets(t1 / 414 * 10, 0, 0, 0), A.Chip$(B.Color_4278298233, B.Color_4294967295, A.Text$("", _null, _null, _null, _null, _null, t3 == null ? _null : t3.copyWith$3$color$fontSize$fontWeight(B.Color_4294967295, $.$get$width() / 414 * 14, B.FontWeight_3_400), _null, _null), new A.FilterCompleteMobile__filterChips__closure(this.customers, current, t2)), _null);
     },
-    $signature: 121
+    $signature: 140
   };
   A.FilterCompleteMobile__filterChips__closure.prototype = {
     call$0() {
@@ -286609,7 +286619,7 @@
       else
         return t2._control_accounts_screen$_appBar$2$context$state(context, t3);
     },
-    $signature: 18
+    $signature: 16
   };
   A.ControlAccountsScreen__appbartablet_closure.prototype = {
     call$0() {
@@ -286807,7 +286817,7 @@
     call$1(context) {
       return A.FilterBloc$();
     },
-    $signature: 127
+    $signature: 137
   };
   A.CreditNoteInvoices_build_closure1.prototype = {
     call$2(context, state) {
@@ -286820,7 +286830,7 @@
       var t1 = this.$this;
       return A.Scaffold$(t1._mobilesTabletUi$1(context), null, t1._credit_note_screen$_body$3$context$filterState$state(0, context, filterState, this.state), t1._credit_note_screen$_bottom$0(0), null, null);
     },
-    $signature: 106
+    $signature: 115
   };
   A.CreditNoteInvoices__mobilesTabletUi_closure.prototype = {
     call$2(context, sizingInformation) {
@@ -286841,7 +286851,7 @@
     call$2(context, sizingInformation) {
       return new A.FilterVoidMobile(this.filterState, null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.CreditNoteInvoices__body_closure0.prototype = {
     call$1(context) {
@@ -286871,7 +286881,7 @@
       }
       return A.ResponsiveBuilder$(new A.CreditNoteInvoices__body__closure(_box_0));
     },
-    $signature: 32
+    $signature: 31
   };
   A.CreditNoteInvoices__body__closure.prototype = {
     call$2(context, sizingInformation) {
@@ -286884,7 +286894,7 @@
         return new A.TotalVoidMobile(t1.netVal, t1.vatVal, t1.totalVal, _null);
       }
     },
-    $signature: 4
+    $signature: 3
   };
   A.CreditNoteInvoices__listComplete_closure.prototype = {
     call$1(v) {
@@ -286896,19 +286906,19 @@
     call$2(context, sizingInformation) {
       return new A.CreditNotes(this.state0, new A.CreditNoteInvoices__listComplete__closure(), null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.CreditNoteInvoices__listComplete__closure.prototype = {
     call$1(invoice) {
     },
-    $signature: 123
+    $signature: 139
   };
   A.CreditNoteInvoices__bottom_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.CreditNoteInvoices__bottom__closure(), null, false, "", "");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.CreditNoteInvoices__bottom__closure.prototype = {
     call$0() {
@@ -287061,7 +287071,7 @@
     call$1(e) {
       return e === this.current;
     },
-    $signature: 194
+    $signature: 175
   };
   A.FilterVoidMobile__filterChips_closure0.prototype = {
     call$1(index) {
@@ -287585,20 +287595,20 @@
     call$1(e) {
       return e.form;
     },
-    $signature: 119
+    $signature: 142
   };
   A.InvoiceCustomScreen__body_closure1.prototype = {
     call$2(context, sizingInformation) {
       var t1 = this.state.itemValues1;
       return new A.TotalCustomInvoiceMobile(t1 == null ? A._setArrayType([], type$.JSArray_InvoiceItemModel) : t1, null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.InvoiceCustomScreen__customerBody_closure.prototype = {
     call$1(v) {
       return v.itemFrom;
     },
-    $signature: 119
+    $signature: 142
   };
   A.InvoiceCustomScreen__customerBody_closure0.prototype = {
     call$2(context, sizingInformation) {
@@ -287608,7 +287618,7 @@
       t1 = A.SingleChildScrollView$(new A.CustomInvoiceListMobile(t2, new A.InvoiceCustomScreen__customerBody__closure(t1, this.form, t2, context), t1.type, _null), _null, B.DragStartBehavior_1, _null, _null, B.Axis_1);
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.InvoiceCustomScreen__customerBody__closure.prototype = {
     call$1(item) {
@@ -287688,7 +287698,7 @@
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.InvoiceCustomScreen_bottom__closure(context), new A.InvoiceCustomScreen_bottom__closure0(this.$this, context, this.state), true, "Reports", "Save");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.InvoiceCustomScreen_bottom__closure.prototype = {
     call$0() {
@@ -287711,7 +287721,7 @@
       t3.toString;
       J.add$1$ax(t2, new A.SaveInvoiceDataEvent($status, t3, new A.InvoiceCustomScreen_bottom____closure(t1)));
     },
-    $signature: 19
+    $signature: 20
   };
   A.InvoiceCustomScreen_bottom____closure.prototype = {
     call$0() {
@@ -287723,7 +287733,7 @@
       t1 === $ && A.throwUnnamedLateFieldNI();
       t1.pop$1(null);
     },
-    $signature: 12
+    $signature: 13
   };
   A._InvoiceCustomScreen_StatelessWidget_Dialogs.prototype = {};
   A.CustomInvoiceListMobile.prototype = {
@@ -287786,7 +287796,7 @@
     call$1(e) {
       return e.form;
     },
-    $signature: 119
+    $signature: 142
   };
   A._InvoicesItemList_build_closure0.prototype = {
     call$0() {
@@ -287871,7 +287881,7 @@
       t3 = A.Theme_of(context).textTheme.bodySmall;
       return A.SizedBox$(A.Text$(t2, _null, _null, B.TextOverflow_2, _null, _null, t3 == null ? _null : t3.copyWith$3$color$fontSize$fontWeight(B.Color_4281413937, $.$get$width() / 414 * 18, B.FontWeight_3_400), _null, _null), _null, t1 / 414 * 70);
     },
-    $signature: 109
+    $signature: 105
   };
   A._InvoicesItemList_build_closure2.prototype = {
     call$1(context) {
@@ -287889,7 +287899,7 @@
       t3 = A.Theme_of(context).textTheme.bodySmall;
       return A.SizedBox$(A.Text$(t2, _null, _null, B.TextOverflow_2, _null, _null, t3 == null ? _null : t3.copyWith$3$color$fontSize$fontWeight(B.Color_4281413937, $.$get$width() / 414 * 18, B.FontWeight_3_400), _null, _null), _null, t1 / 414 * 70);
     },
-    $signature: 109
+    $signature: 105
   };
   A._InvoicesItemList_build_closure3.prototype = {
     call$1(context) {
@@ -287910,7 +287920,7 @@
       t3 = A.Theme_of(context).textTheme.bodySmall;
       return A.SizedBox$(A.Text$(t2, _null, _null, B.TextOverflow_2, _null, _null, t3 == null ? _null : t3.copyWith$3$color$fontSize$fontWeight(B.Color_4281413937, $.$get$width() / 414 * 18, B.FontWeight_3_400), _null, _null), _null, t1 / 414 * 70);
     },
-    $signature: 109
+    $signature: 105
   };
   A._InvoicesItemList_build_closure4.prototype = {
     call$1(context) {
@@ -287930,7 +287940,7 @@
       t3 = A.Theme_of(context).textTheme.bodySmall;
       return A.SizedBox$(A.Text$(t2, _null, _null, B.TextOverflow_2, _null, _null, t3 == null ? _null : t3.copyWith$3$color$fontSize$fontWeight(B.Color_4281413937, $.$get$width() / 414 * 18, B.FontWeight_3_400), _null, _null), _null, t1 / 414 * 70);
     },
-    $signature: 109
+    $signature: 105
   };
   A._CustomInvoiceListMobile_StatelessWidget_Dialogs.prototype = {};
   A.__InvoicesItemList_StatelessWidget_Dialogs.prototype = {};
@@ -288186,7 +288196,7 @@
       t2 = A.Theme_of(context).textTheme.bodySmall;
       return A.Text$(t1, _null, _null, B.TextOverflow_2, _null, _null, t2 == null ? _null : t2.copyWith$3$color$fontSize$fontWeight(B.Color_4281413937, $.$get$width() / 414 * 14, B.FontWeight_3_400), _null, _null);
     },
-    $signature: 150
+    $signature: 130
   };
   A.TotalCustomInvoiceMobile__body_closure0.prototype = {
     call$1(context) {
@@ -288209,7 +288219,7 @@
       t2 = A.Theme_of(context).textTheme.bodySmall;
       return A.Text$(t1, _null, _null, B.TextOverflow_2, _null, _null, t2 == null ? _null : t2.copyWith$3$color$fontSize$fontWeight(B.Color_4281413937, $.$get$width() / 414 * 14, B.FontWeight_3_400), _null, _null);
     },
-    $signature: 150
+    $signature: 130
   };
   A.TotalCustomInvoiceMobile__body_closure1.prototype = {
     call$1(context) {
@@ -288235,7 +288245,7 @@
       t2 = A.Theme_of(context).textTheme.bodySmall;
       return A.Text$(t1, _null, _null, B.TextOverflow_2, _null, _null, t2 == null ? _null : t2.copyWith$3$color$fontSize$fontWeight(B.Color_4281413937, $.$get$width() / 414 * 14, B.FontWeight_3_400), _null, _null);
     },
-    $signature: 150
+    $signature: 130
   };
   A.EditInvoiceItemDetails.prototype = {
     build$1(context) {
@@ -288312,7 +288322,7 @@
     call$1(v) {
       return v.itemFrom;
     },
-    $signature: 119
+    $signature: 142
   };
   A.EditInvoiceItemDetails__saveButton_closure0.prototype = {
     call$0() {
@@ -288532,7 +288542,7 @@
     call$1(context) {
       return A.FilterBloc$();
     },
-    $signature: 127
+    $signature: 137
   };
   A.CustomerBalance_build_closure1.prototype = {
     call$2(context, state) {
@@ -288546,7 +288556,7 @@
         t2 = this.state;
       return A.Scaffold$(t1._customer_balance_screen$_mobilesTabletUi$1(context), null, t1._customer_balance_screen$_body$3$context$filterState$state(0, context, filterState, t2), t1._customer_balance_screen$_bottom$1$state(0, t2), null, null);
     },
-    $signature: 106
+    $signature: 115
   };
   A.CustomerBalance__mobilesTabletUi_closure.prototype = {
     call$2(context, sizingInformation) {
@@ -288588,14 +288598,14 @@
       }
       return new A.TotalCustomerBalance(amount, null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.CustomerBalance__bottom_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.CustomerBalance__bottom__closure(), null, false, "", "");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.CustomerBalance__bottom__closure.prototype = {
     call$0() {
@@ -288813,7 +288823,7 @@
       if (!t1._isCanceled)
         t1._emit.call$1(t4);
     },
-    $signature: 12
+    $signature: 13
   };
   A.DashboardBloc__closure2.prototype = {
     call$0() {
@@ -288826,7 +288836,7 @@
       if (!t1._isCanceled)
         t1._emit.call$1(t3);
     },
-    $signature: 12
+    $signature: 13
   };
   A.DashboardEvent.prototype = {
     get$props() {
@@ -288890,7 +288900,7 @@
       else {
         t1 = state.weekDays;
         t1.toString;
-        t2 = A.Calendar$(new A.DashboardScreen__body_closure(state, context), new A.DashboardScreen__body_closure0(state, context), B.JSArray_methods.get$first(t1), _null, new A.DashboardScreen__body_closure1(context, state), false);
+        t2 = A.Calendar$(new A.DashboardScreen__body_closure(state, context), new A.DashboardScreen__body_closure0(state, context), B.JSArray_methods.get$first(t1), _null, _null, new A.DashboardScreen__body_closure1(context, state), false);
         t3 = type$.JSArray_Widget;
         t4 = A.Row$(A._setArrayType([A.Text$("Date", _null, _null, _null, _null, _null, A.TextStyle$(_null, _null, B.Color_4278220117, _null, _null, _null, _null, _null, _null, _null, _null, 18, _null, _null, B.FontWeight_6_700, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.Text$("Details", _null, _null, _null, _null, _null, A.TextStyle$(_null, _null, B.Color_4278220117, _null, _null, _null, _null, _null, _null, _null, _null, 18, _null, _null, B.FontWeight_6_700, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), A.Text$("Amounts", _null, _null, _null, _null, _null, A.TextStyle$(_null, _null, B.Color_4278220117, _null, _null, _null, _null, _null, _null, _null, _null, 18, _null, _null, B.FontWeight_6_700, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)], t3), B.CrossAxisAlignment_2, B.MainAxisAlignment_3, B.MainAxisSize_1, _null);
         t5 = A.Divider$(B.Color_4278220117, _null, 1);
@@ -289023,7 +289033,7 @@
       else
         return t2._dashboard_screen$_appBar$1$context(context);
     },
-    $signature: 18
+    $signature: 16
   };
   A.DashboardScreen__appbartablet_closure.prototype = {
     call$0() {
@@ -289374,7 +289384,7 @@
     call$1(context) {
       return A.FilterBloc$();
     },
-    $signature: 127
+    $signature: 137
   };
   A.DraftInvoices_build_closure1.prototype = {
     call$2(context, state) {
@@ -289388,7 +289398,7 @@
         t2 = this.state;
       return A.Scaffold$(t1._draft_invoices_screen$_mobilesTabletUi$1(context), null, t1._draft_invoices_screen$_body$3$context$filterState$state(0, context, filterState, t2), t1._draft_invoices_screen$_bottom$1$state(0, t2), null, null);
     },
-    $signature: 106
+    $signature: 115
   };
   A.DraftInvoices__mobilesTabletUi_closure.prototype = {
     call$2(context, sizingInformation) {
@@ -289409,7 +289419,7 @@
     call$2(context, sizingInformation) {
       return new A.Builder(new A.DraftInvoices__body__closure(this.state), null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.DraftInvoices__body__closure.prototype = {
     call$1(context) {
@@ -289450,19 +289460,19 @@
     call$2(context, sizingInformation) {
       return new A.DraftListMobile(this.state0, new A.DraftInvoices__listComplete__closure(), null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.DraftInvoices__listComplete__closure.prototype = {
     call$1(invoice) {
     },
-    $signature: 123
+    $signature: 139
   };
   A.DraftInvoices__bottom_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.DraftInvoices__bottom__closure(), null, false, "", "");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.DraftInvoices__bottom__closure.prototype = {
     call$0() {
@@ -289608,7 +289618,7 @@
         t5 = A.Theme_of(t4).textTheme.bodySmall;
       return new A.Padding(new A.EdgeInsets(t2 / 414 * 10, 0, 0, 0), A.Chip$(B.Color_4278298233, B.Color_4294967295, A.Text$(t3, _null, _null, _null, _null, _null, t5 == null ? _null : t5.copyWith$3$color$fontSize$fontWeight(B.Color_4294967295, $.$get$width() / 414 * 14, B.FontWeight_3_400), _null, _null), new A.FilterDraftMobile__filterChips__closure0(t1, current, t4)), _null);
     },
-    $signature: 121
+    $signature: 140
   };
   A.FilterDraftMobile__filterChips__closure0.prototype = {
     call$0() {
@@ -289626,7 +289636,7 @@
     call$1(e) {
       return e === this.current;
     },
-    $signature: 194
+    $signature: 175
   };
   A.FilterDraftMobile__filterChips_closure0.prototype = {
     call$1(index) {
@@ -289639,7 +289649,7 @@
       t4 = A.Theme_of(t3).textTheme.bodySmall;
       return new A.Padding(new A.EdgeInsets(t2 / 414 * 10, 0, 0, 0), A.Chip$(B.Color_4278298233, B.Color_4294967295, A.Text$("", _null, _null, _null, _null, _null, t4 == null ? _null : t4.copyWith$3$color$fontSize$fontWeight(B.Color_4294967295, $.$get$width() / 414 * 14, B.FontWeight_3_400), _null, _null), new A.FilterDraftMobile__filterChips__closure(t1, current, t3)), _null);
     },
-    $signature: 121
+    $signature: 140
   };
   A.FilterDraftMobile__filterChips__closure.prototype = {
     call$0() {
@@ -289848,14 +289858,14 @@
     call$2(context, sizingInformation) {
       return new A.EditBankNamesListMobile(this.state0, null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.EditBankNamesScreen_bottom_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.EditBankNamesScreen_bottom__closure(), new A.EditBankNamesScreen_bottom__closure0(), false, "", "");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.EditBankNamesScreen_bottom__closure0.prototype = {
     call$0() {
@@ -289952,7 +289962,7 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A._EditDeleteBankName_build__closure.prototype = {
     call$1(val) {
@@ -289972,7 +289982,7 @@
       J.add$1$ax(t1, new A.UpdateBankName(val, t3, t4, t5, t6, t2.orderNum, t8, t7));
       this.form.control$1(0, "search").set$value(0, "");
     },
-    $signature: 24
+    $signature: 23
   };
   A._EditDeleteBankName_build__closure0.prototype = {
     call$1(val) {
@@ -289984,7 +289994,7 @@
       J.add$1$ax(A.Provider_of(t1, false, type$.EditBankNamesBloc), new A.UpdateBankName(val, this.$this.bankListModel.bankId, _null, _null, _null, _null, _null, _null));
       this.form.control$1(0, "search").set$value(0, "");
     },
-    $signature: 24
+    $signature: 23
   };
   A._EditBankNamesListMobile_StatelessWidget_Dialogs.prototype = {};
   A.__EditDeleteBankName_StatelessWidget_Dialogs.prototype = {};
@@ -290206,14 +290216,14 @@
     call$2(context, sizingInformation) {
       return new A.EditCustumerListMobile(this.state0, null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.EditCustomerScreen_bottom_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.EditCustomerScreen_bottom__closure(context), new A.EditCustomerScreen_bottom__closure0(), false, "Add New", "");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.EditCustomerScreen_bottom__closure0.prototype = {
     call$0() {
@@ -290231,7 +290241,7 @@
     call$1(value) {
       J.add$1$ax(A.Provider_of(this.context, false, type$.EditCustomerBloc), new A.GetCustomersList());
     },
-    $signature: 16
+    $signature: 17
   };
   A.EditCustumerListMobile.prototype = {
     build$1(context) {
@@ -290355,7 +290365,7 @@
     call$1(value) {
       J.add$1$ax(A.Provider_of(this.context, false, type$.EditCustomerBloc), new A.GetCustomersList());
     },
-    $signature: 16
+    $signature: 17
   };
   A._EditDeleteCustomer_StatelessWidget_Dialogs.prototype = {};
   A.EditCustomerInvoiceBloc.prototype = {
@@ -290529,7 +290539,7 @@
         return new A.Padding(new A.EdgeInsets(0, 0, 0, t1 < 0 ? t1 : 100), new A.EditCustomerTileMobile(this.form, this.state, null), null);
       }
     },
-    $signature: 18
+    $signature: 16
   };
   A.EditCustomerInvoiceScreen_bottom_closure0.prototype = {
     call$1(v) {
@@ -290541,7 +290551,7 @@
     call$2(context, sizingInformation) {
       return new A.BottomBarSaveMobile(new A.EditCustomerInvoiceScreen_bottom__closure(this.state, this.form, context), null);
     },
-    $signature: 22
+    $signature: 25
   };
   A.EditCustomerInvoiceScreen_bottom__closure.prototype = {
     call$0() {
@@ -290644,7 +290654,7 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["email", "Invalid email"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A.EditCustomerTileMobile_build_closure9.prototype = {
     call$0() {
@@ -290832,7 +290842,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1441
+    $signature: 960
   };
   A.EditDeleteItemBloc_closure1.prototype = {
     call$2($event, emit) {
@@ -290868,13 +290878,13 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 961
+    $signature: 1442
   };
   A.EditDeleteItemBloc__closure0.prototype = {
     call$1(value) {
       return value == null ? null : value.get$itemCategoryId();
     },
-    $signature: 42
+    $signature: 44
   };
   A.EditDeleteItemBloc_closure2.prototype = {
     call$2($event, emit) {
@@ -291010,13 +291020,13 @@
     call$1(v) {
       return v.form;
     },
-    $signature: 196
+    $signature: 174
   };
   A.EditDeleteItem__itemList_closure.prototype = {
     call$2(context, sizingInformation) {
       return new A.EditDeleteItemList(this.state, null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.EditDeleteItem__bottom_closure.prototype = {
     call$0() {
@@ -291093,13 +291103,13 @@
     call$1(v) {
       return v.form;
     },
-    $signature: 196
+    $signature: 174
   };
   A._ItemsList_build_closure0.prototype = {
     call$1(v) {
       return v.itemFrom;
     },
-    $signature: 196
+    $signature: 174
   };
   A._ItemsList_build_closure1.prototype = {
     call$0() {
@@ -291355,7 +291365,7 @@
     call$1(year) {
       return year.toJson$0();
     },
-    $signature: 36
+    $signature: 37
   };
   A.EditOtherIncomeBloc_closure0.prototype = {
     call$2($event, emit) {
@@ -291417,7 +291427,7 @@
     call$1(year) {
       return year.toJson$0();
     },
-    $signature: 36
+    $signature: 37
   };
   A.EditOtherIncomeBloc_closure1.prototype = {
     call$2($event, emit) {
@@ -291581,7 +291591,7 @@
     call$1(year) {
       return year.toJson$0();
     },
-    $signature: 36
+    $signature: 37
   };
   A.EditOtherIncomeBloc_closure5.prototype = {
     call$2($event, emit) {
@@ -291677,7 +291687,7 @@
     call$1(year) {
       return year.toJson$0();
     },
-    $signature: 36
+    $signature: 37
   };
   A.EditOtherIncomeBloc_closure7.prototype = {
     call$1(val) {
@@ -291699,7 +291709,7 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 95
+    $signature: 88
   };
   A.EditOtherIncomeBloc__closure.prototype = {
     call$0() {
@@ -291856,7 +291866,7 @@
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.EditOtherIncomeScreen_bottom__closure(), new A.EditOtherIncomeScreen_bottom__closure0(), false, "", "");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.EditOtherIncomeScreen_bottom__closure0.prototype = {
     call$0() {
@@ -291886,7 +291896,7 @@
     call$1(supplier) {
       return this.$this.state.isShownAll || supplier.xbStatusId === 1;
     },
-    $signature: 88
+    $signature: 92
   };
   A.EditOtherListTablet_build_closure0.prototype = {
     call$1(income) {
@@ -292126,7 +292136,7 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This Field is required"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A._OtherIncomeTypeName_build__closure.prototype = {
     call$1(val) {
@@ -292137,7 +292147,7 @@
       J.add$1$ax(A.Provider_of(t1, false, type$.EditOtherIncomeBloc), new A.UpdateIncomeName(val, this.$this.incomeTypeModel));
       this.form.control$1(0, "search").set$value(0, "");
     },
-    $signature: 24
+    $signature: 23
   };
   A._OtherIncomeTypeName_build__closure0.prototype = {
     call$1(val) {
@@ -292148,7 +292158,7 @@
       J.add$1$ax(A.Provider_of(t1, false, type$.EditOtherIncomeBloc), new A.UpdateIncomeName(val, this.$this.incomeTypeModel));
       this.form.control$1(0, "search").set$value(0, "");
     },
-    $signature: 24
+    $signature: 23
   };
   A._EditOtherListTablet_StatelessWidget_Dialogs.prototype = {};
   A.__OtherIncomeTypeName_StatelessWidget_Dialogs.prototype = {};
@@ -292222,7 +292232,7 @@
     call$1(year) {
       return year.toJson$0();
     },
-    $signature: 36
+    $signature: 37
   };
   A.EditPaymentsTypeBloc_closure0.prototype = {
     call$2($event, emit) {
@@ -292281,7 +292291,7 @@
     call$1(year) {
       return year.toJson$0();
     },
-    $signature: 36
+    $signature: 37
   };
   A.EditPaymentsTypeBloc_closure1.prototype = {
     call$2($event, emit) {
@@ -292479,7 +292489,7 @@
     call$1(year) {
       return year.toJson$0();
     },
-    $signature: 36
+    $signature: 37
   };
   A.EditPaymentsTypeBloc_closure6.prototype = {
     call$2($event, emit) {
@@ -292534,7 +292544,7 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 95
+    $signature: 88
   };
   A.EditPaymentsTypeBloc__closure.prototype = {
     call$0() {
@@ -292669,14 +292679,14 @@
     call$2(context, sizingInformation) {
       return new A.EditPaymentsTypeMobile(this.state0, null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.EditPaymentsTypeScreen_bottom_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.EditPaymentsTypeScreen_bottom__closure(), new A.EditPaymentsTypeScreen_bottom__closure0(), false, "", "");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.EditPaymentsTypeScreen_bottom__closure0.prototype = {
     call$0() {
@@ -292704,7 +292714,7 @@
     call$1(expense) {
       return this.$this.state.isShownAll || expense.xbStatusId === 1;
     },
-    $signature: 89
+    $signature: 93
   };
   A.EditPaymentsTypeMobile_build_closure0.prototype = {
     call$1(expense) {
@@ -292954,7 +292964,7 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A._EditDeletePayments_build__closure.prototype = {
     call$1(val) {
@@ -292965,7 +292975,7 @@
       J.add$1$ax(A.Provider_of(t1, false, type$.EditPaymentsTypeBloc), new A.UpdateExpanseTypeName(val, this.$this.expense));
       this.form.control$1(0, "search").set$value(0, "");
     },
-    $signature: 24
+    $signature: 23
   };
   A._EditDeletePayments_build__closure0.prototype = {
     call$1(val) {
@@ -292976,7 +292986,7 @@
       J.add$1$ax(A.Provider_of(t1, false, type$.EditPaymentsTypeBloc), new A.UpdateExpanseTypeName(val, this.$this.expense));
       this.form.control$1(0, "search").set$value(0, "");
     },
-    $signature: 24
+    $signature: 23
   };
   A._EditPaymentsTypeMobile_StatelessWidget_Dialogs.prototype = {};
   A.__EditDeletePayments_StatelessWidget_Dialogs.prototype = {};
@@ -293017,7 +293027,7 @@
       isShownButton = isShownButton;
       return this.$this._search_payemnts_type$_mobile$2$context$isShown(context, isShownButton === true);
     },
-    $signature: 18
+    $signature: 16
   };
   A.SearchExpanseEditDelete_build__closure.prototype = {
     call$1(v) {
@@ -293133,7 +293143,7 @@
       else
         return t2._edit_payroll_screen$_appBar$1$context(context);
     },
-    $signature: 18
+    $signature: 16
   };
   A.EditPayroll__appbartablet_closure.prototype = {
     call$0() {
@@ -293170,7 +293180,7 @@
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.EditPayroll__bottom__closure(), new A.EditPayroll__bottom__closure0(context), false, "", "");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.EditPayroll__bottom__closure0.prototype = {
     call$0() {
@@ -293441,13 +293451,13 @@
       var t1 = $.$get$EditPersonalDetailsBloc_form();
       return new A.EditPersonalMobile(new A.EditPersonalDetails__body__closure(this.$this), t1, null);
     },
-    $signature: 22
+    $signature: 25
   };
   A.EditPersonalDetails__body__closure.prototype = {
     call$1(signature) {
       this.$this._signature = signature;
     },
-    $signature: 118
+    $signature: 148
   };
   A.EditPersonalDetails__employee_closure.prototype = {
     call$2(context, sizingInformation) {
@@ -293469,7 +293479,7 @@
         t4 = A.Theme_of(context).textTheme.bodySmall;
       return A.Column$(A._setArrayType([t2, A.GestureDetector$(_null, A.Container$(B.Alignment_0_0, A.Text$("See on government website", _null, _null, _null, _null, _null, t4 == null ? _null : t4.copyWith$3$color$fontSize$fontWeight(B.Color_4294967295, $.$get$width() / 414 * 15, B.FontWeight_6_700), _null, _null), B.Clip_0, _null, _null, new A.BoxDecoration(B.Color_4278298233, _null, _null, t3, _null, _null, B.BoxShape_0), _null, t1 * 35, _null, _null, _null, _null, _null), B.DragStartBehavior_1, false, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, new A.EditPersonalDetails__seeOnGovernment__closure(), _null, _null, _null, _null, _null, _null, false, B.Offset_O5r)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1);
     },
-    $signature: 51
+    $signature: 48
   };
   A.EditPersonalDetails__seeOnGovernment__closure.prototype = {
     call$0() {
@@ -293480,7 +293490,7 @@
     call$2(context, sizingInformation) {
       return new A.BottomBarSaveMobile(new A.EditPersonalDetails__bottom__closure(this.$this, context), null);
     },
-    $signature: 22
+    $signature: 25
   };
   A.EditPersonalDetails__bottom__closure.prototype = {
     call$0() {
@@ -293794,43 +293804,43 @@
     call$1(val) {
       return val.text;
     },
-    $signature: 25
+    $signature: 24
   };
   A._EditPersonalMobileState__body_closure0.prototype = {
     call$1(val) {
       return val.text;
     },
-    $signature: 25
+    $signature: 24
   };
   A._EditPersonalMobileState__body_closure1.prototype = {
     call$1(val) {
       return val.text;
     },
-    $signature: 25
+    $signature: 24
   };
   A._EditPersonalMobileState__body_closure2.prototype = {
     call$1(val) {
       return val.text;
     },
-    $signature: 25
+    $signature: 24
   };
   A._EditPersonalMobileState__body_closure3.prototype = {
     call$1(val) {
       return val.text;
     },
-    $signature: 25
+    $signature: 24
   };
   A._EditPersonalMobileState__body_closure4.prototype = {
     call$1(val) {
       return val.text;
     },
-    $signature: 25
+    $signature: 24
   };
   A._EditPersonalMobileState__body_closure5.prototype = {
     call$1(val) {
       return val.text;
     },
-    $signature: 25
+    $signature: 24
   };
   A._EditPersonalMobileState__inputText_closure.prototype = {
     call$0() {
@@ -293886,7 +293896,7 @@
       if (value != null)
         this.$this._widget.onSignatureSubmitted.call$1(value);
     },
-    $signature: 207
+    $signature: 188
   };
   A.__EditPersonalMobileState_State_TickerProviderStateMixin.prototype = {
     activate$0() {
@@ -294046,7 +294056,7 @@
       var t1 = this.$this;
       t1.setState$1(new A._EditPlanMobileState__planBody__closure(t1, val));
     },
-    $signature: 71
+    $signature: 65
   };
   A._EditPlanMobileState__planBody__closure.prototype = {
     call$0() {
@@ -294071,7 +294081,7 @@
       t1 = A.Theme_of(t1).textTheme.bodySmall;
       return A.Container$(_null, A.Row$(A._setArrayType([t5, A.SizedBox$(A.Text$(t2, _null, _null, _null, _null, _null, t1 == null ? _null : t1.copyWith$3$color$fontSize$fontWeight(B.Color_4281413937, $.$get$width() / 414 * 15, B.FontWeight_6_700), _null, _null), _null, t3 * 250)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, _null), B.Clip_0, _null, _null, _null, _null, _null, _null, new A.EdgeInsets(t4, t4, t4, t4), _null, _null, _null);
     },
-    $signature: 170
+    $signature: 187
   };
   A.__EditPlanMobileState_State_TickerProviderStateMixin.prototype = {
     activate$0() {
@@ -294217,7 +294227,7 @@
       var t1 = this.$this;
       t1.setState$1(new A._AddStatementEditMobileState__planBody__closure(t1, val));
     },
-    $signature: 71
+    $signature: 65
   };
   A._AddStatementEditMobileState__planBody__closure.prototype = {
     call$0() {
@@ -294241,7 +294251,7 @@
       t1 = A.Theme_of(t1).textTheme.bodySmall;
       return A.Row$(A._setArrayType([t4, A.SizedBox$(A.Text$(t2, _null, _null, _null, _null, _null, t1 == null ? _null : t1.copyWith$3$color$fontSize$fontWeight(B.Color_4281413937, $.$get$width() / 414 * 16, B.FontWeight_5_600), _null, _null), _null, t3 * 300)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, _null);
     },
-    $signature: 166
+    $signature: 185
   };
   A.__AddStatementEditMobileState_State_TickerProviderStateMixin.prototype = {
     activate$0() {
@@ -294369,7 +294379,7 @@
     call$1(year) {
       return year.toJson$0();
     },
-    $signature: 36
+    $signature: 37
   };
   A.EditSuppliersBloc_closure0.prototype = {
     call$2($event, emit) {
@@ -294494,7 +294504,7 @@
     call$1(year) {
       return year.toJson$0();
     },
-    $signature: 36
+    $signature: 37
   };
   A.EditSuppliersBloc_closure2.prototype = {
     call$2($event, emit) {
@@ -294606,7 +294616,7 @@
     call$1(year) {
       return year.toJson$0();
     },
-    $signature: 36
+    $signature: 37
   };
   A.EditSuppliersBloc_closure5.prototype = {
     call$2($event, emit) {
@@ -294827,14 +294837,14 @@
     call$2(context, sizingInformation) {
       return new A.EditSupplierListMobile(this.state0, null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.EditSuppliersScreen_bottom_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.EditSuppliersScreen_bottom__closure(), new A.EditSuppliersScreen_bottom__closure0(), false, "", "");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.EditSuppliersScreen_bottom__closure0.prototype = {
     call$0() {
@@ -294863,7 +294873,7 @@
     call$1(supplier) {
       return this.$this.state.isShownAll || supplier.xbStatusId === 1;
     },
-    $signature: 91
+    $signature: 95
   };
   A.EditSupplierListMobile_build_closure0.prototype = {
     call$1(supplier) {
@@ -295097,7 +295107,7 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A._EditDeleteSupplier_build__closure.prototype = {
     call$1(val) {
@@ -295108,7 +295118,7 @@
       J.add$1$ax(A.Provider_of(t1, false, type$.EditSuppliersBloc), new A.UpdateSupplierTypeName(val, this.$this.supplierListModel));
       this.form.control$1(0, "search").set$value(0, "");
     },
-    $signature: 24
+    $signature: 23
   };
   A._EditDeleteSupplier_build__closure0.prototype = {
     call$1(val) {
@@ -295119,7 +295129,7 @@
       J.add$1$ax(A.Provider_of(t1, false, type$.EditSuppliersBloc), new A.UpdateSupplierTypeName(val, this.$this.supplierListModel));
       this.form.control$1(0, "search").set$value(0, "");
     },
-    $signature: 24
+    $signature: 23
   };
   A._EditSupplierListMobile_StatelessWidget_Dialogs.prototype = {};
   A.__EditDeleteSupplier_StatelessWidget_Dialogs.prototype = {};
@@ -295673,7 +295683,7 @@
     call$1(e) {
       return e.takingsTillId != null;
     },
-    $signature: 69
+    $signature: 70
   };
   A.AddNoteBloc__closure4.prototype = {
     call$1(entryId) {
@@ -296067,18 +296077,18 @@
         t4 = this.state;
       return A.Column$(A._setArrayType([t2, t3, new A.EnterNewNote(t4.images, false, false, t4, t1.noteId, t1.apiEndPoint, t4.uploadImages, t4.isNoteInEditMode, null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1);
     },
-    $signature: 51
+    $signature: 48
   };
   A.AddNoteScreen_build___closure.prototype = {
     call$2(context, sizingInformation) {
       var _null = null,
         t1 = sizingInformation.deviceScreenType;
       if (t1 === B.DeviceScreenType_5 || t1 === B.DeviceScreenType_6)
-        return new A.CalendarTablet(_null, _null, _null, _null);
+        return A.CalendarTablet$();
       else
-        return A.Calendar$(_null, _null, this.$this.selectedDate, _null, _null, true);
+        return A.Calendar$(_null, _null, this.$this.selectedDate, _null, _null, _null, true);
     },
-    $signature: 22
+    $signature: 25
   };
   A.AddNoteScreen__mobilesTabletUi_closure.prototype = {
     call$2(context, sizingInformation) {
@@ -296136,7 +296146,7 @@
       var t1 = A.BottomBarHomeMobile$(true, false, false, new A.AddNoteScreen_bottom__closure(this.$this, this.state, context), new A.AddNoteScreen_bottom__closure0(), new A.AddNoteScreen_bottom__closure1(), false, "", "");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.AddNoteScreen_bottom__closure0.prototype = {
     call$0() {
@@ -296891,7 +296901,7 @@
       if (t1 != null)
         t1.updateValue$1(net + vat);
     },
-    $signature: 131
+    $signature: 149
   };
   A.ExpensePaymentEvent.prototype = {
     get$props() {
@@ -297060,19 +297070,19 @@
     call$1(e) {
       return e.otherPaymentId == this.$this.expense.otherPaymentId;
     },
-    $signature: 89
+    $signature: 93
   };
   A.ExpensePaymentEntryScreen_build___closure0.prototype = {
     call$0() {
       return this.$this.expense;
     },
-    $signature: 197
+    $signature: 204
   };
   A.ExpensePaymentEntryScreen_build___closure1.prototype = {
     call$1(e) {
       return e.otherPaymentId == this.$this.expense.otherPaymentId;
     },
-    $signature: 89
+    $signature: 93
   };
   A.ExpensePaymentEntryScreen_build___closure2.prototype = {
     call$0() {
@@ -297119,13 +297129,13 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 67
+    $signature: 72
   };
   A.ExpensePaymentEntryScreen_build____closure.prototype = {
     call$1(e) {
       return e.otherPaymentId == this.$this.expense.otherPaymentId;
     },
-    $signature: 89
+    $signature: 93
   };
   A.ExpensePaymentEntryScreen_build____closure0.prototype = {
     call$0() {
@@ -297133,13 +297143,13 @@
       t1.toString;
       return J.get$first$ax(t1);
     },
-    $signature: 197
+    $signature: 204
   };
   A.ExpensePaymentEntryScreen_build____closure1.prototype = {
     call$1(e) {
       return e.otherPaymentId == this.$this.expense.otherPaymentId;
     },
-    $signature: 89
+    $signature: 93
   };
   A.ExpensePaymentEntryScreen_build____closure2.prototype = {
     call$0() {
@@ -297147,7 +297157,7 @@
       t1.toString;
       return J.get$first$ax(t1);
     },
-    $signature: 197
+    $signature: 204
   };
   A.ExpensePaymentEntryScreen_build_closure.prototype = {
     call$2(context, state) {
@@ -297239,10 +297249,10 @@
   A.ExpensePaymentEntryScreen__body_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = this.state;
-      t1 = A.Calendar$(new A.ExpensePaymentEntryScreen__body__closure0(t1, context), new A.ExpensePaymentEntryScreen__body__closure1(t1, context), t1.date, null, new A.ExpensePaymentEntryScreen__body__closure2(t1, context), false);
+      t1 = A.Calendar$(new A.ExpensePaymentEntryScreen__body__closure0(t1, context), new A.ExpensePaymentEntryScreen__body__closure1(t1, context), t1.date, null, null, new A.ExpensePaymentEntryScreen__body__closure2(t1, context), false);
       return t1;
     },
-    $signature: 22
+    $signature: 25
   };
   A.ExpensePaymentEntryScreen__body__closure2.prototype = {
     call$1(val) {
@@ -297369,7 +297379,7 @@
     call$1(route) {
       return route._settings.name === "/paymentsSelectDate";
     },
-    $signature: 129
+    $signature: 123
   };
   A.ExpensePaymentEntryScreen__addNewEntry_closure.prototype = {
     call$1(context) {
@@ -297382,7 +297392,7 @@
       t5 = A.Theme_of(context).textTheme.bodySmall;
       return new A.Padding(new A.EdgeInsets(0, 0, 0, t1), A.InkWell$(false, _null, true, A.Container$(B.Alignment_0_0, A.Text$("+  Add New Entry", _null, _null, _null, _null, _null, t5 == null ? _null : t5.copyWith$3$color$fontSize$fontWeight(B.Color_4294967295, $.$get$width() / 414 * 15, B.FontWeight_6_700), _null, _null), B.Clip_0, _null, _null, new A.BoxDecoration(B.Color_4278298233, _null, t3, t4, _null, _null, B.BoxShape_0), _null, t2 * 50, _null, _null, _null, _null, t2 * 380), _null, true, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, new A.ExpensePaymentEntryScreen__addNewEntry__closure(this.$this, context, this.state), _null, _null, _null, _null, _null, _null, _null), _null);
     },
-    $signature: 126
+    $signature: 133
   };
   A.ExpensePaymentEntryScreen__addNewEntry__closure.prototype = {
     call$0() {
@@ -297442,7 +297452,7 @@
         t1.animateTo$3$curve$duration(t2, B.C__DecelerateCurve, A.Duration$(0, 0, 0, 300, 0, 0));
       }
     },
-    $signature: 12
+    $signature: 13
   };
   A.ExpensePaymentEntryScreen_bottom_closure.prototype = {
     call$2(context, sizingInformation) {
@@ -297450,7 +297460,7 @@
       t1 = A.BottomBarHomeMobile$(true, true, t1.savingEntry, null, new A.ExpensePaymentEntryScreen_bottom__closure(), new A.ExpensePaymentEntryScreen_bottom__closure0(t1, context), false, "", "Save");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.ExpensePaymentEntryScreen_bottom__closure.prototype = {
     call$0() {
@@ -297686,7 +297696,7 @@
     call$1(control) {
       this.$this.textController = control;
     },
-    $signature: 46
+    $signature: 47
   };
   A.ExpenseEntryState__tile__closure2.prototype = {
     call$1(a) {
@@ -297715,7 +297725,7 @@
     call$1(control) {
       this.$this.vatController = control;
     },
-    $signature: 46
+    $signature: 47
   };
   A.ExpenseEntryState__tile__closure5.prototype = {
     call$1(a) {
@@ -297741,7 +297751,7 @@
   A.ExpenseEntryState__tile__closure7.prototype = {
     call$1(TextEditingController) {
     },
-    $signature: 46
+    $signature: 47
   };
   A.ExpenseEntryState__tile__closure8.prototype = {
     call$1(val) {
@@ -297797,7 +297807,7 @@
         t1 = false;
       return t1;
     },
-    $signature: 89
+    $signature: 93
   };
   A.ExpenseEntryState__tile__closure11.prototype = {
     call$1(index) {
@@ -297814,7 +297824,7 @@
         isSelected = J.$eq$(t2, bank);
       return A.Expanded$(new A.Padding(new A.EdgeInsets(5, 0, 5, 0), new A._BankList(new A.ExpenseEntryState__tile___closure(t1, bank, this.context), isSelected, bank, _null), _null), 1);
     },
-    $signature: 128
+    $signature: 135
   };
   A.ExpenseEntryState__tile___closure.prototype = {
     call$0() {
@@ -298144,10 +298154,10 @@
   A.ExpensePaymentsScreen__body_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = this.state;
-      t1 = A.Calendar$(new A.ExpensePaymentsScreen__body__closure0(t1, context), new A.ExpensePaymentsScreen__body__closure1(t1, context), t1.dateTime, this.minDate, new A.ExpensePaymentsScreen__body__closure2(context), false);
+      t1 = A.Calendar$(new A.ExpensePaymentsScreen__body__closure0(t1, context), new A.ExpensePaymentsScreen__body__closure1(t1, context), t1.dateTime, null, this.minDate, new A.ExpensePaymentsScreen__body__closure2(context), false);
       return t1;
     },
-    $signature: 22
+    $signature: 25
   };
   A.ExpensePaymentsScreen__body__closure2.prototype = {
     call$1(val) {
@@ -298199,7 +298209,7 @@
       }
       return A.ResponsiveBuilder$(new A.ExpensePaymentsScreen__body__closure(_box_0));
     },
-    $signature: 32
+    $signature: 31
   };
   A.ExpensePaymentsScreen__body__closure.prototype = {
     call$2(context, sizingInformation) {
@@ -298209,7 +298219,7 @@
       t1 = t1.net;
       return new A.TotalExpenseMobile(t2, t1, t3, null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.ExpensePaymentsScreen__expenseBody_closure.prototype = {
     call$1(e) {
@@ -298238,13 +298248,13 @@
         J.add$1$ax(t1, new A.GetPaymentsWeeklyList(date));
       }
     },
-    $signature: 19
+    $signature: 20
   };
   A.ExpensePaymentsScreen__expenseBody_closure0.prototype = {
     call$2(context, index) {
       return A.ResponsiveBuilder$(new A.ExpensePaymentsScreen__expenseBody__closure(this.typeState, this.state, this.state0));
     },
-    $signature: 176
+    $signature: 195
   };
   A.ExpensePaymentsScreen__expenseBody__closure.prototype = {
     call$2(context, sizingInformation) {
@@ -298252,7 +298262,7 @@
       A.print("The types coming are 1 : " + A.S(t1.expenseValues));
       return new A.ExpensePaymentsListMobile(this.state0, new A.ExpensePaymentsScreen__expenseBody___closure(context, this.state, t1), null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.ExpensePaymentsScreen__expenseBody___closure.prototype = {
     call$1(expense) {
@@ -298272,14 +298282,14 @@
       t2.toString;
       J.add$1$ax(t1, new A.GetPaymentsWeeklyList(t2));
     },
-    $signature: 16
+    $signature: 17
   };
   A.ExpensePaymentsScreen_bottom_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.ExpensePaymentsScreen_bottom__closure(), new A.ExpensePaymentsScreen_bottom__closure0(), false, "", "");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.ExpensePaymentsScreen_bottom__closure0.prototype = {
     call$0() {
@@ -298517,7 +298527,7 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 95
+    $signature: 88
   };
   A.ExpenseTypeBloc__closure.prototype = {
     call$0() {
@@ -298654,7 +298664,7 @@
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.ExpenseTypeScreen_bottom__closure(), new A.ExpenseTypeScreen_bottom__closure0(), false, "", "");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.ExpenseTypeScreen_bottom__closure.prototype = {
     call$0() {
@@ -298798,7 +298808,7 @@
       var t1 = this.$this;
       return A.Scaffold$(t1._filter_screen$_mobilesTabletUi$1(context), B.Color_4294967295, t1._filter_screen$_body$2$context$state(0, context, state), null, null, null);
     },
-    $signature: 106
+    $signature: 115
   };
   A.FilterScreen__mobilesTabletUi_closure.prototype = {
     call$2(context, sizingInformation) {
@@ -298957,7 +298967,7 @@
       t1._widget.onItemSelected.call$1(t3);
       t1.setState$1(new A.FilterExpansionTileState__expansion___closure0());
     },
-    $signature: 71
+    $signature: 65
   };
   A.FilterExpansionTileState__expansion___closure.prototype = {
     call$1(e) {
@@ -299214,7 +299224,7 @@
         return "Please enter a valid email address";
       return null;
     },
-    $signature: 148
+    $signature: 118
   };
   A._ForgotPasswordScreenState_build__closure0.prototype = {
     call$1(value) {
@@ -299228,7 +299238,7 @@
         return "Please enter a valid mobile number";
       return null;
     },
-    $signature: 148
+    $signature: 118
   };
   A._ForgotPasswordScreenState_build__closure1.prototype = {
     call$1(value) {
@@ -299236,7 +299246,7 @@
         return "Please enter your last name";
       return null;
     },
-    $signature: 148
+    $signature: 118
   };
   A._ForgotPasswordScreenState__submitButton_closure.prototype = {
     call$0() {
@@ -299344,7 +299354,7 @@
     call$2(context, sizingInformation) {
       return new A.MobileView(null);
     },
-    $signature: 22
+    $signature: 25
   };
   A.MobileView.prototype = {
     createState$0() {
@@ -299734,7 +299744,7 @@
       }
       return t1 === t2;
     },
-    $signature: 151
+    $signature: 150
   };
   A.IAPBloc_closure0.prototype = {
     call$2($event, emit) {
@@ -300715,19 +300725,19 @@
     call$1(income) {
       return income.otherIncomeId == this.$this.otherIncome.otherIncomeId;
     },
-    $signature: 88
+    $signature: 92
   };
   A.IncomeEntryScreen_build___closure0.prototype = {
     call$0() {
       return this.$this.otherIncome;
     },
-    $signature: 187
+    $signature: 191
   };
   A.IncomeEntryScreen_build___closure1.prototype = {
     call$1(income) {
       return income.otherIncomeId == this.$this.otherIncome.otherIncomeId;
     },
-    $signature: 88
+    $signature: 92
   };
   A.IncomeEntryScreen_build___closure2.prototype = {
     call$0() {
@@ -300774,13 +300784,13 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 67
+    $signature: 72
   };
   A.IncomeEntryScreen_build____closure.prototype = {
     call$1(income) {
       return income.otherIncomeId == this.$this.otherIncome.otherIncomeId;
     },
-    $signature: 88
+    $signature: 92
   };
   A.IncomeEntryScreen_build____closure0.prototype = {
     call$0() {
@@ -300788,13 +300798,13 @@
       t1.toString;
       return J.get$first$ax(t1);
     },
-    $signature: 187
+    $signature: 191
   };
   A.IncomeEntryScreen_build____closure1.prototype = {
     call$1(income) {
       return income.otherIncomeId == this.$this.otherIncome.otherIncomeId;
     },
-    $signature: 88
+    $signature: 92
   };
   A.IncomeEntryScreen_build____closure2.prototype = {
     call$0() {
@@ -300802,7 +300812,7 @@
       t1.toString;
       return J.get$first$ax(t1);
     },
-    $signature: 187
+    $signature: 191
   };
   A.IncomeEntryScreen_build_closure.prototype = {
     call$2(context, state) {
@@ -300895,10 +300905,10 @@
   A.IncomeEntryScreen__body_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = this.state;
-      t1 = A.Calendar$(new A.IncomeEntryScreen__body__closure(t1, context), new A.IncomeEntryScreen__body__closure0(t1, context), t1.date, null, new A.IncomeEntryScreen__body__closure1(t1, context), false);
+      t1 = A.Calendar$(new A.IncomeEntryScreen__body__closure(t1, context), new A.IncomeEntryScreen__body__closure0(t1, context), t1.date, null, null, new A.IncomeEntryScreen__body__closure1(t1, context), false);
       return t1;
     },
-    $signature: 22
+    $signature: 25
   };
   A.IncomeEntryScreen__body__closure1.prototype = {
     call$1(val) {
@@ -301036,7 +301046,7 @@
       t5 = A.Theme_of(context).textTheme.bodySmall;
       return new A.Padding(new A.EdgeInsets(0, 0, 0, t1), A.InkWell$(false, _null, true, A.Container$(B.Alignment_0_0, A.Text$("+  Add New Entry", _null, _null, _null, _null, _null, t5 == null ? _null : t5.copyWith$3$color$fontSize$fontWeight(B.Color_4294967295, $.$get$width() / 414 * 15, B.FontWeight_6_700), _null, _null), B.Clip_0, _null, _null, new A.BoxDecoration(B.Color_4278298233, _null, t3, t4, _null, _null, B.BoxShape_0), _null, t2 * 50, _null, _null, _null, _null, t2 * 380), _null, true, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, new A.IncomeEntryScreen__addNewIncome__closure(this.$this, context, this.state), _null, _null, _null, _null, _null, _null, _null), _null);
     },
-    $signature: 126
+    $signature: 133
   };
   A.IncomeEntryScreen__addNewIncome__closure.prototype = {
     call$0() {
@@ -301102,7 +301112,7 @@
         t1.animateTo$3$curve$duration(t2, B.C__DecelerateCurve, A.Duration$(0, 0, 0, 300, 0, 0));
       }
     },
-    $signature: 12
+    $signature: 13
   };
   A.IncomeEntryScreen__incomeEntryScreenBody_closure.prototype = {
     call$1(v) {
@@ -301156,7 +301166,7 @@
     call$1(route) {
       return route._settings.name === "/otherIncomeSelectDate";
     },
-    $signature: 129
+    $signature: 123
   };
   A.IncomeEntryScreen__bottom_closure.prototype = {
     call$2(context, sizingInformation) {
@@ -301164,7 +301174,7 @@
       t1 = A.BottomBarHomeMobile$(true, true, t1.savingEntry, null, new A.IncomeEntryScreen__bottom__closure(), new A.IncomeEntryScreen__bottom__closure0(t1, context), false, "", "Save");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.IncomeEntryScreen__bottom__closure.prototype = {
     call$0() {
@@ -301382,7 +301392,7 @@
     call$1(control) {
       this.$this.__IncomeEntryMobileState_textController_A = control;
     },
-    $signature: 46
+    $signature: 47
   };
   A.IncomeEntryMobileState__tile_closure2.prototype = {
     call$1(a) {
@@ -301448,7 +301458,7 @@
         t1 = false;
       return t1;
     },
-    $signature: 88
+    $signature: 92
   };
   A.IncomeEntryMobileState__tile_closure4.prototype = {
     call$1(index) {
@@ -301461,7 +301471,7 @@
       bank.toString;
       return A.Expanded$(new A.Padding(new A.EdgeInsets(5, 0, 5, 0), new A._BankIncome(new A.IncomeEntryMobileState__tile__closure(t1, bank), isSelected, bank, _null), _null), 1);
     },
-    $signature: 128
+    $signature: 135
   };
   A.IncomeEntryMobileState__tile__closure.prototype = {
     call$0() {
@@ -301619,7 +301629,7 @@
     call$2(context, sizingInformation) {
       return new A.ReportMobile(null);
     },
-    $signature: 22
+    $signature: 25
   };
   A.ReportMobile.prototype = {
     createState$0() {
@@ -302282,7 +302292,7 @@
     call$2(context, sizingInformation) {
       return new A.LoginMobileView(this.$this.initialPage, null);
     },
-    $signature: 22
+    $signature: 25
   };
   A.LoginMobileView.prototype = {
     createState$0() {
@@ -302532,7 +302542,7 @@
         t1 = this._framework$_element;
       t1.toString;
       t1 = A.Theme_of(t1).primaryTextTheme.bodyLarge;
-      return A.Container$(_null, A.Row$(A._setArrayType([A.Text$("App Version 2.0.1(144)", _null, _null, _null, _null, _null, t1 == null ? _null : t1.copyWith$3$fontSize$fontWeight$height($.$get$width() / 414 * 16, B.FontWeight_3_400, 1), _null, _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, _null), B.Clip_0, _null, _null, _null, _null, _null, new A.EdgeInsets(0, 20, 0, 0), _null, _null, _null, _null);
+      return A.Container$(_null, A.Row$(A._setArrayType([A.Text$("App Version 2.0.1(145)", _null, _null, _null, _null, _null, t1 == null ? _null : t1.copyWith$3$fontSize$fontWeight$height($.$get$width() / 414 * 16, B.FontWeight_3_400, 1), _null, _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, _null), B.Clip_0, _null, _null, _null, _null, _null, new A.EdgeInsets(0, 20, 0, 0), _null, _null, _null, _null);
     }
   };
   A._LoginMobileViewState_initState_closure.prototype = {
@@ -302548,7 +302558,7 @@
       t2.add$1(0, t1.get$_getSecondFormValues());
       t1.setState$1(new A._LoginMobileViewState_initState__closure());
     },
-    $signature: 131
+    $signature: 149
   };
   A._LoginMobileViewState_initState__closure.prototype = {
     call$0() {
@@ -302684,7 +302694,7 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A._LoginMobileViewState__setBiometric__closure.prototype = {
     call$1(val) {
@@ -302703,19 +302713,19 @@
         J.add$1$ax(A.Provider_of(t1, false, type$.LoginBloc), new A.SetBiometricLogin(val));
       }
     },
-    $signature: 24
+    $signature: 23
   };
   A._LoginMobileViewState__setBiometric__closure0.prototype = {
     call$1(val) {
     },
-    $signature: 24
+    $signature: 23
   };
   A._LoginMobileViewState__inputFields_closure1.prototype = {
     call$1(control) {
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A._LoginMobileViewState__inputFields_closure.prototype = {
     call$0() {
@@ -302760,7 +302770,7 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A._LoginMobileViewState__inputFields_closure3.prototype = {
     call$0() {
@@ -302805,7 +302815,7 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A._LoginMobileViewState__emailInputFields_closure.prototype = {
     call$0() {
@@ -302844,7 +302854,7 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A._LoginMobileViewState__emailInputFields_closure3.prototype = {
     call$0() {
@@ -302997,7 +303007,7 @@
       var t1 = this.state.unreadMessagesCount;
       return new A.MenuMobileView(t1 == null ? 0 : t1, null);
     },
-    $signature: 22
+    $signature: 25
   };
   A.MenuMobileView.prototype = {
     createState$0() {
@@ -303107,7 +303117,7 @@
           return A.Container$(_null, _null, B.Clip_0, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null);
       }
     },
-    $signature: 23
+    $signature: 22
   };
   A._MenuMobileViewState__menuItem_closure.prototype = {
     call$0() {
@@ -303402,7 +303412,7 @@
       else
         return t2._messages_screen$_appBar$2$context$state(context, t3);
     },
-    $signature: 18
+    $signature: 16
   };
   A._MessagesScreen__appbartablet_closure.prototype = {
     call$0() {
@@ -303641,7 +303651,7 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A.MoreScreen__appBar__closure.prototype = {
     call$1(val) {
@@ -303667,12 +303677,12 @@
         }
       }
     },
-    $signature: 24
+    $signature: 23
   };
   A.MoreScreen__appBar__closure0.prototype = {
     call$1(val) {
     },
-    $signature: 24
+    $signature: 23
   };
   A.MoreScreen__appBar_closure1.prototype = {
     call$0() {
@@ -303693,7 +303703,7 @@
         t6 = $.$get$ChangeNotifier__emptyListeners();
       return new A.ProfileMobile(this.state, context, t1, new A.DateTime(t2, false), t3, t4, t5, new A.TextEditingController(B.TextEditingValue_li8, t6), new A.TextEditingController(B.TextEditingValue_li8, t6), _null);
     },
-    $signature: 4
+    $signature: 3
   };
   A._MoreScreen_StatelessWidget_Dialogs.prototype = {};
   A.ProfileMobile.prototype = {
@@ -304021,7 +304031,7 @@
     call$2(context, sizingInformation) {
       return new A.NewSupplierListMobile(this.state0, new A.AddNewSupplierScreen__selectSupplierBody__closure(this.$this, context), null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.AddNewSupplierScreen__selectSupplierBody__closure.prototype = {
     call$1(supplier) {
@@ -304051,7 +304061,7 @@
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.AddNewSupplierScreen_bottom__closure(), new A.AddNewSupplierScreen_bottom__closure0(), false, "", "");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.AddNewSupplierScreen_bottom__closure.prototype = {
     call$0() {
@@ -304219,13 +304229,13 @@
       bankId.toString;
       return new A.BankTotal(t1, bankId, 0);
     },
-    $signature: 82
+    $signature: 90
   };
   A.AddNewTakingsBloc__closure2.prototype = {
     call$1(year) {
       return year.toJson$0();
     },
-    $signature: 36
+    $signature: 37
   };
   A.AddNewTakingsBloc_closure0.prototype = {
     call$2($event, emit) {
@@ -304336,7 +304346,7 @@
     call$1(year) {
       return year.toJson$0();
     },
-    $signature: 36
+    $signature: 37
   };
   A.AddNewTakingsBloc_closure3.prototype = {
     call$2($event, emit) {
@@ -304704,7 +304714,7 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This Field is required"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A.AddTakingsScreen__takingsBody__closure.prototype = {
     call$1(val) {
@@ -304715,7 +304725,7 @@
       t2 = this.data;
       J.add$1$ax(A.Provider_of(t1, false, type$.AddNewTakingsBloc), new A.UpdateTakingsName(t2.tillId, t2.clientId, val));
     },
-    $signature: 24
+    $signature: 23
   };
   A.AddTakingsScreen_bottom_closure.prototype = {
     call$1(v) {
@@ -304728,7 +304738,7 @@
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.AddTakingsScreen_bottom__closure(), new A.AddTakingsScreen_bottom__closure0(), false, "", " ");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.AddTakingsScreen_bottom__closure.prototype = {
     call$0() {
@@ -304984,10 +304994,10 @@
       }
       minDate = minDateString == null ? _null : A.DateTime_parse(minDateString[0]);
       t1 = this.state;
-      t1 = A.Calendar$(new A.OtherIncomeScreen__body__closure(t1, context), new A.OtherIncomeScreen__body__closure0(context, t1), t1.selectedDateTime, minDate, new A.OtherIncomeScreen__body__closure1(context), false);
+      t1 = A.Calendar$(new A.OtherIncomeScreen__body__closure(t1, context), new A.OtherIncomeScreen__body__closure0(context, t1), t1.selectedDateTime, _null, minDate, new A.OtherIncomeScreen__body__closure1(context), false);
       return t1;
     },
-    $signature: 22
+    $signature: 25
   };
   A.OtherIncomeScreen__body__closure1.prototype = {
     call$1(val) {
@@ -305055,14 +305065,14 @@
       t2.toString;
       J.add$1$ax(t1, new A.ListOtherIncome(t2));
     },
-    $signature: 16
+    $signature: 17
   };
   A.OtherIncomeScreen_bottom_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.OtherIncomeScreen_bottom__closure(), new A.OtherIncomeScreen_bottom__closure0(), false, "", "");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.OtherIncomeScreen_bottom__closure0.prototype = {
     call$0() {
@@ -305321,7 +305331,7 @@
     call$1(element) {
       return element.bankId !== "6009798964793049101";
     },
-    $signature: 104
+    $signature: 111
   };
   A.OtherIncomeSelectBloc__closure0.prototype = {
     call$1(e) {
@@ -305335,7 +305345,7 @@
       bankId.toString;
       return new A.BankTotal(t1, bankId, total);
     },
-    $signature: 82
+    $signature: 90
   };
   A.OtherIncomeSelectEvent.prototype = {
     get$props() {
@@ -305398,31 +305408,60 @@
       return A.AppBar$(_null, _null, false, B.Color_4278298233, _null, true, 0, new A.IconThemeData(_null, _null, _null, _null, _null, B.Color_4294967295, _null, _null, _null), A.IconButton$(_null, A.Icon$(B.IconData_57492_MaterialIcons_null_true, _null, _null, _null), _null, new A.OtherIncomeSelectDate__appBar_closure(context), _null, _null, _null), _null, t1, _null);
     },
     _other_income_select_screen$_body$2$context$state(_, context, state) {
-      var minDateString, minDate, _null = null, t1 = {},
-        t2 = A.Provider_of(context, false, type$.AuthBloc)._bloc$_state.user;
-      if (t2 == null)
+      var minDateString, minDate, maxDateString, maxDate, _null = null, t1 = {},
+        t2 = type$.AuthBloc,
+        t3 = A.Provider_of(context, false, t2)._bloc$_state.user;
+      if (t3 == null)
         minDateString = _null;
       else {
-        t2 = t2.accountingYear;
-        if (t2 == null)
+        t3 = t3.accountingYear;
+        if (t3 == null)
           minDateString = _null;
         else {
-          t2 = B.JSArray_methods.get$first(t2).accountingYearStart;
-          t2 = t2 == null ? _null : A._setArrayType(t2.split("T"), type$.JSArray_String);
-          minDateString = t2;
+          t3 = B.JSArray_methods.get$first(t3).accountingYearStart;
+          t3 = t3 == null ? _null : A._setArrayType(t3.split("T"), type$.JSArray_String);
+          minDateString = t3;
         }
       }
       minDate = minDateString == null ? _null : A.DateTime_parse(minDateString[0]);
+      t2 = A.Provider_of(context, false, t2)._bloc$_state.user;
+      if (t2 == null)
+        maxDateString = _null;
+      else {
+        t2 = t2.accountingYear;
+        if (t2 == null)
+          maxDateString = _null;
+        else {
+          t2 = B.JSArray_methods.get$last(t2).accountingYearEnd;
+          t2 = t2 == null ? _null : A._setArrayType(t2.split("T"), type$.JSArray_String);
+          maxDateString = t2;
+        }
+      }
+      maxDate = maxDateString == null ? _null : A.DateTime_parse(maxDateString[0]);
       t1.date = new A.DateTime(Date.now(), false);
       if (state instanceof A.OtherIncomeSelectInitial)
         return new A.Loading(_null);
       else
-        return A.Column$(A._setArrayType([A.ResponsiveBuilder$(new A.OtherIncomeSelectDate__body_closure(t1, state, minDate)), this._takingsBody$2$context$state(context, state), new A.Builder(new A.OtherIncomeSelectDate__body_closure0(state), _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1);
+        return A.Column$(A._setArrayType([A.ResponsiveBuilder$(new A.OtherIncomeSelectDate__body_closure(t1, state, minDate, maxDate)), this._takingsBody$2$context$state(context, state), new A.Builder(new A.OtherIncomeSelectDate__body_closure0(state), _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1);
     },
     _takingsBody$2$context$state(context, state) {
-      var _null = null,
-        t1 = $.$get$width() / 414 * 10;
-      return A.Expanded$(A.Container$(_null, A.PageView$builder(this.pageController, new A.OtherIncomeSelectDate__takingsBody_closure(state), _null, _null, new A.OtherIncomeSelectDate__takingsBody_closure0(this, state, context)), B.Clip_0, _null, _null, _null, _null, _null, _null, new A.EdgeInsets(0, t1, 0, t1), _null, _null, _null), 1);
+      var maxDateString, maxDate, _null = null,
+        t1 = A.Provider_of(context, false, type$.AuthBloc)._bloc$_state.user;
+      if (t1 == null)
+        maxDateString = _null;
+      else {
+        t1 = t1.accountingYear;
+        if (t1 == null)
+          maxDateString = _null;
+        else {
+          t1 = B.JSArray_methods.get$last(t1).accountingYearEnd;
+          t1 = t1 == null ? _null : A._setArrayType(t1.split("T"), type$.JSArray_String);
+          maxDateString = t1;
+        }
+      }
+      maxDate = maxDateString == null ? _null : A.DateTime_parse(maxDateString[0]);
+      t1 = $.$get$width() / 414 * 10;
+      return A.Expanded$(A.Container$(_null, A.PageView$builder(this.pageController, new A.OtherIncomeSelectDate__takingsBody_closure(state, maxDate), _null, _null, new A.OtherIncomeSelectDate__takingsBody_closure0(this, state, context)), B.Clip_0, _null, _null, _null, _null, _null, _null, new A.EdgeInsets(0, t1, 0, t1), _null, _null, _null), 1);
     },
     _other_income_select_screen$_bottom$1$context(_, context) {
       return A.ResponsiveBuilder$(new A.OtherIncomeSelectDate__bottom_closure(this, A.SelectContext_select(context, new A.OtherIncomeSelectDate__bottom_closure0(), type$.OtherIncomeSelectBloc, type$.FormGroup)));
@@ -305467,14 +305506,14 @@
   };
   A.OtherIncomeSelectDate__body_closure.prototype = {
     call$2(context, sizingInformation) {
-      var t3,
-        t1 = this.state,
+      var t3, _this = this,
+        t1 = _this.state,
         t2 = t1.weekDays;
       t2.toString;
-      t3 = this._box_0;
-      return A.Calendar$(new A.OtherIncomeSelectDate__body__closure(t3, t1, context), new A.OtherIncomeSelectDate__body__closure0(t3, t1, context), B.JSArray_methods.get$first(t2), this.minDate, new A.OtherIncomeSelectDate__body__closure1(context), false);
+      t3 = _this._box_0;
+      return A.Calendar$(new A.OtherIncomeSelectDate__body__closure(t3, t1, context), new A.OtherIncomeSelectDate__body__closure0(t3, t1, context), B.JSArray_methods.get$first(t2), _this.maxDate, _this.minDate, new A.OtherIncomeSelectDate__body__closure1(context), false);
     },
-    $signature: 22
+    $signature: 171
   };
   A.OtherIncomeSelectDate__body__closure1.prototype = {
     call$1(date) {
@@ -305515,7 +305554,7 @@
         t3 = A._setArrayType([], type$.JSArray_BankTotal);
       return new A.TotalIncome(t2, t1.startWeekDate, t1.endWeekDate, t3, t1.showPostedTo, null);
     },
-    $signature: 1175
+    $signature: 1176
   };
   A.OtherIncomeSelectDate__takingsBody_closure0.prototype = {
     call$1(index) {
@@ -305535,7 +305574,7 @@
         t1.add$1(0, new A.WeeklistOtherIncome(date, false));
       }
     },
-    $signature: 19
+    $signature: 20
   };
   A.OtherIncomeSelectDate__takingsBody_closure.prototype = {
     call$2(context, index) {
@@ -305543,9 +305582,9 @@
         t1 = this.state,
         t2 = t1.weekDays;
       t2 = t2 == null ? _null : t2.length;
-      return A.ListView$builder(_null, new A.OtherIncomeSelectDate__takingsBody__closure(t1), t2, _null, new A.NeverScrollableScrollPhysics(_null), false, B.Axis_1, false);
+      return A.ListView$builder(_null, new A.OtherIncomeSelectDate__takingsBody__closure(t1, this.maxDate), t2, _null, new A.NeverScrollableScrollPhysics(_null), false, B.Axis_1, false);
     },
-    $signature: 120
+    $signature: 151
   };
   A.OtherIncomeSelectDate__takingsBody__closure.prototype = {
     call$2(context, index) {
@@ -305557,8 +305596,10 @@
       if (t2)
         valid = _null;
       else {
-        t3 = Date.now();
-        valid = current._value < t3;
+        t3 = this.maxDate;
+        if (t3 == null)
+          t3 = new A.DateTime(Date.now(), false);
+        valid = current._value < t3._value;
       }
       t3 = t1.totals;
       if (t3 == null)
@@ -305572,7 +305613,7 @@
         hasNote = t3.$index(0, t2 ? _null : A.Primitives_getWeekday(current));
       return A.ResponsiveBuilder$(new A.OtherIncomeSelectDate__takingsBody___closure(valid, t1, index, amount, hasNote));
     },
-    $signature: 176
+    $signature: 195
   };
   A.OtherIncomeSelectDate__takingsBody___closure.prototype = {
     call$2(context, sizingInformation) {
@@ -305595,7 +305636,7 @@
         return A.OtherIncomeListSelectDate$(t5, _this.hasNote === true, t2, t3, t4, t1);
       }
     },
-    $signature: 1177
+    $signature: 1178
   };
   A.OtherIncomeSelectDate__takingsBody____closure.prototype = {
     call$0() {
@@ -305613,7 +305654,7 @@
       t2.toString;
       J.add$1$ax(t1, new A.WeeklistOtherIncome(t2, false));
     },
-    $signature: 16
+    $signature: 17
   };
   A.OtherIncomeSelectDate__takingsBody____closure0.prototype = {
     call$0() {
@@ -305631,20 +305672,20 @@
       t2.toString;
       J.add$1$ax(t1, new A.WeeklistOtherIncome(t2, false));
     },
-    $signature: 16
+    $signature: 17
   };
   A.OtherIncomeSelectDate__bottom_closure0.prototype = {
     call$1(v) {
       return v.form;
     },
-    $signature: 1178
+    $signature: 1179
   };
   A.OtherIncomeSelectDate__bottom_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.OtherIncomeSelectDate__bottom__closure(this.$this, this.form, context), new A.OtherIncomeSelectDate__bottom__closure0(context), false, "Add New Income Type", "Edit Income");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.OtherIncomeSelectDate__bottom__closure0.prototype = {
     call$0() {
@@ -305657,7 +305698,7 @@
     call$1(v) {
       J.add$1$ax(A.Provider_of(this.context, false, type$.OtherIncomeSelectBloc), new A.GetListOtherIncome0());
     },
-    $signature: 16
+    $signature: 17
   };
   A.OtherIncomeSelectDate__bottom__closure.prototype = {
     call$0() {
@@ -305693,7 +305734,7 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A.OtherIncomeSelectDate__bottom___closure0.prototype = {
     call$1(val) {
@@ -305703,7 +305744,7 @@
       t2.pop$1(null);
       J.add$1$ax(A.Provider_of(t1, false, type$.OtherIncomeSelectBloc), new A.InsertOtherIncome(val));
     },
-    $signature: 24
+    $signature: 23
   };
   A.OtherIncomeSelectDate__bottom___closure1.prototype = {
     call$1(val) {
@@ -305713,7 +305754,7 @@
       t2.pop$1(null);
       J.add$1$ax(A.Provider_of(t1, false, type$.OtherIncomeSelectBloc), new A.InsertOtherIncome(val));
     },
-    $signature: 24
+    $signature: 23
   };
   A._OtherIncomeSelectDate_StatelessWidget_Dialogs.prototype = {};
   A.OtherIncomeListSelectDate.prototype = {
@@ -305874,7 +305915,7 @@
       var t1 = this.$this;
       this.rows.push(new A.TableRow(null, null, A._setArrayType([t1._total_income$_buildDataCell$1(element.bankName), t1._total_income$_buildDataCell$1(B.JSNumber_methods.toStringAsFixed$1(element.total, 2))], type$.JSArray_Widget)));
     },
-    $signature: 200
+    $signature: 182
   };
   A.StripeOtherPaymentsBloc.prototype = {
     StripeOtherPaymentsBloc$2$authBloc$clientsRepo(authBloc, clientsRepo) {
@@ -305962,7 +306003,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1180
+    $signature: 1181
   };
   A.StripeOtherPaymentsBloc__closure.prototype = {
     call$1(element) {
@@ -305976,7 +306017,7 @@
       }
       return t1 === t2;
     },
-    $signature: 151
+    $signature: 150
   };
   A.StripeOtherPaymentsBloc__closure0.prototype = {
     call$0() {
@@ -305997,7 +306038,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 67
+    $signature: 72
   };
   A.StripeOtherPaymentsBloc_closure0.prototype = {
     call$2($event, emit) {
@@ -306074,7 +306115,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1181
+    $signature: 1182
   };
   A.StripeOtherPaymentsBloc__payWith_link_closure.prototype = {
     call$1(_) {
@@ -306099,7 +306140,7 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 306
+    $signature: 259
   };
   A.StripeOtherPaymentsBloc__payWith_link__closure.prototype = {
     call$1(value) {
@@ -306136,7 +306177,7 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 1182
+    $signature: 1183
   };
   A.StripeOtherPaymentsBloc__payWith_link___closure.prototype = {
     call$1(value) {
@@ -306145,7 +306186,7 @@
       A.print(t1.get$paymentIntent(value));
       t1.get$error(value);
     },
-    $signature: 1183
+    $signature: 1184
   };
   A.StripeOtherPaymentsBloc__payWith_link___closure0.prototype = {
     call$1(error) {
@@ -306209,14 +306250,14 @@
       t1.add$1(0, new A.StripePayments(this.$this._widget.redirectStatus));
       return t1;
     },
-    $signature: 1184
+    $signature: 1185
   };
   A._StripeOtherPaymentsScreenScreenState_build_closure0.prototype = {
     call$2(context, state) {
       if (state instanceof A.SubscriptionSuccess)
         A.GoRouter_maybeOf(context).go$2$extra(0, "/menu", null);
     },
-    $signature: 1185
+    $signature: 1186
   };
   A._StripeOtherPaymentsScreenScreenState_build_closure.prototype = {
     call$2(context, state) {
@@ -306226,7 +306267,7 @@
       t1 = state.isLoading ? A.Center$(A.CircularProgressIndicator$(B.Color_4278298233, 4, _null, _null), _null, _null) : new A.FractionallySizedBox(1, A.Form$(_null, A.Column$(A._setArrayType([A.SingleChildScrollView$(new A.LinkPaymentButton(_null), _null, B.DragStartBehavior_1, _null, _null, B.Axis_1), A.Expanded$(new A.Align(B.Alignment_0_1, _null, _null, t1._submitFormPayment$2(context, state), _null), 1)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), state.formKey), _null);
       return A.Scaffold$(t2, _null, new A.Padding(new A.EdgeInsets(16, 16, 16, 16), new A.Align(B.Alignment_0_m1, _null, _null, t1, _null), _null), _null, _null, _null);
     },
-    $signature: 1186
+    $signature: 1187
   };
   A._StripeOtherPaymentsScreenScreenState__submitFormPayment_closure.prototype = {
     call$0() {
@@ -306347,7 +306388,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1187
+    $signature: 1188
   };
   A.PaymentsSelectDateBloc__closure.prototype = {
     call$1(e) {
@@ -306361,13 +306402,13 @@
       bankId.toString;
       return new A.BankTotal(t1, bankId, total);
     },
-    $signature: 82
+    $signature: 90
   };
   A.PaymentsSelectDateBloc_closure0.prototype = {
     call$2($event, emit) {
       this.$this.add$1(0, new A.ExpenseWeeklyList($event.date, $event.loading));
     },
-    $signature: 1188
+    $signature: 1189
   };
   A.PaymentsSelectDateBloc_closure1.prototype = {
     call$2($event, emit) {
@@ -306378,7 +306419,7 @@
       if (!emit._isCanceled)
         emit._emit.call$1(t2);
     },
-    $signature: 1189
+    $signature: 1190
   };
   A.PaymentsSelectDateBloc_closure2.prototype = {
     call$2($event, emit) {
@@ -306425,7 +306466,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1190
+    $signature: 1191
   };
   A.PaymentsSelectDateEvent.prototype = {
     get$props() {
@@ -306482,33 +306523,62 @@
       return A.AppBar$(_null, _null, false, B.Color_4278298233, _null, true, _null, t1.primaryIconTheme, A.IconButton$(_null, A.Icon$(B.IconData_57492_MaterialIcons_null_true, _null, _null, _null), _null, new A.PaymentsSelectedScreen__appBar_closure(context), _null, _null, _null), _null, t2, _null);
     },
     _payments_select_date_screen$_body$2$context$state(_, context, state) {
-      var minDateString, minDate, _null = null,
-        t1 = A.Provider_of(context, false, type$.AuthBloc)._bloc$_state.user;
-      if (t1 == null)
+      var minDateString, minDate, maxDateString, maxDate, _null = null,
+        t1 = type$.AuthBloc,
+        t2 = A.Provider_of(context, false, t1)._bloc$_state.user;
+      if (t2 == null)
         minDateString = _null;
       else {
-        t1 = t1.accountingYear;
-        if (t1 == null)
+        t2 = t2.accountingYear;
+        if (t2 == null)
           minDateString = _null;
         else {
-          t1 = B.JSArray_methods.get$first(t1).accountingYearStart;
-          t1 = t1 == null ? _null : A._setArrayType(t1.split("T"), type$.JSArray_String);
-          minDateString = t1;
+          t2 = B.JSArray_methods.get$first(t2).accountingYearStart;
+          t2 = t2 == null ? _null : A._setArrayType(t2.split("T"), type$.JSArray_String);
+          minDateString = t2;
         }
       }
       minDate = minDateString == null ? _null : A.DateTime_parse(minDateString[0]);
+      t1 = A.Provider_of(context, false, t1)._bloc$_state.user;
+      if (t1 == null)
+        maxDateString = _null;
+      else {
+        t1 = t1.accountingYear;
+        if (t1 == null)
+          maxDateString = _null;
+        else {
+          t1 = B.JSArray_methods.get$last(t1).accountingYearEnd;
+          t1 = t1 == null ? _null : A._setArrayType(t1.split("T"), type$.JSArray_String);
+          maxDateString = t1;
+        }
+      }
+      maxDate = maxDateString == null ? _null : A.DateTime_parse(maxDateString[0]);
       if (state instanceof A.PaymentsInitial)
         return A.Center$(new A.Loading(_null), _null, _null);
       else {
         t1 = state.weekDays;
         t1.toString;
-        return A.Column$(A._setArrayType([A.Calendar$(new A.PaymentsSelectedScreen__body_closure(state, context), new A.PaymentsSelectedScreen__body_closure0(state, context), B.JSArray_methods.get$first(t1), minDate, new A.PaymentsSelectedScreen__body_closure1(context), false), this._payments_select_date_screen$_expenseBody$2$context$state(context, state), new A.Builder(new A.PaymentsSelectedScreen__body_closure2(state), _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1);
+        return A.Column$(A._setArrayType([A.Calendar$(new A.PaymentsSelectedScreen__body_closure(state, context), new A.PaymentsSelectedScreen__body_closure0(state, context), B.JSArray_methods.get$first(t1), maxDate, minDate, new A.PaymentsSelectedScreen__body_closure1(context), false), this._payments_select_date_screen$_expenseBody$2$context$state(context, state), new A.Builder(new A.PaymentsSelectedScreen__body_closure2(state), _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1);
       }
     },
     _payments_select_date_screen$_expenseBody$2$context$state(context, state) {
-      var _null = null,
-        t1 = $.$get$width() / 414 * 10;
-      return A.Expanded$(A.Container$(_null, A.PageView$builder(this.pageController, new A.PaymentsSelectedScreen__expenseBody_closure(state), _null, _null, new A.PaymentsSelectedScreen__expenseBody_closure0(this, state, context)), B.Clip_0, _null, _null, _null, _null, _null, _null, new A.EdgeInsets(0, t1, 0, t1), _null, _null, _null), 1);
+      var maxDateString, maxDate, _null = null,
+        t1 = A.Provider_of(context, false, type$.AuthBloc)._bloc$_state.user;
+      if (t1 == null)
+        maxDateString = _null;
+      else {
+        t1 = t1.accountingYear;
+        if (t1 == null)
+          maxDateString = _null;
+        else {
+          t1 = B.JSArray_methods.get$last(t1).accountingYearEnd;
+          t1 = t1 == null ? _null : A._setArrayType(t1.split("T"), type$.JSArray_String);
+          maxDateString = t1;
+        }
+      }
+      maxDate = maxDateString == null ? _null : A.DateTime_parse(maxDateString[0]);
+      t1 = $.$get$width() / 414 * 10;
+      return A.Expanded$(A.Container$(_null, A.PageView$builder(this.pageController, new A.PaymentsSelectedScreen__expenseBody_closure(state, maxDate), _null, _null, new A.PaymentsSelectedScreen__expenseBody_closure0(this, state, context)), B.Clip_0, _null, _null, _null, _null, _null, _null, new A.EdgeInsets(0, t1, 0, t1), _null, _null, _null), 1);
     },
     _payments_select_date_screen$_bottom$1$context(_, context) {
       var t1 = type$.PaymentsSelectDateBloc,
@@ -306525,14 +306595,14 @@
       t2.add$1(0, new A.ExpenseWeeklyList(this.selectedDate, false));
       return t2;
     },
-    $signature: 1191
+    $signature: 1192
   };
   A.PaymentsSelectedScreen_build_closure.prototype = {
     call$2(context, state) {
       var t1 = this.$this;
       return A.Scaffold$(t1._payments_select_date_screen$_appBar$1$context(context), null, t1._payments_select_date_screen$_body$2$context$state(0, context, state), t1._payments_select_date_screen$_bottom$1$context(0, context), null, null);
     },
-    $signature: 1192
+    $signature: 1193
   };
   A.PaymentsSelectedScreen__appBar_closure.prototype = {
     call$0() {
@@ -306582,7 +306652,7 @@
         t2 = A._setArrayType([], type$.JSArray_BankTotal);
       return new A.TotalExpense(total, t2, t1.startWeekDate, t1.endWeekDate, t1.showPostedTo, null);
     },
-    $signature: 1193
+    $signature: 1194
   };
   A.PaymentsSelectedScreen__expenseBody_closure0.prototype = {
     call$1(index) {
@@ -306602,7 +306672,7 @@
         J.add$1$ax(t1, new A.ExpenseWeeklyList(date, false));
       }
     },
-    $signature: 19
+    $signature: 20
   };
   A.PaymentsSelectedScreen__expenseBody_closure.prototype = {
     call$2(context, index) {
@@ -306610,9 +306680,9 @@
         t1 = this.state,
         t2 = t1.weekDays;
       t2 = t2 == null ? _null : t2.length;
-      return A.ListView$builder(_null, new A.PaymentsSelectedScreen__expenseBody__closure(t1), t2, _null, new A.NeverScrollableScrollPhysics(_null), false, B.Axis_1, false);
+      return A.ListView$builder(_null, new A.PaymentsSelectedScreen__expenseBody__closure(t1, this.maxDate), t2, _null, new A.NeverScrollableScrollPhysics(_null), false, B.Axis_1, false);
     },
-    $signature: 120
+    $signature: 151
   };
   A.PaymentsSelectedScreen__expenseBody__closure.prototype = {
     call$2(context, index) {
@@ -306624,8 +306694,10 @@
       if (t3)
         valid = _null;
       else {
-        t4 = Date.now();
-        valid = current._value < t4;
+        t4 = this.maxDate;
+        if (t4 == null)
+          t4 = new A.DateTime(Date.now(), false);
+        valid = current._value < t4._value;
       }
       t4 = t1.total;
       if (t4 == null)
@@ -306643,7 +306715,7 @@
       t4 = total == null ? 0 : total;
       return new A.PaymentsSelectDateList(valid, t2[index], t4, hasNotes === true, t3, t1, _null);
     },
-    $signature: 1194
+    $signature: 1195
   };
   A.PaymentsSelectedScreen__expenseBody___closure.prototype = {
     call$0() {
@@ -306661,7 +306733,7 @@
       t2.toString;
       J.add$1$ax(t1, new A.ExpenseWeeklyList(t2, true));
     },
-    $signature: 16
+    $signature: 17
   };
   A.PaymentsSelectedScreen__expenseBody___closure0.prototype = {
     call$0() {
@@ -306687,7 +306759,7 @@
       t2.toString;
       J.add$1$ax(t1, new A.ExpenseWeeklyList(t2, false));
     },
-    $signature: 16
+    $signature: 17
   };
   A.PaymentsSelectedScreen__expenseBody___closure2.prototype = {
     call$0() {
@@ -306698,20 +306770,20 @@
     call$1(v) {
       return v.form;
     },
-    $signature: 1195
+    $signature: 1196
   };
   A.PaymentsSelectedScreen__bottom_closure1.prototype = {
     call$1(v) {
       return v._bloc$_state;
     },
-    $signature: 1196
+    $signature: 1197
   };
   A.PaymentsSelectedScreen__bottom_closure0.prototype = {
     call$2(context, sizingInformation) {
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.PaymentsSelectedScreen__bottom__closure(this.$this, this.form, context), new A.PaymentsSelectedScreen__bottom__closure0(context, this.state), false, "Add New Expense Type", "Edit Expenses");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.PaymentsSelectedScreen__bottom__closure.prototype = {
     call$0() {
@@ -306747,7 +306819,7 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A.PaymentsSelectedScreen__bottom___closure0.prototype = {
     call$1(val) {
@@ -306761,7 +306833,7 @@
       } else
         return null;
     },
-    $signature: 24
+    $signature: 23
   };
   A.PaymentsSelectedScreen__bottom___closure1.prototype = {
     call$1(val) {
@@ -306771,7 +306843,7 @@
       t2.pop$1(null);
       J.add$1$ax(A.Provider_of(t1, false, type$.PaymentsSelectDateBloc), new A.InsertExpensePaymentsType(val));
     },
-    $signature: 24
+    $signature: 23
   };
   A.PaymentsSelectedScreen__bottom__closure0.prototype = {
     call$0() {
@@ -306787,7 +306859,7 @@
       t2.toString;
       J.add$1$ax(t1, new A.ExpenseWeeklyList(t2, true));
     },
-    $signature: 16
+    $signature: 17
   };
   A._PaymentsSelectedScreen_StatelessWidget_Dialogs.prototype = {};
   A.PaymentsSelectDateList.prototype = {
@@ -306942,7 +307014,7 @@
       var t1 = this.$this;
       this.rows.push(new A.TableRow(null, null, A._setArrayType([t1._buildDataCell$1(element.bankName), t1._buildDataCell$1(B.JSNumber_methods.toStringAsFixed$1(element.total, 2))], type$.JSArray_Widget)));
     },
-    $signature: 200
+    $signature: 182
   };
   A.ProductServiceSoldBloc.prototype = {
     ProductServiceSoldBloc$2$clientRepo$user(clientRepo, user) {
@@ -306980,7 +307052,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1197
+    $signature: 1198
   };
   A.ProductServiceSoldBloc_closure0.prototype = {
     call$2($event, emit) {
@@ -306991,7 +307063,7 @@
       if (!emit._isCanceled)
         emit._emit.call$1(t2);
     },
-    $signature: 1198
+    $signature: 1199
   };
   A.ProductServiceSoldEvent.prototype = {
     get$props() {
@@ -307059,14 +307131,14 @@
       t1.add$1(0, new A.GetItemList());
       return t1;
     },
-    $signature: 1199
+    $signature: 1200
   };
   A.ProductServiceSold_build_closure.prototype = {
     call$2(context, state) {
       var t1 = this.$this;
       return A.Scaffold$(t1._product_service_sold_screen$_mobilesTabletUi$1(context), null, t1._product_service_sold_screen$_body$2$context$state(0, context, state), t1._product_service_sold_screen$_bottom$0(0), null, null);
     },
-    $signature: 1200
+    $signature: 1201
   };
   A.ProductServiceSold__mobilesTabletUi_closure.prototype = {
     call$2(context, sizingInformation) {
@@ -307088,20 +307160,20 @@
       var t1 = A.SelectContext_select(context, new A.ProductServiceSold__body__closure(), type$.ProductServiceSoldBloc, type$.FormGroup);
       return new A.FromToMobile(t1, null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.ProductServiceSold__body__closure.prototype = {
     call$1(v) {
       return v.form;
     },
-    $signature: 1201
+    $signature: 1202
   };
   A.ProductServiceSold__bottom_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.ProductServiceSold__bottom__closure(), new A.ProductServiceSold__bottom__closure0(), false, "", "");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.ProductServiceSold__bottom__closure0.prototype = {
     call$0() {
@@ -307130,7 +307202,7 @@
     call$1(value) {
       return value._bloc$_state.selectDate;
     },
-    $signature: 1202
+    $signature: 1203
   };
   A.FromToMobile__dateInput_closure1.prototype = {
     call$0() {
@@ -307194,7 +307266,7 @@
     call$1(e) {
       return new A._SoldList(e, null);
     },
-    $signature: 1203
+    $signature: 1204
   };
   A._SoldList.prototype = {
     build$1(context) {
@@ -307287,7 +307359,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1204
+    $signature: 1205
   };
   A.ProductsServicesBloc_closure0.prototype = {
     call$2($event, emit) {
@@ -307318,13 +307390,13 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1205
+    $signature: 1206
   };
   A.ProductsServicesBloc__closure1.prototype = {
     call$1(value) {
       return value == null ? null : value.get$itemCategoryId();
     },
-    $signature: 42
+    $signature: 44
   };
   A.ProductsServicesBloc_closure1.prototype = {
     call$2($event, emit) {
@@ -307354,7 +307426,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1206
+    $signature: 1207
   };
   A.ProductsServicesBloc_closure2.prototype = {
     call$2($event, emit) {
@@ -307385,7 +307457,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1207
+    $signature: 1208
   };
   A.ProductsServicesBloc_closure3.prototype = {
     call$1(val) {
@@ -307434,13 +307506,13 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1208
+    $signature: 1209
   };
   A.ProductsServicesBloc__closure.prototype = {
     call$1(value) {
       return value == null ? null : value.get$itemCategoryId();
     },
-    $signature: 42
+    $signature: 44
   };
   A.ProductsServicesEvent.prototype = {
     get$props() {
@@ -307505,14 +307577,14 @@
       t1.add$1(0, new A.GetItemList0());
       return t1;
     },
-    $signature: 1209
+    $signature: 1210
   };
   A.ProductsServices_build_closure.prototype = {
     call$2(context, state) {
       var t1 = this.$this;
       return A.Scaffold$(t1._products_services_screen$_mobilesTabletUi$1(context), null, t1._products_services_screen$_body$2$context$state(0, context, state), t1._products_services_screen$_bottom$2$context$state(0, context, state), null, null);
     },
-    $signature: 372
+    $signature: 373
   };
   A.ProductsServices__mobilesTabletUi_closure.prototype = {
     call$2(context, sizingInformation) {
@@ -307533,19 +307605,19 @@
     call$1(v) {
       return v.form;
     },
-    $signature: 59
+    $signature: 58
   };
   A.ProductsServices__service_closure.prototype = {
     call$1(v) {
       return v.updateForm;
     },
-    $signature: 59
+    $signature: 58
   };
   A.ProductsServices__service_closure0.prototype = {
     call$2(context, sizingInformation) {
       return new A.ProductsServicesListMobile(this.state, new A.ProductsServices__service__closure(this.$this, this.form, context), null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.ProductsServices__service__closure.prototype = {
     call$1(item) {
@@ -307581,20 +307653,20 @@
     call$1(value) {
       J.add$1$ax(A.Provider_of(this.context, false, type$.ProductsServicesBloc), new A.GetItemList0());
     },
-    $signature: 1212
+    $signature: 1213
   };
   A.ProductsServices__bottom_closure0.prototype = {
     call$1(v) {
       return v.itemFrom;
     },
-    $signature: 59
+    $signature: 58
   };
   A.ProductsServices__bottom_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.ProductsServices__bottom__closure(context), new A.ProductsServices__bottom__closure0(this.$this, this.form, context, this.state), true, "Sales Reports", "Add New");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.ProductsServices__bottom__closure.prototype = {
     call$0() {
@@ -307662,7 +307734,7 @@
     call$1(e) {
       return new A._ItemList(e, this.$this.state, null);
     },
-    $signature: 1213
+    $signature: 1214
   };
   A._ItemList.prototype = {
     build$1(context) {
@@ -307717,13 +307789,13 @@
     call$1(v) {
       return v.form;
     },
-    $signature: 59
+    $signature: 58
   };
   A._ItemList_build_closure0.prototype = {
     call$1(v) {
       return v.updateForm;
     },
-    $signature: 59
+    $signature: 58
   };
   A._ItemList_build_closure1.prototype = {
     call$0() {
@@ -307850,14 +307922,14 @@
       t1.add$1(0, new A.GetCustomerListForSalesReceipts());
       return t1;
     },
-    $signature: 1214
+    $signature: 1215
   };
   A.ReceiptsSelectCustomer_build_closure.prototype = {
     call$2(context, state) {
       var t1 = this.$this;
       return A.Scaffold$(t1._receipts_select_customer$_appBar$1$context(context), null, t1._receipts_select_customer$_body$2$context$state(0, context, state), t1._receipts_select_customer$_bottom$0(0), null, null);
     },
-    $signature: 1215
+    $signature: 1216
   };
   A.ReceiptsSelectCustomer__appBar_closure.prototype = {
     call$0() {
@@ -307871,13 +307943,13 @@
     call$1(v) {
       return v.form;
     },
-    $signature: 1216
+    $signature: 1217
   };
   A.ReceiptsSelectCustomer__listCustomer_closure.prototype = {
     call$1(customer) {
       A.GoRouterHelper_pushNamed(this.context, "/reportSalesReceipts", A.LinkedHashMap_LinkedHashMap$_literal(["customer", customer], type$.String, type$.InvoiceCustomers), type$.nullable_Object);
     },
-    $signature: 374
+    $signature: 375
   };
   A.ReceiptsSelectCustomer__bottom_closure.prototype = {
     call$0() {
@@ -307927,7 +307999,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1218
+    $signature: 1219
   };
   A.ReceiptsSelectCustomerBloc_closure0.prototype = {
     call$2($event, emit) {
@@ -307958,7 +308030,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1219
+    $signature: 1220
   };
   A.ReceiptsSelectCustomerBloc_closure1.prototype = {
     call$1(val) {
@@ -308002,7 +308074,7 @@
     call$1(customer) {
       return new A._ListOfCustomer(customer, new A.CustomerList_build__closure(this.$this, customer), null);
     },
-    $signature: 1220
+    $signature: 1221
   };
   A.CustomerList_build__closure.prototype = {
     call$0() {
@@ -308074,7 +308146,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1221
+    $signature: 1222
   };
   A.ReportCustomersBloc_closure0.prototype = {
     call$2($event, emit) {
@@ -308105,7 +308177,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1222
+    $signature: 1223
   };
   A.ReportCustomersBloc_closure1.prototype = {
     call$1(val) {
@@ -308171,14 +308243,14 @@
       t1.add$1(0, new A.GetCustomerList());
       return t1;
     },
-    $signature: 1223
+    $signature: 1224
   };
   A.ReportCustomers_build_closure.prototype = {
     call$2(context, state) {
       var t1 = this.$this;
       return A.Scaffold$(t1._report_customers_screen$_mobilesTabletUi$1(context), null, t1._report_customers_screen$_body$2$context$state(0, context, state), t1._report_customers_screen$_bottom$1$context(0, context), null, null);
     },
-    $signature: 1224
+    $signature: 1225
   };
   A.ReportCustomers__mobilesTabletUi_closure.prototype = {
     call$2(context, sizingInformation) {
@@ -308199,20 +308271,20 @@
     call$1(v) {
       return v.form;
     },
-    $signature: 1225
+    $signature: 1226
   };
   A.ReportCustomers__customerBody_closure.prototype = {
     call$2(context, sizingInformation) {
       return new A.CustomerListMobile(this.state, null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.ReportCustomers__bottom_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.ReportCustomers__bottom__closure(context), new A.ReportCustomers__bottom__closure0(), false, "Add New Customer", "");
       return t1;
     },
-    $signature: 1226
+    $signature: 1227
   };
   A.ReportCustomers__bottom__closure.prototype = {
     call$0() {
@@ -308225,7 +308297,7 @@
     call$1(value) {
       J.add$1$ax(A.Provider_of(this.context, false, type$.ReportCustomersBloc), new A.GetCustomerList());
     },
-    $signature: 16
+    $signature: 17
   };
   A.ReportCustomers__bottom__closure0.prototype = {
     call$0() {
@@ -308245,7 +308317,7 @@
     call$1(e) {
       return new A._CustomerList1(e, null);
     },
-    $signature: 1227
+    $signature: 1228
   };
   A._CustomerList1.prototype = {
     build$1(context) {
@@ -308285,7 +308357,7 @@
     call$1(value) {
       J.add$1$ax(A.Provider_of(this.context, false, type$.ReportCustomersBloc), new A.GetCustomerList());
     },
-    $signature: 16
+    $signature: 17
   };
   A.ReportSalesReceiptsBloc.prototype = {
     ReportSalesReceiptsBloc$3$clientRepo$customers$user(clientRepo, customers, user) {
@@ -308349,7 +308421,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1228
+    $signature: 1229
   };
   A.ReportSalesReceiptsBloc_closure0.prototype = {
     call$2($event, emit) {
@@ -308360,7 +308432,7 @@
       if (!emit._isCanceled)
         emit._emit.call$1(t1);
     },
-    $signature: 1229
+    $signature: 1230
   };
   A.ReportSalesReceiptsEvent.prototype = {
     get$props() {
@@ -308428,14 +308500,14 @@
       t2.add$1(0, new A.GetInvoiceListByCustomerId(null));
       return t2;
     },
-    $signature: 1230
+    $signature: 1231
   };
   A.ReportSalesReceipts_build_closure.prototype = {
     call$2(context, state) {
       var t1 = this.$this;
       return A.Scaffold$(t1._report_sales_receipts_screen$_mobilesTabletUi$1(context), null, t1._report_sales_receipts_screen$_body$2$context$state(0, context, state), t1._report_sales_receipts_screen$_bottom$0(0), null, null);
     },
-    $signature: 1231
+    $signature: 1232
   };
   A.ReportSalesReceipts__mobilesTabletUi_closure.prototype = {
     call$2(context, sizingInformation) {
@@ -308459,13 +308531,13 @@
         t3 = this.state;
       return A.Column$(A._setArrayType([new A.ReportReceiptsMobile(t2, t1.customer, null), new A.DateInfinAmount(null), t1._report_sales_receipts_screen$_customerBody$1$state(t3), new A.Builder(new A.ReportSalesReceipts__body__closure0(t3), null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1);
     },
-    $signature: 51
+    $signature: 48
   };
   A.ReportSalesReceipts__body__closure.prototype = {
     call$1(v) {
       return v.form;
     },
-    $signature: 1232
+    $signature: 1233
   };
   A.ReportSalesReceipts__body__closure0.prototype = {
     call$1(context) {
@@ -308483,14 +308555,14 @@
       }
       return new A.TotalReportSalesMobile(total, null);
     },
-    $signature: 1233
+    $signature: 1234
   };
   A.ReportSalesReceipts__bottom_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.ReportSalesReceipts__bottom__closure(), new A.ReportSalesReceipts__bottom__closure0(), false, "", "");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.ReportSalesReceipts__bottom__closure0.prototype = {
     call$0() {
@@ -308571,7 +308643,7 @@
     call$1(invoice) {
       return new A._InvoiceListByCustomerId(invoice, null);
     },
-    $signature: 1234
+    $signature: 1235
   };
   A._InvoiceListByCustomerId.prototype = {
     build$1(context) {
@@ -308692,13 +308764,13 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1235
+    $signature: 1236
   };
   A.ReviewPlanBLoc__closure0.prototype = {
     call$1(element) {
       return element.planType !== "giga";
     },
-    $signature: 151
+    $signature: 150
   };
   A.ReviewPlanBLoc_closure0.prototype = {
     call$2($event, emit) {
@@ -308762,7 +308834,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1236
+    $signature: 1237
   };
   A.ReviewPlanBLoc_closure1.prototype = {
     call$2($event, emit) {
@@ -308834,13 +308906,13 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1237
+    $signature: 1238
   };
   A.ReviewPlanBLoc__closure.prototype = {
     call$1(element) {
       return element.planType == this.$this._bloc$_state.selectedPlan;
     },
-    $signature: 151
+    $signature: 150
   };
   A.ReviewPlanBLoc_closure2.prototype = {
     call$2($event, emit) {
@@ -308848,7 +308920,7 @@
       if (!emit._isCanceled)
         emit._emit.call$1(t1);
     },
-    $signature: 1238
+    $signature: 1239
   };
   A.ReviewPlansEvent.prototype = {};
   A.UpdatePaymentChange.prototype = {};
@@ -308967,7 +309039,7 @@
       t1.add$1(0, new A.GetPaymentOptions());
       return t1;
     },
-    $signature: 1239
+    $signature: 1240
   };
   A._ReviewPlansScreenState_build_closure.prototype = {
     call$2(context, state) {
@@ -308975,13 +309047,13 @@
         t1 = this.$this;
       return A.Scaffold$(t1._review_plans_screen$_mobilesTabletUi$2(context, state), _null, t1._review_plans_screen$_body$2$context$state(0, context, state), _null, _null, _null);
     },
-    $signature: 1240
+    $signature: 1241
   };
   A._ReviewPlansScreenState__body_closure.prototype = {
     call$1(entry) {
       return this.$this._productDetails$3$context$product$selectedPlan(this.context, entry.value, this.state.selectedPlan);
     },
-    $signature: 1241
+    $signature: 1242
   };
   A._ReviewPlansScreenState__removePlans_closure.prototype = {
     call$0() {
@@ -309129,7 +309201,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1242
+    $signature: 1243
   };
   A.SelectIncomeTypeBloc_closure0.prototype = {
     call$2($event, emit) {
@@ -309137,7 +309209,7 @@
       if (!emit._isCanceled)
         emit._emit.call$1(new A.SelectIncomeTypeState());
     },
-    $signature: 1243
+    $signature: 1244
   };
   A.SelectIncomeTypeBloc_closure1.prototype = {
     call$2($event, emit) {
@@ -309187,7 +309259,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1244
+    $signature: 1245
   };
   A.SelectIncomeTypeBloc_closure2.prototype = {
     call$2($event, emit) {
@@ -309218,7 +309290,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1245
+    $signature: 1246
   };
   A.SelectIncomeTypeBloc_closure3.prototype = {
     call$1(val) {
@@ -309241,7 +309313,7 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 95
+    $signature: 88
   };
   A.SelectIncomeTypeBloc__closure.prototype = {
     call$0() {
@@ -309327,7 +309399,7 @@
       var t1 = this.$this;
       return A.Scaffold$(t1._select_income_type_screen$_mobilesTabletUi$1(context), null, t1._select_income_type_screen$_body$2$context$state(0, context, state), t1._select_income_type_screen$_bottom$1$context(0, context), null, null);
     },
-    $signature: 1246
+    $signature: 1247
   };
   A.SelectIncomeTypeScreen__mobilesTabletUi_closure.prototype = {
     call$2(context, sizingInformation) {
@@ -309348,13 +309420,13 @@
     call$1(v) {
       return v.form;
     },
-    $signature: 375
+    $signature: 376
   };
   A.SelectIncomeTypeScreen__selectIncomeBody_closure.prototype = {
     call$1(v) {
       return v._bloc$_state;
     },
-    $signature: 1248
+    $signature: 1249
   };
   A.SelectIncomeTypeScreen__selectIncomeBody_closure0.prototype = {
     call$1(income) {
@@ -309377,14 +309449,14 @@
     call$1(v) {
       return v.form;
     },
-    $signature: 375
+    $signature: 376
   };
   A.SelectIncomeTypeScreen__bottom_closure0.prototype = {
     call$2(context, sizingInformation) {
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.SelectIncomeTypeScreen__bottom__closure(), new A.SelectIncomeTypeScreen__bottom__closure0(), false, "", "");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.SelectIncomeTypeScreen__bottom__closure0.prototype = {
     call$0() {
@@ -309426,7 +309498,7 @@
     call$1(income) {
       return new A._IncomeList(income, new A.IncomeType_build__closure(this.$this, income), null);
     },
-    $signature: 1249
+    $signature: 1250
   };
   A.IncomeType_build__closure.prototype = {
     call$0() {
@@ -309486,7 +309558,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1250
+    $signature: 1251
   };
   A.StatementBloc_closure0.prototype = {
     call$2($event, emit) {
@@ -309497,7 +309569,7 @@
       if (!emit._isCanceled)
         emit._emit.call$1(t1);
     },
-    $signature: 1251
+    $signature: 1252
   };
   A.StatementEvent.prototype = {
     get$props() {
@@ -309608,14 +309680,14 @@
       t1.add$1(0, new A.GetStatementInvoice(null));
       return t1;
     },
-    $signature: 1252
+    $signature: 1253
   };
   A.StatementScreen_build_closure.prototype = {
     call$2(context, state) {
       var t1 = this.$this;
       return A.Scaffold$(t1._statement_screen$_mobilesTabletUi$1(context), null, t1._statement_screen$_body$2$context$state(0, context, state), t1.bottom$2$context$state(0, context, state), null, null);
     },
-    $signature: 1253
+    $signature: 1254
   };
   A.StatementScreen__mobilesTabletUi_closure.prototype = {
     call$2(context, sizingInformation) {
@@ -309648,13 +309720,13 @@
       var t1 = $.$get$StatementBloc_form();
       return new A.Statement(t1, this.$this.customer, null);
     },
-    $signature: 18
+    $signature: 16
   };
   A.StatementScreen__body_closure0.prototype = {
     call$2(context, sizingInformation) {
       return new A.Builder(new A.StatementScreen__body__closure(this.$this, this.state), null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.StatementScreen__body__closure.prototype = {
     call$1(context) {
@@ -309662,7 +309734,7 @@
       t1.toString;
       return new A.TotalStatementMobile(A.num_parse(t1), this.state, null);
     },
-    $signature: 1254
+    $signature: 1255
   };
   A.StatementScreen__statementBody_closure.prototype = {
     call$2(a, b) {
@@ -309672,7 +309744,7 @@
       date2.toString;
       return B.JSString_methods.compareTo$1(date1, date2);
     },
-    $signature: 56
+    $signature: 60
   };
   A.StatementScreen__statementBody_closure0.prototype = {
     call$1(apply) {
@@ -309682,18 +309754,18 @@
         t4 = type$.nullable_Object;
       A.GoRouterHelper_pushNamed(t1, "/applyPayment", A.LinkedHashMap_LinkedHashMap$_literal(["customer", t2.customer, "applyType", apply.type, "applyPayment", apply, "total", t2.getPreviousSum$2(t3.length - 1, t3)], type$.String, t4), t4).then$1$1(0, new A.StatementScreen__statementBody__closure(t1), type$.Null);
     },
-    $signature: 1255
+    $signature: 1256
   };
   A.StatementScreen__statementBody__closure.prototype = {
     call$1(value) {
       J.add$1$ax(A.Provider_of(this.context, false, type$.StatementBloc), new A.GetStatementInvoice(null));
     },
-    $signature: 16
+    $signature: 17
   };
   A.StatementScreen__statementBody_closure1.prototype = {
     call$1(invoice) {
     },
-    $signature: 123
+    $signature: 139
   };
   A.StatementScreen_bottom_closure.prototype = {
     call$2(a, b) {
@@ -309703,14 +309775,14 @@
       date2.toString;
       return B.JSString_methods.compareTo$1(date1, date2);
     },
-    $signature: 56
+    $signature: 60
   };
   A.StatementScreen_bottom_closure0.prototype = {
     call$2(context, sizingInformation) {
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.StatementScreen_bottom__closure(), new A.StatementScreen_bottom__closure0(this.$this, context, this.mergedData), false, "", "Apply Payment");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.StatementScreen_bottom__closure0.prototype = {
     call$0() {
@@ -309749,13 +309821,13 @@
       t3 = this.mergedData;
       A.GoRouterHelper_pushNamed(t1, "/applyPayment", A.LinkedHashMap_LinkedHashMap$_literal(["customer", t2.customer, "applyType", type, "applyPayment", t2.applyPayment, "total", t2.getPreviousSum$2(t3.length - 1, t3)], type$.String, type$.Object), type$.nullable_Object).then$1$1(0, new A.StatementScreen_bottom____closure(t1), type$.Null);
     },
-    $signature: 1256
+    $signature: 1257
   };
   A.StatementScreen_bottom____closure.prototype = {
     call$1(value) {
       J.add$1$ax(A.Provider_of(this.context, false, type$.StatementBloc), new A.GetStatementInvoice(null));
     },
-    $signature: 16
+    $signature: 17
   };
   A.StatementScreen_bottom__closure.prototype = {
     call$0() {
@@ -309845,7 +309917,7 @@
       date2.toString;
       return B.JSString_methods.compareTo$1(date1, date2);
     },
-    $signature: 56
+    $signature: 60
   };
   A.StatementListMobile_build_closure0.prototype = {
     call$0() {
@@ -309876,7 +309948,7 @@
       t1 = t6.getPreviousSum$2(index, t1);
       return new A._ListOfStatement(t3, t4, t5, t1, t2 ? new A.StatementListMobile_build__closure(t6, e) : new A.StatementListMobile_build__closure0(t6, e), null);
     },
-    $signature: 1257
+    $signature: 1258
   };
   A.StatementListMobile_build__closure.prototype = {
     call$0() {
@@ -309969,7 +310041,7 @@
       date2.toString;
       return B.JSString_methods.compareTo$1(date1, date2);
     },
-    $signature: 56
+    $signature: 60
   };
   A.StatementCustomerListBloc.prototype = {
     StatementCustomerListBloc$2$client$user(client, user) {
@@ -310012,7 +310084,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1258
+    $signature: 1259
   };
   A.StatementCustomerListBloc_closure0.prototype = {
     call$2($event, emit) {
@@ -310043,7 +310115,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1259
+    $signature: 1260
   };
   A.StatementCustomerListBloc_closure1.prototype = {
     call$1(val) {
@@ -310110,21 +310182,21 @@
       t1.add$1(0, new A.GetCustomerData());
       return t1;
     },
-    $signature: 1260
+    $signature: 1261
   };
   A.StatementCustomerListScreen_build_closure.prototype = {
     call$2(context, state) {
       var t1 = this.$this;
       return A.Scaffold$(t1._appBar$1$context(context), null, t1._statement_customer_list_screen$_body$2$context$state(0, context, state), t1._statement_customer_list_screen$_bottom$0(0), null, null);
     },
-    $signature: 1261
+    $signature: 1262
   };
   A.StatementCustomerListScreen__appBar_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = this.$this._mobileAppBar$1$context(context);
       return t1;
     },
-    $signature: 18
+    $signature: 16
   };
   A.StatementCustomerListScreen__mobileAppBar_closure.prototype = {
     call$0() {
@@ -310138,7 +310210,7 @@
     call$1(v) {
       return v.form;
     },
-    $signature: 1262
+    $signature: 1263
   };
   A.StatementCustomerListScreen__customerBody_closure.prototype = {
     call$2(context, sizingInformation) {
@@ -310149,20 +310221,20 @@
       else
         return A.Container$(_null, _null, B.Clip_0, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.StatementCustomerListScreen__customerBody__closure.prototype = {
     call$1(customer) {
       A.GoRouterHelper_pushNamed(this.context, "/statement", A.LinkedHashMap_LinkedHashMap$_literal(["customer", customer], type$.String, type$.InvoiceCustomers), type$.nullable_Object);
     },
-    $signature: 374
+    $signature: 375
   };
   A.StatementCustomerListScreen__bottom_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.StatementCustomerListScreen__bottom__closure(), new A.StatementCustomerListScreen__bottom__closure0(), false, "", "");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.StatementCustomerListScreen__bottom__closure.prototype = {
     call$0() {
@@ -310187,7 +310259,7 @@
     call$1(customer) {
       return new A._CustomerList(customer, new A.StatementCustomerList_build__closure(this.$this, customer), null);
     },
-    $signature: 1263
+    $signature: 1264
   };
   A.StatementCustomerList_build__closure.prototype = {
     call$0() {
@@ -310361,7 +310433,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1264
+    $signature: 1265
   };
   A.SupplierEntryBloc_closure0.prototype = {
     call$2($event, emit) {
@@ -310375,7 +310447,7 @@
       if (!emit._isCanceled)
         emit._emit.call$1(t2);
     },
-    $signature: 1265
+    $signature: 1266
   };
   A.SupplierEntryBloc_closure1.prototype = {
     call$2($event, emit) {
@@ -310434,7 +310506,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1266
+    $signature: 1267
   };
   A.SupplierEntryBloc_closure2.prototype = {
     call$2($event, emit) {
@@ -310522,7 +310594,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1267
+    $signature: 1268
   };
   A.SupplierEntryBloc_closure3.prototype = {
     call$2($event, emit) {
@@ -310588,7 +310660,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1268
+    $signature: 1269
   };
   A.SupplierEntryBloc_closure4.prototype = {
     call$2($event, emit) {
@@ -310596,7 +310668,7 @@
       if (!emit._isCanceled)
         emit._emit.call$1(t1);
     },
-    $signature: 1269
+    $signature: 1270
   };
   A.SupplierEntryBloc__addSupplierToForm_closure.prototype = {
     call$1(val) {
@@ -310614,7 +310686,7 @@
         t1.updateValue$1(net + vat);
       }
     },
-    $signature: 131
+    $signature: 149
   };
   A.SupplierEntryEvent.prototype = {
     get$props() {
@@ -310744,14 +310816,14 @@
       t3.add$1(0, new A.GetSupplierDate(t2));
       return t3;
     },
-    $signature: 1270
+    $signature: 1271
   };
   A.SupplierEntryScreen_build_closure0.prototype = {
     call$2(context, state) {
       if (!state.loading && state.initialBuild)
         $.WidgetsBinding__instance.SchedulerBinding__postFrameCallbacks.push(new A.SupplierEntryScreen_build__closure(this.$this, state));
     },
-    $signature: 1271
+    $signature: 1272
   };
   A.SupplierEntryScreen_build__closure.prototype = {
     call$1(timeStamp) {
@@ -310772,19 +310844,19 @@
     call$1(e) {
       return e.supplierPaymentsId == this.$this.supplier.supplierPaymentsId;
     },
-    $signature: 91
+    $signature: 95
   };
   A.SupplierEntryScreen_build___closure0.prototype = {
     call$0() {
       return this.$this.supplier;
     },
-    $signature: 157
+    $signature: 176
   };
   A.SupplierEntryScreen_build___closure1.prototype = {
     call$1(e) {
       return e.supplierPaymentsId == this.$this.supplier.supplierPaymentsId;
     },
-    $signature: 91
+    $signature: 95
   };
   A.SupplierEntryScreen_build___closure2.prototype = {
     call$0() {
@@ -310831,13 +310903,13 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 67
+    $signature: 72
   };
   A.SupplierEntryScreen_build____closure.prototype = {
     call$1(e) {
       return e.supplierPaymentsId == this.$this.supplier.supplierPaymentsId;
     },
-    $signature: 91
+    $signature: 95
   };
   A.SupplierEntryScreen_build____closure0.prototype = {
     call$0() {
@@ -310845,13 +310917,13 @@
       t1.toString;
       return J.get$first$ax(t1);
     },
-    $signature: 157
+    $signature: 176
   };
   A.SupplierEntryScreen_build____closure1.prototype = {
     call$1(e) {
       return e.supplierPaymentsId == this.$this.supplier.supplierPaymentsId;
     },
-    $signature: 91
+    $signature: 95
   };
   A.SupplierEntryScreen_build____closure2.prototype = {
     call$0() {
@@ -310859,14 +310931,14 @@
       t1.toString;
       return J.get$first$ax(t1);
     },
-    $signature: 157
+    $signature: 176
   };
   A.SupplierEntryScreen_build_closure.prototype = {
     call$2(context, state) {
       var t1 = this.$this;
       return A.Scaffold$(t1._supplier_entry_screen$_mobilesTabletUi$2(context, state), B.Color_4294967295, t1._supplier_entry_screen$_body$2$context$state(0, context, state), t1.bottom$2$context$state(0, context, state), null, false);
     },
-    $signature: 1273
+    $signature: 1274
   };
   A.SupplierEntryScreen__mobilesTabletUi_closure.prototype = {
     call$2(context, sizingInformation) {
@@ -310953,10 +311025,10 @@
   A.SupplierEntryScreen__body_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = this.state;
-      t1 = A.Calendar$(new A.SupplierEntryScreen__body__closure0(t1, context), new A.SupplierEntryScreen__body__closure1(t1, context), t1.date, null, new A.SupplierEntryScreen__body__closure2(t1, context), false);
+      t1 = A.Calendar$(new A.SupplierEntryScreen__body__closure0(t1, context), new A.SupplierEntryScreen__body__closure1(t1, context), t1.date, null, null, new A.SupplierEntryScreen__body__closure2(t1, context), false);
       return t1;
     },
-    $signature: 22
+    $signature: 25
   };
   A.SupplierEntryScreen__body__closure2.prototype = {
     call$1(val) {
@@ -311107,7 +311179,7 @@
     call$1(route) {
       return route._settings.name === "/supplierSelectDate";
     },
-    $signature: 129
+    $signature: 123
   };
   A.SupplierEntryScreen__addNewEntry_closure.prototype = {
     call$1(context) {
@@ -311118,7 +311190,7 @@
         t4 = A.Theme_of(context).textTheme.bodySmall;
       return new A.Padding(new A.EdgeInsets(10, 0, 10, 5), A.InkWell$(false, _null, true, A.Container$(B.Alignment_0_0, A.Text$("+  Add New Entry", _null, _null, _null, _null, _null, t4 == null ? _null : t4.copyWith$3$color$fontSize$fontWeight(B.Color_4294967295, $.$get$width() / 414 * 15, B.FontWeight_6_700), _null, _null), B.Clip_0, _null, _null, new A.BoxDecoration(B.Color_4278298233, _null, t2, t3, _null, _null, B.BoxShape_0), _null, t1 * 50, _null, _null, _null, _null, t1 * 380), _null, true, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, new A.SupplierEntryScreen__addNewEntry__closure(this.$this, context, this.state), _null, _null, _null, _null, _null, _null, _null), _null);
     },
-    $signature: 126
+    $signature: 133
   };
   A.SupplierEntryScreen__addNewEntry__closure.prototype = {
     call$0() {
@@ -311159,7 +311231,7 @@
       A.FocusScope_of(this.context).requestFocus$0();
       A.Future_Future$delayed(A.Duration$(0, 0, 0, 300, 0, 0), new A.SupplierEntryScreen__addNewEntry____closure(this.$this, supplier), type$.Null);
     },
-    $signature: 1274
+    $signature: 1275
   };
   A.SupplierEntryScreen__addNewEntry____closure.prototype = {
     call$0() {
@@ -311178,7 +311250,7 @@
         t1.animateTo$3$curve$duration(t2, B.C__DecelerateCurve, A.Duration$(0, 0, 0, 300, 0, 0));
       }
     },
-    $signature: 12
+    $signature: 13
   };
   A.SupplierEntryScreen__supplierBody_closure.prototype = {
     call$2(context, index) {
@@ -311228,7 +311300,7 @@
         return new A.SuppliersMobile(t2, t5, t9, t10, t3, t7, t1, t6.selectedDate, t8);
       }
     },
-    $signature: 1275
+    $signature: 1276
   };
   A.SupplierEntryScreen_bottom_closure.prototype = {
     call$2(context, sizingInformation) {
@@ -311236,7 +311308,7 @@
       t1 = A.BottomBarHomeMobile$(true, true, t1.savingEntry, null, new A.SupplierEntryScreen_bottom__closure(), new A.SupplierEntryScreen_bottom__closure0(t1, context), false, "", "Save");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.SupplierEntryScreen_bottom__closure.prototype = {
     call$0() {
@@ -311422,7 +311494,7 @@
       }
       return A.Container$(_null, _null, B.Clip_0, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null);
     },
-    $signature: 23
+    $signature: 22
   };
   A.SuppliersMobileState__tile__closure.prototype = {
     call$1(element) {
@@ -311486,7 +311558,7 @@
     call$1(control) {
       this.$this.__SuppliersMobileState_textController_A = control;
     },
-    $signature: 46
+    $signature: 47
   };
   A.SuppliersMobileState__tile__closure3.prototype = {
     call$1(a) {
@@ -311516,7 +311588,7 @@
     call$1(control) {
       this.$this.__SuppliersMobileState_vatController_A = control;
     },
-    $signature: 46
+    $signature: 47
   };
   A.SuppliersMobileState__tile__closure4.prototype = {
     call$0() {
@@ -311590,7 +311662,7 @@
         t1 = false;
       return t1;
     },
-    $signature: 91
+    $signature: 95
   };
   A.SuppliersMobileState__tile__closure10.prototype = {
     call$1(index) {
@@ -311602,7 +311674,7 @@
       isSelected = (t2 == null ? _null : t2.bankId) == null && index === 0 ? true : J.$eq$(t2, bank);
       return A.Expanded$(new A.Padding(new A.EdgeInsets(5, 0, 5, 0), new A._BankList1(new A.SuppliersMobileState__tile___closure(t1, bank, this.context), isSelected, bank, _null), _null), 1);
     },
-    $signature: 128
+    $signature: 135
   };
   A.SuppliersMobileState__tile___closure.prototype = {
     call$0() {
@@ -311649,7 +311721,7 @@
       }
       A.BlocProvider_of(this.context, type$.SupplierEntryBloc).add$1(0, new A.UpdateState());
     },
-    $signature: 1276
+    $signature: 1277
   };
   A.SuppliersMobileState__entryName_closure.prototype = {
     call$1(supplierObject) {
@@ -311660,7 +311732,7 @@
       t2 = A.Theme_of(this.context).textTheme.bodySmall;
       return A.DropdownMenuItem$(A.Text$(t1, _null, _null, _null, _null, _null, t2 == null ? _null : t2.copyWith$3$color$fontSize$fontWeight(B.Color_4281413937, $.$get$width() / 414 * 14, B.FontWeight_5_600), _null, _null), supplierObject, type$.SupplierModel);
     },
-    $signature: 1277
+    $signature: 1278
   };
   A._Input1.prototype = {
     build$1(context) {
@@ -311755,7 +311827,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1278
+    $signature: 1279
   };
   A.SupplierSelectDateBloc_closure0.prototype = {
     call$2($event, emit) {
@@ -311851,13 +311923,13 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1279
+    $signature: 1280
   };
   A.SupplierSelectDateBloc__closure.prototype = {
     call$1(element) {
       return element.bankId !== "6009798964793049101";
     },
-    $signature: 104
+    $signature: 111
   };
   A.SupplierSelectDateBloc__closure0.prototype = {
     call$1(e) {
@@ -311872,7 +311944,7 @@
       bankId.toString;
       return new A.BankTotal(t1, bankId, total);
     },
-    $signature: 82
+    $signature: 90
   };
   A.SupplierSelectDateEvent.prototype = {
     get$props() {
@@ -311924,9 +311996,23 @@
       return state.isLoading ? new A.Loading(null) : A.Column$(A._setArrayType([A.ResponsiveBuilder$(new A.SupplierSelectDateScreen__body_closure(state)), this._weekListSupplier$2$context$state(context, state), new A.Builder(new A.SupplierSelectDateScreen__body_closure0(state), null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1);
     },
     _weekListSupplier$2$context$state(context, state) {
-      var _null = null,
-        t1 = $.$get$width() / 414 * 10;
-      return A.Expanded$(A.Container$(_null, A.PageView$builder(this.pageController, new A.SupplierSelectDateScreen__weekListSupplier_closure(state), _null, _null, new A.SupplierSelectDateScreen__weekListSupplier_closure0(this, state, context)), B.Clip_0, _null, _null, _null, _null, _null, _null, new A.EdgeInsets(0, t1, 0, t1), _null, _null, _null), 1);
+      var maxDateString, maxDate, _null = null,
+        t1 = A.Provider_of(context, false, type$.AuthBloc)._bloc$_state.user;
+      if (t1 == null)
+        maxDateString = _null;
+      else {
+        t1 = t1.accountingYear;
+        if (t1 == null)
+          maxDateString = _null;
+        else {
+          t1 = B.JSArray_methods.get$last(t1).accountingYearEnd;
+          t1 = t1 == null ? _null : A._setArrayType(t1.split("T"), type$.JSArray_String);
+          maxDateString = t1;
+        }
+      }
+      maxDate = maxDateString == null ? _null : A.DateTime_parse(maxDateString[0]);
+      t1 = $.$get$width() / 414 * 10;
+      return A.Expanded$(A.Container$(_null, A.PageView$builder(this.pageController, new A.SupplierSelectDateScreen__weekListSupplier_closure(state, maxDate), _null, _null, new A.SupplierSelectDateScreen__weekListSupplier_closure0(this, state, context)), B.Clip_0, _null, _null, _null, _null, _null, _null, new A.EdgeInsets(0, t1, 0, t1), _null, _null, _null), 1);
     },
     _supplier_select_date_screen$_bottom$1(_, context) {
       var t1 = type$.SupplierSelectDateBloc;
@@ -311942,14 +312028,14 @@
       t2.add$1(0, new A.WeekListSupplier(this.selectedDate));
       return t2;
     },
-    $signature: 1280
+    $signature: 1281
   };
   A.SupplierSelectDateScreen_build_closure.prototype = {
     call$2(context, state) {
       var t1 = this.$this;
       return A.Scaffold$(t1._supplier_select_date_screen$_appBar$1$context(context), null, t1._supplier_select_date_screen$_body$2$context$state(0, context, state), t1._supplier_select_date_screen$_bottom$1(0, context), null, null);
     },
-    $signature: 1281
+    $signature: 1282
   };
   A.SupplierSelectDateScreen__appBar_closure.prototype = {
     call$0() {
@@ -311965,25 +312051,40 @@
   };
   A.SupplierSelectDateScreen__body_closure.prototype = {
     call$2(context, sizingInformation) {
-      var minDateString, minDate, _null = null,
-        t1 = A.Provider_of(context, false, type$.AuthBloc)._bloc$_state.user;
-      if (t1 == null)
+      var minDateString, minDate, maxDateString, maxDate, _null = null,
+        t1 = type$.AuthBloc,
+        t2 = A.Provider_of(context, false, t1)._bloc$_state.user;
+      if (t2 == null)
         minDateString = _null;
       else {
-        t1 = t1.accountingYear;
-        if (t1 == null)
+        t2 = t2.accountingYear;
+        if (t2 == null)
           minDateString = _null;
         else {
-          t1 = B.JSArray_methods.get$first(t1).accountingYearStart;
-          t1 = t1 == null ? _null : A._setArrayType(t1.split("T"), type$.JSArray_String);
-          minDateString = t1;
+          t2 = B.JSArray_methods.get$first(t2).accountingYearStart;
+          t2 = t2 == null ? _null : A._setArrayType(t2.split("T"), type$.JSArray_String);
+          minDateString = t2;
         }
       }
       minDate = minDateString == null ? _null : A.DateTime_parse(minDateString[0]);
+      t1 = A.Provider_of(context, false, t1)._bloc$_state.user;
+      if (t1 == null)
+        maxDateString = _null;
+      else {
+        t1 = t1.accountingYear;
+        if (t1 == null)
+          maxDateString = _null;
+        else {
+          t1 = B.JSArray_methods.get$last(t1).accountingYearEnd;
+          t1 = t1 == null ? _null : A._setArrayType(t1.split("T"), type$.JSArray_String);
+          maxDateString = t1;
+        }
+      }
+      maxDate = maxDateString == null ? _null : A.DateTime_parse(maxDateString[0]);
       t1 = this.state;
-      return A.Calendar$(new A.SupplierSelectDateScreen__body__closure(t1, context), new A.SupplierSelectDateScreen__body__closure0(t1, context), B.JSArray_methods.get$first(t1.weekDays), minDate, new A.SupplierSelectDateScreen__body__closure1(context), false);
+      return A.Calendar$(new A.SupplierSelectDateScreen__body__closure(t1, context), new A.SupplierSelectDateScreen__body__closure0(t1, context), B.JSArray_methods.get$first(t1.weekDays), maxDate, minDate, new A.SupplierSelectDateScreen__body__closure1(context), false);
     },
-    $signature: 22
+    $signature: 171
   };
   A.SupplierSelectDateScreen__body__closure1.prototype = {
     call$1(date) {
@@ -312016,7 +312117,7 @@
       t1 = t1.bankList;
       return new A.TotalSupplier(t2, t1 == null ? A._setArrayType([], type$.JSArray_BankTotal) : t1, null);
     },
-    $signature: 1282
+    $signature: 1283
   };
   A.SupplierSelectDateScreen__weekListSupplier_closure0.prototype = {
     call$1(index) {
@@ -312034,23 +312135,25 @@
         J.add$1$ax(A.Provider_of(t2, false, t3), new A.WeekListSupplier(date));
       }
     },
-    $signature: 19
+    $signature: 20
   };
   A.SupplierSelectDateScreen__weekListSupplier_closure.prototype = {
     call$2(context, index) {
       var t1 = this.state;
-      return A.ListView$builder(null, new A.SupplierSelectDateScreen__weekListSupplier__closure(t1), t1.weekDays.length, null, new A.NeverScrollableScrollPhysics(null), false, B.Axis_1, false);
+      return A.ListView$builder(null, new A.SupplierSelectDateScreen__weekListSupplier__closure(t1, this.maxDate), t1.weekDays.length, null, new A.NeverScrollableScrollPhysics(null), false, B.Axis_1, false);
     },
-    $signature: 120
+    $signature: 151
   };
   A.SupplierSelectDateScreen__weekListSupplier__closure.prototype = {
     call$2(context, index) {
-      var amount, hasNotes, t4, _null = null,
+      var valid, amount, hasNotes, t4, _null = null,
         t1 = this.state,
         t2 = t1.weekDays,
         current = t2[index],
-        t3 = Date.now(),
-        valid = current._value < t3;
+        t3 = this.maxDate;
+      if (t3 == null)
+        t3 = new A.DateTime(Date.now(), false);
+      valid = current._value < t3._value;
       t3 = t1.totals;
       amount = t3 == null ? _null : t3.$index(0, A.Primitives_getWeekday(current));
       t3 = t1.totalNotes;
@@ -312061,7 +312164,7 @@
       t4 = amount == null ? 0 : amount;
       return new A.SupplierSelectList(valid, t2, t4, hasNotes === true, t1, t3, _null);
     },
-    $signature: 1283
+    $signature: 1284
   };
   A.SupplierSelectDateScreen__weekListSupplier___closure.prototype = {
     call$0() {
@@ -312075,7 +312178,7 @@
     call$1(v) {
       J.add$1$ax(A.Provider_of(this.context, false, type$.SupplierSelectDateBloc), new A.WeekListSupplier(this.state.selectedDateTime));
     },
-    $signature: 16
+    $signature: 17
   };
   A.SupplierSelectDateScreen__weekListSupplier___closure0.prototype = {
     call$0() {
@@ -312094,26 +312197,26 @@
     call$1(value) {
       J.add$1$ax(A.Provider_of(this.context, false, type$.SupplierSelectDateBloc), new A.WeekListSupplier(this.state.selectedDateTime));
     },
-    $signature: 16
+    $signature: 17
   };
   A.SupplierSelectDateScreen__bottom_closure0.prototype = {
     call$1(v) {
       return v.form;
     },
-    $signature: 1284
+    $signature: 1285
   };
   A.SupplierSelectDateScreen__bottom_closure1.prototype = {
     call$1(v) {
       return v._bloc$_state;
     },
-    $signature: 1285
+    $signature: 1286
   };
   A.SupplierSelectDateScreen__bottom_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.SupplierSelectDateScreen__bottom__closure(this.$this, this.form, context), new A.SupplierSelectDateScreen__bottom__closure0(context, this.state), false, "Add New Supplier ", "Edit Suppliers");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.SupplierSelectDateScreen__bottom__closure.prototype = {
     call$0() {
@@ -312149,7 +312252,7 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A.SupplierSelectDateScreen__bottom___closure0.prototype = {
     call$1(val) {
@@ -312159,7 +312262,7 @@
       t2.pop$1(null);
       J.add$1$ax(A.Provider_of(t1, false, type$.SupplierSelectDateBloc), new A.AddNewSupplier(val));
     },
-    $signature: 24
+    $signature: 23
   };
   A.SupplierSelectDateScreen__bottom___closure1.prototype = {
     call$1(val) {
@@ -312169,7 +312272,7 @@
       t2.pop$1(null);
       J.add$1$ax(A.Provider_of(t1, false, type$.SupplierSelectDateBloc), new A.AddNewSupplier(val));
     },
-    $signature: 24
+    $signature: 23
   };
   A.SupplierSelectDateScreen__bottom__closure0.prototype = {
     call$0() {
@@ -312182,7 +312285,7 @@
     call$1(value) {
       J.add$1$ax(A.Provider_of(this.context, false, type$.SupplierSelectDateBloc), new A.WeekListSupplier(this.state.selectedDateTime));
     },
-    $signature: 16
+    $signature: 17
   };
   A._SupplierSelectDateScreen_StatelessWidget_Dialogs.prototype = {};
   A.SupplierSelectList.prototype = {
@@ -312268,7 +312371,7 @@
       var t1 = $.$get$width() / 414 * 8;
       return new A.Padding(new A.EdgeInsets(t1, 0, t1, 0), this.$this._numWidget$3$context$heading$price(this.context, e.bankName.toUpperCase(), e.total), null);
     },
-    $signature: 1286
+    $signature: 1287
   };
   A.SupplierStockBloc.prototype = {
     SupplierStockBloc$2$clientRepo$user(clientRepo, user) {
@@ -312367,7 +312470,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1287
+    $signature: 1288
   };
   A.SupplierStockEvent.prototype = {
     get$props() {
@@ -312469,7 +312572,7 @@
       t2.add$1(0, new A.SupplierList0(this.$this.dateTime));
       return t2;
     },
-    $signature: 1288
+    $signature: 1289
   };
   A.SupplierStockScreen_build_closure0.prototype = {
     call$1(context) {
@@ -312487,7 +312590,7 @@
         t1 = this.$this;
       return A.Scaffold$(t1._supplier_stock_screen$_mobileTabletUi$1(context), null, t1._supplier_stock_screen$_body$3$context$state$state2(0, context, state, addNewSupplierState), t1.bottom$1$context(0, context), null, null);
     },
-    $signature: 1289
+    $signature: 1290
   };
   A.SupplierStockScreen__mobileTabletUi_closure.prototype = {
     call$2(context, sizingInformation) {
@@ -312507,10 +312610,10 @@
   A.SupplierStockScreen__body_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = this.state;
-      t1 = A.Calendar$(new A.SupplierStockScreen__body__closure0(t1, context), new A.SupplierStockScreen__body__closure1(t1, context), t1.selectedDateTime, this.minDate, new A.SupplierStockScreen__body__closure2(context), false);
+      t1 = A.Calendar$(new A.SupplierStockScreen__body__closure0(t1, context), new A.SupplierStockScreen__body__closure1(t1, context), t1.selectedDateTime, null, this.minDate, new A.SupplierStockScreen__body__closure2(context), false);
       return t1;
     },
-    $signature: 22
+    $signature: 25
   };
   A.SupplierStockScreen__body__closure2.prototype = {
     call$1(date) {
@@ -312558,7 +312661,7 @@
       }
       return A.ResponsiveBuilder$(new A.SupplierStockScreen__body__closure(_box_0));
     },
-    $signature: 32
+    $signature: 31
   };
   A.SupplierStockScreen__body__closure.prototype = {
     call$2(context, sizingInformation) {
@@ -312576,13 +312679,13 @@
         return new A.TotalSupplierMobile(t2, t1.vat, t3, null);
       }
     },
-    $signature: 4
+    $signature: 3
   };
   A.SupplierStockScreen__supplierBody_closure.prototype = {
     call$1(v) {
       return v._bloc$_state;
     },
-    $signature: 1290
+    $signature: 1291
   };
   A.SupplierStockScreen__supplierBody_closure0.prototype = {
     call$1(supplier) {
@@ -312599,14 +312702,14 @@
     call$1(value) {
       J.add$1$ax(A.Provider_of(this.context, false, type$.SupplierStockBloc), new A.SupplierList0(this.state.selectedDateTime));
     },
-    $signature: 16
+    $signature: 17
   };
   A.SupplierStockScreen_bottom_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.SupplierStockScreen_bottom__closure(), new A.SupplierStockScreen_bottom__closure0(), false, "", "");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.SupplierStockScreen_bottom__closure0.prototype = {
     call$0() {
@@ -312631,7 +312734,7 @@
     call$1(supplier) {
       return new A._SupplierList0(supplier, new A.SupplierPaymentsList_build__closure(this.$this, supplier), null);
     },
-    $signature: 1291
+    $signature: 1292
   };
   A.SupplierPaymentsList_build__closure.prototype = {
     call$0() {
@@ -312770,7 +312873,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1292
+    $signature: 1293
   };
   A.TakingsBloc_closure0.prototype = {
     call$2($event, emit) {
@@ -312851,7 +312954,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1293
+    $signature: 1294
   };
   A.TakingsBloc__closure.prototype = {
     call$1(t) {
@@ -312889,7 +312992,7 @@
       bankId.toString;
       return new A.BankTotal(t1, bankId, total);
     },
-    $signature: 82
+    $signature: 90
   };
   A.TakingsBloc_closure1.prototype = {
     call$2($event, emit) {
@@ -312898,7 +313001,7 @@
       if (!emit._isCanceled)
         emit._emit.call$1(t1);
     },
-    $signature: 1294
+    $signature: 1295
   };
   A.TakingsBloc_closure2.prototype = {
     call$2($event, emit) {
@@ -312946,7 +313049,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1295
+    $signature: 1296
   };
   A.TakingsEvent.prototype = {
     get$props() {
@@ -313012,9 +313115,23 @@
       }
     },
     _takings_screen$_takingsBody$2$context$state(context, state) {
-      var _null = null,
-        t1 = $.$get$width() / 414 * 10;
-      return A.Expanded$(A.Container$(_null, A.PageView$builder(this.pageController, new A.TakingsScreen__takingsBody_closure(state), _null, _null, new A.TakingsScreen__takingsBody_closure0(this, state, context)), B.Clip_0, _null, _null, _null, _null, _null, _null, new A.EdgeInsets(0, t1, 0, t1), _null, _null, _null), 1);
+      var maxDateString, maxDate, _null = null,
+        t1 = A.Provider_of(context, false, type$.AuthBloc)._bloc$_state.user;
+      if (t1 == null)
+        maxDateString = _null;
+      else {
+        t1 = t1.accountingYear;
+        if (t1 == null)
+          maxDateString = _null;
+        else {
+          t1 = B.JSArray_methods.get$last(t1).accountingYearEnd;
+          t1 = t1 == null ? _null : A._setArrayType(t1.split("T"), type$.JSArray_String);
+          maxDateString = t1;
+        }
+      }
+      maxDate = maxDateString == null ? _null : A.DateTime_parse(maxDateString[0]);
+      t1 = $.$get$width() / 414 * 10;
+      return A.Expanded$(A.Container$(_null, A.PageView$builder(this.pageController, new A.TakingsScreen__takingsBody_closure(state, maxDate), _null, _null, new A.TakingsScreen__takingsBody_closure0(this, state, context)), B.Clip_0, _null, _null, _null, _null, _null, _null, new A.EdgeInsets(0, t1, 0, t1), _null, _null, _null), 1);
     },
     bottom$2$context$state(_, context, state) {
       return A.ResponsiveBuilder$(new A.TakingsScreen_bottom_closure(this, A.SelectContext_select(context, new A.TakingsScreen_bottom_closure0(), type$.TakingsBloc, type$.FormGroup), state));
@@ -313030,14 +313147,14 @@
       t2.add$1(0, new A.GetTakingsType0(true));
       return t2;
     },
-    $signature: 1296
+    $signature: 1297
   };
   A.TakingsScreen_build_closure0.prototype = {
     call$2(context, state) {
       var t1 = this.$this;
       return A.Scaffold$(t1._takings_screen$_mobileTabletUi$1(context), null, t1._takings_screen$_body$2$context$state(0, context, state), t1.bottom$2$context$state(0, context, state), null, null);
     },
-    $signature: 1297
+    $signature: 1298
   };
   A.TakingsScreen__mobileTabletUi_closure.prototype = {
     call$2(context, sizingInformation) {
@@ -313060,28 +313177,43 @@
   };
   A.TakingsScreen__body_closure.prototype = {
     call$2(context, sizingInformation) {
-      var minDateString, minDate, t2, t3, _null = null,
-        t1 = A.Provider_of(context, false, type$.AuthBloc)._bloc$_state.user;
-      if (t1 == null)
+      var minDateString, minDate, maxDateString, maxDate, t3, _null = null,
+        t1 = type$.AuthBloc,
+        t2 = A.Provider_of(context, false, t1)._bloc$_state.user;
+      if (t2 == null)
         minDateString = _null;
       else {
-        t1 = t1.accountingYear;
-        if (t1 == null)
+        t2 = t2.accountingYear;
+        if (t2 == null)
           minDateString = _null;
         else {
-          t1 = B.JSArray_methods.get$first(t1).accountingYearStart;
-          t1 = t1 == null ? _null : A._setArrayType(t1.split("T"), type$.JSArray_String);
-          minDateString = t1;
+          t2 = B.JSArray_methods.get$first(t2).accountingYearStart;
+          t2 = t2 == null ? _null : A._setArrayType(t2.split("T"), type$.JSArray_String);
+          minDateString = t2;
         }
       }
       minDate = minDateString == null ? _null : A.DateTime_parse(minDateString[0]);
+      t1 = A.Provider_of(context, false, t1)._bloc$_state.user;
+      if (t1 == null)
+        maxDateString = _null;
+      else {
+        t1 = t1.accountingYear;
+        if (t1 == null)
+          maxDateString = _null;
+        else {
+          t1 = B.JSArray_methods.get$last(t1).accountingYearEnd;
+          t1 = t1 == null ? _null : A._setArrayType(t1.split("T"), type$.JSArray_String);
+          maxDateString = t1;
+        }
+      }
+      maxDate = maxDateString == null ? _null : A.DateTime_parse(maxDateString[0]);
       t1 = this.state;
       t2 = t1.weekDays;
       t2.toString;
       t3 = this._box_1;
-      return A.Calendar$(new A.TakingsScreen__body__closure0(t3, t1, context), new A.TakingsScreen__body__closure1(t3, t1, context), B.JSArray_methods.get$first(t2), minDate, new A.TakingsScreen__body__closure2(context), false);
+      return A.Calendar$(new A.TakingsScreen__body__closure0(t3, t1, context), new A.TakingsScreen__body__closure1(t3, t1, context), B.JSArray_methods.get$first(t2), maxDate, minDate, new A.TakingsScreen__body__closure2(context), false);
     },
-    $signature: 22
+    $signature: 171
   };
   A.TakingsScreen__body__closure2.prototype = {
     call$1(date) {
@@ -313123,7 +313255,7 @@
       }
       return A.ResponsiveBuilder$(new A.TakingsScreen__body__closure(_box_0, t2));
     },
-    $signature: 32
+    $signature: 31
   };
   A.TakingsScreen__body__closure.prototype = {
     call$2(context, sizingInformation) {
@@ -313134,7 +313266,7 @@
         t3 = A._setArrayType([], type$.JSArray_BankTotal);
       return new A.TotalMobile0(t1, t3, t2.startWeekDate, t2.endWeekDate, t2.showPostedTo, null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.TakingsScreen__takingsBody_closure0.prototype = {
     call$1(index) {
@@ -313154,7 +313286,7 @@
         t1.add$1(0, new A.WeekList(date, false));
       }
     },
-    $signature: 19
+    $signature: 20
   };
   A.TakingsScreen__takingsBody_closure.prototype = {
     call$2(context, index) {
@@ -313162,9 +313294,9 @@
         t1 = this.state,
         t2 = t1.weekDays;
       t2 = t2 == null ? _null : t2.length;
-      return A.ListView$builder(_null, new A.TakingsScreen__takingsBody__closure(t1), t2, _null, new A.NeverScrollableScrollPhysics(_null), false, B.Axis_1, false);
+      return A.ListView$builder(_null, new A.TakingsScreen__takingsBody__closure(t1, this.maxDate), t2, _null, new A.NeverScrollableScrollPhysics(_null), false, B.Axis_1, false);
     },
-    $signature: 120
+    $signature: 151
   };
   A.TakingsScreen__takingsBody__closure.prototype = {
     call$2(context, index) {
@@ -313176,8 +313308,10 @@
       if (t2)
         valid = _null;
       else {
-        t3 = Date.now();
-        valid = current._value < t3;
+        t3 = this.maxDate;
+        if (t3 == null)
+          t3 = new A.DateTime(Date.now(), false);
+        valid = current._value < t3._value;
       }
       t3 = t1.totals;
       if (t3 == null)
@@ -313193,7 +313327,7 @@
       t2 = valid ? new A.TakingsScreen__takingsBody___closure(t1, index, context) : _null;
       return A.GestureDetector$(_null, A.ResponsiveBuilder$(new A.TakingsScreen__takingsBody___closure0(valid, total, t1, index, hasNote)), B.DragStartBehavior_1, false, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, t2, _null, _null, _null, _null, _null, _null, false, B.Offset_O5r);
     },
-    $signature: 377
+    $signature: 378
   };
   A.TakingsScreen__takingsBody___closure.prototype = {
     call$0() {
@@ -313216,7 +313350,7 @@
       t2.toString;
       J.add$1$ax(t1, new A.WeekList(t2, true));
     },
-    $signature: 16
+    $signature: 17
   };
   A.TakingsScreen__takingsBody___closure0.prototype = {
     call$2(context, sizingInformation) {
@@ -313237,13 +313371,13 @@
         return new A.TakingEntryCardMobile(t2, t3, t1, _this.hasNote, _null);
       }
     },
-    $signature: 1299
+    $signature: 1300
   };
   A.TakingsScreen_bottom_closure0.prototype = {
     call$1(v) {
       return v.form;
     },
-    $signature: 1300
+    $signature: 1301
   };
   A.TakingsScreen_bottom_closure.prototype = {
     call$2(context, sizingInformation) {
@@ -313251,7 +313385,7 @@
       t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.TakingsScreen_bottom__closure(this.$this, this.form, context, t1), new A.TakingsScreen_bottom__closure0(context, t1), false, "Add Takings Type", "Edit Type");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.TakingsScreen_bottom__closure.prototype = {
     call$0() {
@@ -313287,7 +313421,7 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A.TakingsScreen_bottom___closure0.prototype = {
     call$1(val) {
@@ -313297,12 +313431,12 @@
       t2.pop$1(null);
       J.add$1$ax(A.Provider_of(t1, false, type$.TakingsBloc), new A.AddTakingsType("A"));
     },
-    $signature: 24
+    $signature: 23
   };
   A.TakingsScreen_bottom___closure1.prototype = {
     call$1(val) {
     },
-    $signature: 24
+    $signature: 23
   };
   A.TakingsScreen_bottom__closure0.prototype = {
     call$0() {
@@ -313318,7 +313452,7 @@
       t2.toString;
       J.add$1$ax(t1, new A.WeekList(t2, true));
     },
-    $signature: 16
+    $signature: 17
   };
   A._TakingsScreen_StatelessWidget_Dialogs.prototype = {};
   A.TakingEntryCardMobile.prototype = {
@@ -313466,7 +313600,7 @@
       var t1 = this.$this;
       this.rows.push(new A.TableRow(null, null, A._setArrayType([t1._total_mobile$_buildDataCell$1(element.bankName), t1._total_mobile$_buildDataCell$1(B.JSNumber_methods.toStringAsFixed$1(element.total, 2))], type$.JSArray_Widget)));
     },
-    $signature: 200
+    $signature: 182
   };
   A.TakingsEntryBloc.prototype = {
     TakingsEntryBloc$2$clientRepo$user(clientRepo, user) {
@@ -313639,13 +313773,13 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1301
+    $signature: 1302
   };
   A.TakingsEntryBloc__closure.prototype = {
     call$1(year) {
       return year.toJson$0();
     },
-    $signature: 36
+    $signature: 37
   };
   A.TakingsEntryBloc__closure0.prototype = {
     call$1($event) {
@@ -313657,7 +313791,7 @@
       }
       this.$this.totalSubject.add$1(0, total);
     },
-    $signature: 131
+    $signature: 149
   };
   A.TakingsEntryBloc_closure0.prototype = {
     call$2($event, emit) {
@@ -313681,7 +313815,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1302
+    $signature: 1303
   };
   A.TakingsEntryBloc_closure1.prototype = {
     call$2($event, emit) {
@@ -313703,7 +313837,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1303
+    $signature: 1304
   };
   A.TakingsEntryEvent.prototype = {};
   A.GetTakingsData.prototype = {};
@@ -313842,19 +313976,19 @@
       t1.add$1(0, new A.GetTakingsData(this.$this.dateTime));
       return t1;
     },
-    $signature: 1304
+    $signature: 1305
   };
   A.TakingsEntryScreen_build_closure0.prototype = {
     call$2(context, state) {
     },
-    $signature: 1305
+    $signature: 1306
   };
   A.TakingsEntryScreen_build_closure.prototype = {
     call$2(context, state) {
       var t1 = this.$this;
       return A.Scaffold$(t1._takings_entry_screen$_mobilesTabletUi$2(context, state), B.Color_4294967295, t1._takings_entry_screen$_body$2$context$state(0, context, state), t1.bottom$2$context$state(0, context, state), null, null);
     },
-    $signature: 1306
+    $signature: 1307
   };
   A.TakingsEntryScreen__mobilesTabletUi_closure.prototype = {
     call$2(context, sizingInformation) {
@@ -313931,7 +314065,7 @@
     call$1(e) {
       return e.takingsTillId != null;
     },
-    $signature: 69
+    $signature: 70
   };
   A.TakingsEntryScreen__appBar__closure0.prototype = {
     call$1(entryId) {
@@ -313971,7 +314105,7 @@
       });
       return A._asyncStartSync($async$call$0, $async$completer);
     },
-    $signature: 70
+    $signature: 69
   };
   A.TakingsEntryScreen__body_closure.prototype = {
     call$2(context, sizingInformation) {
@@ -313980,9 +314114,9 @@
         t3 = t2.date;
       if (t3 == null)
         t3 = new A.DateTime(Date.now(), false);
-      return A.Calendar$(new A.TakingsEntryScreen__body__closure0(t1, t2, context), new A.TakingsEntryScreen__body__closure1(t1, t2, context), t3, null, new A.TakingsEntryScreen__body__closure2(t1, t2, context), false);
+      return A.Calendar$(new A.TakingsEntryScreen__body__closure0(t1, t2, context), new A.TakingsEntryScreen__body__closure1(t1, t2, context), t3, null, null, new A.TakingsEntryScreen__body__closure2(t1, t2, context), false);
     },
-    $signature: 22
+    $signature: 25
   };
   A.TakingsEntryScreen__body__closure0.prototype = {
     call$0() {
@@ -314055,7 +314189,7 @@
     call$1(e) {
       return e.takingsTillId != null;
     },
-    $signature: 69
+    $signature: 70
   };
   A.TakingsEntryScreen__body___closure4.prototype = {
     call$1(entryId) {
@@ -314135,7 +314269,7 @@
     call$1(e) {
       return e.takingsTillId != null;
     },
-    $signature: 69
+    $signature: 70
   };
   A.TakingsEntryScreen__body___closure2.prototype = {
     call$1(entryId) {
@@ -314209,13 +314343,13 @@
       });
       return A._asyncStartSync($async$call$1, $async$completer);
     },
-    $signature: 1307
+    $signature: 1308
   };
   A.TakingsEntryScreen__body___closure.prototype = {
     call$1(e) {
       return e.takingsTillId != null;
     },
-    $signature: 69
+    $signature: 70
   };
   A.TakingsEntryScreen__body___closure0.prototype = {
     call$1(entryId) {
@@ -314229,7 +314363,7 @@
       var t1 = snapshot.data;
       return A.ResponsiveBuilder$(new A.TakingsEntryScreen__body__closure(t1 != null ? A._asDouble(t1) : 0));
     },
-    $signature: 1308
+    $signature: 1309
   };
   A.TakingsEntryScreen__body__closure.prototype = {
     call$2(context, sizingInformation) {
@@ -314239,7 +314373,7 @@
       else
         return new A.TotalMobile(this.total, null);
     },
-    $signature: 18
+    $signature: 16
   };
   A.TakingsEntryScreen__takingsEntryScreenBody_closure.prototype = {
     call$2(context, sizingInformation) {
@@ -314250,13 +314384,13 @@
       t3.toString;
       return new A.TakinsEntryTillMobile(state0, new A.TakingsEntryScreen__takingsEntryScreenBody__closure0(t1, t2, context), t3, t1.dateTime, t1.takingTileKey);
     },
-    $signature: 22
+    $signature: 25
   };
   A.TakingsEntryScreen__takingsEntryScreenBody__closure.prototype = {
     call$1(v) {
       return v._bloc$_state;
     },
-    $signature: 1309
+    $signature: 1310
   };
   A.TakingsEntryScreen__takingsEntryScreenBody__closure0.prototype = {
     call$0() {
@@ -314326,7 +314460,7 @@
     call$1(e) {
       return e.takingsTillId != null;
     },
-    $signature: 69
+    $signature: 70
   };
   A.TakingsEntryScreen__takingsEntryScreenBody___closure0.prototype = {
     call$1(entryId) {
@@ -314339,7 +314473,7 @@
     call$1(e) {
       return e.takingsTillId != null;
     },
-    $signature: 69
+    $signature: 70
   };
   A.TakingsEntryScreen__handleSaveTills_closure0.prototype = {
     call$1(entryId) {
@@ -314353,7 +314487,7 @@
       var t1 = A.BottomBarHomeMobile$(true, true, false, null, new A.TakingsEntryScreen_bottom__closure(), new A.TakingsEntryScreen_bottom__closure0(this.$this, context, this.state), false, "", "Save");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.TakingsEntryScreen_bottom__closure0.prototype = {
     call$0() {
@@ -314450,7 +314584,7 @@
       t3.push(A.SizedBox$(_null, _null, 20));
       return new A.Padding(new A.EdgeInsets(0, 0, 0, t2.viewInsets.bottom), A.Row$(t3, B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1, _null), _null);
     },
-    $signature: 1310
+    $signature: 1311
   };
   A.TakinsEntryTillMobileState_build__closure0.prototype = {
     call$1(control) {
@@ -314458,7 +314592,7 @@
       t1.toString;
       this.$this.textControllers.$indexSet(0, t1, control);
     },
-    $signature: 1311
+    $signature: 1312
   };
   A.TakinsEntryTillMobileState_build__closure1.prototype = {
     call$1(a) {
@@ -314660,7 +314794,7 @@
       if (!emit._isCanceled)
         emit._emit.call$1(new A.TakingEntryEditState(mergedList, null, false, false));
     },
-    $signature: 1312
+    $signature: 1313
   };
   A.TakingEntryEditBloc_closure0.prototype = {
     call$2($event, emit) {
@@ -314710,7 +314844,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1313
+    $signature: 1314
   };
   A.TakingEntryEditBloc_closure1.prototype = {
     call$2($event, emit) {
@@ -314722,7 +314856,7 @@
       if (!emit._isCanceled)
         emit._emit.call$1(t1);
     },
-    $signature: 1314
+    $signature: 1315
   };
   A.TakingEntryEditBloc_closure2.prototype = {
     call$2($event, emit) {
@@ -314768,7 +314902,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1315
+    $signature: 1316
   };
   A.TakingEntryEditEvent.prototype = {};
   A.PickedImage.prototype = {};
@@ -314834,7 +314968,7 @@
       t1.add$1(0, new A.InitialEvent(this.$this.note));
       return t1;
     },
-    $signature: 1316
+    $signature: 1317
   };
   A.EntryEditDeleteScreen_build_closure0.prototype = {
     call$2(context, state) {
@@ -314846,7 +314980,7 @@
         A.Navigator_popAndPushNamed(context, "/takingsEntryNote", A.LinkedHashMap_LinkedHashMap$_literal(["noteId", t1.transactionId, "apiEndPoint", t1.apiEndPoint], t2, t2), t3, t3);
       }
     },
-    $signature: 1317
+    $signature: 1318
   };
   A.EntryEditDeleteScreen_build_closure.prototype = {
     call$2(context, state) {
@@ -314854,7 +314988,7 @@
         t1 = this.$this;
       return new A.PopScope(A.Scaffold$(t1._taking_entry_edit_screen$_mobilesTabletUi$1(context), _null, A.ResponsiveBuilder$(new A.EntryEditDeleteScreen_build__closure(t1, state)), _null, _null, false), _null, false, _null);
     },
-    $signature: 1318
+    $signature: 1319
   };
   A.EntryEditDeleteScreen_build__closure.prototype = {
     call$2(context, sizingInformation) {
@@ -314878,7 +315012,7 @@
         return A.Column$(A._setArrayType([t3, A.Container$(_null, t2, B.Clip_0, _null, _null, _null, _null, _null, _null, new A.EdgeInsets(0, 0, 0, t1 / 414 * 20), _null, _null, _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1);
       }
     },
-    $signature: 51
+    $signature: 48
   };
   A.EntryEditDeleteScreen__mobilesTabletUi_closure.prototype = {
     call$2(context, sizingInformation) {
@@ -314902,7 +315036,7 @@
       t1 = A.DefaultButton$(B.Color_4278298233, t1 * 46, new A.EntryEditDeleteScreen__save__closure(this.$this, context), B.EdgeInsets_0_0_0_0, 40, "Save", t1 * 250);
       return t1;
     },
-    $signature: 1319
+    $signature: 1320
   };
   A.EntryEditDeleteScreen__save__closure.prototype = {
     call$0() {
@@ -315027,7 +315161,7 @@
       t4.push(A.Positioned$(_null, A.GestureDetector$(_null, A.Container$(B.Alignment_0_0, A.Icon$(B.IconData_57706_MaterialIcons_null_false, B.Color_4294967295, _null, _null), B.Clip_0, t6, _null, _null, _null, t5, _null, _null, _null, _null, t5), B.DragStartBehavior_1, false, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, new A.TakingsEntryEditMobile__imageList__closure1(t2, t3, t1, index), _null, _null, _null, _null, _null, _null, false, B.Offset_O5r), _null, _null, _null, 8, 8, _null));
       return A.GestureDetector$(_null, new A.Stack(B.Alignment_1_m1, _null, B.StackFit_0, B.Clip_1, t4, _null), B.DragStartBehavior_1, false, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, new A.TakingsEntryEditMobile__imageList__closure2(t2, t3, currentImage), _null, _null, _null, _null, _null, _null, false, B.Offset_O5r);
     },
-    $signature: 378
+    $signature: 379
   };
   A.TakingsEntryEditMobile__imageList__closure2.prototype = {
     call$0() {
@@ -315055,7 +315189,7 @@
         t3 = A.Theme_of(context).textTheme.bodySmall;
       return A.SizedBox$(A.Column$(A._setArrayType([t2, A.Text$("Failed to Load", _null, _null, _null, _null, _null, t3 == null ? _null : t3.copyWith$2$fontSize$fontWeight(12, B.FontWeight_3_400), _null, _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1), t1 / 414 * 50, _null);
     },
-    $signature: 181
+    $signature: 186
   };
   A.TakingsEntryEditMobile__imageList__closure1.prototype = {
     call$0() {
@@ -315273,7 +315407,7 @@
       t4.push(A.Positioned$(_null, A.GestureDetector$(_null, A.Container$(B.Alignment_0_0, A.Icon$(B.IconData_57706_MaterialIcons_null_false, B.Color_4294967295, _null, _null), B.Clip_0, t6, _null, _null, _null, t5, _null, _null, _null, _null, t5), B.DragStartBehavior_1, false, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, new A.TakingsEntryEditTablet__imageList__closure1(t2, t3, t1, index), _null, _null, _null, _null, _null, _null, false, B.Offset_O5r), _null, _null, _null, 8, 8, _null));
       return A.GestureDetector$(_null, new A.Stack(B.Alignment_1_m1, _null, B.StackFit_0, B.Clip_1, t4, _null), B.DragStartBehavior_1, false, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, new A.TakingsEntryEditTablet__imageList__closure2(t2, t3, currentImage), _null, _null, _null, _null, _null, _null, false, B.Offset_O5r);
     },
-    $signature: 378
+    $signature: 379
   };
   A.TakingsEntryEditTablet__imageList__closure2.prototype = {
     call$0() {
@@ -315301,7 +315435,7 @@
         t3 = A.Theme_of(context).textTheme.bodySmall;
       return A.SizedBox$(A.Column$(A._setArrayType([t2, A.Text$("Failed to Load", _null, _null, _null, _null, _null, t3 == null ? _null : t3.copyWith$2$fontSize$fontWeight(12, B.FontWeight_3_400), _null, _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1), t1 / 414 * 50, _null);
     },
-    $signature: 181
+    $signature: 186
   };
   A.TakingsEntryEditTablet__imageList__closure1.prototype = {
     call$0() {
@@ -315484,7 +315618,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1322
+    $signature: 1323
   };
   A.TakingsEntryNoteBloc_closure0.prototype = {
     call$2($event, emit) {
@@ -315502,7 +315636,7 @@
       if (!emit._isCanceled)
         emit._emit.call$1(t1);
     },
-    $signature: 1323
+    $signature: 1324
   };
   A.TakingsEntryNoteBloc_closure1.prototype = {
     call$2($event, emit) {
@@ -315511,7 +315645,7 @@
       if (!emit._isCanceled)
         emit._emit.call$1(t1);
     },
-    $signature: 1324
+    $signature: 1325
   };
   A.TakingsEntryNoteBloc_closure2.prototype = {
     call$2($event, emit) {
@@ -315520,7 +315654,7 @@
       if (!emit._isCanceled)
         emit._emit.call$1(t1);
     },
-    $signature: 1325
+    $signature: 1326
   };
   A.TakingsEntryNoteBloc_closure3.prototype = {
     call$2($event, emit) {
@@ -315534,7 +315668,7 @@
       if (!emit._isCanceled)
         emit._emit.call$1(t1);
     },
-    $signature: 1326
+    $signature: 1327
   };
   A.TakingsEntryNoteBloc_closure4.prototype = {
     call$2($event, emit) {
@@ -315545,7 +315679,7 @@
         emit._emit.call$1(t2);
       $.$get$TakingsEntryNoteBloc_form().control$1(0, "text").updateValue$1(t1.notes);
     },
-    $signature: 1327
+    $signature: 1328
   };
   A.TakingsEntryNoteBloc__closure.prototype = {
     call$1(index) {
@@ -315557,7 +315691,7 @@
       else
         return new A.ImageItem(_null, _null);
     },
-    $signature: 1328
+    $signature: 1329
   };
   A.TakingsEntryNoteBloc_closure5.prototype = {
     call$2($event, emit) {
@@ -315565,7 +315699,7 @@
       if (!emit._isCanceled)
         emit._emit.call$1(t1);
     },
-    $signature: 1329
+    $signature: 1330
   };
   A.TakingsEntryNoteBloc_closure6.prototype = {
     call$2($event, emit) {
@@ -315589,7 +315723,7 @@
         emit._emit.call$1(t1);
       $.$get$TakingsEntryNoteBloc_form().control$1(0, "text").set$value(0, "");
     },
-    $signature: 1330
+    $signature: 1331
   };
   A.TakingsEntryNoteBloc_closure7.prototype = {
     call$2($event, emit) {
@@ -315700,7 +315834,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1331
+    $signature: 1332
   };
   A.TakingsEntryNoteBloc_closure8.prototype = {
     call$2($event, emit) {
@@ -315710,7 +315844,7 @@
       if (!emit._isCanceled)
         emit._emit.call$1(t1);
     },
-    $signature: 1332
+    $signature: 1333
   };
   A.TakingsEntryNoteBloc_closure9.prototype = {
     call$2($event, emit) {
@@ -315747,7 +315881,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1333
+    $signature: 1334
   };
   A.TakingsEntryNoteEvent.prototype = {};
   A.GetNotes.prototype = {};
@@ -315850,7 +315984,7 @@
       t1.add$1(0, new A.GetNotes(t3, t2.apiEndPoint));
       return t1;
     },
-    $signature: 1334
+    $signature: 1335
   };
   A.TakingsEntryNoteScreen_build_closure.prototype = {
     call$2(context, state) {
@@ -315858,7 +315992,7 @@
         t1 = this.$this;
       return A.Scaffold$(t1._takings_entry_note_screen$_mobilesTabletUi$2(context, state), _null, A.ResponsiveBuilder$(new A.TakingsEntryNoteScreen_build__closure(t1, state)), _null, _null, _null);
     },
-    $signature: 1335
+    $signature: 1336
   };
   A.TakingsEntryNoteScreen_build__closure.prototype = {
     call$2(context, sizingInformation) {
@@ -315866,7 +316000,7 @@
         t2 = this.$this;
       return new A.TakingEntryNoteMobile(t1.images, t1.isOpenTextField, t1.isWriting, t1, t2.noteId, t2.apiEndPoint, t1.uploadImages, null);
     },
-    $signature: 22
+    $signature: 25
   };
   A.TakingsEntryNoteScreen__mobilesTabletUi_closure.prototype = {
     call$2(context, sizingInformation) {
@@ -315942,7 +316076,7 @@
       }
       return A.GestureDetector$(_null, A.Container$(_null, t4, B.Clip_0, _null, _null, new A.BoxDecoration(_null, _null, t2, t3, _null, _null, B.BoxShape_0), _null, 30, _null, _null, _null, _null, _null), B.DragStartBehavior_1, false, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, new A._HorizontalImageUploadListState_build__closure1(t1, index, context), _null, _null, _null, _null, _null, _null, false, B.Offset_O5r);
     },
-    $signature: 377
+    $signature: 378
   };
   A._HorizontalImageUploadListState_build__closure1.prototype = {
     call$0() {
@@ -316097,7 +316231,7 @@
       t2 = t2 == null ? _null : t2[index];
       return A.Container$(_null, A.Row$(A._setArrayType([A.Expanded$(this.$this._takings_entry_note$_noteDescription$2$context$data(context, t2), 1)], type$.JSArray_Widget), B.CrossAxisAlignment_0, B.MainAxisAlignment_0, B.MainAxisSize_1, _null), B.Clip_0, _null, _null, new A.BoxDecoration(_null, _null, new A.Border(B.BorderSide_8xm, B.BorderSide_8xm, new A.BorderSide(B.Color_4287335307, 0.5, B.BorderStyle_1, -1), B.BorderSide_8xm), _null, _null, _null, B.BoxShape_0), _null, _null, _null, new A.EdgeInsets(t1, t1, t1, t1), _null, _null, _null);
     },
-    $signature: 163
+    $signature: 184
   };
   A._TakingEntryNoteMobileState__noteDescription_closure.prototype = {
     call$2(context, index) {
@@ -316117,7 +316251,7 @@
         t6 = "";
       return new A.Padding(new A.EdgeInsets(0, t1, t1, t1), A.GestureDetector$(_null, new A.Stack(B.Alignment_0_0, _null, B.StackFit_0, B.Clip_1, A._setArrayType([t5, A.Image$network(t6, new A._TakingEntryNoteMobileState__noteDescription__closure(), B.BoxFit_2, t4, new A._TakingEntryNoteMobileState__noteDescription__closure0(), t4)], type$.JSArray_Widget), _null), B.DragStartBehavior_1, false, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, new A._TakingEntryNoteMobileState__noteDescription__closure1(t2, context, t3, index), _null, _null, _null, _null, _null, _null, false, B.Offset_O5r), _null);
     },
-    $signature: 1336
+    $signature: 1337
   };
   A._TakingEntryNoteMobileState__noteDescription__closure1.prototype = {
     call$0() {
@@ -316158,7 +316292,7 @@
         t3 = A.Theme_of(context).textTheme.bodySmall;
       return A.SizedBox$(A.Column$(A._setArrayType([t2, A.Text$("Failed to Load", _null, _null, _null, _null, _null, t3 == null ? _null : t3.copyWith$2$fontSize$fontWeight(12, B.FontWeight_3_400), _null, _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1), t1 / 414 * 50, _null);
     },
-    $signature: 181
+    $signature: 186
   };
   A._TakingEntryNoteMobileState__userInfo_closure.prototype = {
     call$0() {
@@ -316309,19 +316443,19 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1337
+    $signature: 1338
   };
   A.TakingsOnlineAccEntryBloc__closure.prototype = {
     call$1(element) {
       return element.bankId !== "6009798964793049101" && element.bankName !== "Cash";
     },
-    $signature: 104
+    $signature: 111
   };
   A.TakingsOnlineAccEntryBloc_closure0.prototype = {
     call$2($event, emit) {
       this.$this.form.control$1(0, "other_income_bank_id").updateValue$1($event.bankId);
     },
-    $signature: 1338
+    $signature: 1339
   };
   A.TakingsOnlineAccEntryBloc_closure1.prototype = {
     call$2($event, emit) {
@@ -316401,7 +316535,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1339
+    $signature: 1340
   };
   A.TakingsOnlineAccEntryBloc_closure2.prototype = {
     call$1(_) {
@@ -316489,19 +316623,19 @@
       t1.add$1(0, new A.SetTakingsOnlineEntryInputs(t2.till, t2.date));
       return t1;
     },
-    $signature: 1340
+    $signature: 1341
   };
   A.TakingsOnlineAccEntryScreen_build_closure0.prototype = {
     call$2(context, state) {
     },
-    $signature: 1341
+    $signature: 1342
   };
   A.TakingsOnlineAccEntryScreen_build_closure.prototype = {
     call$2(context, state) {
       var t1 = this.$this;
       return A.Scaffold$(t1._takings_online_acc_entry_screen$_mobilexTabletUi$2(context, state), B.Color_4294967295, t1._takings_online_acc_entry_screen$_body$2$context$state(0, context, state), t1._takings_online_acc_entry_screen$_bottom$0(0), null, null);
     },
-    $signature: 1342
+    $signature: 1343
   };
   A.TakingsOnlineAccEntryScreen__bottom_closure.prototype = {
     call$0() {
@@ -316525,7 +316659,7 @@
       else
         return t2._takings_online_acc_entry_screen$_appBar$2$context$state(context, t3);
     },
-    $signature: 18
+    $signature: 16
   };
   A.TakingsOnlineAccEntryScreen__appbartablet_closure.prototype = {
     call$0() {
@@ -316547,7 +316681,7 @@
     call$1(e) {
       return e.form;
     },
-    $signature: 1343
+    $signature: 1344
   };
   A.TakingsOnlineAccEntryScreen__body_closure0.prototype = {
     call$3(context, form, child) {
@@ -316609,7 +316743,7 @@
     },
     "call*": "call$3",
     $requiredArgCount: 3,
-    $signature: 1344
+    $signature: 1345
   };
   A.TakingsOnlineAccEntryScreen__body__closure.prototype = {
     call$1(hasFocus) {
@@ -316748,7 +316882,7 @@
       t1 = t1.control$1(0, _s20_);
       return A.Expanded$(new A.Padding(new A.EdgeInsets(3, 0, 3, 0), A.ElevatedButton$(A.Text$(A.S(t3), _null, _null, _null, _null, _null, A.TextStyle$(_null, _null, J.$eq$(t1.get$value(t1), bank.bankId) ? B.Color_4294967295 : B.Color_4278190080, _null, _null, _null, _null, _null, _null, _null, _null, 18, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), new A.TakingsOnlineAccEntryScreen__body___closure(this.context, bank), t2), _null), 1);
     },
-    $signature: 1345
+    $signature: 1346
   };
   A.TakingsOnlineAccEntryScreen__body___closure.prototype = {
     call$0() {
@@ -316825,19 +316959,19 @@
       t1.add$1(0, new A.TakingsWeeReportkList(t2.weekStartDate, t2.weekEndDate));
       return t1;
     },
-    $signature: 1346
+    $signature: 1347
   };
   A.TakingsWeeklyReportScreen_build_closure0.prototype = {
     call$2(context, state) {
     },
-    $signature: 1347
+    $signature: 1348
   };
   A.TakingsWeeklyReportScreen_build_closure.prototype = {
     call$2(context, state) {
       var t1 = this.$this;
       return A.Scaffold$(t1._takings_weekly_report$_mobilexTabletUi$1(context), B.Color_4294967295, t1._takings_weekly_report$_body$2$context$state(0, context, state), t1._takings_weekly_report$_bottom$0(0), null, null);
     },
-    $signature: 1348
+    $signature: 1349
   };
   A.TakingsWeeklyReportScreen__mobilexTabletUi_closure.prototype = {
     call$2(context, sizindInformation) {
@@ -316850,7 +316984,7 @@
       else
         return t2._takings_weekly_report$_appBar$1$context(context);
     },
-    $signature: 18
+    $signature: 16
   };
   A.TakingsWeeklyReportScreen__appbartablet_closure.prototype = {
     call$0() {
@@ -316916,7 +317050,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1349
+    $signature: 1350
   };
   A.TakingsWeeklyReportEvent.prototype = {
     get$props() {
@@ -316954,14 +317088,14 @@
         t2 = J.map$1$1$ax(this.$this.takingsWeeklyReportGroups, new A.TakingsWeeklyTableReport_build__closure(), type$.DataRow);
       return A.SingleChildScrollView$(new A.ConstrainedBox(new A.BoxConstraints(constraints.maxWidth, 1 / 0, 0, 1 / 0), A.DataTable$(20, t1, 50, 60, A.List_List$of(t2, true, A._instanceType(t2)._eval$1("ListIterable.E"))), _null), _null, B.DragStartBehavior_1, _null, _null, B.Axis_0);
     },
-    $signature: 1350
+    $signature: 1351
   };
   A.TakingsWeeklyTableReport_build__closure.prototype = {
     call$1(account) {
       var _null = null;
       return A.DataRow$(A._setArrayType([A.DataCell$(A.Container$(B.Alignment_m1_0, A.SizedBox$(A.Text$(account.name, _null, _null, _null, _null, true, A.TextStyle$(_null, _null, B.Color_4278220117, _null, _null, _null, _null, _null, _null, _null, _null, 13, _null, _null, B.FontWeight_6_700, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), B.TextAlign_0, _null), _null, 100), B.Clip_0, _null, _null, _null, _null, _null, _null, _null, _null, _null, 100)), A.DataCell$(A.Container$(B.Alignment_1_0, A.Text$("\xa3" + account.totalAmount, _null, _null, _null, _null, _null, A.TextStyle$(_null, _null, B.Color_4278220117, _null, _null, _null, _null, _null, _null, _null, _null, 13, _null, _null, B.FontWeight_6_700, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), B.TextAlign_1, _null), B.Clip_0, _null, _null, _null, _null, _null, _null, _null, _null, _null, 100)), A.DataCell$(A.Container$(B.Alignment_1_0, A.Text$(account.fullTotal, _null, _null, _null, _null, _null, A.TextStyle$(_null, _null, B.Color_4278220117, _null, _null, _null, _null, _null, _null, _null, _null, 13, _null, _null, B.FontWeight_6_700, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), B.TextAlign_1, _null), B.Clip_0, _null, _null, _null, _null, _null, _null, _null, _null, _null, 100))], type$.JSArray_DataCell), new A._MaterialStatePropertyWith(new A.TakingsWeeklyTableReport_build___closure(account), type$._MaterialStatePropertyWith_nullable_Color));
     },
-    $signature: 1351
+    $signature: 1352
   };
   A.TakingsWeeklyTableReport_build___closure.prototype = {
     call$1(states) {
@@ -317030,7 +317164,7 @@
       else
         return t2._personal_details_screen$_appBar$1$context(context);
     },
-    $signature: 18
+    $signature: 16
   };
   A._PersonalDetailsScreenState__appbartablet_closure.prototype = {
     call$0() {
@@ -317058,7 +317192,7 @@
       t1 = A.AnimatedBuilder$(t2, new A._PersonalDetailsScreenState__bottom__closure(t1), null);
       return t1;
     },
-    $signature: 1352
+    $signature: 1353
   };
   A._PersonalDetailsScreenState__bottom__closure.prototype = {
     call$2(context, child) {
@@ -317073,7 +317207,7 @@
       else
         return A.Container$(_null, t1._bottomPayroll$1$context(context), B.Clip_0, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null);
     },
-    $signature: 1353
+    $signature: 1354
   };
   A._PersonalDetailsScreenState__bottom___closure.prototype = {
     call$0() {
@@ -317118,7 +317252,7 @@
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A._PersonalDetailsScreenState__bottomPayroll__closure(context), new A._PersonalDetailsScreenState__bottomPayroll__closure0(context), false, "Add Payroll Change", "Edit");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A._PersonalDetailsScreenState__bottomPayroll__closure.prototype = {
     call$0() {
@@ -317179,7 +317313,7 @@
     call$2(context, index) {
       return new A.PayrollListMobile(this.$this.payroll[index], null);
     },
-    $signature: 1354
+    $signature: 1355
   };
   A.PayrollListMobile.prototype = {
     build$1(context) {
@@ -317557,7 +317691,7 @@
       t3 = A.Column$(A._setArrayType([A.Container$(_null, A.TabBar$(t2, B.Color_4278298233, B.Color_4278298233, A.TextStyle$(_null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, $.$get$width() / 414 * 18, _null, _null, _null, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), A._setArrayType([A.Tab$("Personal Details"), A.Tab$("Payroll")], t3), B.Color_4281413937), B.Clip_0, _null, _null, new A.BoxDecoration(_null, _null, _null, _null, B.List_9QI, _null, B.BoxShape_0), _null, _null, _null, _null, _null, _null, _null), A.SizedBox$(_null, $.$get$width() / 414 * 10, _null), A.Expanded$(A.TabBarView$(A._setArrayType([A.SingleChildScrollView$(new A.PersonalDetailsMobile(t1.signature, _null), _null, B.DragStartBehavior_1, _null, _null, B.Axis_1), new A.PayrollScreenMobile(A._setArrayType([new A.PayrollModel("1.25", "10-01-2021"), new A.PayrollModel("2.11", "11-01-2021"), new A.PayrollModel("2.5", "12-01-2021")], type$.JSArray_PayrollModel), _null)], t3), t2), 1)], t3), B.CrossAxisAlignment_2, B.MainAxisAlignment_3, B.MainAxisSize_1);
       return t3;
     },
-    $signature: 51
+    $signature: 48
   };
   A.SelectOptionScreen.prototype = {
     build$1(context) {
@@ -317596,7 +317730,7 @@
       else
         return t2._user_select_option_screen$_appBar$1$context(context);
     },
-    $signature: 18
+    $signature: 16
   };
   A.SelectOptionScreen__appbartablet_closure.prototype = {
     call$0() {
@@ -317618,7 +317752,7 @@
     call$2(context, sizingInformation) {
       return new A.UserOptionMobile(null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.UserOptionMobile.prototype = {
     build$1(context) {
@@ -317637,13 +317771,13 @@
     call$0() {
       A.GoRouterHelper_pushNamed(this.context, "/personalDetails", A.LinkedHashMap_LinkedHashMap$_literal(["signature", null], type$.String, type$.Null), type$.nullable_Object);
     },
-    $signature: 12
+    $signature: 13
   };
   A.UserOptionMobile_build_closure0.prototype = {
     call$0() {
       A.GoRouterHelper_pushNamed(this.context, "/addStaff", null, type$.nullable_Object);
     },
-    $signature: 12
+    $signature: 13
   };
   A.UserOptionMobile__selectOptionBody_closure.prototype = {
     call$0() {
@@ -317692,7 +317826,7 @@
       else
         return t2._user_staff_screen$_appBar$1$context(context);
     },
-    $signature: 18
+    $signature: 16
   };
   A.UserStaffScreen__appbartablet_closure.prototype = {
     call$0() {
@@ -317720,21 +317854,21 @@
     call$2(context, index) {
       return A.ResponsiveBuilder$(new A.UserStaffScreen__staffBody__closure(this.$this, index));
     },
-    $signature: 176
+    $signature: 195
   };
   A.UserStaffScreen__staffBody__closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = this.$this.staff[this.index];
       return new A.UserStaffListMobile(t1, null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.UserStaffScreen__bottom_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.UserStaffScreen__bottom__closure(), new A.UserStaffScreen__bottom__closure0(context), false, "", "");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.UserStaffScreen__bottom__closure0.prototype = {
     call$0() {
@@ -317838,13 +317972,13 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1355
+    $signature: 1356
   };
   A.VatBloc__closure.prototype = {
     call$1(year) {
       return year.toJson$0();
     },
-    $signature: 36
+    $signature: 37
   };
   A.VatEvent.prototype = {
     get$props() {
@@ -317899,14 +318033,14 @@
       t1.add$1(0, new A.RunVatInitial());
       return t1;
     },
-    $signature: 1356
+    $signature: 1357
   };
   A.VatScreen_build_closure.prototype = {
     call$2(context, state) {
       var t1 = this.$this;
       return A.Scaffold$(t1._vat_screen$_mobilexTabletUi$1(context), null, t1._vat_screen$_body$2$context$state0(0, context, state), t1.bottom$0(0), null, null);
     },
-    $signature: 1357
+    $signature: 1358
   };
   A.VatScreen__mobilexTabletUi_closure.prototype = {
     call$2(context, sizindInformation) {
@@ -317919,7 +318053,7 @@
       else
         return t2._vat_screen$_appBar$1$context(context);
     },
-    $signature: 18
+    $signature: 16
   };
   A.VatScreen__appbartablet_closure.prototype = {
     call$0() {
@@ -317957,14 +318091,14 @@
       }
       return t1;
     },
-    $signature: 18
+    $signature: 16
   };
   A.VatScreen_bottom_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = A.BottomBarHomeMobile$(true, false, false, null, new A.VatScreen_bottom__closure(), new A.VatScreen_bottom__closure0(), false, "", "");
       return t1;
     },
-    $signature: 4
+    $signature: 3
   };
   A.VatScreen_bottom__closure0.prototype = {
     call$0() {
@@ -318024,7 +318158,7 @@
       div.appendChild(iframe).toString;
       return div;
     },
-    $signature: 1358
+    $signature: 1359
   };
   A.VatBodyMobile.prototype = {
     build$1(context) {
@@ -318173,7 +318307,7 @@
       else
         return t2._view_period_expenses_screen$_appBar$1$context(context);
     },
-    $signature: 18
+    $signature: 16
   };
   A.ViewPeriodExpenses__appbartablet_closure.prototype = {
     call$0() {
@@ -318197,13 +318331,13 @@
         t1 = A._setArrayType([new A.ViewOtherIncomeModel("Monday 1st", _s1_, _s1_, _s1_), new A.ViewOtherIncomeModel("Monday 8th", _s1_, _s1_, _s1_), new A.ViewOtherIncomeModel("Monday 15th", _s1_, _s1_, _s1_), new A.ViewOtherIncomeModel("Monday 22nd", "1424", "237", "1186"), new A.ViewOtherIncomeModel("Monday 29th", "345", _s1_, "345")], type$.JSArray_ViewOtherIncomeModel);
       return new A.ViewExpensesScreenMobile(t1, null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.ViewPeriodExpenses__body_closure0.prototype = {
     call$2(context, sizingInformation) {
       return new A.TotalViewExpenseMobile(null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.TotalViewOtherIncomeMobile.prototype = {
     build$1(context) {
@@ -318307,7 +318441,7 @@
       else
         return t2._view_period_other_income_screen$_appBar$1$context(context);
     },
-    $signature: 18
+    $signature: 16
   };
   A.ViewPeriodOtherIncome__appbartablet_closure.prototype = {
     call$0() {
@@ -318331,7 +318465,7 @@
         t1 = A.Column$(A._setArrayType([A.Expanded$(new A.ViewOtherIncomeScreenMobile(A._setArrayType([new A.ViewOtherIncomeModel("Monday 1st", _s1_, _s1_, _s1_), new A.ViewOtherIncomeModel("Monday 8th", _s1_, _s1_, _s1_), new A.ViewOtherIncomeModel("Monday 15th", _s1_, _s1_, _s1_), new A.ViewOtherIncomeModel("Monday 22nd", "1424", "237", "1186"), new A.ViewOtherIncomeModel("Monday 29th", "345", _s1_, "345")], type$.JSArray_ViewOtherIncomeModel), null), 1), new A.TotalViewOtherIncomeMobile(null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1);
       return t1;
     },
-    $signature: 51
+    $signature: 48
   };
   A.TotalViewSupplierMobile.prototype = {
     build$1(context) {
@@ -318436,7 +318570,7 @@
       else
         return t2._view_period_supplier_screen$_appBar$1$context(context);
     },
-    $signature: 18
+    $signature: 16
   };
   A.ViewSupplier__appbartablet_closure.prototype = {
     call$0() {
@@ -318460,7 +318594,7 @@
         t1 = A.Column$(A._setArrayType([A.Expanded$(new A.ViewSupplierMobile(A._setArrayType([new A.ViewOtherIncomeModel("Monday 1st", _s1_, _s1_, _s1_), new A.ViewOtherIncomeModel("Monday 8th", _s1_, _s1_, _s1_), new A.ViewOtherIncomeModel("Monday 15th", _s1_, _s1_, _s1_), new A.ViewOtherIncomeModel("Monday 22nd", "1424", "237", "1186"), new A.ViewOtherIncomeModel("Monday 29th", "345", _s1_, "345")], type$.JSArray_ViewOtherIncomeModel), null), 1), new A.TotalViewSupplierMobile(null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1);
       return t1;
     },
-    $signature: 51
+    $signature: 48
   };
   A.TotalPeriodMobile.prototype = {
     build$1(context) {
@@ -318553,7 +318687,7 @@
       else
         return t2._view_period_screen$_appBar$1$context(context);
     },
-    $signature: 18
+    $signature: 16
   };
   A.ViewPeriodByWeek__appbartablet_closure.prototype = {
     call$0() {
@@ -318577,7 +318711,7 @@
         t1 = A.Column$(A._setArrayType([A.SizedBox$(_null, $.$get$width() / 414 * 2, _null), A.Expanded$(new A.ViewPeriodByWeekScreenMobile(A._setArrayType([new A.VATPeriodModel("Monday 1st", "599.0"), new A.VATPeriodModel("Monday 8th", "600.0"), new A.VATPeriodModel("Monday 16th", "620.0"), new A.VATPeriodModel("Monday 18th", "650.0"), new A.VATPeriodModel("Monday 25th", "700.0")], type$.JSArray_VATPeriodModel), _null), 1), new A.TotalPeriodMobile("666.0", _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1);
       return t1;
     },
-    $signature: 51
+    $signature: 48
   };
   A.TotalYearlyExpenseMobile.prototype = {
     build$1(context) {
@@ -318682,7 +318816,7 @@
       else
         return t2._view_period_year_screen$_appBar$1$context(context);
     },
-    $signature: 18
+    $signature: 16
   };
   A.ViewYearlyExpensesScreen__appbartablet_closure.prototype = {
     call$0() {
@@ -318708,7 +318842,7 @@
         t1 = A.Column$(A._setArrayType([A.Expanded$(new A.ViewYearlyExpensesMobile(A._setArrayType([new A.ViewOtherIncomeModel("Monday 1st", _s1_, _s1_, _s1_), new A.ViewOtherIncomeModel("Monday 8th", _s1_, _s1_, _s1_), new A.ViewOtherIncomeModel("Monday 15th", _s1_, _s1_, _s1_), new A.ViewOtherIncomeModel("Monday 22nd", "1424", "237", "1186"), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_)], type$.JSArray_ViewOtherIncomeModel), null), 1), new A.TotalYearlyExpenseMobile(null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1);
       return t1;
     },
-    $signature: 51
+    $signature: 48
   };
   A.ViewYearlySupplierMobile.prototype = {
     build$1(context) {
@@ -318813,7 +318947,7 @@
       else
         return t2._view_period_yearly_supplier_screen$_appBar$1$context(context);
     },
-    $signature: 18
+    $signature: 16
   };
   A.ViewYearlySupplier__appbartablet_closure.prototype = {
     call$0() {
@@ -318839,7 +318973,7 @@
         t1 = A.Column$(A._setArrayType([A.Expanded$(new A.ViewYearlySupplierMobile(A._setArrayType([new A.ViewOtherIncomeModel("Monday 1st", _s1_, _s1_, _s1_), new A.ViewOtherIncomeModel("Monday 8th", _s1_, _s1_, _s1_), new A.ViewOtherIncomeModel("Monday 15th", _s1_, _s1_, _s1_), new A.ViewOtherIncomeModel("Monday 22nd", "1424", "237", "1186"), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_), new A.ViewOtherIncomeModel(_s11_, _s3_, _s1_, _s3_)], type$.JSArray_ViewOtherIncomeModel), null), 1), new A.TotalYearlySupplierMobile(null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1);
       return t1;
     },
-    $signature: 51
+    $signature: 48
   };
   A.TotalTakingsViewMobile.prototype = {
     build$1(context) {
@@ -318944,7 +319078,7 @@
       else
         return t2._view_period_yearly_takings$_appBar$1$context(context);
     },
-    $signature: 18
+    $signature: 16
   };
   A.ViewYearlyTakings__appbartablet_closure.prototype = {
     call$0() {
@@ -318967,7 +319101,7 @@
       var t1 = A.Column$(A._setArrayType([A.Expanded$(A.ViewYearlTakingsMobile$(), 1), new A.TotalTakingsViewMobile(null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1);
       return t1;
     },
-    $signature: 51
+    $signature: 48
   };
   A.WeeklyTableReport.prototype = {
     build$1(context) {
@@ -318985,7 +319119,7 @@
       var _null = null;
       return A.DataRow$(A._setArrayType([A.DataCell$(A.Text$(account.name, _null, _null, _null, _null, _null, A.TextStyle$(_null, _null, B.Color_4278220117, _null, _null, _null, _null, _null, _null, _null, _null, 14, _null, _null, B.FontWeight_6_700, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null)), A.DataCell$(new A.Align(B.Alignment_1_0, _null, _null, A.Text$("\xa3" + account.total, _null, _null, _null, _null, _null, A.TextStyle$(_null, _null, B.Color_4278220117, _null, _null, _null, _null, _null, _null, _null, _null, 17, _null, _null, B.FontWeight_6_700, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), _null))], type$.JSArray_DataCell), _null);
     },
-    $signature: 1359
+    $signature: 1360
   };
   A.WeeklyReportBloc.prototype = {
     WeeklyReportBloc$2$clientRepo$user(clientRepo, user) {
@@ -319056,7 +319190,7 @@
       });
       return A._asyncStartSync($async$call$2, $async$completer);
     },
-    $signature: 1360
+    $signature: 1361
   };
   A.WeeklyReportEvent.prototype = {
     get$props() {
@@ -319113,7 +319247,7 @@
         return new A.Loading(_null);
       else {
         t1 = type$.JSArray_Widget;
-        t2 = A.Column$(A._setArrayType([A.Calendar$(_null, _null, A.DateTime_parse(this.weekStartDate), _null, new A.WeeklyReportScreen__body_closure(), true), A.Expanded$(A.SingleChildScrollView$(new A.Padding(B.EdgeInsets_8_8_8_8, A.Column$(A._setArrayType([new A.WeeklyTableReport(state.weeklyReportList, _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), _null), _null, B.DragStartBehavior_1, _null, _null, B.Axis_1), 1)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1);
+        t2 = A.Column$(A._setArrayType([A.Calendar$(_null, _null, A.DateTime_parse(this.weekStartDate), _null, _null, new A.WeeklyReportScreen__body_closure(), true), A.Expanded$(A.SingleChildScrollView$(new A.Padding(B.EdgeInsets_8_8_8_8, A.Column$(A._setArrayType([new A.WeeklyTableReport(state.weeklyReportList, _null)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), _null), _null, B.DragStartBehavior_1, _null, _null, B.Axis_1), 1)], t1), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1);
         t3 = $.$get$width() / 414;
         t4 = t3 * 8;
         t5 = A.Theme_of(context).textTheme.bodySmall;
@@ -319136,19 +319270,19 @@
       t1.add$1(0, new A.WeeklyReportList(t2.weekStartDate, t2.weekEndDate, t2.weeklyReportType));
       return t1;
     },
-    $signature: 1361
+    $signature: 1362
   };
   A.WeeklyReportScreen_build_closure0.prototype = {
     call$2(context, state) {
     },
-    $signature: 1362
+    $signature: 1363
   };
   A.WeeklyReportScreen_build_closure.prototype = {
     call$2(context, state) {
       var t1 = this.$this;
       return A.Scaffold$(t1._weekly_reports_screen$_mobilexTabletUi$1(context), B.Color_4294967295, t1._weekly_reports_screen$_body$2$context$state(0, context, state), t1._weekly_reports_screen$_bottom$0(0), null, null);
     },
-    $signature: 1363
+    $signature: 1364
   };
   A.WeeklyReportScreen__mobilexTabletUi_closure.prototype = {
     call$2(context, sizindInformation) {
@@ -319161,7 +319295,7 @@
       else
         return t2._weekly_reports_screen$_appBar$1$context(context);
     },
-    $signature: 18
+    $signature: 16
   };
   A.WeeklyReportScreen__appbartablet_closure.prototype = {
     call$0() {
@@ -319253,7 +319387,7 @@
       else
         return A.LinkedHashMap_LinkedHashMap$_literal(["required", _s22_], t2, t2);
     },
-    $signature: 13
+    $signature: 12
   };
   A.AddNewOtherIncomePopupMobile__nameTexted_closure.prototype = {
     call$0() {
@@ -319350,7 +319484,7 @@
       t9 = t16 * 70;
       return A.Center$(A.Container$(_null, A.Material$(B.Duration_200000, t2, A.Column$(A._setArrayType([t3, A.Expanded$(A.SingleChildScrollView$(A.Container$(_null, A.Column$(A._setArrayType([t7, t8, t11, t12, t13, t15, t14, t18, t17, A.Container$(_null, A.DefaultButton$(B.Color_4278298233, t16 * 46, t6.onPressed, B.EdgeInsets_0_0_0_0, 40, "Save", t16 * 193), B.Clip_0, _null, _null, _null, _null, _null, _null, new A.EdgeInsets(t9, t10, t9, t10), _null, _null, _null), A.SizedBox$(_null, A.InheritedModel_inheritFrom(context, _null, type$.MediaQuery).data.viewInsets.bottom / 2 + $.$get$width() / 414 * 30, _null)], t4), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), B.Clip_0, _null, _null, _null, _null, _null, _null, new A.EdgeInsets(t5, 0, t5, 0), _null, _null, _null), _null, B.DragStartBehavior_1, _null, _null, B.Axis_1), 1)], t4), B.CrossAxisAlignment_0, B.MainAxisAlignment_3, B.MainAxisSize_1), B.Clip_0, B.Color_4294967295, 0, _null, _null, _null, _null, _null, B.MaterialType_0), B.Clip_0, _null, new A.BoxConstraints(0, 1 / 0, 0, t1 * 500), _null, _null, _null, new A.EdgeInsets(0, t1 * 30, 0, 0), _null, _null, _null, t1 * 330), _null, _null);
     },
-    $signature: 1364
+    $signature: 1365
   };
   A.AddNewProductService_build__closure.prototype = {
     call$0() {
@@ -319370,14 +319504,14 @@
     call$1(v) {
       return v.itemFrom;
     },
-    $signature: 59
+    $signature: 58
   };
   A.AddNewProductService_build__closure2.prototype = {
     call$1(control) {
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A.AddNewProductService_build__closure4.prototype = {
     call$0() {
@@ -319389,20 +319523,20 @@
     call$1(v) {
       return v.itemFrom;
     },
-    $signature: 59
+    $signature: 58
   };
   A.AddNewProductService_build__closure5.prototype = {
     call$1(control) {
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A.AddNewProductService_build__closure8.prototype = {
     call$1(control) {
       this.$this.textController = control;
     },
-    $signature: 46
+    $signature: 47
   };
   A.AddNewProductService_build__closure7.prototype = {
     call$0() {
@@ -319414,14 +319548,14 @@
     call$1(v) {
       return v.itemFrom;
     },
-    $signature: 59
+    $signature: 58
   };
   A.AddNewProductService_build__closure10.prototype = {
     call$1(control) {
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A.AddNewProductService_build__closure9.prototype = {
     call$1(a) {
@@ -319443,13 +319577,13 @@
     call$1(control) {
       this.$this.vatController = control;
     },
-    $signature: 46
+    $signature: 47
   };
   A.AddNewProductService_build__closure11.prototype = {
     call$1(v) {
       return v.itemFrom;
     },
-    $signature: 59
+    $signature: 58
   };
   A.AddNewProductService_build__closure14.prototype = {
     call$1(a) {
@@ -319466,7 +319600,7 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 122
+    $signature: 138
   };
   A.AddNewProductService__status_closure.prototype = {
     call$1(e) {
@@ -319474,7 +319608,7 @@
         t1 = e.categoryName;
       return A.DropdownMenuItem$(A.Text$(t1 == null ? "" : t1, _null, _null, _null, _null, _null, _null, _null, _null), e, type$.CategoryModel);
     },
-    $signature: 133
+    $signature: 132
   };
   A._InputNewItem.prototype = {
     build$1(context) {
@@ -319552,14 +319686,14 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "Please select a bank"], t1, t1);
     },
-    $signature: 1367
+    $signature: 1368
   };
   A.AddNewTakingsWithBankListPopupMobile__bankDropdown_closure.prototype = {
     call$1(bank) {
       var _null = null;
       return A.DropdownMenuItem$(A.Text$(bank.bankName, _null, _null, _null, _null, _null, _null, _null, _null), bank.bankId, type$.String);
     },
-    $signature: 1368
+    $signature: 1369
   };
   A.AddNewTakingsWithBankListPopupMobile__nameTexted_closure1.prototype = {
     call$1(_) {
@@ -319574,7 +319708,7 @@
       else
         return A.LinkedHashMap_LinkedHashMap$_literal(["required", _s22_], t2, t2);
     },
-    $signature: 13
+    $signature: 12
   };
   A.AddNewTakingsWithBankListPopupMobile__nameTexted_closure.prototype = {
     call$0() {
@@ -319645,7 +319779,7 @@
         t4 = A.Theme_of(this.context).textTheme.bodySmall;
       return A.GestureDetector$(_null, new A.Padding(new A.EdgeInsets(0, t1 * 10, 0, 0), A.Container$(B.Alignment_0_0, A.Text$(t3, _null, _null, _null, _null, _null, t4 == null ? _null : t4.copyWith$2$color$fontSize(B.Color_4294967295, $.$get$width() / 414 * 16), _null, _null), B.Clip_0, _null, _null, new A.BoxDecoration(B.Color_4278298233, _null, _null, t2, _null, _null, B.BoxShape_0), _null, t1 * 45, _null, _null, _null, _null, t1 * 200), _null), B.DragStartBehavior_1, false, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, new A.ApplyPaymentOptions__applyOptions__closure(this.$this, e), _null, _null, _null, _null, _null, _null, false, B.Offset_O5r);
     },
-    $signature: 1369
+    $signature: 1370
   };
   A.ApplyPaymentOptions__applyOptions__closure.prototype = {
     call$0() {
@@ -320026,7 +320160,7 @@
       }
       return A.Dialog$(_null, _null, A.Container$(_null, new A.SfDateRangePicker(B.DateRangePickerView_2, new A.DateRangePickerHeaderStyle(t2, B.TextAlign_2, B.Color_4278298233), 50, B.Color_4278220117, 0, t6, B.Color_4278220117, B.MaterialColor_Map_JNGTf_4280391411, new A.DateRangePickerMonthViewSettings(new A.DateRangePickerViewHeaderStyle(t4), 40), new A.DateRangePickerYearCellStyle(t3), new A.DateRangePickerMonthCellStyle(t5), t10, t9, t8, new A.DateTime(t7, false), _null, _null, _null, new A.Dialogs_datePicker__closure(_this.completer, context), _null), B.Clip_1, _null, _null, new A.BoxDecoration(_null, _null, _null, t1, _null, _null, B.BoxShape_0), _null, 350, _null, _null, _null, _null, _null), B.Clip_0, _null, new A.EdgeInsets(29, 0, 29, 0), _null, _null, _null);
     },
-    $signature: 1370
+    $signature: 1371
   };
   A.Dialogs_datePicker__closure.prototype = {
     call$1(args) {
@@ -320040,123 +320174,123 @@
         t1.pop$1(null);
       }
     },
-    $signature: 1371
+    $signature: 1372
   };
   A.Dialogs_showCancelChangesDialog_closure.prototype = {
     call$1(_) {
       var _this = this;
       return A.ResponsiveBuilder$(new A.Dialogs_showCancelChangesDialog__closure(_this.text, _this.title, _this.form, _this.onPressed, _this.onPressedKeepChanges));
     },
-    $signature: 32
+    $signature: 31
   };
   A.Dialogs_showCancelChangesDialog__closure.prototype = {
     call$2(context, sizingInformation) {
       var _this = this;
       return new A.CancelChangesTypes(_this.text, _this.title, _this.onPressed, _this.onPressedKeepChanges, null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.Dialogs_showDeleteDialog_closure.prototype = {
     call$1(_) {
       var _this = this;
       return A.ResponsiveBuilder$(new A.Dialogs_showDeleteDialog__closure(_this.text, _this.title, _this.form, _this.onPressed, _this.onPressedDelete));
     },
-    $signature: 32
+    $signature: 31
   };
   A.Dialogs_showDeleteDialog__closure.prototype = {
     call$2(context, sizingInformation) {
       return new A.DeleteTypes(this.text, this.title, this.onPressed, null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.Dialogs_showAlertDialog_closure.prototype = {
     call$1(index) {
       return new A.CustomDialog(this.image, null);
     },
-    $signature: 1372
+    $signature: 1373
   };
   A.Dialogs_showPickImageDialog_closure.prototype = {
     call$1(index) {
       return new A.CustomShowImageDialog(this.image, this.onDeleteAttachmentPress, null);
     },
-    $signature: 1373
+    $signature: 1374
   };
   A.Dialogs_showMessage_closure.prototype = {
     call$1(_) {
       return A.ResponsiveBuilder$(new A.Dialogs_showMessage__closure(this.text));
     },
-    $signature: 32
+    $signature: 31
   };
   A.Dialogs_showMessage__closure.prototype = {
     call$2(context, sizingInformation) {
       return new A.MessageInvoiceMobile(this.text, null);
     },
-    $signature: 22
+    $signature: 25
   };
   A.Dialogs_showAddNewProduct_closure.prototype = {
     call$1(_) {
       var _this = this;
       return A.ResponsiveBuilder$(new A.Dialogs_showAddNewProduct__closure(_this.form, _this.itemBloc, _this.onPressed, _this.onSelected));
     },
-    $signature: 32
+    $signature: 31
   };
   A.Dialogs_showAddNewProduct__closure.prototype = {
     call$2(context, sizingInformation) {
       return new A.NewItem(this.itemBloc, this.onPressed, this.form, null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.Dialogs_showAddNewProductService_closure.prototype = {
     call$1(_) {
       var _this = this;
       return A.ResponsiveBuilder$(new A.Dialogs_showAddNewProductService__closure(_this.form, _this.productBloc, _this.onPressed, _this.onSelected, _this.categoryValues));
     },
-    $signature: 32
+    $signature: 31
   };
   A.Dialogs_showAddNewProductService__closure.prototype = {
     call$2(context, sizingInformation) {
       return new A.AddNewProductService(this.productBloc, this.onPressed, this.form, null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.Dialogs_showSaveChange_closure.prototype = {
     call$1(_) {
       return A.ResponsiveBuilder$(new A.Dialogs_showSaveChange__closure());
     },
-    $signature: 32
+    $signature: 31
   };
   A.Dialogs_showSaveChange__closure.prototype = {
     call$2(context, sizingInformation) {
       return new A.SaveChangeMobile(null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.Dialogs_showSignature_closure.prototype = {
     call$1(_) {
       return A.SignatureDialog$();
     },
-    $signature: 1374
+    $signature: 1375
   };
   A.Dialogs_showAddNewTakingsWithBanks_closure.prototype = {
     call$1(_) {
       var _this = this;
       return A.ResponsiveBuilder$(new A.Dialogs_showAddNewTakingsWithBanks__closure(_this.title, _this.labelText, _this.form, _this.maxLength, _this.onPressed, _this.onTap, _this.validationMessages, _this.disable, _this.saveText, _this.bankList));
     },
-    $signature: 32
+    $signature: 31
   };
   A.Dialogs_showAddNewTakingsWithBanks__closure.prototype = {
     call$2(context, sizingInformation) {
       var _this = this;
       return new A.AddNewTakingsWithBankListPopupMobile(_this.title, _this.maxLength, _this.labelText, _this.saveText, _this.onPressed, _this.form, _this.disable, _this.bankList, null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.Dialogs_showAddOrEditPopup_closure.prototype = {
     call$1(_) {
       var _this = this;
       return A.ResponsiveBuilder$(new A.Dialogs_showAddOrEditPopup__closure(_this.title, _this.labelText, _this.form, _this.maxLength, _this.onPressed, _this.onTap, _this.validationMessages, _this.disable, _this.saveText));
     },
-    $signature: 32
+    $signature: 31
   };
   A.Dialogs_showAddOrEditPopup__closure.prototype = {
     call$2(context, sizingInformation) {
@@ -320165,79 +320299,79 @@
       t1.toString;
       return new A.AddNewOtherIncomePopupMobile(_this.title, _this.maxLength, _this.labelText, _this.saveText, _this.onPressed, t1, _this.disable, null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.Dialogs_showSelectOption_closure.prototype = {
     call$1(_) {
       return A.ResponsiveBuilder$(new A.Dialogs_showSelectOption__closure(this.onSavePressed));
     },
-    $signature: 32
+    $signature: 31
   };
   A.Dialogs_showSelectOption__closure.prototype = {
     call$2(context, sizingInformation) {
       return new A.SelectOptionPopUpMobile(this.onSavePressed, null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.Dialogs_showSelectOptions_closure.prototype = {
     call$1(_) {
       return A.ResponsiveBuilder$(new A.Dialogs_showSelectOptions__closure(this.onTap));
     },
-    $signature: 32
+    $signature: 31
   };
   A.Dialogs_showSelectOptions__closure.prototype = {
     call$2(context, sizingInformation) {
       return new A.SelectOptionsPopUp(this.onTap, null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.Dialogs_showSelectApplyPayment_closure.prototype = {
     call$1(_) {
       return A.ResponsiveBuilder$(new A.Dialogs_showSelectApplyPayment__closure(this.onTap));
     },
-    $signature: 32
+    $signature: 31
   };
   A.Dialogs_showSelectApplyPayment__closure.prototype = {
     call$2(context, sizingInformation) {
       return new A.ApplyPaymentOptions(this.onTap, null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.Dialogs_showEditProductService_closure.prototype = {
     call$1(_) {
       return A.ResponsiveBuilder$(new A.Dialogs_showEditProductService__closure(this.item, this.form, this.productBloc));
     },
-    $signature: 32
+    $signature: 31
   };
   A.Dialogs_showEditProductService__closure.prototype = {
     call$2(context, sizingInformation) {
       return new A.EditProductServiceMobile(this.form, this.productBloc, this.item, null);
     },
-    $signature: 18
+    $signature: 16
   };
   A.Dialogs_showEditItemDetail_closure.prototype = {
     call$1(_) {
       return A.ResponsiveBuilder$(new A.Dialogs_showEditItemDetail__closure(this.form, this.item, this.itemBloc));
     },
-    $signature: 32
+    $signature: 31
   };
   A.Dialogs_showEditItemDetail__closure.prototype = {
     call$2(context, sizingInformation) {
       return new A.EditItemDetails(this.item, this.form, this.itemBloc, null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.Dialogs_showEditInvoiceItemDetail_closure.prototype = {
     call$1(_) {
       return A.ResponsiveBuilder$(new A.Dialogs_showEditInvoiceItemDetail__closure(this.form, this.item, this.itemBloc));
     },
-    $signature: 32
+    $signature: 31
   };
   A.Dialogs_showEditInvoiceItemDetail__closure.prototype = {
     call$2(context, sizingInformation) {
       return new A.EditInvoiceItemDetails(this.item, this.form, this.itemBloc, null);
     },
-    $signature: 4
+    $signature: 3
   };
   A.EditItemDetails.prototype = {
     build$1(context) {
@@ -320328,7 +320462,7 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 122
+    $signature: 138
   };
   A.EditItemDetails__status_closure.prototype = {
     call$1(e) {
@@ -320336,7 +320470,7 @@
         t1 = e.categoryName;
       return A.DropdownMenuItem$(A.Text$(t1 == null ? "" : t1, _null, _null, _null, _null, _null, _null, _null, _null), e, type$.CategoryModel);
     },
-    $signature: 133
+    $signature: 132
   };
   A.EditItemDetails__saveButton_closure.prototype = {
     call$0() {
@@ -320431,7 +320565,7 @@
       t11 = t6.item;
       return A.Scaffold$(_null, B.Color_0, A.Center$(A.Container$(_null, A.Material$(B.Duration_200000, _null, A.Column$(A._setArrayType([t2, A.Expanded$(A.SingleChildScrollView$(A.Container$(_null, A.Column$(A._setArrayType([t4, t7, A.SizedBox$(_null, t8 * 10, _null), A.Container$(_null, A._InputEditItem$(t10, "item_code", false, B.TextInputType_1_null_null, t11, true, new A.EditProductServiceMobile_build__closure0(t6), false, "Code"), B.Clip_0, _null, _null, _null, _null, _null, _null, new A.EdgeInsets(0, 0, t9, 0), _null, _null, _null), A.Container$(_null, A._InputEditItem$(t10, "item_description", false, B.TextInputType_1_null_null, t11, true, new A.EditProductServiceMobile_build__closure1(t6), false, "Description"), B.Clip_0, _null, _null, _null, _null, _null, _null, new A.EdgeInsets(0, 0, t9, 0), _null, _null, _null), A.Container$(_null, A._InputEditItem$(t10, "item_price", false, new A.TextInputType(2, false, true), t11, true, new A.EditProductServiceMobile_build__closure2(t6), false, "Price"), B.Clip_0, _null, _null, _null, _null, _null, _null, new A.EdgeInsets(0, 0, t9, 0), _null, _null, _null), A.Container$(_null, A._InputEditItem$(t10, "item_vat", false, new A.TextInputType(2, false, true), t11, true, new A.EditProductServiceMobile_build__closure3(), false, "VAT"), B.Clip_0, _null, _null, _null, _null, _null, _null, new A.EdgeInsets(0, 0, t9, 0), _null, _null, _null)], t3), B.CrossAxisAlignment_0, B.MainAxisAlignment_0, B.MainAxisSize_1), B.Clip_0, _null, _null, _null, _null, _null, _null, new A.EdgeInsets(t5, 0, t5, 0), _null, _null, _null), _null, B.DragStartBehavior_1, _null, _null, B.Axis_1), 1), t6._saveButton$1$context(context)], t3), B.CrossAxisAlignment_0, B.MainAxisAlignment_0, B.MainAxisSize_1), B.Clip_0, B.Color_4294967295, 0, _null, _null, _null, _null, _null, B.MaterialType_0), B.Clip_0, B.Color_4294967295, new A.BoxConstraints(0, 1 / 0, 0, t1 * 450), _null, _null, _null, new A.EdgeInsets(0, t1 * 30, 0, 0), _null, _null, _null, t1 * 327), _null, _null), _null, _null, _null);
     },
-    $signature: 372
+    $signature: 373
   };
   A.EditProductServiceMobile_build__closure.prototype = {
     call$0() {
@@ -320469,7 +320603,7 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 122
+    $signature: 138
   };
   A.EditProductServiceMobile__status_closure.prototype = {
     call$1(e) {
@@ -320477,7 +320611,7 @@
         t1 = e.categoryName;
       return A.DropdownMenuItem$(A.Text$(t1 == null ? "" : t1, _null, _null, _null, _null, _null, _null, _null, _null), e, type$.CategoryModel);
     },
-    $signature: 133
+    $signature: 132
   };
   A.EditProductServiceMobile__saveButton_closure.prototype = {
     call$0() {
@@ -320572,7 +320706,7 @@
       var t1 = type$.String;
       return new A.InputEmailMobile(A.FormGroup$(A.LinkedHashMap_LinkedHashMap$_literal(["email", A.FormControl$(false, false, A._setArrayType([new A.RequiredValidator().get$validate()], type$.JSArray_of_nullable_Map_String_dynamic_Function_AbstractControl_dynamic), null, t1)], t1, type$.AbstractControl_dynamic), B.List_empty17), null);
     },
-    $signature: 1375
+    $signature: 1376
   };
   A._MessageInvoiceMobileState_build_closure1.prototype = {
     call$0() {
@@ -320692,7 +320826,7 @@
       t9 = t16 * 70;
       return A.Center$(A.Container$(_null, A.Material$(B.Duration_200000, t2, A.Column$(A._setArrayType([t3, A.Expanded$(A.SingleChildScrollView$(A.Container$(_null, A.Column$(A._setArrayType([t7, t8, t11, t12, t13, t15, t14, t18, t17, A.Container$(_null, A.DefaultButton$(B.Color_4278298233, t16 * 46, t6.onPressed, B.EdgeInsets_0_0_0_0, 40, "Save", t16 * 193), B.Clip_0, _null, _null, _null, _null, _null, _null, new A.EdgeInsets(t9, t10, t9, t10), _null, _null, _null), A.SizedBox$(_null, A.InheritedModel_inheritFrom(context, _null, type$.MediaQuery).data.viewInsets.bottom / 2 + $.$get$width() / 414 * 30, _null)], t4), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), B.Clip_0, _null, _null, _null, _null, _null, _null, new A.EdgeInsets(t5, 0, t5, 0), _null, _null, _null), _null, B.DragStartBehavior_1, _null, _null, B.Axis_1), 1)], t4), B.CrossAxisAlignment_0, B.MainAxisAlignment_3, B.MainAxisSize_1), B.Clip_0, B.Color_4294967295, 0, _null, _null, _null, _null, _null, B.MaterialType_0), B.Clip_0, _null, new A.BoxConstraints(0, 1 / 0, 0, t1 * 500), _null, _null, _null, new A.EdgeInsets(0, t1 * 30, 0, 0), _null, _null, _null, t1 * 330), _null, _null);
     },
-    $signature: 1376
+    $signature: 1377
   };
   A.NewItem_build__closure.prototype = {
     call$0() {
@@ -320712,14 +320846,14 @@
     call$1(v) {
       return v.itemFrom;
     },
-    $signature: 78
+    $signature: 74
   };
   A.NewItem_build__closure2.prototype = {
     call$1(control) {
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A.NewItem_build__closure4.prototype = {
     call$0() {
@@ -320731,20 +320865,20 @@
     call$1(v) {
       return v.itemFrom;
     },
-    $signature: 78
+    $signature: 74
   };
   A.NewItem_build__closure5.prototype = {
     call$1(control) {
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A.NewItem_build__closure8.prototype = {
     call$1(control) {
       this.$this.textController = control;
     },
-    $signature: 46
+    $signature: 47
   };
   A.NewItem_build__closure7.prototype = {
     call$0() {
@@ -320756,14 +320890,14 @@
     call$1(v) {
       return v.itemFrom;
     },
-    $signature: 78
+    $signature: 74
   };
   A.NewItem_build__closure10.prototype = {
     call$1(control) {
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 13
+    $signature: 12
   };
   A.NewItem_build__closure9.prototype = {
     call$1(a) {
@@ -320785,13 +320919,13 @@
     call$1(control) {
       this.$this.vatController = control;
     },
-    $signature: 46
+    $signature: 47
   };
   A.NewItem_build__closure11.prototype = {
     call$1(v) {
       return v.itemFrom;
     },
-    $signature: 78
+    $signature: 74
   };
   A.NewItem_build__closure14.prototype = {
     call$1(a) {
@@ -320808,7 +320942,7 @@
       var t1 = type$.String;
       return A.LinkedHashMap_LinkedHashMap$_literal(["required", "This field is required"], t1, t1);
     },
-    $signature: 122
+    $signature: 138
   };
   A.NewItem__status_closure.prototype = {
     call$1(e) {
@@ -320816,7 +320950,7 @@
         t1 = e.categoryName;
       return A.DropdownMenuItem$(A.Text$(t1 == null ? "" : t1, _null, _null, _null, _null, _null, _null, _null, _null), e, type$.CategoryModel);
     },
-    $signature: 133
+    $signature: 132
   };
   A._InputNewItem0.prototype = {
     build$1(context) {
@@ -320856,7 +320990,7 @@
         t1 = A.Color$fromARGB(B.JSNumber_methods.round$0(127.5), 0, 0, 0);
       return new A.SizedBox(1 / 0, 1 / 0, A.Container$(_null, A.Center$(A.Material$(B.Duration_200000, _null, new A.Loading(_null), B.Clip_0, B.Color_0, 0, _null, _null, _null, _null, _null, B.MaterialType_0), _null, _null), B.Clip_0, t1, _null, _null, _null, _null, _null, _null, _null, _null, _null), _null);
     },
-    $signature: 109
+    $signature: 105
   };
   A.SelectOptionPopUpMobile.prototype = {
     build$1(context) {
@@ -321172,13 +321306,20 @@
       return new A.DatePicker(new A._CalendarState__datePicker_closure(this), null);
     },
     _forwardIcon$0() {
-      var canMoveForward, t2, _null = null,
+      var today, t2, t3, canMoveForward, _null = null,
         now = new A.DateTime(Date.now(), false),
         t1 = A.Primitives_valueFromDecomposedDate(A.Primitives_getYear(now), A.Primitives_getMonth(now), A.Primitives_getDay(now), 0, 0, 0, 0, false);
       if (!A._isInt(t1))
         A.throwExpression(A.argumentErrorValue(t1));
-      canMoveForward = this.selectedDate._value < t1;
-      t1 = canMoveForward ? this._widget.forwardButton : new A._CalendarState__forwardIcon_closure(this);
+      today = new A.DateTime(t1, false);
+      t1 = this.selectedDate;
+      t1.toString;
+      t2 = this._widget;
+      t3 = t2.maxDate;
+      if (t3 == null)
+        t3 = today;
+      canMoveForward = t1._value < t3._value;
+      t1 = canMoveForward ? t2.forwardButton : new A._CalendarState__forwardIcon_closure(this);
       t2 = canMoveForward ? B.Color_4278298233 : B.Color_4287335307;
       return A.IconButton$(_null, A.Icon$(B.IconData_59294_MaterialIcons_null_true, t2, _null, $.$get$width() / 414 * 50), _null, t1, new A.EdgeInsets(0, 0, 0, 0), _null, _null);
     },
@@ -321235,7 +321376,7 @@
         t1 = t1._framework$_element;
         t1.toString;
         t1 = A.Theme_of(t1).textTheme.bodySmall;
-        t2.showSnackBar$1(A.SnackBar$(_null, _null, _null, B.Color_4289069313, _null, B.Clip_1, _null, A.Text$("The selected date cannot be a future date", _null, _null, _null, _null, _null, t1 == null ? _null : t1.copyWith$2$color$fontSize(B.Color_4294967295, $.$get$width() / 414 * 20), _null, _null), _null, B.Duration_4000000, _null, _null, _null, _null, _null, _null, _null, _null, _null));
+        t2.showSnackBar$1(A.SnackBar$(_null, _null, _null, B.Color_4289069313, _null, B.Clip_1, _null, A.Text$("The selected date cannot be at end of Accountant years", _null, _null, _null, _null, _null, t1 == null ? _null : t1.copyWith$2$color$fontSize(B.Color_4294967295, $.$get$width() / 414 * 20), _null, _null), _null, B.Duration_4000000, _null, _null, _null, _null, _null, _null, _null, _null, _null));
       }
     },
     $signature: 0
@@ -321249,14 +321390,14 @@
   };
   A._CalendarTabletState.prototype = {
     build$1(context) {
-      var t7, t8, _this = this, _null = null,
+      var t6, t7, _this = this, _null = null,
         t1 = $.$get$width(),
         t2 = A._setArrayType([new A.BoxShadow(0, B.BlurStyle_0, A.Color$fromARGB(B.JSNumber_methods.round$0(127.5), 139, 139, 139), new A.Offset(0, 0.75), 3)], type$.JSArray_BoxShadow),
         t3 = _this._calendar_tablet$_datePicker$0(),
         t4 = $.$get$width() / 414,
-        t5 = t4 * 30,
-        t6 = _this._widget.backButton;
-      t5 = A.IconButton$(_null, A.Icon$(B.IconData_59292_MaterialIcons_null_true, B.Color_4278298233, _null, t4 * 40), _null, t6, new A.EdgeInsets(0, 0, t5, t5), _null, _null);
+        t5 = t4 * 30;
+      _this._widget.toString;
+      t5 = A.IconButton$(_null, A.Icon$(B.IconData_59292_MaterialIcons_null_true, B.Color_4278298233, _null, t4 * 40), _null, _null, new A.EdgeInsets(0, 0, t5, t5), _null, _null);
       t4 = _this.selectedDate;
       t6 = type$.MaterialLocalizations;
       t7 = _this._framework$_element;
@@ -321280,8 +321421,8 @@
       t4 = A.Expanded$(A.Container$(B.Alignment_0_0, A.Text$(t4, _null, _null, _null, _null, _null, t6 == null ? _null : t6.copyWith$3$color$fontSize$fontWeight(B.Color_4278298233, $.$get$width() / 414 * 16, B.FontWeight_5_600), B.TextAlign_2, _null), B.Clip_0, _null, _null, new A.BoxDecoration(_null, _null, new A.Border(B.BorderSide_8xm, new A.BorderSide(B.Color_4287335307, 1, B.BorderStyle_1, -1), B.BorderSide_8xm, new A.BorderSide(B.Color_4287335307, 1, B.BorderStyle_1, -1)), _null, _null, _null, B.BoxShape_0), _null, _null, _null, _null, _null, _null, _null), 1);
       t6 = $.$get$width() / 414;
       t7 = t6 * 40;
-      t8 = _this._widget.forwardButton;
-      return A.Container$(_null, A.Row$(A._setArrayType([t3, t5, t4, A.IconButton$(_null, A.Icon$(B.IconData_59294_MaterialIcons_null_true, B.Color_4278298233, _null, t7), _null, t8, new A.EdgeInsets(0, 0, t6 * 25, t7), _null, _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_3, B.MainAxisSize_1, _null), B.Clip_0, _null, _null, new A.BoxDecoration(B.Color_4294967295, _null, _null, _null, t2, _null, B.BoxShape_0), _null, t1 / 414 * 40, _null, _null, _null, _null, _null);
+      _this._widget.toString;
+      return A.Container$(_null, A.Row$(A._setArrayType([t3, t5, t4, A.IconButton$(_null, A.Icon$(B.IconData_59294_MaterialIcons_null_true, B.Color_4278298233, _null, t7), _null, _null, new A.EdgeInsets(0, 0, t6 * 25, t7), _null, _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_3, B.MainAxisSize_1, _null), B.Clip_0, _null, _null, new A.BoxDecoration(B.Color_4294967295, _null, _null, _null, t2, _null, B.BoxShape_0), _null, t1 / 414 * 40, _null, _null, _null, _null, _null);
     },
     _calendar_tablet$_datePicker$0() {
       var _null = null;
@@ -321295,7 +321436,7 @@
     call$0() {
       var $async$goto = 0,
         $async$completer = A._makeAsyncAwaitCompleter(type$.void),
-        $async$self = this, t3, t1, t2;
+        $async$self = this, t1, t2, $async$temp1;
       var $async$call$0 = A._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
         if ($async$errorCode === 1)
           return A._asyncRethrow($async$result, $async$completer);
@@ -321306,17 +321447,13 @@
               t1 = $async$self.$this;
               t2 = t1._framework$_element;
               t2.toString;
+              $async$temp1 = t1;
               $async$goto = 2;
               return A._asyncAwait(t1.datePicker$2$initialDate(t2, t1.selectedDate), $async$call$0);
             case 2:
               // returning from await.
-              t2 = $async$result;
-              t1.selectedDate = t2;
-              t3 = t1._widget.onDatePicked;
-              if (t3 != null) {
-                t2.toString;
-                t3.call$1(t2);
-              }
+              $async$temp1.selectedDate = $async$result;
+              t1._widget.toString;
               t1.setState$1(new A._CalendarTabletState__datePicker__closure());
               // implicit return
               return A._asyncReturn(null, $async$completer);
@@ -321385,7 +321522,7 @@
         t4 = A.Theme_of(context).textTheme.bodySmall;
       return A.Container$(_null, A.Column$(A._setArrayType([t3, A.Text$("Failed to Load", _null, _null, _null, _null, _null, t4 == null ? _null : t4.copyWith$2$fontSize$fontWeight(18, B.FontWeight_3_400), _null, _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1), B.Clip_0, B.Color_4294967295, _null, _null, _null, t2 * 400, _null, _null, _null, _null, t2 * t1);
     },
-    $signature: 382
+    $signature: 383
   };
   A.CustomShowImageDialog_build_closure1.prototype = {
     call$0() {
@@ -321546,7 +321683,7 @@
         t1 = A.ThemeData_ThemeData(B.Brightness_1, _null).copyWith$3$buttonTheme$colorScheme$primaryColor(A.ButtonThemeData$(false, _null, _null, _null, _null, 36, _null, _null, B.ButtonBarLayoutBehavior_1, _null, 88, _null, _null, _null, B.ButtonTextTheme_2), new A.ColorScheme(B.Brightness_1, B.Color_4278298233, B.Color_4294967295, _null, _null, B.Color_4278442694, B.Color_4278190080, _null, _null, _null, _null, _null, _null, B.Color_4289724448, B.Color_4294967295, _null, _null, B.Color_4294967295, B.Color_4278190080, B.Color_4294967295, B.Color_4278190080, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null), B.Color_4278298233);
       return new A.Theme(t1, child, _null);
     },
-    $signature: 1378
+    $signature: 1379
   };
   A.InputField.prototype = {
     createState$0() {
@@ -321618,7 +321755,7 @@
       var t1 = this.$this._inputFiledMobile$0();
       return t1;
     },
-    $signature: 18
+    $signature: 16
   };
   A.InputFieldState__inputFiledMobile_closure.prototype = {
     call$1(context) {
@@ -321677,7 +321814,7 @@
       t30 = t30 == null ? _null : t30.copyWith$3$color$fontSize$fontWeight(B.Color_4289069313, $.$get$width() / 414 * 13, B.FontWeight_5_600);
       return A.ReactiveTextField$(t16, new A.Color(4283979864), _null, A.InputDecoration$(_null, B._NoInputBorder_uXA, _null, new A.EdgeInsets(t26 / 414 * t24, 0, 0, 0), _null, _null, "", _null, true, _null, _null, _null, _null, t30, _null, _null, true, _null, t1, _null, _null, _null, _null, _null, _null, _null, _null, _null, t27, t25, _null, _null, _null, _null, _null, true, _null, t29, t28, _null, _null, _null, _null, _null, _null, _null, _null, t20, _null, new A.BoxConstraints(0, 1 / 0, t22, t22), t23, _null), t12, t10, t6, t3, t14, t5, B.MaxLengthEnforcement_1, t2, t11, t19, "*", t4, t8, t17, t13, true, t18, t15, t7, _null, t9, t21, type$.dynamic);
     },
-    $signature: 1379
+    $signature: 1380
   };
   A.InputFieldState__inputFiledMobile__closure.prototype = {
     call$0() {
@@ -321907,7 +322044,7 @@
       var t1 = this.$this._login_field$_inputFiledMobile$0();
       return t1;
     },
-    $signature: 18
+    $signature: 16
   };
   A.LoginFieldsState_iosDoneButton_closure.prototype = {
     call$2(context, snapshot) {
@@ -321915,7 +322052,7 @@
         t2 = t1.text;
       return new A._IosDoneButton(snapshot.data === true, t1.onPressed, t2, null);
     },
-    $signature: 1380
+    $signature: 1381
   };
   A.LoginFieldsState_iosDoneButton_closure0.prototype = {
     call$0() {
@@ -321939,7 +322076,7 @@
       }
       return new A._IosDoneButton(enabled, this.$this._widget.nextButtonOnPressed, "Next", null);
     },
-    $signature: 1381
+    $signature: 1382
   };
   A.LoginFieldsState_androidKeyboard_closure.prototype = {
     call$2(context, snapshot) {
@@ -321948,7 +322085,7 @@
         t3 = t2.text;
       return t1.androidKeyboardButton$3$enabled$onPressed$title(snapshot.data === true, t2.onPressed, t3);
     },
-    $signature: 1382
+    $signature: 1383
   };
   A.LoginFieldsState_androidKeyboard_closure0.prototype = {
     call$0() {
@@ -321974,7 +322111,7 @@
       t2 = t1._widget.nextButtonOnPressed;
       return t1.androidKeyboardButton$3$enabled$onPressed$title(enabled, t2, "Next");
     },
-    $signature: 1383
+    $signature: 1384
   };
   A.LoginFieldsState__inputFiledMobile_closure2.prototype = {
     call$0() {
@@ -322021,7 +322158,7 @@
       t2 = $.$get$Platform_isIOS() ? t2.iosDoneButton$0() : t2.androidKeyboard$0();
       return A.Positioned$(t1.viewInsets.bottom, t2, _null, _null, 0, 0, _null, _null);
     },
-    $signature: 1384
+    $signature: 1385
   };
   A._IosDoneButton.prototype = {
     build$1(context) {
@@ -322135,19 +322272,19 @@
         isShownButton = t1.fromOtherIncome ? A.SelectContext_select(context, new A.Search_build__closure0(), type$.EditOtherIncomeBloc, type$.nullable_bool) : null;
       return t1._mobile$2$context$isShown(context, isShownButton === true);
     },
-    $signature: 18
+    $signature: 16
   };
   A.Search_build__closure.prototype = {
     call$1(v) {
       return v._bloc$_state.isShownAll;
     },
-    $signature: 1385
+    $signature: 1386
   };
   A.Search_build__closure0.prototype = {
     call$1(v) {
       return v._bloc$_state.isShownAll;
     },
-    $signature: 1386
+    $signature: 1387
   };
   A.Search__mobile_closure.prototype = {
     call$0() {
@@ -322226,7 +322363,7 @@
         t4 = A.Theme_of(context).textTheme.bodySmall;
       return A.Container$(_null, A.Column$(A._setArrayType([t3, A.Text$("Failed to Load", _null, _null, _null, _null, _null, t4 == null ? _null : t4.copyWith$2$fontSize$fontWeight(18, B.FontWeight_3_400), _null, _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1), B.Clip_0, B.Color_4294967295, _null, _null, _null, t2 * 400, _null, _null, _null, _null, t2 * t1);
     },
-    $signature: 382
+    $signature: 383
   };
   A.CustomDialog_build_closure1.prototype = {
     call$0() {
@@ -322355,19 +322492,19 @@
       t1.add$1(0, new A.LoginAuto());
       return t1;
     },
-    $signature: 1387
+    $signature: 1388
   };
   A.Xpressobooks_build_closure0.prototype = {
     call$1(context) {
       return new A.DateProvider($.$get$ChangeNotifier__emptyListeners());
     },
-    $signature: 1388
+    $signature: 1389
   };
   A.Xpressobooks_build_closure1.prototype = {
     call$1(context) {
       return $.$get$injector().call$1$0(type$.Login);
     },
-    $signature: 1389
+    $signature: 1390
   };
   A.Xpressobooks_build_closure2.prototype = {
     call$2(context, widget) {
@@ -322376,7 +322513,7 @@
       widget.toString;
       return A.MediaQuery$(A.Center$(A.Container$(_null, widget, B.Clip_0, _null, new A.BoxConstraints(0, 500, 0, 1 / 0), _null, _null, _null, _null, _null, _null, _null, _null), _null, _null), t1, _null);
     },
-    $signature: 231
+    $signature: 232
   };
   A.main_closure0.prototype = {
     call$0() {
@@ -323134,36 +323271,36 @@
       _instance = hunkHelpers.installInstanceTearOff,
       _instance_0_i = hunkHelpers._instance_0i,
       _instance_2_i = hunkHelpers._instance_2i;
-    _static_2(A, "_engine__canvasKitWasmModuleUrl$closure", "canvasKitWasmModuleUrl", 1391);
+    _static_2(A, "_engine__canvasKitWasmModuleUrl$closure", "canvasKitWasmModuleUrl", 1392);
     _static_1(A, "_engine_BitmapCanvas__onEvictElement$closure", "BitmapCanvas__onEvictElement", 7);
     _static(A, "_engine___defaultFactory$closure", 1, function() {
       return {params: null};
     }, ["call$2$params", "call$1"], ["_defaultFactory", function(viewId) {
       return A._defaultFactory(viewId, null);
-    }], 1392, 0);
-    _static_1(A, "_engine___noopCallback$closure", "_noopCallback", 53);
+    }], 1393, 0);
+    _static_1(A, "_engine___noopCallback$closure", "_noopCallback", 54);
     _static_1(A, "_engine___emptyCallback$closure", "_emptyCallback", 6);
     _instance_0_u(A.AlarmClock.prototype, "get$_timerDidFire", "_timerDidFire$0", 0);
-    _instance_1_u(A.CkCanvas.prototype, "get$drawPicture", "drawPicture$1", 571);
+    _instance_1_u(A.CkCanvas.prototype, "get$drawPicture", "drawPicture$1", 569);
     var _;
-    _instance_1_u(_ = A.HtmlViewEmbedder.prototype, "get$_releaseOverlay", "_releaseOverlay$1", 19);
-    _instance_1_u(_, "get$_initializeOverlay", "_initializeOverlay$1", 19);
-    _instance_1_u(A.CkNWayCanvas.prototype, "get$addCanvas", "addCanvas$1", 483);
-    _instance_1_u(A.RenderCanvasFactory.prototype, "get$_removeFromDom", "_removeFromDom$1", 509);
-    _instance_1_u(_ = A.CanvasKitRenderer.prototype, "get$_onViewCreated", "_onViewCreated$1", 19);
-    _instance_1_u(_, "get$_onViewDisposed", "_onViewDisposed$1", 19);
+    _instance_1_u(_ = A.HtmlViewEmbedder.prototype, "get$_releaseOverlay", "_releaseOverlay$1", 20);
+    _instance_1_u(_, "get$_initializeOverlay", "_initializeOverlay$1", 20);
+    _instance_1_u(A.CkNWayCanvas.prototype, "get$addCanvas", "addCanvas$1", 481);
+    _instance_1_u(A.RenderCanvasFactory.prototype, "get$_removeFromDom", "_removeFromDom$1", 504);
+    _instance_1_u(_ = A.CanvasKitRenderer.prototype, "get$_onViewCreated", "_onViewCreated$1", 20);
+    _instance_1_u(_, "get$_onViewDisposed", "_onViewDisposed$1", 20);
     _instance_1_u(_ = A.Surface.prototype, "get$_contextRestoredListener", "_contextRestoredListener$1", 7);
     _instance_1_u(_, "get$_contextLostListener", "_contextLostListener$1", 7);
-    _instance_1_i(_ = A.FallbackFontDownloadQueue.prototype, "get$add", "add$1", 699);
+    _instance_1_i(_ = A.FallbackFontDownloadQueue.prototype, "get$add", "add$1", 698);
     _instance_0_u(_, "get$startDownloads", "startDownloads$0", 2);
-    _instance_1_u(A.KeyboardBinding.prototype, "get$_onKeyData", "_onKeyData$1", 172);
+    _instance_1_u(A.KeyboardBinding.prototype, "get$_onKeyData", "_onKeyData$1", 170);
     _instance_1_i(A.MultiEntriesBrowserHistory.prototype, "get$onPopState", "onPopState$1", 21);
     _instance_1_i(A.SingleEntryBrowserHistory.prototype, "get$onPopState", "onPopState$1", 21);
     _instance_1_u(A.HighContrastSupport.prototype, "get$_onHighContrastChange", "_onHighContrastChange$1", 7);
     _instance_0_u(_ = A.EnginePlatformDispatcher.prototype, "get$dispose", "dispose$0", 0);
     _instance_1_u(_, "get$_updateHighContrast", "_updateHighContrast$1", 10);
-    _instance_1_u(A.PlatformViewManager.prototype, "get$clearPlatformView", "clearPlatformView$1", 19);
-    _instance_2_u(_ = A.ClickDebouncer.prototype, "get$onPointerData", "onPointerData$2", 552);
+    _instance_1_u(A.PlatformViewManager.prototype, "get$clearPlatformView", "clearPlatformView$1", 20);
+    _instance_2_u(_ = A.ClickDebouncer.prototype, "get$onPointerData", "onPointerData$2", 551);
     _instance_0_u(_, "get$_onTimerExpired", "_onTimerExpired$0", 0);
     _instance_1_u(A.TextLayoutService.prototype, "get$_positionLineFragments", "_positionLineFragments$1", 751);
     _instance_1_u(A.Spanometer.prototype, "get$measureFragment", "measureFragment$1", 756);
@@ -323180,96 +323317,96 @@
     _instance_0_u(_ = A.EngineFlutterView.prototype, "get$dispose", "dispose$0", 0);
     _instance_1_u(_, "get$_didResize", "_didResize$1", 977);
     _instance_0_u(A.EngineFlutterWindow.prototype, "get$dispose", "dispose$0", 0);
-    _static_2(J, "_interceptors_JSArray__compareAny$closure", "JSArray__compareAny", 56);
-    _instance_1_i(J.JSArray.prototype, "get$remove", "remove$1", 54);
-    _instance_1_i(J.JSString.prototype, "get$endsWith", "endsWith$1", 41);
+    _static_2(J, "_interceptors_JSArray__compareAny$closure", "JSArray__compareAny", 60);
+    _instance_1_i(J.JSArray.prototype, "get$remove", "remove$1", 53);
+    _instance_1_i(J.JSString.prototype, "get$endsWith", "endsWith$1", 42);
     _instance_1_u(A.CastStreamSubscription.prototype, "get$__internal$_onData", "__internal$_onData$1", 21);
-    _instance_1_i(A._CastIterableBase.prototype, "get$contains", "contains$1", 54);
-    _static_0(A, "_js_helper_Primitives_dateNow$closure", "Primitives_dateNow", 115);
-    _instance_1_i(A.ConstantStringSet.prototype, "get$contains", "contains$1", 54);
-    _instance_1_i(A.GeneralConstantSet.prototype, "get$contains", "contains$1", 54);
+    _instance_1_i(A._CastIterableBase.prototype, "get$contains", "contains$1", 53);
+    _static_0(A, "_js_helper_Primitives_dateNow$closure", "Primitives_dateNow", 108);
+    _instance_1_i(A.ConstantStringSet.prototype, "get$contains", "contains$1", 53);
+    _instance_1_i(A.GeneralConstantSet.prototype, "get$contains", "contains$1", 53);
     _instance_1_i(A.JsLinkedHashMap.prototype, "get$remove", "remove$1", "2?(Object?)");
-    _static_1(A, "async__AsyncRun__scheduleImmediateJsOverride$closure", "_AsyncRun__scheduleImmediateJsOverride", 100);
-    _static_1(A, "async__AsyncRun__scheduleImmediateWithSetImmediate$closure", "_AsyncRun__scheduleImmediateWithSetImmediate", 100);
-    _static_1(A, "async__AsyncRun__scheduleImmediateWithTimer$closure", "_AsyncRun__scheduleImmediateWithTimer", 100);
-    _static_1(A, "async_Future__kTrue$closure", "Future__kTrue", 54);
+    _static_1(A, "async__AsyncRun__scheduleImmediateJsOverride$closure", "_AsyncRun__scheduleImmediateJsOverride", 97);
+    _static_1(A, "async__AsyncRun__scheduleImmediateWithSetImmediate$closure", "_AsyncRun__scheduleImmediateWithSetImmediate", 97);
+    _static_1(A, "async__AsyncRun__scheduleImmediateWithTimer$closure", "_AsyncRun__scheduleImmediateWithTimer", 97);
+    _static_1(A, "async_Future__kTrue$closure", "Future__kTrue", 53);
     _static_0(A, "async___startMicrotaskLoop$closure", "_startMicrotaskLoop", 0);
     _static_1(A, "async___nullDataHandler$closure", "_nullDataHandler", 6);
-    _static_2(A, "async___nullErrorHandler$closure", "_nullErrorHandler", 49);
+    _static_2(A, "async___nullErrorHandler$closure", "_nullErrorHandler", 52);
     _static_0(A, "async___nullDoneHandler$closure", "_nullDoneHandler", 0);
     _instance_0_u(_ = A._BroadcastSubscription.prototype, "get$_onPause", "_onPause$0", 0);
     _instance_0_u(_, "get$_onResume", "_onResume$0", 0);
     _instance_1_i(_ = A._BroadcastStreamController.prototype, "get$add", "add$1", 21);
     _instance(_, "get$addError", 0, 1, function() {
       return [null];
-    }, ["call$2", "call$1"], ["addError$2", "addError$1"], 130, 0, 0);
+    }, ["call$2", "call$1"], ["addError$2", "addError$1"], 146, 0, 0);
     _instance_1_i(_ = A._AsBroadcastStreamController.prototype, "get$add", "add$1", 21);
     _instance(_, "get$addError", 0, 1, function() {
       return [null];
-    }, ["call$2", "call$1"], ["addError$2", "addError$1"], 130, 0, 0);
-    _instance_0_i(_, "get$close", "close$0", 114);
+    }, ["call$2", "call$1"], ["addError$2", "addError$1"], 146, 0, 0);
+    _instance_0_i(_, "get$close", "close$0", 102);
     _instance(A._Completer.prototype, "get$completeError", 0, 1, function() {
       return [null];
-    }, ["call$2", "call$1"], ["completeError$2", "completeError$1"], 130, 0, 0);
+    }, ["call$2", "call$1"], ["completeError$2", "completeError$1"], 146, 0, 0);
     _instance(A._AsyncCompleter.prototype, "get$complete", 1, 0, function() {
       return [null];
-    }, ["call$1", "call$0"], ["complete$1", "complete$0"], 351, 0, 0);
-    _instance_2_u(A._Future.prototype, "get$_completeError", "_completeError$2", 49);
+    }, ["call$1", "call$0"], ["complete$1", "complete$0"], 217, 0, 0);
+    _instance_2_u(A._Future.prototype, "get$_completeError", "_completeError$2", 52);
     _instance_1_i(_ = A._StreamController.prototype, "get$add", "add$1", 21);
     _instance(_, "get$addError", 0, 1, function() {
       return [null];
-    }, ["call$2", "call$1"], ["addError$2", "addError$1"], 130, 0, 0);
-    _instance_0_i(_, "get$close", "close$0", 114);
+    }, ["call$2", "call$1"], ["addError$2", "addError$1"], 146, 0, 0);
+    _instance_0_i(_, "get$close", "close$0", 102);
     _instance_1_i(_, "get$_add", "_add$1", 21);
-    _instance_2_u(_, "get$_addError", "_addError$2", 49);
+    _instance_2_u(_, "get$_addError", "_addError$2", 52);
     _instance_0_u(_, "get$_close", "_close$0", 0);
     _instance_0_u(_ = A._ControllerSubscription.prototype, "get$_onPause", "_onPause$0", 0);
     _instance_0_u(_, "get$_onResume", "_onResume$0", 0);
-    _instance_0_i(_ = A._BufferingStreamSubscription.prototype, "get$cancel", "cancel$0", 114);
+    _instance_0_i(_ = A._BufferingStreamSubscription.prototype, "get$cancel", "cancel$0", 102);
     _instance_0_u(_, "get$_onPause", "_onPause$0", 0);
     _instance_0_u(_, "get$_onResume", "_onResume$0", 0);
-    _instance_0_i(_ = A._DoneStreamSubscription.prototype, "get$cancel", "cancel$0", 114);
+    _instance_0_i(_ = A._DoneStreamSubscription.prototype, "get$cancel", "cancel$0", 102);
     _instance_0_u(_, "get$_onMicrotask", "_onMicrotask$0", 0);
     _instance_0_u(_ = A._AsBroadcastStream.prototype, "get$_onCancel", "_onCancel$0", 0);
     _instance_0_u(_, "get$_onListen", "_onListen$0", 0);
     _instance_0_u(_ = A._ForwardingStreamSubscription.prototype, "get$_onPause", "_onPause$0", 0);
     _instance_0_u(_, "get$_onResume", "_onResume$0", 0);
     _instance_1_u(_, "get$_async$_handleData", "_async$_handleData$1", 21);
-    _instance_2_u(_, "get$_async$_handleError", "_async$_handleError$2", 487);
+    _instance_2_u(_, "get$_async$_handleError", "_async$_handleError$2", 486);
     _instance_0_u(_, "get$_handleDone", "_handleDone$0", 0);
     _instance_0_u(_ = A._SinkTransformerStreamSubscription.prototype, "get$_onPause", "_onPause$0", 0);
     _instance_0_u(_, "get$_onResume", "_onResume$0", 0);
     _instance_1_u(_, "get$_async$_handleData", "_async$_handleData$1", 21);
-    _instance_2_u(_, "get$_async$_handleError", "_async$_handleError$2", 49);
+    _instance_2_u(_, "get$_async$_handleError", "_async$_handleError$2", 52);
     _instance_0_u(_, "get$_handleDone", "_handleDone$0", 0);
-    _static_2(A, "collection___defaultEquals$closure", "_defaultEquals", 171);
-    _static_1(A, "collection___defaultHashCode$closure", "_defaultHashCode", 134);
-    _static_2(A, "collection_ListBase__compareAny$closure", "ListBase__compareAny", 56);
-    _static_2(A, "collection___dynamicCompare$closure", "_dynamicCompare", 56);
+    _static_2(A, "collection___defaultEquals$closure", "_defaultEquals", 158);
+    _static_1(A, "collection___defaultHashCode$closure", "_defaultHashCode", 121);
+    _static_2(A, "collection_ListBase__compareAny$closure", "ListBase__compareAny", 60);
+    _static_2(A, "collection___dynamicCompare$closure", "_dynamicCompare", 60);
     _instance_1_i(A._LinkedCustomHashMap.prototype, "get$remove", "remove$1", "2?(Object?)");
-    _instance(_ = A._HashSet.prototype, "get$_newSimilarSet", 0, 0, null, ["call$1$0", "call$0"], ["_newSimilarSet$1$0", "_newSimilarSet$0"], 178, 0, 0);
-    _instance_1_i(_, "get$contains", "contains$1", 54);
-    _instance(_ = A._LinkedHashSet.prototype, "get$_newSimilarSet", 0, 0, null, ["call$1$0", "call$0"], ["_newSimilarSet$1$0", "_newSimilarSet$0"], 178, 0, 0);
-    _instance_1_i(_, "get$contains", "contains$1", 54);
-    _instance(_ = A.SplayTreeSet.prototype, "get$_newSet", 0, 0, null, ["call$1$0", "call$0"], ["_newSet$1$0", "_newSet$0"], 178, 0, 0);
-    _instance_1_i(_, "get$contains", "contains$1", 54);
+    _instance(_ = A._HashSet.prototype, "get$_newSimilarSet", 0, 0, null, ["call$1$0", "call$0"], ["_newSimilarSet$1$0", "_newSimilarSet$0"], 211, 0, 0);
+    _instance_1_i(_, "get$contains", "contains$1", 53);
+    _instance(_ = A._LinkedHashSet.prototype, "get$_newSimilarSet", 0, 0, null, ["call$1$0", "call$0"], ["_newSimilarSet$1$0", "_newSimilarSet$0"], 211, 0, 0);
+    _instance_1_i(_, "get$contains", "contains$1", 53);
+    _instance(_ = A.SplayTreeSet.prototype, "get$_newSet", 0, 0, null, ["call$1$0", "call$0"], ["_newSet$1$0", "_newSet$0"], 211, 0, 0);
+    _instance_1_i(_, "get$contains", "contains$1", 53);
     _static(A, "convert__jsonEncode$closure", 1, function() {
       return {toEncodable: null};
     }, ["call$2$toEncodable", "call$1"], ["jsonEncode", function(object) {
       return A.jsonEncode(object, null);
-    }], 1393, 0);
+    }], 1394, 0);
     _static(A, "convert__jsonDecode$closure", 1, function() {
       return {reviver: null};
     }, ["call$2$reviver", "call$1"], ["jsonDecode", function(source) {
       return A.jsonDecode(source, null);
-    }], 1394, 0);
-    _static_1(A, "convert___defaultToEncodable$closure", "_defaultToEncodable", 42);
+    }], 1395, 0);
+    _static_1(A, "convert___defaultToEncodable$closure", "_defaultToEncodable", 44);
     _instance_0_i(A._JsonDecoderSink.prototype, "get$close", "close$0", 0);
     _instance_1_i(_ = A._ByteCallbackSink.prototype, "get$add", "add$1", 21);
     _instance_0_i(_, "get$close", "close$0", 0);
-    _static_1(A, "core__identityHashCode$closure", "identityHashCode", 134);
-    _static_2(A, "core__identical$closure", "identical", 171);
-    _static_2(A, "core_Comparable_compare$closure", "Comparable_compare", 1395);
+    _static_1(A, "core__identityHashCode$closure", "identityHashCode", 121);
+    _static_2(A, "core__identical$closure", "identical", 158);
+    _static_2(A, "core_Comparable_compare$closure", "Comparable_compare", 1396);
     _static(A, "core_DateTime___new_tearOff$closure", 1, null, ["call$8", "call$1", "call$2", "call$3", "call$4", "call$5", "call$6"], ["DateTime___new_tearOff", function(year) {
       return A.DateTime___new_tearOff(year, 1, 1, 0, 0, 0, 0, 0);
     }, function(year, month) {
@@ -323282,7 +323419,7 @@
       return A.DateTime___new_tearOff(year, month, day, hour, minute, 0, 0, 0);
     }, function(year, month, day, hour, minute, second) {
       return A.DateTime___new_tearOff(year, month, day, hour, minute, second, 0, 0);
-    }], 383, 0);
+    }], 384, 0);
     _static(A, "core_DateTime___utc_tearOff$closure", 1, null, ["call$8", "call$1", "call$2", "call$3", "call$4", "call$5", "call$6"], ["DateTime___utc_tearOff", function(year) {
       return A.DateTime___utc_tearOff(year, 1, 1, 0, 0, 0, 0, 0);
     }, function(year, month) {
@@ -323295,57 +323432,57 @@
       return A.DateTime___utc_tearOff(year, month, day, hour, minute, 0, 0, 0);
     }, function(year, month, day, hour, minute, second) {
       return A.DateTime___utc_tearOff(year, month, day, hour, minute, second, 0, 0);
-    }], 383, 0);
+    }], 384, 0);
     _static_1(A, "core__print$closure", "print", 21);
     _static(A, "core_Uri_encodeQueryComponent$closure", 1, null, ["call$2$encoding", "call$1"], ["Uri_encodeQueryComponent", function(component) {
       return A.Uri_encodeQueryComponent(component, B.C_Utf8Codec);
-    }], 1397, 0);
-    _static_1(A, "core_Uri_decodeComponent$closure", "Uri_decodeComponent", 57);
-    _static_0(A, "core__Uri__createList$closure", "_Uri__createList", 1398);
-    _static_2(A, "core___toUnmodifiableStringList$closure", "_toUnmodifiableStringList", 1399);
-    _instance_1_i(A.Iterable.prototype, "get$contains", "contains$1", 54);
-    _instance(A.StringBuffer.prototype, "get$writeln", 0, 0, null, ["call$1", "call$0"], ["writeln$1", "writeln$0"], 351, 0, 0);
+    }], 1398, 0);
+    _static_1(A, "core_Uri_decodeComponent$closure", "Uri_decodeComponent", 63);
+    _static_0(A, "core__Uri__createList$closure", "_Uri__createList", 1399);
+    _static_2(A, "core___toUnmodifiableStringList$closure", "_toUnmodifiableStringList", 1400);
+    _instance_1_i(A.Iterable.prototype, "get$contains", "contains$1", 53);
+    _instance(A.StringBuffer.prototype, "get$writeln", 0, 0, null, ["call$1", "call$0"], ["writeln$1", "writeln$0"], 217, 0, 0);
     _instance_0_i(A.Node.prototype, "get$remove", "remove$0", 0);
-    _instance_0_i(A._File.prototype, "get$length", "length$0", 193);
-    _static_1(A, "js___convertToJS$closure", "_convertToJS", 136);
-    _static_1(A, "js___convertToDart$closure", "_convertToDart", 1400);
+    _instance_0_i(A._File.prototype, "get$length", "length$0", 154);
+    _static_1(A, "js___convertToJS$closure", "_convertToJS", 134);
+    _static_1(A, "js___convertToDart$closure", "_convertToDart", 1401);
     _static(A, "math__min$closure", 2, null, ["call$1$2", "call$2"], ["min", function(a, b) {
       return A.min(a, b, type$.num);
-    }], 384, 1);
+    }], 385, 1);
     _static(A, "math__max$closure", 2, null, ["call$1$2", "call$2"], ["max", function(a, b) {
       return A.max(a, b, type$.num);
-    }], 384, 1);
-    _static(A, "ui_Size_lerp$closure", 3, null, ["call$3"], ["Size_lerp"], 1402, 0);
-    _static(A, "ui__lerpDouble$closure", 3, null, ["call$3"], ["lerpDouble"], 1403, 0);
-    _static(A, "ui_Color_lerp$closure", 3, null, ["call$3"], ["Color_lerp"], 1404, 0);
-    _instance_1_u(A._StoredMessage.prototype, "get$invoke", "invoke$1", 53);
+    }], 385, 1);
+    _static(A, "ui_Size_lerp$closure", 3, null, ["call$3"], ["Size_lerp"], 1403, 0);
+    _static(A, "ui__lerpDouble$closure", 3, null, ["call$3"], ["lerpDouble"], 1404, 0);
+    _static(A, "ui_Color_lerp$closure", 3, null, ["call$3"], ["Color_lerp"], 1405, 0);
+    _instance_1_u(A._StoredMessage.prototype, "get$invoke", "invoke$1", 54);
     _instance_0_u(A._Channel.prototype, "get$_drainStep", "_drainStep$0", 0);
     _instance_0_i(A._Emitter.prototype, "get$cancel", "cancel$0", 0);
     _instance_1_u(A.BaseChart.prototype, "get$makeSeries", "makeSeries$1", "MutableSeries<1>(Object?)");
-    _instance_1_u(_ = A.SelectNearest.prototype, "get$_onTapTest", "_onTapTest$1", 199);
-    _instance_1_u(_, "get$_onLongPressSelect", "_onLongPressSelect$1", 199);
+    _instance_1_u(_ = A.SelectNearest.prototype, "get$_onTapTest", "_onTapTest$1", 179);
+    _instance_1_u(_, "get$_onLongPressSelect", "_onLongPressSelect$1", 179);
     _instance(_, "get$_onSelect", 0, 1, null, ["call$2", "call$1"], ["_onSelect$2", "_onSelect$1"], 765, 0, 0);
     _instance(_, "get$_onDeselectAll", 0, 3, null, ["call$3"], ["_onDeselectAll$3"], 772, 0, 0);
     _instance_1_u(A.BaseChart0.prototype, "get$_notACustomBehavior", "_notACustomBehavior$1", 843);
     _instance_0_u(A.BaseChartState.prototype, "get$_animationTick", "_animationTick$0", 0);
-    _instance_1_u(A.ChartContainerCustomPaint.prototype, "get$_buildSemantics", "_buildSemantics$1", 185);
+    _instance_1_u(A.ChartContainerCustomPaint.prototype, "get$_buildSemantics", "_buildSemantics$1", 156);
     _instance_1_u(_ = A.ChartGestureDetector.prototype, "get$onTapDown", "onTapDown$1", 45);
-    _instance_1_u(_, "get$onTapUp", "onTapUp$1", 61);
-    _instance_1_u(_, "get$onScaleStart", "onScaleStart$1", 326);
-    _instance_1_u(_, "get$onScaleUpdate", "onScaleUpdate$1", 325);
-    _instance_1_u(_, "get$onScaleEnd", "onScaleEnd$1", 322);
-    _instance_2_u(_ = A.DeepCollectionEquality.prototype, "get$equals", "equals$2", 171);
-    _instance_1_i(_, "get$hash", "hash$1", 134);
-    _instance_1_u(_, "get$isValidKey", "isValidKey$1", 54);
-    _instance_0_i(A.XFileBase.prototype, "get$length", "length$0", 193);
-    _instance_0_i(A.XFile.prototype, "get$length", "length$0", 193);
-    _instance_2_u(_ = A.Interceptor0.prototype, "get$onRequest", "onRequest$2", 153);
-    _instance_2_u(_, "get$onResponse", "onResponse$2", 318);
-    _instance_2_i(_, "get$onError", "onError$2", 317);
-    _instance_2_u(A.ImplyContentTypeInterceptor.prototype, "get$onRequest", "onRequest$2", 153);
-    _static_1(A, "options___defaultValidateStatus$closure", "_defaultValidateStatus", 1405);
-    _static_1(A, "background_transformer___decodeJson$closure", "_decodeJson", 183);
-    _static_2(A, "equatable_utils___combine$closure", "_combine", 1406);
+    _instance_1_u(_, "get$onTapUp", "onTapUp$1", 55);
+    _instance_1_u(_, "get$onScaleStart", "onScaleStart$1", 370);
+    _instance_1_u(_, "get$onScaleUpdate", "onScaleUpdate$1", 361);
+    _instance_1_u(_, "get$onScaleEnd", "onScaleEnd$1", 358);
+    _instance_2_u(_ = A.DeepCollectionEquality.prototype, "get$equals", "equals$2", 158);
+    _instance_1_i(_, "get$hash", "hash$1", 121);
+    _instance_1_u(_, "get$isValidKey", "isValidKey$1", 53);
+    _instance_0_i(A.XFileBase.prototype, "get$length", "length$0", 154);
+    _instance_0_i(A.XFile.prototype, "get$length", "length$0", 154);
+    _instance_2_u(_ = A.Interceptor0.prototype, "get$onRequest", "onRequest$2", 145);
+    _instance_2_u(_, "get$onResponse", "onResponse$2", 312);
+    _instance_2_i(_, "get$onError", "onError$2", 310);
+    _instance_2_u(A.ImplyContentTypeInterceptor.prototype, "get$onRequest", "onRequest$2", 145);
+    _static_1(A, "options___defaultValidateStatus$closure", "_defaultValidateStatus", 1406);
+    _static_1(A, "background_transformer___decodeJson$closure", "_decodeJson", 168);
+    _static_2(A, "equatable_utils___combine$closure", "_combine", 1407);
     _instance(_ = A.AnimationController.prototype, "get$reverse", 1, 0, null, ["call$1$from", "call$0"], ["reverse$1$from", "reverse$0"], 438, 0, 0);
     _instance_1_u(_, "get$_directionSetter", "_directionSetter$1", 447);
     _instance_1_u(_, "get$_animation_controller$_tick", "_animation_controller$_tick$1", 9);
@@ -323358,11 +323495,11 @@
     _instance_0_u(A.AnimationLocalListenersMixin.prototype, "get$notifyListeners", "notifyListeners$0", 0);
     _instance_1_u(A.AnimationLocalStatusListenersMixin.prototype, "get$notifyStatusListeners", "notifyStatusListeners$1", 11);
     _instance_1_u(_ = A._CupertinoButtonState.prototype, "get$_handleTapDown", "_handleTapDown$1", 45);
-    _instance_1_u(_, "get$_handleTapUp", "_handleTapUp$1", 61);
+    _instance_1_u(_, "get$_handleTapUp", "_handleTapUp$1", 55);
     _instance_0_u(_, "get$_handleTapCancel", "_handleTapCancel$0", 0);
     _instance_1_u(A._CupertinoCheckboxState.prototype, "get$onFocusChange", "onFocusChange$1", 10);
-    _instance_1_u(_ = A._CupertinoDesktopTextSelectionToolbarButtonState.prototype, "get$_onEnter", "_onEnter$1", 79);
-    _instance_1_u(_, "get$_onExit", "_onExit$1", 68);
+    _instance_1_u(_ = A._CupertinoDesktopTextSelectionToolbarButtonState.prototype, "get$_onEnter", "_onEnter$1", 80);
+    _instance_1_u(_, "get$_onExit", "_onExit$1", 64);
     _instance_1_u(_ = A._RenderCupertinoDialog.prototype, "get$computeMinIntrinsicWidth", "computeMinIntrinsicWidth$1", 1);
     _instance_1_u(_, "get$computeMaxIntrinsicWidth", "computeMaxIntrinsicWidth$1", 1);
     _instance_1_u(_, "get$computeMinIntrinsicHeight", "computeMinIntrinsicHeight$1", 1);
@@ -323372,68 +323509,68 @@
     _instance_1_u(_, "get$computeMinIntrinsicHeight", "computeMinIntrinsicHeight$1", 1);
     _instance_1_u(_, "get$computeMaxIntrinsicHeight", "computeMaxIntrinsicHeight$1", 1);
     _instance_0_u(A._CupertinoTextMagnifierState.prototype, "get$_magnifier0$_determineMagnifierPositionAndFocalPoint", "_magnifier0$_determineMagnifierPositionAndFocalPoint$0", 0);
-    _static_2(A, "nav_bar___linearTranslateWithLargestRectSizeTween$closure", "_linearTranslateWithLargestRectSizeTween", 1407);
-    _static(A, "nav_bar___navBarHeroLaunchPadBuilder$closure", 3, null, ["call$3"], ["_navBarHeroLaunchPadBuilder"], 1408, 0);
-    _static(A, "nav_bar___navBarHeroFlightShuttleBuilder$closure", 5, null, ["call$5"], ["_navBarHeroFlightShuttleBuilder"], 230, 0);
+    _static_2(A, "nav_bar___linearTranslateWithLargestRectSizeTween$closure", "_linearTranslateWithLargestRectSizeTween", 1408);
+    _static(A, "nav_bar___navBarHeroLaunchPadBuilder$closure", 3, null, ["call$3"], ["_navBarHeroLaunchPadBuilder"], 1409, 0);
+    _static(A, "nav_bar___navBarHeroFlightShuttleBuilder$closure", 5, null, ["call$5"], ["_navBarHeroFlightShuttleBuilder"], 231, 0);
     _instance(A._BackLabel.prototype, "get$_buildPreviousTitleWidget", 0, 3, null, ["call$3"], ["_buildPreviousTitleWidget$3"], 480, 0, 0);
     _instance_0_u(A._CupertinoPageScaffoldState.prototype, "get$_handleStatusBarTap", "_handleStatusBarTap$0", 0);
-    _instance_1_u(_ = A._CupertinoBackGestureDetectorState.prototype, "get$_route$_handleDragStart", "_route$_handleDragStart$1", 48);
-    _instance_1_u(_, "get$_route$_handleDragUpdate", "_route$_handleDragUpdate$1", 31);
-    _instance_1_u(_, "get$_route$_handleDragEnd", "_route$_handleDragEnd$1", 62);
+    _instance_1_u(_ = A._CupertinoBackGestureDetectorState.prototype, "get$_route$_handleDragStart", "_route$_handleDragStart$1", 49);
+    _instance_1_u(_, "get$_route$_handleDragUpdate", "_route$_handleDragUpdate$1", 32);
+    _instance_1_u(_, "get$_route$_handleDragEnd", "_route$_handleDragEnd$1", 56);
     _instance_0_u(_, "get$_route$_handleDragCancel", "_route$_handleDragCancel$0", 0);
-    _instance_1_u(_, "get$_route$_handlePointerDown", "_route$_handlePointerDown$1", 83);
+    _instance_1_u(_, "get$_route$_handlePointerDown", "_route$_handlePointerDown$1", 86);
     _instance_0_u(A._CupertinoScrollbarState.prototype, "get$handleThumbPress", "handleThumbPress$0", 0);
-    _static(A, "text_selection_toolbar0_CupertinoTextSelectionToolbar__defaultToolbarBuilder$closure", 4, null, ["call$4"], ["CupertinoTextSelectionToolbar__defaultToolbarBuilder"], 1409, 0);
-    _instance_1_u(_ = A._CupertinoTextSelectionToolbarContentState.prototype, "get$_onHorizontalDragEnd", "_onHorizontalDragEnd$1", 62);
+    _static(A, "text_selection_toolbar0_CupertinoTextSelectionToolbar__defaultToolbarBuilder$closure", 4, null, ["call$4"], ["CupertinoTextSelectionToolbar__defaultToolbarBuilder"], 1410, 0);
+    _instance_1_u(_ = A._CupertinoTextSelectionToolbarContentState.prototype, "get$_onHorizontalDragEnd", "_onHorizontalDragEnd$1", 56);
     _instance_0_u(_, "get$_handleNextPage", "_handleNextPage$0", 0);
     _instance_0_u(_, "get$_handlePreviousPage", "_handlePreviousPage$0", 0);
     _instance_1_u(_, "get$_statusListener", "_statusListener$1", 11);
     _instance_1_u(_ = A._CupertinoTextSelectionToolbarButtonState.prototype, "get$_onTapDown", "_onTapDown$1", 45);
-    _instance_1_u(_, "get$_onTapUp", "_onTapUp$1", 61);
+    _instance_1_u(_, "get$_onTapUp", "_onTapUp$1", 55);
     _instance_0_u(_, "get$_onTapCancel", "_onTapCancel$0", 0);
     _instance_1_u(_ = A.ToggleableStateMixin.prototype, "get$_toggleable0$_handleTapDown", "_toggleable0$_handleTapDown$1", 45);
     _instance(_, "get$_toggleable0$_handleTap", 0, 0, function() {
       return [null];
-    }, ["call$1", "call$0"], ["_toggleable0$_handleTap$1", "_toggleable0$_handleTap$0"], 212, 0, 0);
-    _instance(_, "get$_toggleable0$_handleTapEnd", 0, 0, null, ["call$1", "call$0"], ["_toggleable0$_handleTapEnd$1", "_toggleable0$_handleTapEnd$0"], 301, 0, 0);
+    }, ["call$1", "call$0"], ["_toggleable0$_handleTap$1", "_toggleable0$_handleTap$0"], 155, 0, 0);
+    _instance(_, "get$_toggleable0$_handleTapEnd", 0, 0, null, ["call$1", "call$0"], ["_toggleable0$_handleTapEnd$1", "_toggleable0$_handleTapEnd$0"], 276, 0, 0);
     _instance_1_u(_, "get$_toggleable0$_handleFocusHighlightChanged", "_toggleable0$_handleFocusHighlightChanged$1", 10);
     _static(A, "assertions_FlutterError_dumpErrorToConsole$closure", 1, null, ["call$2$forceReport", "call$1"], ["FlutterError_dumpErrorToConsole", function(details) {
       return A.FlutterError_dumpErrorToConsole(details, false);
-    }], 1410, 0);
-    _static_1(A, "assertions_DiagnosticsStackTrace__createStackFrame$closure", "DiagnosticsStackTrace__createStackFrame", 1411);
-    _instance_1_i(_ = A.ChangeNotifier.prototype, "get$addListener", "addListener$1", 100);
-    _instance_1_i(_, "get$removeListener", "removeListener$1", 100);
+    }], 1411, 0);
+    _static_1(A, "assertions_DiagnosticsStackTrace__createStackFrame$closure", "DiagnosticsStackTrace__createStackFrame", 1412);
+    _instance_1_i(_ = A.ChangeNotifier.prototype, "get$addListener", "addListener$1", 97);
+    _instance_1_i(_, "get$removeListener", "removeListener$1", 97);
     _instance_0_u(_, "get$dispose", "dispose$0", 0);
     _instance_0_u(_, "get$notifyListeners", "notifyListeners$0", 0);
-    _instance_1_i(A.DiagnosticPropertiesBuilder.prototype, "get$add", "add$1", 299);
-    _static_1(A, "stack_frame_StackFrame_fromStackTraceLine$closure", "StackFrame_fromStackTraceLine", 1412);
-    _instance_1_u(_ = A.GestureBinding.prototype, "get$_handlePointerDataPacket", "_handlePointerDataPacket$1", 388);
-    _instance_1_u(_, "get$_devicePixelRatioForView", "_devicePixelRatioForView$1", 583);
-    _instance_1_u(_, "get$cancelPointer", "cancelPointer$1", 19);
+    _instance_1_i(A.DiagnosticPropertiesBuilder.prototype, "get$add", "add$1", 295);
+    _static_1(A, "stack_frame_StackFrame_fromStackTraceLine$closure", "StackFrame_fromStackTraceLine", 1413);
+    _instance_1_u(_ = A.GestureBinding.prototype, "get$_handlePointerDataPacket", "_handlePointerDataPacket$1", 721);
+    _instance_1_u(_, "get$_devicePixelRatioForView", "_devicePixelRatioForView$1", 571);
+    _instance_1_u(_, "get$cancelPointer", "cancelPointer$1", 20);
     _instance_0_u(_, "get$_flushPointerEventQueue", "_flushPointerEventQueue$0", 0);
-    _instance_1_u(_, "get$_handlePointerEventImmediately", "_handlePointerEventImmediately$1", 38);
+    _instance_1_u(_, "get$_handlePointerEventImmediately", "_handlePointerEventImmediately$1", 39);
     _instance_0_u(_, "get$_handleSampleTimeChanged", "_handleSampleTimeChanged$0", 0);
-    _static(A, "force_press_ForcePressGestureRecognizer__inverseLerp$closure", 3, null, ["call$3"], ["ForcePressGestureRecognizer__inverseLerp"], 1413, 0);
-    _instance_1_u(A.ForcePressGestureRecognizer.prototype, "get$handleEvent", "handleEvent$1", 38);
-    _static_1(A, "long_press_LongPressGestureRecognizer__defaultButtonAcceptBehavior$closure", "LongPressGestureRecognizer__defaultButtonAcceptBehavior", 65);
-    _static_1(A, "monodrag_DragGestureRecognizer__defaultBuilder$closure", "DragGestureRecognizer__defaultBuilder", 243);
-    _static_1(A, "monodrag_DragGestureRecognizer__defaultButtonAcceptBehavior$closure", "DragGestureRecognizer__defaultButtonAcceptBehavior", 65);
-    _instance_1_u(A.DragGestureRecognizer.prototype, "get$handleEvent", "handleEvent$1", 38);
-    _static_1(A, "multitap_DoubleTapGestureRecognizer__defaultButtonAcceptBehavior$closure", "DoubleTapGestureRecognizer__defaultButtonAcceptBehavior", 65);
+    _static(A, "force_press_ForcePressGestureRecognizer__inverseLerp$closure", 3, null, ["call$3"], ["ForcePressGestureRecognizer__inverseLerp"], 1414, 0);
+    _instance_1_u(A.ForcePressGestureRecognizer.prototype, "get$handleEvent", "handleEvent$1", 39);
+    _static_1(A, "long_press_LongPressGestureRecognizer__defaultButtonAcceptBehavior$closure", "LongPressGestureRecognizer__defaultButtonAcceptBehavior", 73);
+    _static_1(A, "monodrag_DragGestureRecognizer__defaultBuilder$closure", "DragGestureRecognizer__defaultBuilder", 244);
+    _static_1(A, "monodrag_DragGestureRecognizer__defaultButtonAcceptBehavior$closure", "DragGestureRecognizer__defaultButtonAcceptBehavior", 73);
+    _instance_1_u(A.DragGestureRecognizer.prototype, "get$handleEvent", "handleEvent$1", 39);
+    _static_1(A, "multitap_DoubleTapGestureRecognizer__defaultButtonAcceptBehavior$closure", "DoubleTapGestureRecognizer__defaultButtonAcceptBehavior", 73);
     _instance_0_u(A._CountdownZoned.prototype, "get$_onTimeout", "_onTimeout$0", 0);
-    _instance_1_u(_ = A.DoubleTapGestureRecognizer.prototype, "get$_multitap$_handleEvent", "_multitap$_handleEvent$1", 38);
-    _instance_1_u(_, "get$_reject", "_reject$1", 597);
+    _instance_1_u(_ = A.DoubleTapGestureRecognizer.prototype, "get$_multitap$_handleEvent", "_multitap$_handleEvent$1", 39);
+    _instance_1_u(_, "get$_reject", "_reject$1", 593);
     _instance_0_u(_, "get$_multitap$_reset", "_multitap$_reset$0", 0);
-    _static_1(A, "recognizer_GestureRecognizer__defaultButtonAcceptBehavior$closure", "GestureRecognizer__defaultButtonAcceptBehavior", 65);
-    _instance(A.OneSequenceGestureRecognizer.prototype, "get$stopTrackingPointer", 0, 1, null, ["call$1"], ["stopTrackingPointer$1"], 19, 0, 1);
-    _instance_1_u(A.PrimaryPointerGestureRecognizer.prototype, "get$handleEvent", "handleEvent$1", 38);
-    _instance_1_u(A.ScaleGestureRecognizer.prototype, "get$handleEvent", "handleEvent$1", 38);
-    _instance_1_u(_ = A._TapStatusTrackerMixin.prototype, "get$handleEvent", "handleEvent$1", 38);
+    _static_1(A, "recognizer_GestureRecognizer__defaultButtonAcceptBehavior$closure", "GestureRecognizer__defaultButtonAcceptBehavior", 73);
+    _instance(A.OneSequenceGestureRecognizer.prototype, "get$stopTrackingPointer", 0, 1, null, ["call$1"], ["stopTrackingPointer$1"], 20, 0, 1);
+    _instance_1_u(A.PrimaryPointerGestureRecognizer.prototype, "get$handleEvent", "handleEvent$1", 39);
+    _instance_1_u(A.ScaleGestureRecognizer.prototype, "get$handleEvent", "handleEvent$1", 39);
+    _instance_1_u(_ = A._TapStatusTrackerMixin.prototype, "get$handleEvent", "handleEvent$1", 39);
     _instance_0_u(_, "get$_consecutiveTapTimerTimeout", "_consecutiveTapTimerTimeout$0", 0);
-    _instance_1_u(A.BaseTapAndDragGestureRecognizer.prototype, "get$handleEvent", "handleEvent$1", 38);
-    _instance_2_u(_ = A._MaterialAppState.prototype, "get$_inspectorSelectButtonBuilder", "_inspectorSelectButtonBuilder$2", 657);
-    _instance_2_u(_, "get$_materialBuilder", "_materialBuilder$2", 44);
-    _instance_1_u(A._AppBarState.prototype, "get$_app_bar$_handleScrollNotification", "_app_bar$_handleScrollNotification$1", 671);
+    _instance_1_u(A.BaseTapAndDragGestureRecognizer.prototype, "get$handleEvent", "handleEvent$1", 39);
+    _instance_2_u(_ = A._MaterialAppState.prototype, "get$_inspectorSelectButtonBuilder", "_inspectorSelectButtonBuilder$2", 651);
+    _instance_2_u(_, "get$_materialBuilder", "_materialBuilder$2", 43);
+    _instance_1_u(A._AppBarState.prototype, "get$_app_bar$_handleScrollNotification", "_app_bar$_handleScrollNotification$1", 668);
     _instance_1_u(_ = A._RenderInputPadding.prototype, "get$computeMinIntrinsicWidth", "computeMinIntrinsicWidth$1", 1);
     _instance_1_u(_, "get$computeMinIntrinsicHeight", "computeMinIntrinsicHeight$1", 1);
     _instance_1_u(_, "get$computeMaxIntrinsicWidth", "computeMaxIntrinsicWidth$1", 1);
@@ -323447,13 +323584,13 @@
     _instance_1_u(_, "get$_handleYearChanged", "_handleYearChanged$1", 27);
     _instance_1_u(_, "get$_handleDayChanged", "_handleDayChanged$1", 27);
     _instance_1_u(_ = A._MonthPickerState.prototype, "get$_handleDateSelected", "_handleDateSelected$1", 27);
-    _instance_1_u(_, "get$_handleMonthPageChanged", "_handleMonthPageChanged$1", 19);
+    _instance_1_u(_, "get$_handleMonthPageChanged", "_handleMonthPageChanged$1", 20);
     _instance_0_u(_, "get$_handleNextMonth", "_handleNextMonth$0", 0);
     _instance_0_u(_, "get$_handlePreviousMonth", "_handlePreviousMonth$0", 0);
     _instance_1_u(_, "get$_handleGridFocusChange", "_handleGridFocusChange$1", 10);
-    _instance_1_u(_, "get$_calendar_date_picker$_handleGridNextFocus", "_calendar_date_picker$_handleGridNextFocus$1", 295);
-    _instance_1_u(_, "get$_calendar_date_picker$_handleGridPreviousFocus", "_calendar_date_picker$_handleGridPreviousFocus$1", 294);
-    _instance_1_u(_, "get$_calendar_date_picker$_handleDirectionFocus", "_calendar_date_picker$_handleDirectionFocus$1", 291);
+    _instance_1_u(_, "get$_calendar_date_picker$_handleGridNextFocus", "_calendar_date_picker$_handleGridNextFocus$1", 328);
+    _instance_1_u(_, "get$_calendar_date_picker$_handleGridPreviousFocus", "_calendar_date_picker$_handleGridPreviousFocus$1", 331);
+    _instance_1_u(_, "get$_calendar_date_picker$_handleDirectionFocus", "_calendar_date_picker$_handleDirectionFocus$1", 334);
     _instance_2_u(_, "get$_buildItems", "_buildItems$2", 34);
     _instance_2_u(A._YearPickerState.prototype, "get$_buildYearItem", "_buildYearItem$2", 34);
     _instance_0_u(A.CheckboxListTile.prototype, "get$_handleValueChange", "_handleValueChange$0", 0);
@@ -323465,7 +323602,7 @@
     _instance_1_u(_, "get$computeMinIntrinsicHeight", "computeMinIntrinsicHeight$1", 1);
     _instance_1_u(_, "get$computeMaxIntrinsicHeight", "computeMaxIntrinsicHeight$1", 1);
     _instance_1_u(_ = A.TableRowInkWell.prototype, "get$getRectCallback", "getRectCallback$1", 793);
-    _instance_1_u(_, "get$debugCheckContext", "debugCheckContext$1", 289);
+    _instance_1_u(_, "get$debugCheckContext", "debugCheckContext$1", 374);
     _instance_0_u(_ = A._DatePickerDialogState.prototype, "get$_handleOk", "_handleOk$0", 0);
     _instance_0_u(_, "get$_handleCancel", "_handleCancel$0", 0);
     _instance_0_u(_, "get$_handleEntryModeToggle", "_handleEntryModeToggle$0", 0);
@@ -323473,18 +323610,18 @@
     _instance_0_u(_ = A._DateRangePickerDialogState.prototype, "get$_handleOk", "_handleOk$0", 0);
     _instance_0_u(_, "get$_handleCancel", "_handleCancel$0", 0);
     _instance_0_u(_, "get$_handleEntryModeToggle", "_handleEntryModeToggle$0", 0);
-    _instance_1_u(_, "get$_handleStartDateChanged", "_handleStartDateChanged$1", 287);
-    _instance_1_u(_, "get$_handleEndDateChanged", "_handleEndDateChanged$1", 287);
+    _instance_1_u(_, "get$_handleStartDateChanged", "_handleStartDateChanged$1", 382);
+    _instance_1_u(_, "get$_handleEndDateChanged", "_handleEndDateChanged$1", 382);
     _instance_0_u(_ = A._CalendarDateRangePickerState.prototype, "get$_scrollListener", "_scrollListener$0", 0);
     _instance_1_u(_, "get$_date_picker0$_updateSelection", "_date_picker0$_updateSelection$1", 27);
     _instance_1_u(_ = A._CalendarKeyboardNavigatorState.prototype, "get$_date_picker0$_handleGridFocusChange", "_date_picker0$_handleGridFocusChange$1", 10);
-    _instance_1_u(_, "get$_handleGridNextFocus", "_handleGridNextFocus$1", 295);
-    _instance_1_u(_, "get$_handleGridPreviousFocus", "_handleGridPreviousFocus$1", 294);
-    _instance_1_u(_, "get$_handleDirectionFocus", "_handleDirectionFocus$1", 291);
+    _instance_1_u(_, "get$_handleGridNextFocus", "_handleGridNextFocus$1", 328);
+    _instance_1_u(_, "get$_handleGridPreviousFocus", "_handleGridPreviousFocus$1", 331);
+    _instance_1_u(_, "get$_handleDirectionFocus", "_handleDirectionFocus$1", 334);
     _instance_1_u(A._MonthItemState.prototype, "get$_dayFocusChanged", "_dayFocusChanged$1", 10);
-    _instance_1_u(_ = A._InputDateRangePickerState.prototype, "get$_handleStartChanged", "_handleStartChanged$1", 37);
-    _instance_1_u(_, "get$_handleEndChanged", "_handleEndChanged$1", 37);
-    _static(A, "dialog___buildMaterialDialogTransitions$closure", 4, null, ["call$4"], ["_buildMaterialDialogTransitions"], 154, 0);
+    _instance_1_u(_ = A._InputDateRangePickerState.prototype, "get$_handleStartChanged", "_handleStartChanged$1", 36);
+    _instance_1_u(_, "get$_handleEndChanged", "_handleEndChanged$1", 36);
+    _static(A, "dialog___buildMaterialDialogTransitions$closure", 4, null, ["call$4"], ["_buildMaterialDialogTransitions"], 196, 0);
     _instance_1_u(_ = A._DropdownMenuItemButtonState.prototype, "get$_handleFocusChange", "_handleFocusChange$1", 10);
     _instance_0_u(_, "get$_handleOnTap", "_handleOnTap$0", 0);
     _instance_0_u(A._DropdownButtonState.prototype, "get$_dropdown$_handleTap", "_dropdown$_handleTap$0", 0);
@@ -323492,37 +323629,37 @@
     _instance_1_u(_ = A._RenderChildOverflowBox.prototype, "get$computeMinIntrinsicWidth", "computeMinIntrinsicWidth$1", 1);
     _instance_1_u(_, "get$computeMinIntrinsicHeight", "computeMinIntrinsicHeight$1", 1);
     _instance_0_u(_ = A._InkState.prototype, "get$_handleRemoved", "_handleRemoved$0", 0);
-    _instance_1_u(_, "get$_build", "_build$1", 23);
+    _instance_1_u(_, "get$_build", "_build$1", 22);
     _instance_0_u(A.InkDecoration.prototype, "get$_handleChanged", "_handleChanged$0", 0);
     _instance_1_u(A.InkHighlight.prototype, "get$_handleAlphaStatusChanged", "_handleAlphaStatusChanged$1", 11);
     _instance_1_u(A.InkRipple.prototype, "get$_ink_ripple$_handleAlphaStatusChanged", "_ink_ripple$_handleAlphaStatusChanged$1", 11);
     _instance_1_u(A.InkSplash.prototype, "get$_ink_splash$_handleAlphaStatusChanged", "_ink_splash$_handleAlphaStatusChanged$1", 11);
     _instance_1_u(_ = A.InkResponse.prototype, "get$getRectCallback", "getRectCallback$1", 849);
-    _instance_1_u(_, "get$debugCheckContext", "debugCheckContext$1", 289);
+    _instance_1_u(_, "get$debugCheckContext", "debugCheckContext$1", 374);
     _instance_1_u(_ = A._InkResponseState.prototype, "get$activateOnIntent", "activateOnIntent$1", 850);
-    _instance(_, "get$simulateTap", 0, 0, null, ["call$1", "call$0"], ["simulateTap$1", "simulateTap$0"], 212, 0, 0);
+    _instance(_, "get$simulateTap", 0, 0, null, ["call$1", "call$0"], ["simulateTap$1", "simulateTap$0"], 155, 0, 0);
     _instance_0_u(_, "get$handleStatesControllerChange", "handleStatesControllerChange$0", 0);
-    _instance_1_u(_, "get$handleFocusHighlightModeChange", "handleFocusHighlightModeChange$1", 280);
+    _instance_1_u(_, "get$handleFocusHighlightModeChange", "handleFocusHighlightModeChange$1", 377);
     _instance_1_u(_, "get$handleFocusUpdate", "handleFocusUpdate$1", 10);
     _instance_1_u(_, "get$handleTapDown", "handleTapDown$1", 45);
-    _instance_1_u(_, "get$handleTapUp", "handleTapUp$1", 61);
+    _instance_1_u(_, "get$handleTapUp", "handleTapUp$1", 55);
     _instance_1_u(_, "get$handleSecondaryTapDown", "handleSecondaryTapDown$1", 45);
-    _instance_1_u(_, "get$handleSecondaryTapUp", "handleSecondaryTapUp$1", 61);
+    _instance_1_u(_, "get$handleSecondaryTapUp", "handleSecondaryTapUp$1", 55);
     _instance_0_u(_, "get$handleTap", "handleTap$0", 0);
     _instance_0_u(_, "get$handleTapCancel", "handleTapCancel$0", 0);
     _instance_0_u(_, "get$handleSecondaryTap", "handleSecondaryTap$0", 0);
     _instance_0_u(_, "get$handleSecondaryTapCancel", "handleSecondaryTapCancel$0", 0);
-    _instance_1_u(_, "get$handleMouseEnter", "handleMouseEnter$1", 79);
-    _instance_1_u(_, "get$handleMouseExit", "handleMouseExit$1", 68);
-    _instance_1_u(_ = A._InputDatePickerFormFieldState.prototype, "get$_validateDate", "_validateDate$1", 148);
+    _instance_1_u(_, "get$handleMouseEnter", "handleMouseEnter$1", 80);
+    _instance_1_u(_, "get$handleMouseExit", "handleMouseExit$1", 64);
+    _instance_1_u(_ = A._InputDatePickerFormFieldState.prototype, "get$_validateDate", "_validateDate$1", 118);
     _instance_1_u(_, "get$_handleSaved", "_handleSaved$1", 14);
-    _instance_1_u(_, "get$_handleSubmitted", "_handleSubmitted$1", 37);
+    _instance_1_u(_, "get$_handleSubmitted", "_handleSubmitted$1", 36);
     _instance_0_u(A._HelperErrorState.prototype, "get$_input_decorator$_handleChange", "_input_decorator$_handleChange$0", 0);
     _instance_1_u(_ = A._RenderDecoration.prototype, "get$computeMinIntrinsicWidth", "computeMinIntrinsicWidth$1", 1);
     _instance_1_u(_, "get$computeMaxIntrinsicWidth", "computeMaxIntrinsicWidth$1", 1);
     _instance_1_u(_, "get$computeMinIntrinsicHeight", "computeMinIntrinsicHeight$1", 1);
     _instance_1_u(_, "get$computeMaxIntrinsicHeight", "computeMaxIntrinsicHeight$1", 1);
-    _instance_1_u(_, "get$_childSemanticsConfigurationDelegate", "_childSemanticsConfigurationDelegate$1", 279);
+    _instance_1_u(_, "get$_childSemanticsConfigurationDelegate", "_childSemanticsConfigurationDelegate$1", 372);
     _instance_2_u(_, "get$_paintLabel", "_paintLabel$2", 29);
     _instance_0_u(A._InputDecoratorState.prototype, "get$_input_decorator$_handleChange", "_input_decorator$_handleChange$0", 0);
     _instance_1_u(_ = A._RenderListTile.prototype, "get$computeMinIntrinsicWidth", "computeMinIntrinsicWidth$1", 1);
@@ -323540,15 +323677,15 @@
     _instance_1_u(_ = A._FloatingActionButtonTransitionState.prototype, "get$_handlePreviousAnimationStatusChanged", "_handlePreviousAnimationStatusChanged$1", 11);
     _instance_0_u(_, "get$_onProgressChanged", "_onProgressChanged$0", 0);
     _instance_0_u(A.ScaffoldState.prototype, "get$_scaffold$_handleStatusBarTap", "_scaffold$_handleStatusBarTap$0", 0);
-    _static(A, "scrollbar_theme___lerpBool$closure", 3, null, ["call$3"], ["_lerpBool"], 1414, 0);
-    _static_2(A, "selectable_text_SelectableText__defaultContextMenuBuilder$closure", "SelectableText__defaultContextMenuBuilder", 203);
-    _instance_1_u(_ = A._SelectableTextSelectionGestureDetectorBuilder.prototype, "get$onForcePressStart", "onForcePressStart$1", 64);
-    _instance_1_u(_, "get$onForcePressEnd", "onForcePressEnd$1", 64);
-    _instance_1_u(_, "get$onSingleLongTapMoveUpdate", "onSingleLongTapMoveUpdate$1", 143);
-    _instance_1_u(_, "get$onSingleTapUp", "onSingleTapUp$1", 138);
-    _instance_1_u(_, "get$onSingleLongTapStart", "onSingleLongTapStart$1", 98);
+    _static(A, "scrollbar_theme___lerpBool$closure", 3, null, ["call$3"], ["_lerpBool"], 1415, 0);
+    _static_2(A, "selectable_text_SelectableText__defaultContextMenuBuilder$closure", "SelectableText__defaultContextMenuBuilder", 177);
+    _instance_1_u(_ = A._SelectableTextSelectionGestureDetectorBuilder.prototype, "get$onForcePressStart", "onForcePressStart$1", 67);
+    _instance_1_u(_, "get$onForcePressEnd", "onForcePressEnd$1", 67);
+    _instance_1_u(_, "get$onSingleLongTapMoveUpdate", "onSingleLongTapMoveUpdate$1", 127);
+    _instance_1_u(_, "get$onSingleTapUp", "onSingleTapUp$1", 128);
+    _instance_1_u(_, "get$onSingleLongTapStart", "onSingleLongTapStart$1", 110);
     _instance_0_u(_ = A._SelectableTextState.prototype, "get$_onControllerChanged", "_onControllerChanged$0", 0);
-    _instance_2_u(_, "get$_handleSelectionChanged", "_handleSelectionChanged$2", 269);
+    _instance_2_u(_, "get$_handleSelectionChanged", "_handleSelectionChanged$2", 344);
     _instance_0_u(_, "get$_handleSelectionHandleTapped", "_handleSelectionHandleTapped$0", 0);
     _instance_1_u(A._SnackBarState.prototype, "get$_onAnimationStatusChanged", "_onAnimationStatusChanged$1", 11);
     _instance_0_u(A.TabController.prototype, "get$dispose", "dispose$0", 0);
@@ -323557,53 +323694,53 @@
     _instance_0_u(_, "get$_handleTabControllerTick", "_handleTabControllerTick$0", 0);
     _instance(_, "get$_saveTabOffsets", 0, 3, null, ["call$3"], ["_saveTabOffsets$3"], 1006, 0, 0);
     _instance_0_u(_ = A._TabBarViewState.prototype, "get$_handleTabControllerAnimationTick", "_handleTabControllerAnimationTick$0", 0);
-    _instance_1_u(_, "get$_tabs$_handleScrollNotification", "_tabs$_handleScrollNotification$1", 74);
-    _static_2(A, "text_field_TextField__defaultContextMenuBuilder$closure", "TextField__defaultContextMenuBuilder", 203);
-    _instance_1_u(_ = A._TextFieldSelectionGestureDetectorBuilder.prototype, "get$onForcePressStart", "onForcePressStart$1", 64);
-    _instance_1_u(_, "get$onForcePressEnd", "onForcePressEnd$1", 64);
-    _instance_1_u(_, "get$onSingleTapUp", "onSingleTapUp$1", 138);
+    _instance_1_u(_, "get$_tabs$_handleScrollNotification", "_tabs$_handleScrollNotification$1", 79);
+    _static_2(A, "text_field_TextField__defaultContextMenuBuilder$closure", "TextField__defaultContextMenuBuilder", 177);
+    _instance_1_u(_ = A._TextFieldSelectionGestureDetectorBuilder.prototype, "get$onForcePressStart", "onForcePressStart$1", 67);
+    _instance_1_u(_, "get$onForcePressEnd", "onForcePressEnd$1", 67);
+    _instance_1_u(_, "get$onSingleTapUp", "onSingleTapUp$1", 128);
     _instance_0_u(_, "get$onUserTap", "onUserTap$0", 0);
-    _instance_1_u(_, "get$onSingleLongTapStart", "onSingleLongTapStart$1", 98);
+    _instance_1_u(_, "get$onSingleLongTapStart", "onSingleLongTapStart$1", 110);
     _instance_0_u(_ = A._TextFieldState.prototype, "get$_text_field$_handleFocusChanged", "_text_field$_handleFocusChanged$0", 0);
-    _instance_2_u(_, "get$_text_field$_handleSelectionChanged", "_text_field$_handleSelectionChanged$2", 269);
+    _instance_2_u(_, "get$_text_field$_handleSelectionChanged", "_text_field$_handleSelectionChanged$2", 344);
     _instance_0_u(_, "get$_text_field$_handleSelectionHandleTapped", "_text_field$_handleSelectionHandleTapped$0", 0);
     _instance_0_u(_, "get$_handleStatesControllerChange", "_handleStatesControllerChange$0", 0);
-    _static_2(A, "text_form_field_TextFormField__defaultContextMenuBuilder$closure", "TextFormField__defaultContextMenuBuilder", 203);
+    _static_2(A, "text_form_field_TextFormField__defaultContextMenuBuilder$closure", "TextFormField__defaultContextMenuBuilder", 177);
     _instance_0_u(A._TextFormFieldState.prototype, "get$_handleControllerChanged", "_handleControllerChanged$0", 0);
-    _static_2(A, "text_selection_toolbar_TextSelectionToolbar__defaultToolbarBuilder$closure", "TextSelectionToolbar__defaultToolbarBuilder", 1416);
+    _static_2(A, "text_selection_toolbar_TextSelectionToolbar__defaultToolbarBuilder$closure", "TextSelectionToolbar__defaultToolbarBuilder", 1417);
     _instance_1_u(_ = A.ToggleableStateMixin0.prototype, "get$_toggleable$_handleTapDown", "_toggleable$_handleTapDown$1", 45);
     _instance(_, "get$_toggleable$_handleTap", 0, 0, function() {
       return [null];
-    }, ["call$1", "call$0"], ["_toggleable$_handleTap$1", "_toggleable$_handleTap$0"], 212, 0, 0);
-    _instance(_, "get$_handleTapEnd", 0, 0, null, ["call$1", "call$0"], ["_handleTapEnd$1", "_handleTapEnd$0"], 301, 0, 0);
+    }, ["call$1", "call$0"], ["_toggleable$_handleTap$1", "_toggleable$_handleTap$0"], 155, 0, 0);
+    _instance(_, "get$_handleTapEnd", 0, 0, null, ["call$1", "call$0"], ["_handleTapEnd$1", "_handleTapEnd$0"], 276, 0, 0);
     _instance_1_u(_, "get$_handleFocusHighlightChanged", "_handleFocusHighlightChanged$1", 10);
     _instance_1_u(_, "get$_handleHoverChanged", "_handleHoverChanged$1", 10);
     _instance_0_u(A.ToggleablePainter0.prototype, "get$dispose", "dispose$0", 0);
     _instance_1_u(_ = A.TooltipState.prototype, "get$_tooltip$_handleStatusChanged", "_tooltip$_handleStatusChanged$1", 11);
-    _instance_1_u(_, "get$_tooltip$_handlePointerDown", "_tooltip$_handlePointerDown$1", 83);
-    _instance_1_u(_, "get$_handleGlobalPointerEvent", "_handleGlobalPointerEvent$1", 38);
+    _instance_1_u(_, "get$_tooltip$_handlePointerDown", "_tooltip$_handlePointerDown$1", 86);
+    _instance_1_u(_, "get$_handleGlobalPointerEvent", "_handleGlobalPointerEvent$1", 39);
     _instance_0_u(_, "get$_handleTapToDismiss", "_handleTapToDismiss$0", 0);
     _instance_0_u(_, "get$_handleLongPress", "_handleLongPress$0", 0);
     _instance_0_u(_, "get$_handlePressUp", "_handlePressUp$0", 0);
-    _instance_1_u(_, "get$_handleMouseEnter", "_handleMouseEnter$1", 79);
-    _instance_1_u(_, "get$_handleMouseExit", "_handleMouseExit$1", 68);
-    _instance_1_u(_, "get$_buildTooltipOverlay", "_buildTooltipOverlay$1", 23);
+    _instance_1_u(_, "get$_handleMouseEnter", "_handleMouseEnter$1", 80);
+    _instance_1_u(_, "get$_handleMouseExit", "_handleMouseExit$1", 64);
+    _instance_1_u(_, "get$_buildTooltipOverlay", "_buildTooltipOverlay$1", 22);
     _instance(_ = A.PaintingBinding.prototype, "get$instantiateImageCodecFromBuffer", 0, 1, null, ["call$4$allowUpscaling$cacheHeight$cacheWidth", "call$1"], ["instantiateImageCodecFromBuffer$4$allowUpscaling$cacheHeight$cacheWidth", "instantiateImageCodecFromBuffer$1"], 1108, 0, 0);
     _instance(_, "get$instantiateImageCodecWithSize", 0, 1, null, ["call$2$getTargetSize", "call$1"], ["instantiateImageCodecWithSize$2$getTargetSize", "instantiateImageCodecWithSize$1"], 1116, 0, 0);
-    _static(A, "borders_OutlinedBorder_lerp$closure", 3, null, ["call$3"], ["OutlinedBorder_lerp"], 1417, 0);
+    _static(A, "borders_OutlinedBorder_lerp$closure", 3, null, ["call$3"], ["OutlinedBorder_lerp"], 1418, 0);
     _instance_0_u(A.ImageSizeInfo.prototype, "get$toJson", "toJson$0", 1164);
-    _static(A, "edge_insets_EdgeInsetsGeometry_lerp$closure", 3, null, ["call$3"], ["EdgeInsetsGeometry_lerp"], 1418, 0);
-    _instance_1_i(_ = A.ImageStreamCompleter.prototype, "get$addListener", "addListener$1", 262);
-    _instance_1_u(_, "get$reportImageChunkEvent", "reportImageChunkEvent$1", 258);
+    _static(A, "edge_insets_EdgeInsetsGeometry_lerp$closure", 3, null, ["call$3"], ["EdgeInsetsGeometry_lerp"], 1419, 0);
+    _instance_1_i(_ = A.ImageStreamCompleter.prototype, "get$addListener", "addListener$1", 323);
+    _instance_1_u(_, "get$reportImageChunkEvent", "reportImageChunkEvent$1", 321);
     _instance_1_u(_ = A.MultiFrameImageStreamCompleter.prototype, "get$_handleCodecReady", "_handleCodecReady$1", 1366);
     _instance_1_u(_, "get$_handleAppFrame", "_handleAppFrame$1", 9);
-    _instance_1_i(_, "get$addListener", "addListener$1", 262);
-    _instance_2_u(A.WordBoundary.prototype, "get$_skipSpacesAndPunctuations", "_skipSpacesAndPunctuations$2", 1429);
-    _static(A, "text_style_TextStyle_lerp$closure", 3, null, ["call$3"], ["TextStyle_lerp"], 1419, 0);
+    _instance_1_i(_, "get$addListener", "addListener$1", 323);
+    _instance_2_u(A.WordBoundary.prototype, "get$_skipSpacesAndPunctuations", "_skipSpacesAndPunctuations$2", 1416);
+    _static(A, "text_style_TextStyle_lerp$closure", 3, null, ["call$3"], ["TextStyle_lerp"], 1420, 0);
     _instance_1_i(_ = A.FrictionSimulation.prototype, "get$x", "x$1", 1);
     _instance_1_i(_, "get$dx", "dx$1", 1);
     _instance_1_u(A.RenderAnimatedSize.prototype, "get$_animationStatusListener", "_animationStatusListener$1", 11);
-    _static_1(A, "binding2__DefaultRootPipelineOwner__onSemanticsUpdate$closure", "_DefaultRootPipelineOwner__onSemanticsUpdate", 256);
+    _static_1(A, "binding2__DefaultRootPipelineOwner__onSemanticsUpdate$closure", "_DefaultRootPipelineOwner__onSemanticsUpdate", 319);
     _instance_1_u(_ = A.RendererBinding.prototype, "get$_handleWebFirstFrame", "_handleWebFirstFrame$1", 9);
     _instance_1_u(_, "get$_handlePersistentFrameCallback", "_handlePersistentFrameCallback$1", 9);
     _instance_0_u(A._BindingPipelineManifold.prototype, "get$dispose", "dispose$0", 0);
@@ -323623,7 +323760,7 @@
     _instance_1_u(_, "get$computeMaxIntrinsicHeight", "computeMaxIntrinsicHeight$1", 1);
     _instance_0_u(_ = A.RenderEditable.prototype, "get$markNeedsPaint", "markNeedsPaint$0", 0);
     _instance_0_u(_, "get$_showHideCursor", "_showHideCursor$0", 0);
-    _instance_1_u(_, "get$_handleSetText", "_handleSetText$1", 37);
+    _instance_1_u(_, "get$_handleSetText", "_handleSetText$1", 36);
     _instance_1_u(_, "get$_handleSetSelection", "_handleSetSelection$1", 395);
     _instance_1_u(_, "get$_handleMoveCursorForwardByCharacter", "_handleMoveCursorForwardByCharacter$1", 10);
     _instance_1_u(_, "get$_handleMoveCursorBackwardByCharacter", "_handleMoveCursorBackwardByCharacter$1", 10);
@@ -323656,7 +323793,7 @@
     _instance(_, "get$paint", 0, 2, null, ["call$2"], ["paint$2"], 29, 0, 1);
     _instance_0_u(_, "get$markNeedsSemanticsUpdate", "markNeedsSemanticsUpdate$0", 0);
     _instance(_, "get$_marksExplicitInMergeGroup", 0, 1, null, ["call$2$isMergeUp", "call$1"], ["_marksExplicitInMergeGroup$2$isMergeUp", "_marksExplicitInMergeGroup$1"], 403, 0, 0);
-    _instance(_, "get$showOnScreen", 0, 0, null, ["call$4$curve$descendant$duration$rect", "call$0", "call$1$rect", "call$3$curve$duration$rect", "call$2$descendant$rect"], ["showOnScreen$4$curve$descendant$duration$rect", "showOnScreen$0", "showOnScreen$1$rect", "showOnScreen$3$curve$duration$rect", "showOnScreen$2$descendant$rect"], 186, 0, 0);
+    _instance(_, "get$showOnScreen", 0, 0, null, ["call$4$curve$descendant$duration$rect", "call$0", "call$1$rect", "call$3$curve$duration$rect", "call$2$descendant$rect"], ["showOnScreen$4$curve$descendant$duration$rect", "showOnScreen$0", "showOnScreen$1$rect", "showOnScreen$3$curve$duration$rect", "showOnScreen$2$descendant$rect"], 163, 0, 0);
     _instance_1_u(_ = A.ContainerRenderObjectMixin.prototype, "get$childBefore", "childBefore$1", "ContainerRenderObjectMixin.0?(Object?)");
     _instance_1_u(_, "get$childAfter", "childAfter$1", "ContainerRenderObjectMixin.0?(Object?)");
     _instance_0_u(A.RelayoutWhenSystemFontsChangeMixin.prototype, "get$_scheduleSystemFontsUpdate", "_scheduleSystemFontsUpdate$0", 0);
@@ -323664,8 +323801,8 @@
     _instance_1_u(_, "get$computeMaxIntrinsicWidth", "computeMaxIntrinsicWidth$1", 1);
     _instance_1_u(_, "get$computeMinIntrinsicHeight", "computeMinIntrinsicHeight$1", 1);
     _instance_1_u(_, "get$computeMaxIntrinsicHeight", "computeMaxIntrinsicHeight$1", 1);
-    _instance_1_u(_, "get$_childSemanticsConfigurationsDelegate", "_childSemanticsConfigurationsDelegate$1", 279);
-    _instance_1_u(A._PlatformViewGestureRecognizer.prototype, "get$handleEvent", "handleEvent$1", 38);
+    _instance_1_u(_, "get$_childSemanticsConfigurationsDelegate", "_childSemanticsConfigurationsDelegate$1", 372);
+    _instance_1_u(A._PlatformViewGestureRecognizer.prototype, "get$handleEvent", "handleEvent$1", 39);
     _instance_1_u(_ = A.RenderProxyBoxMixin.prototype, "get$computeMinIntrinsicWidth", "computeMinIntrinsicWidth$1", 1);
     _instance_1_u(_, "get$computeMaxIntrinsicWidth", "computeMaxIntrinsicWidth$1", 1);
     _instance_1_u(_, "get$computeMinIntrinsicHeight", "computeMinIntrinsicHeight$1", 1);
@@ -323739,14 +323876,14 @@
     _instance_1_u(_, "get$computeMinIntrinsicHeight", "computeMinIntrinsicHeight$1", 1);
     _instance_1_u(_, "get$computeMaxIntrinsicHeight", "computeMaxIntrinsicHeight$1", 1);
     _instance_2_u(_, "get$_paintContents", "_paintContents$2", 29);
-    _instance(_, "get$showOnScreen", 0, 0, null, ["call$4$curve$descendant$duration$rect", "call$0", "call$1$rect", "call$3$curve$duration$rect", "call$2$descendant$rect"], ["showOnScreen$4$curve$descendant$duration$rect", "showOnScreen$0", "showOnScreen$1$rect", "showOnScreen$3$curve$duration$rect", "showOnScreen$2$descendant$rect"], 186, 0, 0);
+    _instance(_, "get$showOnScreen", 0, 0, null, ["call$4$curve$descendant$duration$rect", "call$0", "call$1$rect", "call$3$curve$duration$rect", "call$2$descendant$rect"], ["showOnScreen$4$curve$descendant$duration$rect", "showOnScreen$0", "showOnScreen$1$rect", "showOnScreen$3$curve$duration$rect", "showOnScreen$2$descendant$rect"], 163, 0, 0);
     _instance_1_u(_ = A.RenderWrap.prototype, "get$computeMinIntrinsicWidth", "computeMinIntrinsicWidth$1", 1);
     _instance_1_u(_, "get$computeMaxIntrinsicWidth", "computeMaxIntrinsicWidth$1", 1);
     _instance_1_u(_, "get$computeMinIntrinsicHeight", "computeMinIntrinsicHeight$1", 1);
     _instance_1_u(_, "get$computeMaxIntrinsicHeight", "computeMaxIntrinsicHeight$1", 1);
-    _static_2(A, "binding1_SchedulerBinding__taskSorter$closure", "SchedulerBinding__taskSorter", 1420);
-    _static(A, "binding1__defaultSchedulingStrategy$closure", 0, null, ["call$2$priority$scheduler"], ["defaultSchedulingStrategy"], 1421, 0);
-    _instance_1_u(_ = A.SchedulerBinding.prototype, "get$_executeTimingsCallbacks", "_executeTimingsCallbacks$1", 191);
+    _static_2(A, "binding1_SchedulerBinding__taskSorter$closure", "SchedulerBinding__taskSorter", 1421);
+    _static(A, "binding1__defaultSchedulingStrategy$closure", 0, null, ["call$2$priority$scheduler"], ["defaultSchedulingStrategy"], 1422, 0);
+    _instance_1_u(_ = A.SchedulerBinding.prototype, "get$_executeTimingsCallbacks", "_executeTimingsCallbacks$1", 164);
     _instance_0_u(_, "get$_runTasks", "_runTasks$0", 0);
     _instance_1_u(_, "get$_handleBeginFrame", "_handleBeginFrame$1", 9);
     _instance_0_u(_, "get$_handleDrawFrame", "_handleDrawFrame$0", 0);
@@ -323756,53 +323893,53 @@
     _instance_0_u(_ = A.SemanticsBinding.prototype, "get$_didDisposeSemanticsHandle", "_didDisposeSemanticsHandle$0", 0);
     _instance_0_u(_, "get$_handleSemanticsEnabledChanged", "_handleSemanticsEnabledChanged$0", 0);
     _instance_1_u(_, "get$_handleSemanticsActionEvent", "_handleSemanticsActionEvent$1", 418);
-    _instance_1_u(_ = A.SemanticsNode.prototype, "get$_redepthChild", "_redepthChild$1", 245);
-    _instance_1_u(_, "get$_updateChildMergeFlagRecursively", "_updateChildMergeFlagRecursively$1", 245);
+    _instance_1_u(_ = A.SemanticsNode.prototype, "get$_redepthChild", "_redepthChild$1", 291);
+    _instance_1_u(_, "get$_updateChildMergeFlagRecursively", "_updateChildMergeFlagRecursively$1", 291);
     _instance_0_u(A.SemanticsOwner.prototype, "get$dispose", "dispose$0", 0);
     _instance_1_u(A.SemanticsConfiguration.prototype, "get$addTagForChildren", "addTagForChildren$1", 427);
     _instance_0_u(A.AutofillConfiguration.prototype, "get$toJson", "toJson$0", 432);
     _instance_0_u(A._AutofillScopeTextInputConfiguration.prototype, "get$toJson", "toJson$0", 15);
-    _static_1(A, "binding3_ServicesBinding__parseLicenses$closure", "ServicesBinding__parseLicenses", 1422);
+    _static_1(A, "binding3_ServicesBinding__parseLicenses$closure", "ServicesBinding__parseLicenses", 1423);
     _instance_0_u(_ = A.ServicesBinding.prototype, "get$_addLicenses", "_addLicenses$0", 436);
     _instance_1_u(_, "get$_handleLifecycleMessage", "_handleLifecycleMessage$1", 437);
-    _instance_1_u(_, "get$_handlePlatformMessage", "_handlePlatformMessage$1", 146);
-    _instance_1_u(_ = A.KeyEventManager.prototype, "get$handleKeyData", "handleKeyData$1", 172);
+    _instance_1_u(_, "get$_handlePlatformMessage", "_handlePlatformMessage$1", 147);
+    _instance_1_u(_ = A.KeyEventManager.prototype, "get$handleKeyData", "handleKeyData$1", 170);
     _instance_1_u(_, "get$handleRawKeyMessage", "handleRawKeyMessage$1", 443);
     _instance_1_u(_, "get$_convertRawEventAndStore", "_convertRawEventAndStore$1", 444);
-    _instance_1_u(_ = A.RestorationManager.prototype, "get$_methodHandler", "_methodHandler$1", 240);
+    _instance_1_u(_ = A.RestorationManager.prototype, "get$_methodHandler", "_methodHandler$1", 279);
     _instance_0_u(_, "get$dispose", "dispose$0", 0);
-    _instance_1_u(_ = A.RestorationBucket.prototype, "get$_restoration$_dropChild", "_restoration$_dropChild$1", 239);
-    _instance_1_u(_, "get$_recursivelyUpdateManager", "_recursivelyUpdateManager$1", 239);
+    _instance_1_u(_ = A.RestorationBucket.prototype, "get$_restoration$_dropChild", "_restoration$_dropChild$1", 274);
+    _instance_1_u(_, "get$_recursivelyUpdateManager", "_recursivelyUpdateManager$1", 274);
     _instance_0_u(A.TextInputType.prototype, "get$toJson", "toJson$0", 15);
     _instance_0_u(A.TextInputConfiguration.prototype, "get$toJson", "toJson$0", 15);
     _instance_0_u(A.TextEditingValue.prototype, "get$toJSON", "toJSON$0", 15);
-    _instance_1_u(A.TextInput.prototype, "get$_loudlyHandleTextInputInvocation", "_loudlyHandleTextInputInvocation$1", 146);
-    _instance_1_u(A.UndoManager.prototype, "get$_handleUndoManagerInvocation", "_handleUndoManagerInvocation$1", 146);
+    _instance_1_u(A.TextInput.prototype, "get$_loudlyHandleTextInputInvocation", "_loudlyHandleTextInputInvocation$1", 147);
+    _instance_1_u(A.UndoManager.prototype, "get$_handleUndoManagerInvocation", "_handleUndoManagerInvocation$1", 147);
     _instance_1_u(A._HtmlElementViewController.prototype, "get$dispatchPointerEvent", "dispatchPointerEvent$1", 460);
     _instance_1_u(A._ActionsState.prototype, "get$_handleActionChanged", "_handleActionChanged$1", 463);
-    _instance_1_u(_ = A._FocusableActionDetectorState.prototype, "get$_handleFocusHighlightModeChange", "_handleFocusHighlightModeChange$1", 280);
-    _instance_1_u(_, "get$_actions$_handleMouseEnter", "_actions$_handleMouseEnter$1", 79);
-    _instance_1_u(_, "get$_actions$_handleMouseExit", "_actions$_handleMouseExit$1", 68);
+    _instance_1_u(_ = A._FocusableActionDetectorState.prototype, "get$_handleFocusHighlightModeChange", "_handleFocusHighlightModeChange$1", 377);
+    _instance_1_u(_, "get$_actions$_handleMouseEnter", "_actions$_handleMouseEnter$1", 80);
+    _instance_1_u(_, "get$_actions$_handleMouseExit", "_actions$_handleMouseExit$1", 64);
     _instance_1_u(_, "get$_actions$_handleFocusChange", "_actions$_handleFocusChange$1", 10);
-    _static_2(A, "animated_switcher_AnimatedSwitcher_defaultTransitionBuilder$closure", "AnimatedSwitcher_defaultTransitionBuilder", 266);
-    _static_2(A, "animated_switcher_AnimatedSwitcher_defaultLayoutBuilder$closure", "AnimatedSwitcher_defaultLayoutBuilder", 1423);
+    _static_2(A, "animated_switcher_AnimatedSwitcher_defaultTransitionBuilder$closure", "AnimatedSwitcher_defaultTransitionBuilder", 267);
+    _static_2(A, "animated_switcher_AnimatedSwitcher_defaultLayoutBuilder$closure", "AnimatedSwitcher_defaultLayoutBuilder", 1424);
     _instance_1_u(A._AnimatedSwitcherState.prototype, "get$_updateTransitionForEntry", "_updateTransitionForEntry$1", 465);
-    _instance_1_u(_ = A._WidgetsAppState.prototype, "get$_defaultOnNavigationNotification", "_defaultOnNavigationNotification$1", 236);
+    _instance_1_u(_ = A._WidgetsAppState.prototype, "get$_defaultOnNavigationNotification", "_defaultOnNavigationNotification$1", 249);
     _instance_1_u(_, "get$_onGenerateRoute", "_onGenerateRoute$1", 469);
     _instance_1_u(_, "get$_onUnknownRoute", "_onUnknownRoute$1", 470);
     _instance_1_u(A._AutomaticKeepAliveState.prototype, "get$_addClient", "_addClient$1", 473);
     _instance_0_u(A.KeepAliveHandle.prototype, "get$dispose", "dispose$0", 0);
     _instance_0_u(_ = A.WidgetsBinding.prototype, "get$handleLocaleChanged", "handleLocaleChanged$0", 0);
-    _instance_1_u(_, "get$_handleNavigationInvocation", "_handleNavigationInvocation$1", 146);
+    _instance_1_u(_, "get$_handleNavigationInvocation", "_handleNavigationInvocation$1", 147);
     _instance_0_u(_, "get$_handleBuildScheduled", "_handleBuildScheduled$0", 0);
     _instance_0_u(_ = A._WidgetsFlutterBinding_BindingBase_GestureBinding_SchedulerBinding_ServicesBinding_PaintingBinding_SemanticsBinding_RendererBinding_WidgetsBinding.prototype, "get$handleMetricsChanged", "handleMetricsChanged$0", 0);
     _instance_0_u(_, "get$handleTextScaleFactorChanged", "handleTextScaleFactorChanged$0", 0);
     _instance_0_u(_, "get$handlePlatformBrightnessChanged", "handlePlatformBrightnessChanged$0", 0);
-    _instance_1_u(_, "get$handleAppLifecycleStateChanged", "handleAppLifecycleStateChanged$1", 1390);
-    _instance_1_u(_ = A._DismissibleState.prototype, "get$_dismissible$_handleDragStart", "_dismissible$_handleDragStart$1", 48);
-    _instance_1_u(_, "get$_dismissible$_handleDragUpdate", "_dismissible$_handleDragUpdate$1", 31);
+    _instance_1_u(_, "get$handleAppLifecycleStateChanged", "handleAppLifecycleStateChanged$1", 1391);
+    _instance_1_u(_ = A._DismissibleState.prototype, "get$_dismissible$_handleDragStart", "_dismissible$_handleDragStart$1", 49);
+    _instance_1_u(_, "get$_dismissible$_handleDragUpdate", "_dismissible$_handleDragUpdate$1", 32);
     _instance_0_u(_, "get$_handleDismissUpdateValueChanged", "_handleDismissUpdateValueChanged$0", 0);
-    _instance_1_u(_, "get$_dismissible$_handleDragEnd", "_dismissible$_handleDragEnd$1", 62);
+    _instance_1_u(_, "get$_dismissible$_handleDragEnd", "_dismissible$_handleDragEnd$1", 56);
     _instance_1_u(_, "get$_handleDismissStatusChanged", "_handleDismissStatusChanged$1", 482);
     _instance_1_u(A._DualTransitionBuilderState.prototype, "get$_animationListener", "_animationListener$1", 11);
     _instance_0_u(_ = A.EditableTextState.prototype, "get$_onChangedClipboardStatus", "_onChangedClipboardStatus$0", 0);
@@ -323817,15 +323954,15 @@
     _instance_1_u(_, "get$_compositeCallback", "_compositeCallback$1", 485);
     _instance(_, "get$_schedulePeriodicPostFrameCallbacks", 0, 0, function() {
       return [null];
-    }, ["call$1", "call$0"], ["_schedulePeriodicPostFrameCallbacks$1", "_schedulePeriodicPostFrameCallbacks$0"], 216, 0, 0);
-    _instance_1_u(_, "get$performSelector", "performSelector$1", 37);
-    _instance(_, "get$_moveBeyondTextBoundary", 0, 3, null, ["call$3"], ["_moveBeyondTextBoundary$3"], 273, 0, 0);
-    _instance(_, "get$_moveToTextBoundary", 0, 3, null, ["call$3"], ["_moveToTextBoundary$3"], 273, 0, 0);
-    _instance_0_u(_, "get$_characterBoundary", "_characterBoundary$0", 111);
-    _instance_0_u(_, "get$_nextWordBoundary", "_nextWordBoundary$0", 111);
-    _instance_0_u(_, "get$_linebreak", "_linebreak$0", 111);
-    _instance_0_u(_, "get$_paragraphBoundary", "_paragraphBoundary$0", 111);
-    _instance_0_u(_, "get$_documentBoundary", "_documentBoundary$0", 111);
+    }, ["call$1", "call$0"], ["_schedulePeriodicPostFrameCallbacks$1", "_schedulePeriodicPostFrameCallbacks$0"], 237, 0, 0);
+    _instance_1_u(_, "get$performSelector", "performSelector$1", 36);
+    _instance(_, "get$_moveBeyondTextBoundary", 0, 3, null, ["call$3"], ["_moveBeyondTextBoundary$3"], 235, 0, 0);
+    _instance(_, "get$_moveToTextBoundary", 0, 3, null, ["call$3"], ["_moveToTextBoundary$3"], 235, 0, 0);
+    _instance_0_u(_, "get$_characterBoundary", "_characterBoundary$0", 101);
+    _instance_0_u(_, "get$_nextWordBoundary", "_nextWordBoundary$0", 101);
+    _instance_0_u(_, "get$_linebreak", "_linebreak$0", 101);
+    _instance_0_u(_, "get$_paragraphBoundary", "_paragraphBoundary$0", 101);
+    _instance_0_u(_, "get$_documentBoundary", "_documentBoundary$0", 101);
     _instance_1_u(_, "get$_transposeCharacters", "_transposeCharacters$1", 489);
     _instance_1_u(_, "get$_replaceText", "_replaceText$1", 490);
     _instance_1_u(_, "get$_scrollToDocumentBoundary", "_scrollToDocumentBoundary$1", 491);
@@ -323833,11 +323970,11 @@
     _instance_1_u(_, "get$_extendSelectionByPage", "_extendSelectionByPage$1", 493);
     _instance_1_u(_, "get$_updateSelection", "_updateSelection$1", 494);
     _instance_1_u(_, "get$_hideToolbarIfVisible", "_hideToolbarIfVisible$1", 495);
-    _instance_1_u(_, "get$_defaultOnTapOutside", "_defaultOnTapOutside$1", 83);
+    _instance_1_u(_, "get$_defaultOnTapOutside", "_defaultOnTapOutside$1", 86);
     _instance_0_u(A.FocusNode.prototype, "get$dispose", "dispose$0", 0);
     _instance_0_u(_ = A.FocusManager.prototype, "get$dispose", "dispose$0", 0);
     _instance_0_u(_, "get$applyFocusChangesIfNeeded", "applyFocusChangesIfNeeded$0", 0);
-    _instance_1_u(_ = A._HighlightModeManager.prototype, "get$handlePointerEvent", "handlePointerEvent$1", 38);
+    _instance_1_u(_ = A._HighlightModeManager.prototype, "get$handlePointerEvent", "handlePointerEvent$1", 39);
     _instance_1_u(_, "get$handleKeyMessage", "handleKeyMessage$1", 506);
     _instance_0_u(A._FocusState.prototype, "get$_handleFocusChanged", "_handleFocusChanged$0", 0);
     _static(A, "focus_traversal_FocusTraversalPolicy_defaultTraversalRequestFocusCallback$closure", 1, null, ["call$5$alignment$alignmentPolicy$curve$duration", "call$1", "call$2$alignmentPolicy"], ["FocusTraversalPolicy_defaultTraversalRequestFocusCallback", function(node) {
@@ -323845,30 +323982,30 @@
       return A.FocusTraversalPolicy_defaultTraversalRequestFocusCallback(node, _null, _null, _null, _null);
     }, function(node, alignmentPolicy) {
       return A.FocusTraversalPolicy_defaultTraversalRequestFocusCallback(node, null, alignmentPolicy, null, null);
-    }], 1424, 0);
+    }], 1425, 0);
     _static_1(A, "framework__InactiveElements__deactivateRecursively$closure", "_InactiveElements__deactivateRecursively", 33);
-    _static_2(A, "framework_Element__sort$closure", "Element__sort", 1425);
+    _static_2(A, "framework_Element__sort$closure", "Element__sort", 1426);
     _static_1(A, "framework_Element__activateRecursively$closure", "Element__activateRecursively", 33);
     _instance_1_u(_ = A._InactiveElements.prototype, "get$_unmount", "_unmount$1", 33);
     _instance_0_u(_, "get$_unmountAll", "_unmountAll$0", 0);
     _instance_1_u(A.Element.prototype, "get$deactivateChild", "deactivateChild$1", 33);
-    _instance_1_u(_ = A.RawGestureDetectorState.prototype, "get$_gesture_detector$_handlePointerDown", "_gesture_detector$_handlePointerDown$1", 83);
+    _instance_1_u(_ = A.RawGestureDetectorState.prototype, "get$_gesture_detector$_handlePointerDown", "_gesture_detector$_handlePointerDown$1", 86);
     _instance_1_u(_, "get$_handlePointerPanZoomStart", "_handlePointerPanZoomStart$1", 538);
     _instance_1_u(_, "get$_updateSemanticsForRenderObject", "_updateSemanticsForRenderObject$1", 539);
-    _instance_1_u(_ = A._HeroFlight.prototype, "get$_buildOverlay", "_buildOverlay$1", 23);
+    _instance_1_u(_ = A._HeroFlight.prototype, "get$_buildOverlay", "_buildOverlay$1", 22);
     _instance_1_u(_, "get$_handleAnimationUpdate", "_handleAnimationUpdate$1", 11);
     _instance_0_u(_, "get$onTick", "onTick$0", 0);
     _instance_1_u(_ = A.HeroController.prototype, "get$_handleFlightEnded", "_handleFlightEnded$1", 542);
-    _instance(_, "get$_defaultHeroFlightShuttleBuilder", 0, 5, null, ["call$5"], ["_defaultHeroFlightShuttleBuilder$5"], 230, 0, 0);
-    _static(A, "icon_theme_data_IconThemeData_lerp$closure", 3, null, ["call$3"], ["IconThemeData_lerp"], 1426, 0);
+    _instance(_, "get$_defaultHeroFlightShuttleBuilder", 0, 5, null, ["call$5"], ["_defaultHeroFlightShuttleBuilder$5"], 231, 0, 0);
+    _static(A, "icon_theme_data_IconThemeData_lerp$closure", 3, null, ["call$3"], ["IconThemeData_lerp"], 1427, 0);
     _instance_2_u(_ = A._ImageState.prototype, "get$_handleImageFrame", "_handleImageFrame$2", 547);
-    _instance_1_u(_, "get$_handleImageChunk", "_handleImageChunk$1", 258);
+    _instance_1_u(_, "get$_handleImageChunk", "_handleImageChunk$1", 321);
     _instance_0_u(A.AnimatedWidgetBaseState.prototype, "get$_handleAnimationChanged", "_handleAnimationChanged$0", 0);
     _instance_0_u(A._InheritedNotifierElement.prototype, "get$_handleUpdate", "_handleUpdate$0", 0);
-    _instance_1_u(_ = A._InteractiveViewerState.prototype, "get$_onScaleStart", "_onScaleStart$1", 326);
-    _instance_1_u(_, "get$_onScaleUpdate", "_onScaleUpdate$1", 325);
-    _instance_1_u(_, "get$_onScaleEnd", "_onScaleEnd$1", 322);
-    _instance_1_u(_, "get$_interactive_viewer$_receivedPointerSignal", "_interactive_viewer$_receivedPointerSignal$1", 205);
+    _instance_1_u(_ = A._InteractiveViewerState.prototype, "get$_onScaleStart", "_onScaleStart$1", 370);
+    _instance_1_u(_, "get$_onScaleUpdate", "_onScaleUpdate$1", 361);
+    _instance_1_u(_, "get$_onScaleEnd", "_onScaleEnd$1", 358);
+    _instance_1_u(_, "get$_interactive_viewer$_receivedPointerSignal", "_interactive_viewer$_receivedPointerSignal$1", 212);
     _instance_0_u(_, "get$_onAnimate", "_onAnimate$0", 0);
     _instance_0_u(_, "get$_onScaleAnimate", "_onScaleAnimate$0", 0);
     _instance_0_u(_, "get$_onTransformationControllerChange", "_onTransformationControllerChange$0", 0);
@@ -323877,18 +324014,18 @@
     _instance_1_u(_, "get$computeMaxIntrinsicWidth", "computeMaxIntrinsicWidth$1", 1);
     _instance_1_u(_, "get$computeMinIntrinsicHeight", "computeMinIntrinsicHeight$1", 1);
     _instance_1_u(_, "get$computeMaxIntrinsicHeight", "computeMaxIntrinsicHeight$1", 1);
-    _static_2(A, "navigator_Navigator_defaultGenerateInitialRoutes$closure", "Navigator_defaultGenerateInitialRoutes", 1427);
-    _static_1(A, "navigator__RouteEntry_isPresentPredicate$closure", "_RouteEntry_isPresentPredicate", 108);
-    _static_1(A, "navigator__RouteEntry_suitableForTransitionAnimationPredicate$closure", "_RouteEntry_suitableForTransitionAnimationPredicate", 108);
-    _static_1(A, "navigator__RouteEntry_willBePresentPredicate$closure", "_RouteEntry_willBePresentPredicate", 108);
-    _instance_1_u(A._NavigatorPushObservation.prototype, "get$notify", "notify$1", 140);
-    _instance_1_u(A._NavigatorPopObservation.prototype, "get$notify", "notify$1", 140);
-    _instance_1_u(A._NavigatorRemoveObservation.prototype, "get$notify", "notify$1", 140);
-    _instance_1_u(A._NavigatorReplaceObservation.prototype, "get$notify", "notify$1", 140);
+    _static_2(A, "navigator_Navigator_defaultGenerateInitialRoutes$closure", "Navigator_defaultGenerateInitialRoutes", 1428);
+    _static_1(A, "navigator__RouteEntry_isPresentPredicate$closure", "_RouteEntry_isPresentPredicate", 104);
+    _static_1(A, "navigator__RouteEntry_suitableForTransitionAnimationPredicate$closure", "_RouteEntry_suitableForTransitionAnimationPredicate", 104);
+    _static_1(A, "navigator__RouteEntry_willBePresentPredicate$closure", "_RouteEntry_willBePresentPredicate", 104);
+    _instance_1_u(A._NavigatorPushObservation.prototype, "get$notify", "notify$1", 152);
+    _instance_1_u(A._NavigatorPopObservation.prototype, "get$notify", "notify$1", 152);
+    _instance_1_u(A._NavigatorRemoveObservation.prototype, "get$notify", "notify$1", 152);
+    _instance_1_u(A._NavigatorReplaceObservation.prototype, "get$notify", "notify$1", 152);
     _instance_0_u(_ = A.NavigatorState.prototype, "get$_handleHistoryChanged", "_handleHistoryChanged$0", 0);
     _instance_0_u(_, "get$_recordLastFocus", "_recordLastFocus$0", 0);
-    _instance_1_u(_, "get$_handlePointerDown", "_handlePointerDown$1", 83);
-    _instance_1_u(_, "get$_handlePointerUpOrCancel", "_handlePointerUpOrCancel$1", 38);
+    _instance_1_u(_, "get$_handlePointerDown", "_handlePointerDown$1", 86);
+    _instance_1_u(_, "get$_handlePointerUpOrCancel", "_handlePointerUpOrCancel$1", 39);
     _instance_1_u(_ = A._RenderOverflowBar.prototype, "get$computeMinIntrinsicHeight", "computeMinIntrinsicHeight$1", 1);
     _instance_1_u(_, "get$computeMaxIntrinsicHeight", "computeMaxIntrinsicHeight$1", 1);
     _instance_1_u(_, "get$computeMinIntrinsicWidth", "computeMinIntrinsicWidth$1", 1);
@@ -323899,15 +324036,15 @@
     _instance_1_u(_, "get$computeMaxIntrinsicWidth", "computeMaxIntrinsicWidth$1", 1);
     _instance_1_u(_, "get$computeMinIntrinsicHeight", "computeMinIntrinsicHeight$1", 1);
     _instance_1_u(_, "get$computeMaxIntrinsicHeight", "computeMaxIntrinsicHeight$1", 1);
-    _instance_1_u(A._GlowingOverscrollIndicatorState.prototype, "get$_overscroll_indicator$_handleScrollNotification", "_overscroll_indicator$_handleScrollNotification$1", 74);
+    _instance_1_u(A._GlowingOverscrollIndicatorState.prototype, "get$_overscroll_indicator$_handleScrollNotification", "_overscroll_indicator$_handleScrollNotification$1", 79);
     _instance_0_u(_ = A._GlowController.prototype, "get$dispose", "dispose$0", 0);
     _instance_1_u(_, "get$_changePhase", "_changePhase$1", 11);
     _instance_1_u(_, "get$_tickDisplacement", "_tickDisplacement$1", 9);
-    _instance_1_u(A._StretchingOverscrollIndicatorState.prototype, "get$_overscroll_indicator$_handleScrollNotification", "_overscroll_indicator$_handleScrollNotification$1", 74);
+    _instance_1_u(A._StretchingOverscrollIndicatorState.prototype, "get$_overscroll_indicator$_handleScrollNotification", "_overscroll_indicator$_handleScrollNotification$1", 79);
     _instance_1_u(_ = A._StretchController.prototype, "get$_changePhase", "_changePhase$1", 11);
     _instance_0_u(_, "get$dispose", "dispose$0", 0);
-    _instance_1_u(A.DefaultPlatformMenuDelegate.prototype, "get$_methodCallHandler", "_methodCallHandler$1", 240);
-    _instance_1_u(_ = A._PlatformViewLinkState.prototype, "get$_onPlatformViewCreated", "_onPlatformViewCreated$1", 19);
+    _instance_1_u(A.DefaultPlatformMenuDelegate.prototype, "get$_methodCallHandler", "_methodCallHandler$1", 279);
+    _instance_1_u(_ = A._PlatformViewLinkState.prototype, "get$_onPlatformViewCreated", "_onPlatformViewCreated$1", 20);
     _instance_1_u(_, "get$_handleFrameworkFocusChanged", "_handleFrameworkFocusChanged$1", 10);
     _instance_0_u(A._RootRestorationScopeState.prototype, "get$_replaceRootBucket", "_replaceRootBucket$0", 0);
     _instance_0_u(A.RestorableProperty.prototype, "get$dispose", "dispose$0", 0);
@@ -323916,52 +324053,52 @@
     _instance_0_u(A.RestorableChangeNotifier.prototype, "get$dispose", "dispose$0", 0);
     _instance_1_u(_ = A._RouterState.prototype, "get$_reportRouteInformation", "_reportRouteInformation$1", 9);
     _instance_0_u(_, "get$_handleRouteInformationProviderNotification", "_handleRouteInformationProviderNotification$0", 0);
-    _instance_0_u(_, "get$_handleBackButtonDispatcherNotification", "_handleBackButtonDispatcherNotification$0", 70);
+    _instance_0_u(_, "get$_handleBackButtonDispatcherNotification", "_handleBackButtonDispatcherNotification$0", 69);
     _instance_0_u(_, "get$_handleRouterDelegateNotification", "_handleRouterDelegateNotification$0", 0);
-    _instance_1_u(_ = A.RouterDelegate.prototype, "get$setInitialRoutePath", "setInitialRoutePath$1", 198);
-    _instance_1_u(_, "get$setRestoredRoutePath", "setRestoredRoutePath$1", 198);
+    _instance_1_u(_ = A.RouterDelegate.prototype, "get$setInitialRoutePath", "setInitialRoutePath$1", 210);
+    _instance_1_u(_, "get$setRestoredRoutePath", "setRestoredRoutePath$1", 210);
     _instance_1_u(A.TransitionRoute.prototype, "get$_handleStatusChanged", "_handleStatusChanged$1", 11);
     _instance_0_u(_ = A.ModalRoute.prototype, "get$_handlePopEntryChange", "_handlePopEntryChange$0", 0);
-    _instance_1_u(_, "get$_buildModalBarrier", "_buildModalBarrier$1", 23);
-    _instance_1_u(_, "get$_buildModalScope", "_buildModalScope$1", 23);
+    _instance_1_u(_, "get$_buildModalBarrier", "_buildModalBarrier$1", 22);
+    _instance_1_u(_, "get$_buildModalScope", "_buildModalScope$1", 22);
     _instance_0_u(_ = A.BallisticScrollActivity.prototype, "get$_scroll_activity$_tick", "_scroll_activity$_tick$0", 0);
     _instance_0_u(_, "get$_scroll_activity$_end", "_scroll_activity$_end$0", 0);
     _instance_0_u(_ = A.DrivenScrollActivity.prototype, "get$_scroll_activity$_tick", "_scroll_activity$_tick$0", 0);
     _instance_0_u(_, "get$_scroll_activity$_end", "_scroll_activity$_end$0", 0);
     _instance_0_u(A.ScrollController.prototype, "get$dispose", "dispose$0", 0);
-    _static_2(A, "scroll_delegate___kDefaultSemanticIndexCallback$closure", "_kDefaultSemanticIndexCallback", 1428);
-    _instance_1_i(_ = A._SelectionKeepAliveState.prototype, "get$add", "add$1", 86);
-    _instance_1_i(_, "get$remove", "remove$1", 86);
-    _static_1(A, "scroll_notification__defaultScrollNotificationPredicate$closure", "defaultScrollNotificationPredicate", 74);
+    _static_2(A, "scroll_delegate___kDefaultSemanticIndexCallback$closure", "_kDefaultSemanticIndexCallback", 1429);
+    _instance_1_i(_ = A._SelectionKeepAliveState.prototype, "get$add", "add$1", 89);
+    _instance_1_i(_, "get$remove", "remove$1", 89);
+    _static_1(A, "scroll_notification__defaultScrollNotificationPredicate$closure", "defaultScrollNotificationPredicate", 79);
     _instance_0_u(_ = A.ScrollPosition.prototype, "get$didUpdateScrollMetrics", "didUpdateScrollMetrics$0", 0);
     _instance_0_u(_, "get$dispose", "dispose$0", 0);
     _instance_0_u(A.ScrollPositionWithSingleContext.prototype, "get$dispose", "dispose$0", 0);
     _instance_1_u(_ = A.ScrollableState.prototype, "get$_handleDragDown", "_handleDragDown$1", 596);
-    _instance_1_u(_, "get$_scrollable$_handleDragStart", "_scrollable$_handleDragStart$1", 48);
-    _instance_1_u(_, "get$_scrollable$_handleDragUpdate", "_scrollable$_handleDragUpdate$1", 31);
-    _instance_1_u(_, "get$_scrollable$_handleDragEnd", "_scrollable$_handleDragEnd$1", 62);
+    _instance_1_u(_, "get$_scrollable$_handleDragStart", "_scrollable$_handleDragStart$1", 49);
+    _instance_1_u(_, "get$_scrollable$_handleDragUpdate", "_scrollable$_handleDragUpdate$1", 32);
+    _instance_1_u(_, "get$_scrollable$_handleDragEnd", "_scrollable$_handleDragEnd$1", 56);
     _instance_0_u(_, "get$_handleDragCancel", "_handleDragCancel$0", 0);
     _instance_0_u(_, "get$_disposeHold", "_disposeHold$0", 0);
     _instance_0_u(_, "get$_disposeDrag", "_disposeDrag$0", 0);
-    _instance_1_u(_, "get$_receivedPointerSignal", "_receivedPointerSignal$1", 205);
-    _instance_1_u(_, "get$_scrollable$_handlePointerScroll", "_scrollable$_handlePointerScroll$1", 38);
-    _instance_1_u(_, "get$_handleScrollMetricsNotification", "_handleScrollMetricsNotification$1", 192);
+    _instance_1_u(_, "get$_receivedPointerSignal", "_receivedPointerSignal$1", 212);
+    _instance_1_u(_, "get$_scrollable$_handlePointerScroll", "_scrollable$_handlePointerScroll$1", 39);
+    _instance_1_u(_, "get$_handleScrollMetricsNotification", "_handleScrollMetricsNotification$1", 206);
     _instance_0_u(_ = A._ScrollableSelectionContainerDelegate.prototype, "get$_scheduleLayoutChange", "_scheduleLayoutChange$0", 0);
     _instance_0_u(_, "get$dispose", "dispose$0", 0);
     _instance_0_u(A.ScrollbarPainter.prototype, "get$dispose", "dispose$0", 0);
     _instance_1_u(_ = A.RawScrollbarState.prototype, "get$_validateInteractions", "_validateInteractions$1", 11);
     _instance_0_u(_, "get$handleThumbPress", "handleThumbPress$0", 0);
     _instance_1_u(_, "get$_handleTrackTapDown", "_handleTrackTapDown$1", 45);
-    _instance_1_u(_, "get$_scrollbar$_handleScrollMetricsNotification", "_scrollbar$_handleScrollMetricsNotification$1", 192);
-    _instance_1_u(_, "get$_handleScrollNotification", "_handleScrollNotification$1", 74);
-    _instance_1_u(_, "get$_handlePointerScroll", "_handlePointerScroll$1", 38);
-    _instance_1_u(_, "get$_scrollbar$_receivedPointerSignal", "_scrollbar$_receivedPointerSignal$1", 205);
-    _instance_1_i(_ = A.MultiSelectableSelectionContainerDelegate.prototype, "get$add", "add$1", 86);
-    _instance_1_i(_, "get$remove", "remove$1", 86);
+    _instance_1_u(_, "get$_scrollbar$_handleScrollMetricsNotification", "_scrollbar$_handleScrollMetricsNotification$1", 206);
+    _instance_1_u(_, "get$_handleScrollNotification", "_handleScrollNotification$1", 79);
+    _instance_1_u(_, "get$_handlePointerScroll", "_handlePointerScroll$1", 39);
+    _instance_1_u(_, "get$_scrollbar$_receivedPointerSignal", "_scrollbar$_receivedPointerSignal$1", 212);
+    _instance_1_i(_ = A.MultiSelectableSelectionContainerDelegate.prototype, "get$add", "add$1", 89);
+    _instance_1_i(_, "get$remove", "remove$1", 89);
     _instance_2_u(_, "get$_compareScreenOrder", "_compareScreenOrder$2", 606);
     _instance_0_u(_, "get$_handleSelectableGeometryChange", "_handleSelectableGeometryChange$0", 0);
     _instance_0_u(_, "get$dispose", "dispose$0", 0);
-    _instance_2_u(A._ShortcutsState.prototype, "get$_handleOnKeyEvent", "_handleOnKeyEvent$2", 184);
+    _instance_2_u(A._ShortcutsState.prototype, "get$_handleOnKeyEvent", "_handleOnKeyEvent$2", 181);
     _instance_0_u(A.ShortcutRegistry.prototype, "get$dispose", "dispose$0", 0);
     _instance_0_u(A._ShortcutRegistrarState.prototype, "get$_shortcutsChanged", "_shortcutsChanged$0", 0);
     _instance_0_u(_ = A._RenderSingleChildViewport.prototype, "get$_hasScrolled", "_hasScrolled$0", 0);
@@ -323969,63 +324106,63 @@
     _instance_1_u(_, "get$computeMaxIntrinsicWidth", "computeMaxIntrinsicWidth$1", 1);
     _instance_1_u(_, "get$computeMinIntrinsicHeight", "computeMinIntrinsicHeight$1", 1);
     _instance_1_u(_, "get$computeMaxIntrinsicHeight", "computeMaxIntrinsicHeight$1", 1);
-    _instance(_, "get$showOnScreen", 0, 0, null, ["call$4$curve$descendant$duration$rect", "call$0", "call$1$rect", "call$3$curve$duration$rect", "call$2$descendant$rect"], ["showOnScreen$4$curve$descendant$duration$rect", "showOnScreen$0", "showOnScreen$1$rect", "showOnScreen$3$curve$duration$rect", "showOnScreen$2$descendant$rect"], 186, 0, 0);
+    _instance(_, "get$showOnScreen", 0, 0, null, ["call$4$curve$descendant$duration$rect", "call$0", "call$1$rect", "call$3$curve$duration$rect", "call$2$descendant$rect"], ["showOnScreen$4$curve$descendant$duration$rect", "showOnScreen$0", "showOnScreen$1$rect", "showOnScreen$3$curve$duration$rect", "showOnScreen$2$descendant$rect"], 163, 0, 0);
     _instance_1_u(A.SliverMultiBoxAdaptorElement.prototype, "get$removeChild", "removeChild$1", 613);
     _instance_0_u(A._RenderSnapshotWidget.prototype, "get$_onRasterValueChanged", "_onRasterValueChanged$0", 0);
     _instance_0_u(A._DefaultSnapshotPainter.prototype, "get$dispose", "dispose$0", 0);
     _instance_0_u(_ = A.TextSelectionOverlay.prototype, "get$_updateTextSelectionOverlayVisibilities", "_updateTextSelectionOverlayVisibilities$0", 0);
-    _instance_1_u(_, "get$_handleSelectionEndHandleDragStart", "_handleSelectionEndHandleDragStart$1", 48);
-    _instance_1_u(_, "get$_handleSelectionEndHandleDragUpdate", "_handleSelectionEndHandleDragUpdate$1", 31);
-    _instance_1_u(_, "get$_handleSelectionStartHandleDragStart", "_handleSelectionStartHandleDragStart$1", 48);
-    _instance_1_u(_, "get$_handleSelectionStartHandleDragUpdate", "_handleSelectionStartHandleDragUpdate$1", 31);
-    _instance_1_u(_, "get$_handleAnyDragEnd", "_handleAnyDragEnd$1", 62);
-    _instance_1_u(_ = A.SelectionOverlay.prototype, "get$_handleStartHandleDragStart", "_handleStartHandleDragStart$1", 48);
-    _instance_1_u(_, "get$_handleStartHandleDragUpdate", "_handleStartHandleDragUpdate$1", 31);
-    _instance_1_u(_, "get$_handleStartHandleDragEnd", "_handleStartHandleDragEnd$1", 62);
-    _instance_1_u(_, "get$_handleEndHandleDragStart", "_handleEndHandleDragStart$1", 48);
-    _instance_1_u(_, "get$_handleEndHandleDragUpdate", "_handleEndHandleDragUpdate$1", 31);
-    _instance_1_u(_, "get$_handleEndHandleDragEnd", "_handleEndHandleDragEnd$1", 62);
-    _instance_1_u(_, "get$_buildStartHandle", "_buildStartHandle$1", 23);
-    _instance_1_u(_, "get$_buildEndHandle", "_buildEndHandle$1", 23);
-    _instance_1_u(_, "get$_buildToolbar", "_buildToolbar$1", 23);
+    _instance_1_u(_, "get$_handleSelectionEndHandleDragStart", "_handleSelectionEndHandleDragStart$1", 49);
+    _instance_1_u(_, "get$_handleSelectionEndHandleDragUpdate", "_handleSelectionEndHandleDragUpdate$1", 32);
+    _instance_1_u(_, "get$_handleSelectionStartHandleDragStart", "_handleSelectionStartHandleDragStart$1", 49);
+    _instance_1_u(_, "get$_handleSelectionStartHandleDragUpdate", "_handleSelectionStartHandleDragUpdate$1", 32);
+    _instance_1_u(_, "get$_handleAnyDragEnd", "_handleAnyDragEnd$1", 56);
+    _instance_1_u(_ = A.SelectionOverlay.prototype, "get$_handleStartHandleDragStart", "_handleStartHandleDragStart$1", 49);
+    _instance_1_u(_, "get$_handleStartHandleDragUpdate", "_handleStartHandleDragUpdate$1", 32);
+    _instance_1_u(_, "get$_handleStartHandleDragEnd", "_handleStartHandleDragEnd$1", 56);
+    _instance_1_u(_, "get$_handleEndHandleDragStart", "_handleEndHandleDragStart$1", 49);
+    _instance_1_u(_, "get$_handleEndHandleDragUpdate", "_handleEndHandleDragUpdate$1", 32);
+    _instance_1_u(_, "get$_handleEndHandleDragEnd", "_handleEndHandleDragEnd$1", 56);
+    _instance_1_u(_, "get$_buildStartHandle", "_buildStartHandle$1", 22);
+    _instance_1_u(_, "get$_buildEndHandle", "_buildEndHandle$1", 22);
+    _instance_1_u(_, "get$_buildToolbar", "_buildToolbar$1", 22);
     _instance_0_u(A._SelectionToolbarWrapperState.prototype, "get$_toolbarVisibilityChanged", "_toolbarVisibilityChanged$0", 0);
     _instance_0_u(A._SelectionHandleOverlayState.prototype, "get$_handleVisibilityChanged", "_handleVisibilityChanged$0", 0);
     _instance_0_u(_ = A.TextSelectionGestureDetectorBuilder.prototype, "get$onTapTrackStart", "onTapTrackStart$0", 0);
     _instance_0_u(_, "get$onTapTrackReset", "onTapTrackReset$0", 0);
-    _instance_1_u(_, "get$onTapDown", "onTapDown$1", 139);
-    _instance_1_u(_, "get$onForcePressStart", "onForcePressStart$1", 64);
-    _instance_1_u(_, "get$onForcePressEnd", "onForcePressEnd$1", 64);
+    _instance_1_u(_, "get$onTapDown", "onTapDown$1", 129);
+    _instance_1_u(_, "get$onForcePressStart", "onForcePressStart$1", 67);
+    _instance_1_u(_, "get$onForcePressEnd", "onForcePressEnd$1", 67);
     _instance_0_u(_, "get$onUserTap", "onUserTap$0", 0);
-    _instance_1_u(_, "get$onSingleTapUp", "onSingleTapUp$1", 138);
+    _instance_1_u(_, "get$onSingleTapUp", "onSingleTapUp$1", 128);
     _instance_0_u(_, "get$onSingleTapCancel", "onSingleTapCancel$0", 0);
-    _instance_1_u(_, "get$onSingleLongTapStart", "onSingleLongTapStart$1", 98);
-    _instance_1_u(_, "get$onSingleLongTapMoveUpdate", "onSingleLongTapMoveUpdate$1", 143);
-    _instance_1_u(_, "get$onSingleLongTapEnd", "onSingleLongTapEnd$1", 189);
+    _instance_1_u(_, "get$onSingleLongTapStart", "onSingleLongTapStart$1", 110);
+    _instance_1_u(_, "get$onSingleLongTapMoveUpdate", "onSingleLongTapMoveUpdate$1", 127);
+    _instance_1_u(_, "get$onSingleLongTapEnd", "onSingleLongTapEnd$1", 205);
     _instance_0_u(_, "get$onSecondaryTap", "onSecondaryTap$0", 0);
     _instance_1_u(_, "get$onSecondaryTapDown", "onSecondaryTapDown$1", 45);
-    _instance_1_u(_, "get$onDoubleTapDown", "onDoubleTapDown$1", 139);
-    _instance_1_u(_, "get$onTripleTapDown", "onTripleTapDown$1", 139);
-    _instance_1_u(_, "get$onDragSelectionStart", "onDragSelectionStart$1", 253);
-    _instance_1_u(_, "get$onDragSelectionUpdate", "onDragSelectionUpdate$1", 254);
-    _instance_1_u(_, "get$onDragSelectionEnd", "onDragSelectionEnd$1", 255);
+    _instance_1_u(_, "get$onDoubleTapDown", "onDoubleTapDown$1", 129);
+    _instance_1_u(_, "get$onTripleTapDown", "onTripleTapDown$1", 129);
+    _instance_1_u(_, "get$onDragSelectionStart", "onDragSelectionStart$1", 254);
+    _instance_1_u(_, "get$onDragSelectionUpdate", "onDragSelectionUpdate$1", 255);
+    _instance_1_u(_, "get$onDragSelectionEnd", "onDragSelectionEnd$1", 256);
     _instance_0_u(_ = A._TextSelectionGestureDetectorState.prototype, "get$_handleTapTrackStart", "_handleTapTrackStart$0", 0);
     _instance_0_u(_, "get$_handleTapTrackReset", "_handleTapTrackReset$0", 0);
-    _instance_1_u(_, "get$_text_selection$_handleTapDown", "_text_selection$_handleTapDown$1", 139);
-    _instance_1_u(_, "get$_text_selection$_handleTapUp", "_text_selection$_handleTapUp$1", 138);
+    _instance_1_u(_, "get$_text_selection$_handleTapDown", "_text_selection$_handleTapDown$1", 129);
+    _instance_1_u(_, "get$_text_selection$_handleTapUp", "_text_selection$_handleTapUp$1", 128);
     _instance_0_u(_, "get$_text_selection$_handleTapCancel", "_text_selection$_handleTapCancel$0", 0);
-    _instance_1_u(_, "get$_handleDragStart", "_handleDragStart$1", 253);
-    _instance_1_u(_, "get$_handleDragUpdate", "_handleDragUpdate$1", 254);
-    _instance_1_u(_, "get$_handleDragEnd", "_handleDragEnd$1", 255);
-    _instance_1_u(_, "get$_forcePressStarted", "_forcePressStarted$1", 64);
-    _instance_1_u(_, "get$_forcePressEnded", "_forcePressEnded$1", 64);
-    _instance_1_u(_, "get$_handleLongPressStart", "_handleLongPressStart$1", 98);
-    _instance_1_u(_, "get$_handleLongPressMoveUpdate", "_handleLongPressMoveUpdate$1", 143);
-    _instance_1_u(_, "get$_handleLongPressEnd", "_handleLongPressEnd$1", 189);
+    _instance_1_u(_, "get$_handleDragStart", "_handleDragStart$1", 254);
+    _instance_1_u(_, "get$_handleDragUpdate", "_handleDragUpdate$1", 255);
+    _instance_1_u(_, "get$_handleDragEnd", "_handleDragEnd$1", 256);
+    _instance_1_u(_, "get$_forcePressStarted", "_forcePressStarted$1", 67);
+    _instance_1_u(_, "get$_forcePressEnded", "_forcePressEnded$1", 67);
+    _instance_1_u(_, "get$_handleLongPressStart", "_handleLongPressStart$1", 110);
+    _instance_1_u(_, "get$_handleLongPressMoveUpdate", "_handleLongPressMoveUpdate$1", 127);
+    _instance_1_u(_, "get$_handleLongPressEnd", "_handleLongPressEnd$1", 205);
     _instance_0_u(A.ClipboardStatusNotifier.prototype, "get$dispose", "dispose$0", 0);
     _instance_0_u(A.SingleTickerProviderStateMixin.prototype, "get$_updateTicker", "_updateTicker$0", 0);
     _instance_0_u(A.TickerProviderStateMixin.prototype, "get$_updateTickers", "_updateTickers$0", 0);
-    _static_1(A, "transitions_ScaleTransition__handleScaleMatrix$closure", "ScaleTransition__handleScaleMatrix", 386);
-    _static_1(A, "transitions_RotationTransition__handleTurnsMatrix$closure", "RotationTransition__handleTurnsMatrix", 386);
+    _static_1(A, "transitions_ScaleTransition__handleScaleMatrix$closure", "ScaleTransition__handleScaleMatrix", 309);
+    _static_1(A, "transitions_RotationTransition__handleTurnsMatrix$closure", "RotationTransition__handleTurnsMatrix", 309);
     _instance_0_u(A._AnimatedState.prototype, "get$_handleChange", "_handleChange$0", 0);
     _instance_0_u(_ = A.UndoHistoryState.prototype, "get$undo", "undo$0", 0);
     _instance_0_u(_, "get$redo", "redo$0", 0);
@@ -324039,74 +324176,74 @@
     _instance_1_u(_, "get$computeMaxIntrinsicWidth", "computeMaxIntrinsicWidth$1", 1);
     _instance_1_u(_, "get$computeMinIntrinsicHeight", "computeMinIntrinsicHeight$1", 1);
     _instance_1_u(_, "get$computeMinIntrinsicWidth", "computeMinIntrinsicWidth$1", 1);
-    _static_2(A, "bloc_provider_BlocProvider__startListening$closure", "BlocProvider__startListening", 1430);
+    _static_2(A, "bloc_provider_BlocProvider__startListening$closure", "BlocProvider__startListening", 1431);
     _instance(A.Registrar.prototype, "get$handleFrameworkMessage", 0, 3, null, ["call$3"], ["handleFrameworkMessage$3"], 642, 0, 0);
     _instance_2_u(A._CustomNavigatorState.prototype, "get$_handlePopPage", "_handlePopPage$2", 644);
     _instance(_ = A.GoRouterDelegate.prototype, "get$_handlePopPageWithRouteMatch", 0, 3, null, ["call$3"], ["_handlePopPageWithRouteMatch$3"], 656, 0, 0);
-    _instance_1_u(_, "get$build", "build$1", 23);
-    _instance_1_u(_, "get$setNewRoutePath", "setNewRoutePath$1", 198);
+    _instance_1_u(_, "get$build", "build$1", 22);
+    _instance_1_u(_, "get$setNewRoutePath", "setNewRoutePath$1", 210);
     _instance_0_u(A.GoRouteInformationProvider.prototype, "get$dispose", "dispose$0", 0);
-    _static(A, "cupertino__pageBuilderForCupertinoApp$closure", 0, null, ["call$5$arguments$child$key$name$restorationId"], ["pageBuilderForCupertinoApp"], 1431, 0);
-    _static(A, "custom_transition_page_NoTransitionPage__transitionsBuilder$closure", 4, null, ["call$4"], ["NoTransitionPage__transitionsBuilder"], 154, 0);
-    _static(A, "material0__pageBuilderForMaterialApp$closure", 0, null, ["call$5$arguments$child$key$name$restorationId"], ["pageBuilderForMaterialApp"], 1432, 0);
+    _static(A, "cupertino__pageBuilderForCupertinoApp$closure", 0, null, ["call$5$arguments$child$key$name$restorationId"], ["pageBuilderForCupertinoApp"], 1432, 0);
+    _static(A, "custom_transition_page_NoTransitionPage__transitionsBuilder$closure", 4, null, ["call$4"], ["NoTransitionPage__transitionsBuilder"], 196, 0);
+    _static(A, "material0__pageBuilderForMaterialApp$closure", 0, null, ["call$5$arguments$child$key$name$restorationId"], ["pageBuilderForMaterialApp"], 1433, 0);
     _instance_0_u(A.MediaInfo.prototype, "get$toJson", "toJson$0", 15);
-    _instance_1_u(_ = A.DateBuilder.prototype, "get$setYear", "setYear$1", 19);
-    _instance_1_u(_, "get$setMonth", "setMonth$1", 19);
-    _instance_1_u(_, "get$setDay", "setDay$1", 19);
-    _instance_1_u(_, "get$setDayOfYear", "setDayOfYear$1", 19);
-    _instance_1_u(_, "get$setHour", "setHour$1", 19);
-    _instance_1_u(_, "get$setMinute", "setMinute$1", 19);
-    _instance_1_u(_, "get$setSecond", "setSecond$1", 19);
-    _instance_1_u(_, "get$setFractionalSecond", "setFractionalSecond$1", 19);
-    _static_1(A, "date_format_DateFormat_localeExists$closure", "DateFormat_localeExists", 257);
+    _instance_1_u(_ = A.DateBuilder.prototype, "get$setYear", "setYear$1", 20);
+    _instance_1_u(_, "get$setMonth", "setMonth$1", 20);
+    _instance_1_u(_, "get$setDay", "setDay$1", 20);
+    _instance_1_u(_, "get$setDayOfYear", "setDayOfYear$1", 20);
+    _instance_1_u(_, "get$setHour", "setHour$1", 20);
+    _instance_1_u(_, "get$setMinute", "setMinute$1", 20);
+    _instance_1_u(_, "get$setSecond", "setSecond$1", 20);
+    _instance_1_u(_, "get$setFractionalSecond", "setFractionalSecond$1", 20);
+    _static_1(A, "date_format_DateFormat_localeExists$closure", "DateFormat_localeExists", 258);
     _instance_0_u(A.DateFormat.prototype, "get$_initDigitMatcher", "_initDigitMatcher$0", 677);
-    _static_1(A, "number_format_NumberFormat_localeExists$closure", "NumberFormat_localeExists", 257);
-    _static_1(A, "intl_helpers__canonicalizedLocale$closure", "canonicalizedLocale", 265);
-    _static_1(A, "intl_helpers___throwLocaleError$closure", "_throwLocaleError", 57);
-    _static_1(A, "intl_helpers__deprecatedLocale$closure", "deprecatedLocale", 57);
-    _static_1(A, "intl_helpers__shortLocale$closure", "shortLocale", 57);
-    _static_0(A, "plural_rules___default_rule$closure", "_default_rule", 17);
-    _static_0(A, "plural_rules___ast_rule$closure", "_ast_rule", 17);
-    _static_0(A, "plural_rules___af_rule$closure", "_af_rule", 17);
-    _static_0(A, "plural_rules___am_rule$closure", "_am_rule", 17);
-    _static_0(A, "plural_rules___ar_rule$closure", "_ar_rule", 17);
-    _static_0(A, "plural_rules___be_rule$closure", "_be_rule", 17);
-    _static_0(A, "plural_rules___br_rule$closure", "_br_rule", 17);
-    _static_0(A, "plural_rules___bs_rule$closure", "_bs_rule", 17);
-    _static_0(A, "plural_rules___ca_rule$closure", "_ca_rule", 17);
-    _static_0(A, "plural_rules___cs_rule$closure", "_cs_rule", 17);
-    _static_0(A, "plural_rules___cy_rule$closure", "_cy_rule", 17);
-    _static_0(A, "plural_rules___da_rule$closure", "_da_rule", 17);
-    _static_0(A, "plural_rules___es_rule$closure", "_es_rule", 17);
-    _static_0(A, "plural_rules___ceb_rule$closure", "_ceb_rule", 17);
-    _static_0(A, "plural_rules___fr_rule$closure", "_fr_rule", 17);
-    _static_0(A, "plural_rules___ga_rule$closure", "_ga_rule", 17);
-    _static_0(A, "plural_rules___he_rule$closure", "_he_rule", 17);
-    _static_0(A, "plural_rules___ff_rule$closure", "_ff_rule", 17);
-    _static_0(A, "plural_rules___is_rule$closure", "_is_rule", 17);
-    _static_0(A, "plural_rules___ak_rule$closure", "_ak_rule", 17);
-    _static_0(A, "plural_rules___lt_rule$closure", "_lt_rule", 17);
-    _static_0(A, "plural_rules___lv_rule$closure", "_lv_rule", 17);
-    _static_0(A, "plural_rules___mk_rule$closure", "_mk_rule", 17);
-    _static_0(A, "plural_rules___mt_rule$closure", "_mt_rule", 17);
-    _static_0(A, "plural_rules___pl_rule$closure", "_pl_rule", 17);
-    _static_0(A, "plural_rules___pt_rule$closure", "_pt_rule", 17);
-    _static_0(A, "plural_rules___mo_rule$closure", "_mo_rule", 17);
-    _static_0(A, "plural_rules___ru_rule$closure", "_ru_rule", 17);
-    _static_0(A, "plural_rules___si_rule$closure", "_si_rule", 17);
-    _static_0(A, "plural_rules___sl_rule$closure", "_sl_rule", 17);
-    _static_1(A, "plural_rules__localeHasPluralRules$closure", "localeHasPluralRules", 41);
+    _static_1(A, "number_format_NumberFormat_localeExists$closure", "NumberFormat_localeExists", 258);
+    _static_1(A, "intl_helpers__canonicalizedLocale$closure", "canonicalizedLocale", 266);
+    _static_1(A, "intl_helpers___throwLocaleError$closure", "_throwLocaleError", 63);
+    _static_1(A, "intl_helpers__deprecatedLocale$closure", "deprecatedLocale", 63);
+    _static_1(A, "intl_helpers__shortLocale$closure", "shortLocale", 63);
+    _static_0(A, "plural_rules___default_rule$closure", "_default_rule", 18);
+    _static_0(A, "plural_rules___ast_rule$closure", "_ast_rule", 18);
+    _static_0(A, "plural_rules___af_rule$closure", "_af_rule", 18);
+    _static_0(A, "plural_rules___am_rule$closure", "_am_rule", 18);
+    _static_0(A, "plural_rules___ar_rule$closure", "_ar_rule", 18);
+    _static_0(A, "plural_rules___be_rule$closure", "_be_rule", 18);
+    _static_0(A, "plural_rules___br_rule$closure", "_br_rule", 18);
+    _static_0(A, "plural_rules___bs_rule$closure", "_bs_rule", 18);
+    _static_0(A, "plural_rules___ca_rule$closure", "_ca_rule", 18);
+    _static_0(A, "plural_rules___cs_rule$closure", "_cs_rule", 18);
+    _static_0(A, "plural_rules___cy_rule$closure", "_cy_rule", 18);
+    _static_0(A, "plural_rules___da_rule$closure", "_da_rule", 18);
+    _static_0(A, "plural_rules___es_rule$closure", "_es_rule", 18);
+    _static_0(A, "plural_rules___ceb_rule$closure", "_ceb_rule", 18);
+    _static_0(A, "plural_rules___fr_rule$closure", "_fr_rule", 18);
+    _static_0(A, "plural_rules___ga_rule$closure", "_ga_rule", 18);
+    _static_0(A, "plural_rules___he_rule$closure", "_he_rule", 18);
+    _static_0(A, "plural_rules___ff_rule$closure", "_ff_rule", 18);
+    _static_0(A, "plural_rules___is_rule$closure", "_is_rule", 18);
+    _static_0(A, "plural_rules___ak_rule$closure", "_ak_rule", 18);
+    _static_0(A, "plural_rules___lt_rule$closure", "_lt_rule", 18);
+    _static_0(A, "plural_rules___lv_rule$closure", "_lv_rule", 18);
+    _static_0(A, "plural_rules___mk_rule$closure", "_mk_rule", 18);
+    _static_0(A, "plural_rules___mt_rule$closure", "_mt_rule", 18);
+    _static_0(A, "plural_rules___pl_rule$closure", "_pl_rule", 18);
+    _static_0(A, "plural_rules___pt_rule$closure", "_pt_rule", 18);
+    _static_0(A, "plural_rules___mo_rule$closure", "_mo_rule", 18);
+    _static_0(A, "plural_rules___ru_rule$closure", "_ru_rule", 18);
+    _static_0(A, "plural_rules___si_rule$closure", "_si_rule", 18);
+    _static_0(A, "plural_rules___sl_rule$closure", "_sl_rule", 18);
+    _static_1(A, "plural_rules__localeHasPluralRules$closure", "localeHasPluralRules", 42);
     _instance_0_u(A._PinCodeTextFieldState.prototype, "get$_textEditingControllerListener", "_textEditingControllerListener$0", 0);
-    _static_2(A, "change_notifier_provider_ChangeNotifierProvider__dispose$closure", "ChangeNotifierProvider__dispose", 1435);
-    _static_2(A, "listenable_provider_ListenableProvider__startListening$closure", "ListenableProvider__startListening", 1436);
+    _static_2(A, "change_notifier_provider_ChangeNotifierProvider__dispose$closure", "ChangeNotifierProvider__dispose", 1436);
+    _static_2(A, "listenable_provider_ListenableProvider__startListening$closure", "ListenableProvider__startListening", 1437);
     _instance_0_u(A._InheritedProviderScopeElement.prototype, "get$markNeedsNotifyDependents", "markNeedsNotifyDependents$0", 0);
     _instance_0_u(_ = A.FocusController.prototype, "get$dispose", "dispose$0", 0);
     _instance_0_u(_, "get$_onFocusNodeFocusChanges", "_onFocusNodeFocusChanges$0", 0);
     _instance(A.AbstractControl.prototype, "get$reset", 1, 0, null, ["call$5$disabled$emitEvent$removeFocus$updateParent$value", "call$0", "call$1$updateParent", "call$1$emitEvent"], ["reset$5$disabled$emitEvent$removeFocus$updateParent$value", "reset$0", "reset$1$updateParent", "reset$1$emitEvent"], 691, 0, 0);
     _instance_0_u(A.FormControl.prototype, "get$_onFocusControllerChanged", "_onFocusControllerChanged$0", 0);
-    _instance_1_u(A.EmailValidator.prototype, "get$validate", "validate$1", 168);
-    _instance_1_u(A.MustMatchValidator.prototype, "get$validate", "validate$1", 168);
-    _instance_1_u(A.RequiredValidator.prototype, "get$validate", "validate$1", 168);
+    _instance_1_u(A.EmailValidator.prototype, "get$validate", "validate$1", 215);
+    _instance_1_u(A.MustMatchValidator.prototype, "get$validate", "validate$1", 215);
+    _instance_1_u(A.RequiredValidator.prototype, "get$validate", "validate$1", 215);
     _instance_1_u(A.ControlValueAccessor.prototype, "get$_updateView", "_updateView$1", 21);
     _instance_1_u(A._InheritedNotifierElement0.prototype, "get$_inherited_streamer$_handleUpdate", "_inherited_streamer$_handleUpdate$1", 21);
     _instance_1_u(_ = A.ReactiveFormFieldState.prototype, "get$onControlValueChanged", "onControlValueChanged$1", 6);
@@ -324116,21 +324253,21 @@
     _instance_1_u(A._ReactiveTextFieldState.prototype, "get$onControlValueChanged", "onControlValueChanged$1", 6);
     _instance_1_i(A.Subject.prototype, "get$add", "add$1", 21);
     _instance_1_u(_ = A._StartWithStreamSink.prototype, "get$onData", "onData$1", 21);
-    _instance_2_i(_, "get$onError", "onError$2", 49);
+    _instance_2_i(_, "get$onError", "onError$2", 52);
     _instance_0_u(_, "get$onDone", "onDone$0", 0);
     _instance_1_u(_ = A._StartWithErrorStreamSink.prototype, "get$onData", "onData$1", 21);
-    _instance_2_i(_, "get$onError", "onError$2", 49);
+    _instance_2_i(_, "get$onError", "onError$2", 52);
     _instance_0_u(_, "get$onDone", "onDone$0", 0);
     _instance(_ = A.Manager.prototype, "get$onping", 0, 0, function() {
       return [null];
-    }, ["call$1", "call$0"], ["onping$1", "onping$0"], 277, 0, 0);
+    }, ["call$1", "call$0"], ["onping$1", "onping$0"], 278, 0, 0);
     _instance_1_u(_, "get$ondata", "ondata$1", 6);
     _instance_1_u(_, "get$ondecoded", "ondecoded$1", 6);
     _instance_1_u(_, "get$onerror", "onerror$1", 6);
     _instance_1_u(_, "get$onclose", "onclose$1", 6);
     _instance(_ = A.Socket0.prototype, "get$onopen", 0, 0, function() {
       return [null];
-    }, ["call$1", "call$0"], ["onopen$1", "onopen$0"], 277, 0, 0);
+    }, ["call$1", "call$0"], ["onopen$1", "onopen$0"], 278, 0, 0);
     _instance_1_u(_, "get$onerror", "onerror$1", 6);
     _instance_1_u(_, "get$onclose", "onclose$1", 6);
     _instance_1_u(_, "get$onpacket", "onpacket$1", 6);
@@ -324139,39 +324276,39 @@
     }, ["call$2", "call$1"], ["emit$2", "emit$1"], 718, 0, 1);
     _instance_2_u(A.StatusChangeTileBuilder.prototype, "get$build", "build$2", 730);
     _instance_0_u(_ = A._SfDateRangePickerState.prototype, "get$_updateFadeAnimation", "_updateFadeAnimation$0", 0);
-    _instance_1_u(_, "get$_pickerValueChangedListener", "_pickerValueChangedListener$1", 37);
+    _instance_1_u(_, "get$_pickerValueChangedListener", "_pickerValueChangedListener$1", 36);
     _instance_0_u(_, "get$_handleScrollChanged", "_handleScrollChanged$0", 0);
     _instance_0_u(_, "get$_moveToNextView", "_moveToNextView$0", 0);
     _instance_0_u(_, "get$_moveToPreviousView", "_moveToPreviousView$0", 0);
-    _instance_1_u(_, "get$_getPickerStateValues", "_getPickerStateValues$1", 93);
-    _instance_1_u(_, "get$_updatePickerStateValues", "_updatePickerStateValues$1", 93);
+    _instance_1_u(_, "get$_getPickerStateValues", "_getPickerStateValues$1", 83);
+    _instance_1_u(_, "get$_updatePickerStateValues", "_updatePickerStateValues$1", 83);
     _instance_0_i(A._AnimatedOpacityWidgetState.prototype, "get$_date_picker$_update", "_date_picker$_update$0", 0);
     _instance_0_u(A._PickerHeaderViewState.prototype, "get$_date_picker$_listener", "_date_picker$_listener$0", 0);
     _instance_0_u(_ = A._PickerScrollViewState.prototype, "get$_date_picker$_animationListener", "_date_picker$_animationListener$0", 0);
-    _instance_2_u(_, "get$_onKeyDown", "_onKeyDown$2", 184);
-    _instance_1_u(_, "get$_onHorizontalStart", "_onHorizontalStart$1", 48);
-    _instance_1_u(_, "get$_onHorizontalUpdate", "_onHorizontalUpdate$1", 31);
-    _instance_1_u(_, "get$_onHorizontalEnd", "_onHorizontalEnd$1", 62);
-    _instance_1_u(_, "get$_onVerticalStart", "_onVerticalStart$1", 48);
-    _instance_1_u(_, "get$_onVerticalUpdate", "_onVerticalUpdate$1", 31);
-    _instance_1_u(_, "get$_onVerticalEnd", "_onVerticalEnd$1", 62);
-    _instance_1_u(_ = A._PickerViewState.prototype, "get$_updateTapCallback", "_updateTapCallback$1", 61);
-    _instance_1_u(_, "get$_pointerEnterEvent", "_pointerEnterEvent$1", 79);
-    _instance_1_u(_, "get$_pointerHoverEvent", "_pointerHoverEvent$1", 188);
-    _instance_1_u(_, "get$_pointerExitEvent", "_pointerExitEvent$1", 68);
-    _instance_1_u(_, "get$_dragStart", "_dragStart$1", 48);
-    _instance_1_u(_, "get$_dragUpdate", "_dragUpdate$1", 31);
-    _instance_1_u(_, "get$_dragStartOnYear", "_dragStartOnYear$1", 48);
-    _instance_1_u(_, "get$_dragUpdateOnYear", "_dragUpdateOnYear$1", 31);
+    _instance_2_u(_, "get$_onKeyDown", "_onKeyDown$2", 181);
+    _instance_1_u(_, "get$_onHorizontalStart", "_onHorizontalStart$1", 49);
+    _instance_1_u(_, "get$_onHorizontalUpdate", "_onHorizontalUpdate$1", 32);
+    _instance_1_u(_, "get$_onHorizontalEnd", "_onHorizontalEnd$1", 56);
+    _instance_1_u(_, "get$_onVerticalStart", "_onVerticalStart$1", 49);
+    _instance_1_u(_, "get$_onVerticalUpdate", "_onVerticalUpdate$1", 32);
+    _instance_1_u(_, "get$_onVerticalEnd", "_onVerticalEnd$1", 56);
+    _instance_1_u(_ = A._PickerViewState.prototype, "get$_updateTapCallback", "_updateTapCallback$1", 55);
+    _instance_1_u(_, "get$_pointerEnterEvent", "_pointerEnterEvent$1", 80);
+    _instance_1_u(_, "get$_pointerHoverEvent", "_pointerHoverEvent$1", 203);
+    _instance_1_u(_, "get$_pointerExitEvent", "_pointerExitEvent$1", 64);
+    _instance_1_u(_, "get$_dragStart", "_dragStart$1", 49);
+    _instance_1_u(_, "get$_dragUpdate", "_dragUpdate$1", 32);
+    _instance_1_u(_, "get$_dragStartOnYear", "_dragStartOnYear$1", 49);
+    _instance_1_u(_, "get$_dragUpdateOnYear", "_dragUpdateOnYear$1", 32);
     _instance(A._MonthViewState.prototype, "get$_month_view$_updateSelection", 0, 0, function() {
       return {isNeedSetState: true};
     }, ["call$1$isNeedSetState", "call$0"], ["_month_view$_updateSelection$1$isNeedSetState", "_month_view$_updateSelection$0"], 282, 0, 0);
     _instance(A._YearViewState.prototype, "get$_year_view$_updateSelection", 0, 0, function() {
       return {isNeedSetState: true};
     }, ["call$1$isNeedSetState", "call$0"], ["_year_view$_updateSelection$1$isNeedSetState", "_year_view$_updateSelection$0"], 282, 0, 0);
-    _static_1(A, "messages_all___messagesExistFor$closure", "_messagesExistFor", 41);
-    _static_1(A, "messages_all___findGeneratedMessagesFor$closure", "_findGeneratedMessagesFor", 1437);
-    _static_1(A, "messages_messages_MessageLookup__notInlinedMessages$closure", "MessageLookup__notInlinedMessages", 42);
+    _static_1(A, "messages_all___messagesExistFor$closure", "_messagesExistFor", 42);
+    _static_1(A, "messages_all___findGeneratedMessagesFor$closure", "_findGeneratedMessagesFor", 1438);
+    _static_1(A, "messages_messages_MessageLookup__notInlinedMessages$closure", "MessageLookup__notInlinedMessages", 44);
     _instance_0_u(A.AccountingYear.prototype, "get$toJson", "toJson$0", 15);
     _instance_0_u(A.UserModel.prototype, "get$toJson", "toJson$0", 15);
     _instance_0_u(A.ApplePayModel.prototype, "get$toJson", "toJson$0", 15);
@@ -324198,26 +324335,26 @@
     _instance_0_u(A.TransactionLimit.prototype, "get$toJson", "toJson$0", 15);
     _instance_0_u(A.TransactionData.prototype, "get$toJson", "toJson$0", 15);
     _instance_0_u(A.UserVatPeriod.prototype, "get$toJson", "toJson$0", 15);
-    _instance_2_u(_ = A.CustomInterceptor.prototype, "get$onRequest", "onRequest$2", 153);
-    _instance_2_u(_, "get$onResponse", "onResponse$2", 318);
-    _instance_2_i(_, "get$onError", "onError$2", 317);
+    _instance_2_u(_ = A.CustomInterceptor.prototype, "get$onRequest", "onRequest$2", 145);
+    _instance_2_u(_, "get$onResponse", "onResponse$2", 312);
+    _instance_2_i(_, "get$onError", "onError$2", 310);
     _instance_0_u(_ = A._EditPlanAddStaffMobileState.prototype, "get$_plan_one$_onTap", "_plan_one$_onTap$0", 0);
-    _instance_2_u(_, "get$_plan_one$_planBody", "_plan_one$_planBody$2", 44);
+    _instance_2_u(_, "get$_plan_one$_planBody", "_plan_one$_planBody$2", 43);
     _instance_0_u(_ = A._EditPlanAddStaffTabletState.prototype, "get$_plan_tablet$_onTap", "_plan_tablet$_onTap$0", 0);
-    _instance_2_u(_, "get$_plan_tablet$_planBody", "_plan_tablet$_planBody$2", 44);
+    _instance_2_u(_, "get$_plan_tablet$_planBody", "_plan_tablet$_planBody$2", 43);
     _instance_0_u(_ = A._AddStatementMobileState.prototype, "get$_statement_a$_onTap", "_statement_a$_onTap$0", 0);
-    _instance_2_u(_, "get$_statement_a$_planBody", "_statement_a$_planBody$2", 44);
+    _instance_2_u(_, "get$_statement_a$_planBody", "_statement_a$_planBody$2", 43);
     _instance_0_u(_ = A._AddStatementTabletState.prototype, "get$_statement_tablet$_onTap", "_statement_tablet$_onTap$0", 0);
-    _instance_2_u(_, "get$_statement_tablet$_planBody", "_statement_tablet$_planBody$2", 44);
+    _instance_2_u(_, "get$_statement_tablet$_planBody", "_statement_tablet$_planBody$2", 43);
     _instance_0_u(_ = A.BankDepositEntryState.prototype, "get$isSelectedAmount", "isSelectedAmount$0", 0);
     _instance_0_u(_, "get$isSelectedRef", "isSelectedRef$0", 0);
     _instance_0_u(_ = A._EditPlanMobileState.prototype, "get$_plan0$_onTap", "_plan0$_onTap$0", 0);
-    _instance_2_u(_, "get$_plan0$_planBody", "_plan0$_planBody$2", 44);
+    _instance_2_u(_, "get$_plan0$_planBody", "_plan0$_planBody$2", 43);
     _instance_0_u(_ = A._AddStatementEditMobileState.prototype, "get$_statement$_onTap", "_statement$_onTap$0", 0);
-    _instance_2_u(_, "get$_statement$_planBody", "_statement$_planBody$2", 44);
+    _instance_2_u(_, "get$_statement$_planBody", "_statement$_planBody$2", 43);
     _instance_0_u(_ = A.ExpenseEntryState.prototype, "get$isSelected", "isSelected$0", 0);
     _instance_0_u(_, "get$isSelectedNet", "isSelectedNet$0", 0);
-    _instance_2_i(_ = A.FilterExpansionTileState.prototype, "get$_filter_expansion_tile$_title", "_filter_expansion_tile$_title$2", 44);
+    _instance_2_i(_ = A.FilterExpansionTileState.prototype, "get$_filter_expansion_tile$_title", "_filter_expansion_tile$_title$2", 43);
     _instance_0_u(_, "get$_filter_expansion_tile$_onTap", "_filter_expansion_tile$_onTap$0", 0);
     _instance_0_u(A.IncomeEntryMobileState.prototype, "get$isSelected", "isSelected$0", 0);
     _instance_0_u(_ = A._LoginMobileViewState.prototype, "get$_launchUrl", "_launchUrl$0", 2);
@@ -324226,22 +324363,22 @@
     _instance_0_u(_ = A.SuppliersMobileState.prototype, "get$isSelected", "isSelected$0", 0);
     _instance_0_u(_, "get$isSelectedNet", "isSelectedNet$0", 0);
     _instance_0_u(_ = A._PersonalDetailsMobileState.prototype, "get$_personal_details$_onTap", "_personal_details$_onTap$0", 0);
-    _instance_2_u(_, "get$_user", "_user$2", 44);
+    _instance_2_u(_, "get$_user", "_user$2", 43);
     _instance_0_u(_ = A._PlanMobileState.prototype, "get$_plan$_onTap", "_plan$_onTap$0", 0);
-    _instance_2_u(_, "get$_planBody", "_planBody$2", 44);
-    _static_1(A, "link_LinkViewController__viewFactory$closure", "LinkViewController__viewFactory", 1438);
+    _instance_2_u(_, "get$_planBody", "_planBody$2", 43);
+    _static_1(A, "link_LinkViewController__viewFactory$closure", "LinkViewController__viewFactory", 1439);
     _static(A, "compute_web__compute$closure", 2, null, ["call$2$3$debugLabel", "call$2", "call$2$2"], ["compute", function(callback, message) {
       var t1 = type$.dynamic;
       return A.compute(callback, message, null, t1, t1);
     }, function(callback, message, $Q, $R) {
       return A.compute(callback, message, null, $Q, $R);
-    }], 1439, 0);
+    }], 1440, 0);
     _static(A, "print__debugPrintThrottled$closure", 1, null, ["call$2$wrapWidth", "call$1"], ["debugPrintThrottled", function(message) {
       return A.debugPrintThrottled(message, null);
-    }], 1440, 0);
+    }], 1441, 0);
     _static_0(A, "print___debugPrintTask$closure", "_debugPrintTask", 0);
-    _static_2(A, "layout_helper_ChildLayoutHelper_dryLayoutChild$closure", "ChildLayoutHelper_dryLayoutChild", 84);
-    _static_2(A, "layout_helper_ChildLayoutHelper_layoutChild$closure", "ChildLayoutHelper_layoutChild", 84);
+    _static_2(A, "layout_helper_ChildLayoutHelper_dryLayoutChild$closure", "ChildLayoutHelper_dryLayoutChild", 96);
+    _static_2(A, "layout_helper_ChildLayoutHelper_layoutChild$closure", "ChildLayoutHelper_layoutChild", 96);
     _static_1(A, "keyboard_visibility_handler_KeyboardVisibilityHandler__updateValue$closure", "KeyboardVisibilityHandler__updateValue", 10);
     _static(A, "part_t_PartT_titilliumWeb$closure", 0, null, ["call$19$background$backgroundColor$color$decoration$decorationColor$decorationStyle$decorationThickness$fontFeatures$fontSize$fontStyle$fontWeight$foreground$height$letterSpacing$locale$shadows$textBaseline$textStyle$wordSpacing", "call$0", "call$3$color$fontSize$fontWeight", "call$18$background$backgroundColor$color$decoration$decorationColor$decorationStyle$decorationThickness$fontFeatures$fontSize$fontStyle$fontWeight$foreground$height$letterSpacing$locale$shadows$textBaseline$wordSpacing", "call$1$color", "call$2$color$fontSize", "call$3$color$fontSize$fontWeight", "call$3$color$fontSize$fontWeight", "call$1$height", "call$2$fontSize$fontWeight", "call$3$color$fontSize$fontWeight", "call$2$color$fontSize", "call$1$fontSize", "call$2$fontSize$fontWeight", "call$3$color$fontSize$fontWeight", "call$3$color$fontSize$fontWeight", "call$3$fontSize$fontWeight$height", "call$3$fontSize$fontWeight$height", "call$1$decoration"], ["PartT_titilliumWeb", function() {
       var _null = null;
@@ -324296,7 +324433,7 @@
     }, function(decoration) {
       var _null = null;
       return A.PartT_titilliumWeb(_null, _null, _null, decoration, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null);
-    }], 960, 0);
+    }], 961, 0);
   })();
   (function inheritance() {
     var _mixin = hunkHelpers.mixin,
@@ -326060,7 +326197,7 @@
     typeUniverse: {eC: new Map(), tR: {}, eT: {}, tPV: {}, sEA: []},
     mangledGlobalNames: {int: "int", double: "double", num: "num", String: "String", bool: "bool", Null: "Null", List: "List", Object: "Object", Map: "Map"},
     mangledNames: {},
-    types: ["~()", "double(double)", "Future<~>()", "NoSwipeTransitionPage<~>(BuildContext,GoRouterState)", "StatelessWidget(BuildContext,SizingInformation)", "Null(@)", "~(@)", "~(JavaScriptObject)", "AppBar(BuildContext,SizingInformation)", "~(Duration)", "~(bool)", "~(AnimationStatus)", "Null()", "Map<String,String>(FormControl<@>)", "~(String?)", "Map<String,@>()", "Null(Object?)", "PluralCase()", "Widget(BuildContext,SizingInformation)", "~(int)", "Color(Set<MaterialState>)", "~(Object?)", "StatefulWidget(BuildContext,SizingInformation)", "Widget(BuildContext)", "Null(String)", "String(@)", "bool(BoxHitTestResult,Offset)", "~(DateTime)", "Null(~)", "~(PaintingContext,Offset)", "~(RenderObject)", "~(DragUpdateDetails)", "ResponsiveBuilder(BuildContext)", "~(Element)", "Widget(BuildContext,int)", "Color?(Set<MaterialState>)", "Map<String,@>(AccountingYear)", "~(String)", "~(PointerEvent)", "bool(Element)", "List<DiagnosticsNode>()", "bool(String)", "@(@)", "~(String,@)", "Widget(BuildContext,Widget?)", "~(TapDownDetails)", "~(TextEditingController)", "bool(FocusNode)", "~(DragStartDetails)", "~(Object,StackTrace)", "Palette()", "Column(BuildContext,SizingInformation)", "~(Event)", "~(ByteData?)", "bool(Object?)", "~(LayoutView)", "int(@,@)", "String(String)", "bool(NotoFont)", "FormGroup(ProductsServicesBloc)", "~(RestorableProperty<Object?>,~())", "~(TapUpDetails)", "~(DragEndDetails)", "Tween<double>(@)", "~(ForcePressDetails)", "bool(int)", "bool(FlutterHtmlKeyboardEvent)", "Future<Null>()", "~(PointerExitEvent)", "bool(TakingsTillModel)", "Future<bool>()", "~(bool?)", "Null(Object,StackTrace)", "double(RenderBox)", "bool(ScrollNotification)", "int(FocusNode,FocusNode)", "int(int)", "Widget(BuildContext,Widget,ImageChunkEvent?)", "FormGroup(AddNewItemBloc)", "~(PointerEnterEvent)", "String()", "TextStyle(Set<MaterialState>)", "BankTotal(EntryBankModel)", "~(PointerDownEvent)", "Size(RenderBox,BoxConstraints)", "~(@,@)", "~(Selectable)", "MaterialStateProperty<Color?>?(DatePickerThemeData?)", "bool(OtherIncomeModel)", "bool(ExpensePaymentsModel)", "Future<~>(bool)", "bool(SupplierModel)", "SystemMouseCursor(Set<MaterialState>)", "~(PickerStateArgs)", "double(RenderBox,double)", "Future<~>(@)", "Null(JavaScriptObject)", "double(double,double)", "~(LongPressStartDetails)", "bool(AbstractControl<@>)", "~(~())", "Future<Map<String,@>>(Map<String,String>)", "bool(RouteMatchBase)", "bool(InlineSpan)", "bool(EntryBankModel)", "bool(BankDepositModel)", "Scaffold(BuildContext,FilterState)", "bool(GestureListener)", "bool(_RouteEntry)", "SizedBox(BuildContext)", "bool(InheritedElement)", "TextBoundary()", "Future<Map<String,Object>>(Map<String,String>)", "bool(@)", "Future<@>()", "int()", "MaterialStateProperty<Color?>?(ButtonStyle?)", "Widget(BuildContext)?(ActionIconThemeData?)", "~(Uint8List)", "FormGroup(CustomInvoiceBloc)", "ListView(BuildContext,int)", "Padding(int)", "Map<String,String>(FormControl<CategoryModel>)", "Null(InvoicesModel)", "IconData(BuildContext)", "String(MaterialLocalizations)", "Padding(BuildContext)", "FilterBloc(BuildContext)", "Expanded(int)", "bool(Route<@>)", "~(Object[StackTrace?])", "~(Map<String,Object?>?)", "int(RenderObject,RenderObject)", "DropdownMenuItem<CategoryModel>(CategoryModel)", "int(Object?)", "String(Match)", "Object?(Object?)", "~(AbstractControl<@>)", "~(TapDragUpDetails)", "~(TapDragDownDetails)", "~(NavigatorObserver)", "List<_RouteEntry>()", "Color(Color)", "~(LongPressMoveUpdateDetails)", "~(String,AbstractControl<@>)", "ColorTween(@)", "Future<@>(MethodCall0)", "double(Point0)", "String?(String?)", "bool()", "Text(BuildContext)", "bool(PackagesListModel)", "Future<bool>(BuildContext,GoRouterState)", "~(RequestOptions,RequestInterceptorHandler)", "Widget(BuildContext,Animation0<double>,Animation0<double>,Widget)", "Column(BuildContext,BoxConstraints)", "Rect()", "SupplierModel()", "Future<InterceptorState<@>>()", "BankDepositModel()", "bool(DataRow)", "BorderSide(Set<MaterialState>)", "bool(_Highlight)", "Container(BuildContext,int)", "Color?(DatePickerThemeData?)", "Null(ProgressEvent)", "Row(int)", "0^?(MaterialStateProperty<0^>?(DatePickerThemeData?),Set<MaterialState>)<Object?>", "Map<String,@>?(Object?)", "0^?(0^?(DatePickerThemeData?))<Object?>", "Container(int)", "bool(Object?,Object?)", "bool(KeyData)", "Null(JSObject)", "String(Object?)", "MaterialStateProperty<Size?>?(ButtonStyle?)", "ResponsiveBuilder(BuildContext,int)", "~(JSObject)", "Set<0^>()<Object?>", "Null(Event)", "~(Object?,Object?)", "SizedBox(BuildContext,Object,StackTrace?)", "TextBox(TextBox)", "@(String)", "KeyEventResult(FocusNode,KeyEvent)", "List<CustomPainterSemantics>(Size)", "~({curve:Curve,descendant:RenderObject?,duration:Duration,rect:Rect?})", "OtherIncomeModel()", "~(PointerHoverEvent)", "~(LongPressEndDetails)", "JavaScriptObject()", "~(List<FrameTiming>)", "bool(ScrollMetricsNotification)", "Future<int>()", "bool(Customer)", "int(SemanticsNode,SemanticsNode)", "FormGroup(EditDeleteItemBloc)", "ExpensePaymentsModel()", "Future<~>(Object?)", "bool(Point<double>)", "~(BankTotal)", "~(ProgressEvent)", "~(String,String)", "Widget(BuildContext,EditableTextState)", "bool(FocusableActionDetector)", "~(PointerSignalEvent)", "Null(bool)", "Null(Uint8List?)", "String(int)", "Future<String>()", "EdgeInsetsGeometryTween(@)", "DateTime?(AddStaffBloc)", "~([Intent?])", "double()", "bool(SemanticsNode)", "_ZoomEnterTransition(BuildContext,Animation0<double>,Widget?)", "~([Duration?])", "int(_ReadingOrderSortData,_ReadingOrderSortData)", "TapGestureRecognizer()", "~(TapGestureRecognizer)", "LongPressGestureRecognizer()", "~(LongPressGestureRecognizer)", "VerticalDragGestureRecognizer()", "~(VerticalDragGestureRecognizer)", "HorizontalDragGestureRecognizer()", "~(HorizontalDragGestureRecognizer)", "PanGestureRecognizer()", "~(PanGestureRecognizer)", "ForcePressGestureRecognizer()", "~(ForcePressGestureRecognizer)", "Widget(BuildContext,Animation0<double>,HeroFlightDirection,BuildContext,BuildContext)", "MediaQuery(BuildContext,Widget?)", "Tween<@>?(Tween<@>?,@,Tween<@>(@))", "AlignmentGeometryTween(@)", "bool(DisplayFeature)", "DecorationTween(@)", "bool(NavigationNotification)", "MediaQuery(BuildContext)", "Map<Object?,Object?>()", "~(RestorationBucket)", "Future<~>(MethodCall0)", "Future<bool>(bool)", "Future<ByteData?>(ByteData?)", "VelocityTracker(PointerEvent)", "List<SemanticsNode>(_SemanticsSortGroup)", "~(SemanticsNode)", "bool(Selectable,double)", "~(String,Object?)", "~(SliverConstraints)", "bool(BoxHitTestResult)", "bool(Selectable)", "_SelectionToolbarWrapper(BuildContext)", "_InterestingSemanticsFragment(SemanticsConfiguration)", "~(TapDragStartDetails)", "~(TapDragUpdateDetails)", "~(TapDragEndDetails)", "~(SemanticsUpdate0)", "bool(String?)", "~(ImageChunkEvent)", "List<RouteMatchBase>()", "RouteMatchList(RouteMatchList)", "~(String,IfdDirectory)", "~(ImageStreamListener)", "Future<File>(File)", "ImageStreamCompleter()", "String(String?)", "Widget(Widget,Animation0<double>)", "Align(BuildContext,Widget?)", "bool(String,@)", "~(TextSelection,SelectionChangedCause?)", "_ZoomExitTransition(BuildContext,Animation0<double>,Widget?)", "Map<String,Object>(Object)", "Map<String,Object>()", "TextPosition(TextPosition,bool,TextBoundary)", "~([~])", "~(RenderBox?)", "Null([@])", "~([@])", "List<@(@)>()", "ChildSemanticsConfigurationsResult(List<SemanticsConfiguration>)", "~(FocusHighlightMode)", "Widget?(BuildContext,int)", "~({isNeedSetState:bool})", "LoginPageFirstScreen(BuildContext,GoRouterState)", "double(Set<MaterialState>)", "Widget(BuildContext,Animation0<double>,Animation0<double>)", "OtherIncomeModel(@)", "~(DateTime?)", "Map<String,@>(@)", "bool(BuildContext)", "Map<String,@>(TakingsTillModel)", "~(DirectionalFocusIntent)", "TakingTypeData(@)", "BankDepositModel(@)", "~(PreviousFocusIntent)", "~(NextFocusIntent)", "MaterialStateProperty<double?>?(ButtonStyle?)", "double(_PointerPanZoomData)", "FormGroup(AddNewCustomerBloc)", "~(DiagnosticsNode)", "Future<~>(String)", "~([TapUpDetails?])", "_ItemsList(InvoiceItemModel)", "SingleChildScrollView(BuildContext,SizingInformation)", "FormGroup(AddStaffBloc)", "Color?(Color?)", "Future<~>(~)", "int(String)", "Gender?(AddStaffBloc)", "MarriedSingle?(AddStaffBloc)", "bool(String,String)", "double(int)", "String(String,Object?)", "Indicator(BuildContext,int)", "Connector?(int)", "PaidHourly?(AddStaffBloc)", "~(String,List<String>)", "~(DioException,ErrorInterceptorHandler)", "~(Response0<@>,ResponseInterceptorHandler)", "Future<@>(@)", "~(List<int>)", "bool(RenderBox)", "~(ScaleEndDetails)", "RouteMatchList/(String?)", "Column(BuildContext)", "~(ScaleUpdateDetails)", "~(ScaleStartDetails)", "~(GestureListener)", "Color0(int?)", "~(Timer)", "bool(Category)", "int(LayoutView,LayoutView)", "Chip(int)", "Scaffold(BuildContext,CustomInvoiceState)", "Null(List<~>)", "Future<Null>(InvoiceItemModel)", "_Channel()", "bool(AccountingYear)", "String(DashboardDialogModel,int?)", "int(DashboardDialogModel,int?)", "Color0(DashboardDialogModel,int?)", "FormGroup(EditBankNamesBloc)", "FormGroup(EditCustomerBloc)", "Scaffold(BuildContext,EditDeleteItemState)", "~(Uint8List,String,int)", "FormGroup(EditOtherIncomeBloc)", "int(int,int)", "int(String?)", "FormGroup(EditPaymentsTypeBloc)", "@()", "FormGroup(EditSuppliersBloc)", "~([Object?])", "~(MapEntry<String,String>)", "Icon(BuildContext,Object,StackTrace?)", "~(Size)", "~(GestureMode)", "Container(BuildContext)", "ExpenseTypeBloc(BuildContext)", "bool(SemanticsObject)", "Null(ExpensePaymentsModel)", "FormGroup(ExpenseTypeBloc)", "KeyData()", "JSObject([JavaScriptObject?])", "Future<Null>(@,@)", "AddNewSupplierBloc(BuildContext)", "FormGroup(AddNewSupplierBloc)", "Null(SupplierModel)", "FormGroup(AddNewTakingsBloc)", "SelectIncomeTypeBloc(BuildContext)", "Null(OtherIncomeModel)", "Future<ServiceExtensionResponse>(String,Map<String,String>)", "DateTime()", "Scaffold(BuildContext,ProductsServicesState)", "~(double)", "Null(InvoiceCustomers)", "FormGroup(SelectIncomeTypeBloc)", "~(NativeUint8List)", "GestureDetector(BuildContext,int)", "GestureDetector(int)", "List<JavaScriptObject>()", "ViewListDiffResult?(int)", "Set<String>()", "Container(BuildContext,Object,StackTrace?)", "DateTime(int[int,int,int,int,int,int,int])", "0^(0^,0^)<num>", "Future<JavaScriptObject>([JavaScriptObject?])", "Matrix40(double)", "bool(LayoutView)", "~(PointerDataPacket)", "DiagnosticsNode(InlineSpan)", "Future<int>(JavaScriptObject)", "HitTestResult(Offset,int)", "String(double,double,String)", "Size()", "double?()", "~(TextSelection)", "bool(InlineSpanSemanticsInformation)", "Rect(Rect?,TextBox)", "~(Response0<@>)", "MouseCursor0(MouseTrackerAnnotation)", "~(MouseTrackerAnnotation,Matrix40)", "bool(MouseTrackerAnnotation)", "@(@,String)", "~(List<_InterestingSemanticsFragment>{isMergeUp:bool})", "Future<JavaScriptObject?>(int)", "MapEntry<int,String>(MapEntry<String,String>)", "~(_SelectableFragment)", "bool(_SelectableFragment)", "OneSequenceGestureRecognizer(Factory<OneSequenceGestureRecognizer>)", "TransformLayer?(PaintingContext,Offset)", "bool(SliverHitTestResult{crossAxisPosition!double,mainAxisPosition!double})", "Future<@>(MapEntry<String,MultipartFile>)", "MapEntry<String,List<String>>(String,List<String>)", "Stream<List<int>>()", "bool(RenderSliver)", "Null(~())", "~(FrameTiming)", "~(int,_FrameCallbackEntry)", "~(SemanticsActionEvent)", "JSObject(JavaScriptObject)", "~(Object?,String)", "SemanticsNode(_TraversalSortNode)", "DiagnosticsNode(SemanticsNode)", "JSObject(int)", "Null(@,StackTrace)", "int(SemanticsNode)", "SemanticsNode(int)", "~(SemanticsTag)", "~(SemanticsAction,~(Object?))", "ByteData(ByteData?)", "Future<_AssetManifestBin>(String)", "AssetMetadata(Map<Object?,Object?>)", "Map<String,@>?()", "~(int,@)", "Map<String,@>(TextInputConfiguration)", "TextInputConfiguration(AutofillClient)", "Stream<LicenseEntry>()", "Future<String?>(String?)", "TickerFuture({from:double?})", "Future<~>(ByteData?,~(ByteData?))", "Uint8List(ByteData)", "Future<~>(Future<Uint8List>)", "Future<~>(Uint8List)", "Future<Map<String,@>>(@)", "~(RawKeyEvent)", "Set<LogicalKeyboardKey>(LogicalKeyboardKey)", "int(_PlatformChannelStats,_PlatformChannelStats)", "~(_AnimationDirection)", "Future<Null>(ByteData?)", "RawKeyEventData()", "_Future<@>?()", "RegisteredFont?(ByteBuffer,String,String)", "String(String,Color)", "List<RestorationBucket>()", "List<RestorationBucket>(List<RestorationBucket>)", "double(num)", "List<@>(String)", "List<num>(SelectionRect)", "PlatformViewSurface(BuildContext,PlatformViewController)", "_HtmlElementViewController(PlatformViewCreationParams)", "Future<~>(PointerEvent)", "JSObject()", "Null(JavaScriptFunction,JavaScriptFunction)", "~(Action<Intent>)", "AnimatedPadding(BuildContext,BoxConstraints)", "~(_ChildEntry)", "Widget(_ChildEntry)", "bool(Widget)", "bool/()", "Route<@>?(RouteSettings)", "Route<@>(RouteSettings)", "bool(AutofillClient)", "AutofillClient()", "bool(KeepAliveNotification)", "CkCanvas(CkPictureRecorder)", "ClipPath(BuildContext)", "Rect(RenderBox)", "Hero(BuildContext)", "Future<double>()", "Future<~>(double)", "Widget(BuildContext,String?,Widget?)", "DefaultSelectionStyle(BuildContext)", "Future<~>(AnimationStatus)", "~(CkCanvas)", "Rect(DisplayFeature)", "~(Layer0)", "_Future<@>(@)", "~(@,StackTrace)", "ViewClipChain()", "~(TransposeCharactersIntent)", "~(ReplaceTextIntent)", "~(ScrollToDocumentBoundaryIntent)", "~(ScrollIntent)", "~(ExtendSelectionByPageIntent)", "~(UpdateSelectionIntent)", "Object?(DismissIntent)", "TextEditingValue(TextEditingValue,TextInputFormatter)", "Null(JSArray<Object?>,JavaScriptObject)", "Future<~>(PasteTextIntent)", "~(TextEditingValue)", "bool(TextEditingValue?,TextEditingValue)", "TextEditingValue(TextEditingValue)", "CompositedTransformTarget(BuildContext,ViewportOffset)", "bool(HitTestEntry<HitTestTarget>)", "String?(String)", "DiagnosticsNode(FocusNode)", "bool(KeyMessage)", "~(_FocusTraversalGroupInfo)", "bool(_DirectionalPolicyDataEntry)", "~(RenderCanvas)", "bool(TraversalDirection)", "Set<Directionality>(_ReadingOrderSortData)", "~(Symbol0,@)", "List<Directionality>(BuildContext)", "Rect(_ReadingOrderSortData)", "int(_ReadingOrderDirectionalGroupData,_ReadingOrderDirectionalGroupData)", "List<_ReadingOrderSortData>(_ReadingOrderSortData,Iterable<_ReadingOrderSortData>)", "bool(_ReadingOrderSortData)", "bool(FormFieldState<@>)", "DiagnosticsProperty<Element>(Element)", "Element?(Element)", "Object?(int,Element?)", "~(int,bool(FlutterHtmlKeyboardEvent))", "Center(Widget)", "DoubleTapGestureRecognizer()", "~(DoubleTapGestureRecognizer)", "Map<String,String>(Map<String,String>,String)", "~(String,int)", "~(String,int?)", "bool(int,int)", "TargetPlatform?()", "TargetPlatform()", "bool(DiagnosticsNode?)", "bool(StackFrame)", "ScaleGestureRecognizer()", "~(ScaleGestureRecognizer)", "ErrorDescription(String)", "~(String,String?)", "~(PointerPanZoomStartEvent)", "~(RenderSemanticsGestureHandler)", "~(StatefulElement,Object)", "Positioned(BuildContext,Widget?)", "~(_HeroFlight)", "String(DiagnosticsNode)", "bool(_HeroFlight)", "~(int,int,int)", "IconTheme(BuildContext)", "~(ImageInfo,bool)", "~(Object,StackTrace?)", "Uint8List(@,@)", "~(JSArray<Object?>,JavaScriptObject)", "~(Blob?)", "~(JavaScriptObject,List<PointerData>)", "BoxConstraintsTween(@)", "Matrix4Tween(@)", "TextStyleTween(@)", "BorderRadiusTween(@)", "_ButtonSanitizer()", "Future<@>(_Pending)", "Map<Type,@>(List<@>)", "Map<Type,@>(Map<Type,@>)", "Null(Map<Type,@>)", "Null(BuildContext,MagnifierController,ValueNotifier<MagnifierInfo>)", "bool(DiagnosticsNode)", "~(RouteTransitionRecord?,bool)", "bool(Route<@>?)", "Future<Null>(@)", "bool(OverlayEntry)", "String(GestureArenaMember)", "_GestureArena()", "_RouteEntry(Route<@>)", "~(CkPicture)", "MapEntry<String?,List<Object>>(@,@)", "RenderBox?()", "_RenderTheaterMarker()", "RenderBox(int)", "~(BoxConstraints)", "ClipRect(BuildContext,Widget?)", "Viewport(BuildContext,ViewportOffset)", "~(Size,Offset)", "Null(RestorationBucket?)", "~(RestorableProperty<Object?>)", "SynchronousFuture<bool>(bool)", "double?(int)", "@(@,@)", "RestorationScope(BuildContext,Widget?)", "Actions(BuildContext)", "IgnorePointer(BuildContext,Widget?)", "bool(PopEntry)", "IOSScrollViewFlingVelocityTracker(PointerEvent)", "MacOSScrollViewFlingVelocityTracker(PointerEvent)", "bool(PointerData)", "_PointerEventDescription?(PointerData)", "String(double)", "Widget(BuildContext,ViewportOffset)", "bool(ScrollUpdateNotification)", "~(DragDownDetails)", "~(_TapTracker)", "Map<~(PointerEvent),Matrix40?>()", "bool(ScrollMetrics?)", "_ThumbPressGestureRecognizer()", "~(_ThumbPressGestureRecognizer)", "~(~(PointerEvent),Matrix40?)", "_TrackTapGestureRecognizer()", "~(_TrackTapGestureRecognizer)", "bool(Node)", "int(Selectable,Selectable)", "Rect(Rect)", "bool(Rect)", "Element0(Node)", "~(ShortcutActivator,Intent)", "List<_ActivatorIntentPair>()", "_SingleChildViewport(BuildContext,ViewportOffset)", "~(RenderBox)", "Element?()", "bool(TableRow)", "Decoration?(TableRow)", "_TableElementRow(TableRow)", "Element(Widget)", "bool(_TableElementRow)", "bool(List<Element>)", "Iterable<RenderBox>(_TableElementRow)", "RenderBox(Element)", "List<Element>(_TableElementRow)", "_CombiningGestureArenaMember()", "~(Element0)", "_PointerDeviceState()", "Future<JavaScriptObject>()", "CupertinoTextSelectionToolbarButton(ContextMenuButtonItem)", "TapAndHorizontalDragGestureRecognizer()", "~(TapAndHorizontalDragGestureRecognizer)", "TapAndPanGestureRecognizer()", "~(TapAndPanGestureRecognizer)", "~(UndoTextIntent)", "~(RedoTextIntent)", "_ViewScope(BuildContext,PipelineOwner)", "String(MapEntry<String,String>)", "DesktopTextSelectionToolbarButton(ContextMenuButtonItem)", "SynchronousFuture<CupertinoLocalizations>()", "SynchronousFuture<MaterialLocalizations>()", "~(String,DateSymbols)", "SynchronousFuture<WidgetsLocalizations>()", "Future<~>(String,ByteData?,~(ByteData?)?)", "LinkedHashMap<Type,_ServiceFactory<Object,@,@>>()", "bool(Route<Object?>,Object?)", "MaterialErrorScreen(BuildContext,GoRouterState)", "CupertinoErrorScreen(BuildContext,GoRouterState)", "NoTransitionPage<~>({arguments!Object?,child!Widget,key!LocalKey,name!String?,restorationId!String})", "ErrorScreen(BuildContext,GoRouterState)", "RouteMatchList/(RouteMatchList)", "CupertinoDesktopTextSelectionToolbarButton(ContextMenuButtonItem)", "MaterialRectArcTween(Rect?,Rect?)", "String?/(String?)", "String(RouteMatchList)", "String(_DecorationType)", "_DecorationType(_DecorationType)", "bool(Route<Object?>,Object?,RouteMatchBase)", "Widget(BuildContext,~())", "MapEntry<String,String>(String,String)", "0&(BuildContext,GoRouterState)", "bool(MapEntry<String,String>)", "int(MapEntry<String,String>)", "Map<Object?,Object?>(ImperativeRouteMatch)", "@(Object?)", "InheritedGoRouter(BuildContext,Widget)", "bool(Page<Object?>,GoRouterState)", "bool(~)", "MediaType()", "JsFunction(@)", "~(int,IfdValue)", "Future<XFile>(XFile)", "~(ScrollNotification)", "XFile(File)", "XFile(@)", "Future<Object?>(MethodCall0)", "JsArray<@>(@)", "DateTime(int)", "RegExp()", "DateTime(int,int,int,int,int,int,int,bool)", "bool(_DateFormatField)", "_DateFormatQuotedField(String,DateFormat)", "_DateFormatPatternField(String,DateFormat)", "_DateFormatLiteralField(String,DateFormat)", "String?(NumberSymbols)", "String(NumberSymbols)", "double(_Diagonal)", "Logger()", "0^?(0^?(ButtonStyle?))<Object?>", "0^?(MaterialStateProperty<0^>?(ButtonStyle?))<Object?>", "~(0^)<Object?>", "AbstractControl<@>?(Object?,String)", "~({disabled:bool?,emitEvent:bool,removeFocus:bool,updateParent:bool,value:Object?})", "JsObject(@)", "MaterialStateProperty<TextStyle?>?(ButtonStyle?)", "Future<Map<String,@>?>(Future<Map<String,@>?>(AbstractControl<@>))", "~(Map<String,@>?)", "int(OverlayGroup)", "MapEntry<String,Object?>(String,AbstractControl<@>)", "MaterialStateProperty<EdgeInsetsGeometry?>?(ButtonStyle?)", "~(NotoFont)", "MaterialStateProperty<BorderSide?>?(ButtonStyle?)", "MaterialStateProperty<OutlinedBorder?>?(ButtonStyle?)", "~(ControlStatus)", "Widget(BuildContext,AsyncSnapshot<ControlStatus>)", "Widget(BuildContext,BoxConstraints)", "MouseCursor0?(Set<MaterialState>)", "_Shimmer(BuildContext,Widget?)", "~(PointerUpEvent)", "~(PointerCancelEvent)", "~(PointerMoveEvent)", "MouseCursor0?(ButtonStyle?)", "Point0(Point0)", "bool?(@[@,@])", "EngineLineMetrics(ParagraphLine)", "Null(@,@)", "~(CloseEvent)", "~(MessageEvent)", "Color?(ButtonStyle?)", "~(String[@])", "~(@(@))", "~(@(String,@))", "VisualDensity?(ButtonStyle?)", "String?()", "int(_Line)", "MaterialTapTargetSize?(ButtonStyle?)", "Object(_Line)", "Object(_Highlight)", "int(_Highlight,_Highlight)", "List<_Line>(MapEntry<Object,List<_Highlight>>)", "SourceSpanWithContext()", "Widget(BuildContext,@)", "StatusChangeTile(BuildContext,int)", "Duration?(ButtonStyle?)", "Container(BuildContext,BoxConstraints)", "bool?(ButtonStyle?)", "AlignmentGeometry?(ButtonStyle?)", "bool(bool?)", "~(FlutterErrorDetails)", "String?(BuildContext,GoRouterState)", "InteractiveInkFeatureFactory?(ButtonStyle?)", "Future<~>([JavaScriptObject?])", "~(Object)", "Stream<@>(Stream<@>,Stream<@>(@))", "Scaffold(BuildContext,GoRouterState)", "Future<~>(_Emitter<@>)", "CompositeMessageLookup()", "AppLocalizations(bool)", "Future<~>(StreamSubscription<@>)", "Future<~>?()", "Future<+(String,FontLoadError?)>()", "Map<String,@>(UserVatPeriod)", "~(ParagraphLine)", "Map<String,@>(ApplyPaymentModel)", "Map<String,@>(InvoicesModel)", "NoteData(@)", "Map<String,@>(NoteData)", "~(LayoutFragment)", "Map<String,@>(TakingTypeData)", "WeeklyReportData(@)", "TakingsTillModel(@)", "TakingsWeekReportData(@)", "SupplierModel(@)", "BalanceModel(@)", "MouseCursor0(Set<MaterialState>)", "ExpensePaymentsModel(@)", "bool(Point<double>[double?])", "ControlAccountList(@)", "Login()", "Future<~>(GetCustomerData0,Emitter<AddInvoiceState>)", "Future<~>(SearchCustomer,Emitter<AddInvoiceState>)", "AddInvoiceBloc(BuildContext)", "Scaffold(BuildContext,AddInvoiceState)", "bool(Point<double>,double,double)", "AddInvoiceState(AddInvoiceBloc)", "Future<Null>(InvoiceCustomers)", "Ink(BuildContext,Widget?)", "_CustomerList2(InvoiceCustomers)", "Offset(Size,double)", "FormGroup(AddInvoiceBloc)", "AddNewCustomerBloc(BuildContext)", "Scaffold(BuildContext,AddNewCustomerState)", "String(int?)", "TableRow(int)", "Future<~>(GetCustomer0,Emitter<AddNewCustomerState>)", "Future<~>(AddCustomer,Emitter<AddNewCustomerState>)", "~(TextHeightStyle,TextHeightRuler)", "Container(BuildContext,AsyncSnapshot<Object?>)", "Future<~>(GetItem,Emitter<AddNewItemState>)", "Null(SelectItem,Emitter<AddNewItemState>)", "Future<~>(AddItem,Emitter<AddNewItemState>)", "Future<~>(ItemSearch,Emitter<AddNewItemState>)", "AddNewItemBloc(BuildContext)", "Scaffold(BuildContext,AddNewItemState)", "Rect()(RenderBox)", "Null(InvoiceItemModel)", "~(LineBreakType,int)", "Null(AddPayrollChangeEvent,Emitter<AddPayrollChangeState>)", "AddPayrollChangeBloc(BuildContext)", "Scaffold(BuildContext,AddPayrollChangeState)", "~(List<Object?>)", "FormGroup(AddPayrollChangeBloc)", "PaidHourly?(AddPayrollChangeBloc)", "DateTime?(AddPayrollChangeBloc)", "Null(AddStaffEvent,Emitter<AddStaffState>)", "AddStaffBloc(BuildContext)", "Scaffold(BuildContext,AddStaffState)", "CalendarDatePicker()", "Form()", "Flex(BuildContext,BoxConstraints)", "~(String,JavaScriptObject)", "Palette(Palette())", "~(EditingState?,TextEditingDeltaState?)", "FontFamily(@)", "CustomSingleChildLayout(BuildContext)", "~(ActivateIntent)", "~(ButtonActivateIntent)", "DropdownButtonHideUnderline(BuildContext)", "InputBorder?()", "Future<~>(GetDateOfBank,Emitter<ApplyPaymentState>)", "Future<~>(InsertApplyPayment,Emitter<ApplyPaymentState>)", "Null(UpDateState,Emitter<ApplyPaymentState>)", "ApplyPaymentBloc(BuildContext)", "Scaffold(BuildContext,ApplyPaymentState)", "ApplyPaymentState(ApplyPaymentBloc)", "FormGroup(ApplyPaymentBloc)", "BorderRadius?()", "_BankList2(int)", "Null(LogIn,Emitter<AuthState>)", "Null(LogOut,Emitter<AuthState>)", "Future<~>(LoginAuto,Emitter<AuthState>)", "Future<~>(GetBalancesList,Emitter<BalancesState>)", "BalancesBloc(BuildContext)", "Scaffold(BuildContext,BalancesState)", "BalancesState(BalancesBloc)", "_BankBalancesList(BalanceModel)", "Future<~>(GetDateBankDeposit,Emitter<BankDepositState>)", "num?(int?)", "Null(AddBankToDeleteList,Emitter<BankDepositState>)", "Null(AddBankDeposit,Emitter<BankDepositState>)", "Null(UpdateBanDepositEntry,Emitter<BankDepositState>)", "Future<~>(InsertAndDeleteDeposits,Emitter<BankDepositState>)", "BankDepositBloc(BuildContext)", "~(BuildContext,BankDepositState)", "bool(ChartBehavior<@>)", "bool(Color?)", "Scaffold(BuildContext,BankDepositState)", "BankDepositState(BankDepositBloc)", "BorderSide?(Set<MaterialState>)", "~(BankDepositModel)", "Rect()?(RenderBox)", "~(Intent?)", "Null(ToogleShowSplits,Emitter<BankDepositSelectDateState>)", "Future<~>(WeekListOfBankDeposit,Emitter<BankDepositSelectDateState>)", "BankTotalSplits(EntryBankModel)", "~(SelectionModelType)", "BankDepositSelectDateBloc(BuildContext)", "Scaffold(BuildContext,BankDepositSelectDateState)", "bool(InkHighlight?)", "SingleChildScrollView(BuildContext,int)", "BankSelectDateList(BuildContext,int)", "Future<~>(GetBankDeposits,Emitter<BankingState>)", "BankingBloc(BuildContext)", "Scaffold(BuildContext,BankingState)", "DepositsTotal(BuildContext)", "BankingState(BankingBloc)", "Null(BankDepositModel)", "_BankDepositsList(BankDepositModel)", "Null(ChangePassInitial,Emitter<ChangePassState>)", "Future<~>(ChangePassword,Emitter<ChangePassState>)", "ChangePasswordBloc(BuildContext)", "ResponsiveBuilder(BuildContext,ChangePassState)", "ChangePasswordMobile(BuildContext,SizingInformation)", "Visibility(BuildContext,AbstractControl<Object?>,Widget?)", "Future<~>(GetSalesDayBook,Emitter<CompleteInvoicesState>)", "CompleteInvoicesBloc(BuildContext)", "Color(_HighlightType)", "BlocBuilder<FilterBloc,FilterState>(BuildContext,CompleteInvoicesState)", "~(ChartBehavior<@>)", "TotalCompleteMobile(BuildContext)", "CompleteInvoicesState(CompleteInvoicesBloc)", "~(String,ChartBehavior0<@>)", "_ListOfInvoices(InvoicesModel)", "FormGroup(CompleteInvoicesBloc)", "~(ChartStateBehavior<ChartBehavior0<@>>,AnimationController)", "double(@)", "FontAsset(@)", "Future<~>(ControlAccountsList,Emitter<ControllAccountsState>)", "ControlAccountBloc(BuildContext)", "~(BuildContext,ControllAccountsState)", "Scaffold(BuildContext,ControllAccountsState)", "Future<~>(GetCreditNoteData,Emitter<CreditNoteState>)", "CreditNoteBloc(BuildContext)", "BlocBuilder<FilterBloc,FilterState>(BuildContext,CreditNoteState)", "Color?(Color?,Color?,Color?[Color?])", "CreditNoteState(CreditNoteBloc)", "_CreditNote(InvoicesModel)", "FormGroup(CreditNoteBloc)", "StatefulWidget?(BuildContext,MagnifierController,ValueNotifier<MagnifierInfo>)", "Future<~>(GetInvoiceData0,Emitter<CustomInvoiceState>)", "Null(AddItemList,Emitter<CustomInvoiceState>)", "Null(CustomInvoiceEvent,Emitter<CustomInvoiceState>)", "Null(UnselectCategory,Emitter<CustomInvoiceState>)", "Future<~>(DeleteItem,Emitter<CustomInvoiceState>)", "Future<~>(UpdateInvoice,Emitter<CustomInvoiceState>)", "Null(SelectCategory0,Emitter<CustomInvoiceState>)", "Future<~>(SaveInvoiceDataEvent,Emitter<CustomInvoiceState>)", "Future<~>(GetCategoryData,Emitter<CustomInvoiceState>)", "CustomInvoiceBloc(BuildContext)", "bool(LayoutChangedNotification)", "SurfaceScene()", "~(List<JavaScriptObject>,JavaScriptObject)", "_InvoicesItemList(InvoiceItemModel)", "bool(InvoiceItemModel)", "ShapeBorderTween(@)", "DateTime?(CustomInvoiceBloc)", "Future<~>(GetInvoiceData,Emitter<CustomerBalanceState>)", "Future<~>(SearchCustomers0,Emitter<CustomerBalanceState>)", "CustomerBalanceBloc(BuildContext)", "BlocBuilder<FilterBloc,FilterState>(BuildContext,CustomerBalanceState)", "FormGroup(CustomerBalanceBloc)", "_CustomerList0(InvoiceCustomers)", "Null(DashboardEvent,Emitter<DashboardState>)", "Future<~>(WeekListOfCashControll,Emitter<DashboardState>)", "Size(JavaScriptObject)", "~(AccountingYear)", "~(UserVatPeriod)", "DashboardBloc(BuildContext)", "Scaffold(BuildContext,DashboardState)", "bool(Color)", "PageTransitionsBuilder?(TargetPlatform)", "Actions(BuildContext,Widget?)", "Future<~>(GetDraftInvoice,Emitter<DraftInvoicesState>)", "DraftInvoicesBloc(BuildContext)", "BlocBuilder<FilterBloc,FilterState>(BuildContext,DraftInvoicesState)", "TotalDraftMobile(BuildContext)", "DraftInvoicesState(DraftInvoicesBloc)", "_ListOfDraft(InvoicesModel)", "FormGroup(DraftInvoicesBloc)", "Future<~>(GetBankNamesList,Emitter<EditBankNamesState>)", "Future<~>(UpdateBankName,Emitter<EditBankNamesState>)", "EditBankNamesBloc(BuildContext)", "Scaffold(BuildContext,EditBankNamesState)", "EditBankNamesState(EditBankNamesBloc)", "bool(Set<MaterialState>)", "_EditDeleteBankName(EntryBankModel)", "Future<~>(GetCustomersList,Emitter<EditCustomerState>)", "Future<~>(DeleteCustomer,Emitter<EditCustomerState>)", "Future<~>(SearchCustomers1,Emitter<EditCustomerState>)", "EditCustomerBloc(BuildContext)", "Scaffold(BuildContext,EditCustomerState)", "ChartContainerRenderObject<@>()", "EditCustomerState(EditCustomerBloc)", "EditDeleteCustomer(InvoiceCustomers)", "Future<~>(GetCustomer,Emitter<EditCustomerInvoiceState>)", "Future<~>(EditCustomer,Emitter<EditCustomerInvoiceState>)", "EditCustomerInvoiceBloc(BuildContext)", "Scaffold(BuildContext,EditCustomerInvoiceState)", "FormGroup(EditCustomerInvoiceBloc)", "Map<String,String>(FormControl<@>?)", "Future<~>(GetItemList1,Emitter<EditDeleteItemState>)", "TextStyle({background:Paint?,backgroundColor:Color?,color:Color?,decoration:TextDecoration?,decorationColor:Color?,decorationStyle:TextDecorationStyle?,decorationThickness:double?,fontFeatures:List<FontFeature>?,fontSize:double?,fontStyle:FontStyle?,fontWeight:FontWeight?,foreground:Paint?,height:double?,letterSpacing:double?,locale:Locale?,shadows:List<Shadow>?,textBaseline:TextBaseline?,textStyle:TextStyle?,wordSpacing:double?})", "Future<~>(UpDate,Emitter<EditDeleteItemState>)", "Future<~>(SearchItem,Emitter<EditDeleteItemState>)", "EditDeleteItemBloc(BuildContext)", "JavaScriptObject?(int)", "HotRestartCacheHandler?()", "_ItemsList0(InvoiceItemModel)", "Future<~>(GetOtherIncomeType,Emitter<EditOtherIncomeState>)", "Future<~>(DeleteOtherIncomeType,Emitter<EditOtherIncomeState>)", "Future<~>(UpdateIncomeName,Emitter<EditOtherIncomeState>)", "Future<~>(ToggleHideIncome,Emitter<EditOtherIncomeState>)", "Future<~>(ToggleUnHideIncome,Emitter<EditOtherIncomeState>)", "Future<~>(RestoreIncome,Emitter<EditOtherIncomeState>)", "Future<~>(DeleteOtherIncomeTypeFull,Emitter<EditOtherIncomeState>)", "Future<~>(SearchOtherIncome,Emitter<EditOtherIncomeState>)", "EditOtherIncomeBloc(BuildContext)", "Scaffold(BuildContext,EditOtherIncomeState)", "~(Size?)", "EditOtherIncomeState(EditOtherIncomeBloc)", "MapEntry<String,List<String>>(String,String)", "_OtherIncomeTypeName(OtherIncomeModel)", "Future<~>(GetListExpenseType,Emitter<EditPaymentsTypeState>)", "Future<~>(DeleteType,Emitter<EditPaymentsTypeState>)", "Future<~>(DeleteTypeFull,Emitter<EditPaymentsTypeState>)", "Future<~>(UpdateExpanseTypeName,Emitter<EditPaymentsTypeState>)", "Future<~>(ToggleHideExpenses,Emitter<EditPaymentsTypeState>)", "Future<~>(ToggleUnHideExpense,Emitter<EditPaymentsTypeState>)", "Future<~>(RestoreExpenses,Emitter<EditPaymentsTypeState>)", "Future<~>(SearchExpenseTypeName,Emitter<EditPaymentsTypeState>)", "EditPaymentsTypeBloc(BuildContext)", "Scaffold(BuildContext,EditPaymentsTypeState)", "EditPaymentsTypeState(EditPaymentsTypeBloc)", "~(DismissDirection)", "_EditDeletePayments(ExpensePaymentsModel)", "Object()", "bool(EditPaymentsTypeBloc)", "Null(EditPayrollEvent,Emitter<EditPayrollState>)", "EditPayrollBloc(BuildContext)", "Scaffold(BuildContext,EditPayrollState)", "FormGroup(EditPayrollBloc)", "PaidHourly?(EditPayrollBloc)", "DateTime?(EditPayrollBloc)", "Null(EditPersonalDetailsEvent,Emitter<EditPersonalDetailsState>)", "EditPersonalDetailsBloc(BuildContext)", "Scaffold(BuildContext,EditPersonalDetailsState)", "Container(BuildContext,SizingInformation)", "~(List<double>,TextDirection,double)", "MarriedSingle?(EditPersonalDetailsBloc)", "Gender?(EditPersonalDetailsBloc)", "DateTime?(EditPersonalDetailsBloc)", "PaidHourly?(EditPersonalDetailsBloc)", "Future<~>(GetSupplierList,Emitter<EditSuppliersState>)", "Future<~>(DeleteSupplierTypeFull,Emitter<EditSuppliersState>)", "Future<~>(DeleteSupplierType,Emitter<EditSuppliersState>)", "Future<~>(ToggleHide,Emitter<EditSuppliersState>)", "Future<~>(ToggleUnHide,Emitter<EditSuppliersState>)", "Future<~>(RestoreSupplier,Emitter<EditSuppliersState>)", "Future<~>(UpdateSupplierTypeName,Emitter<EditSuppliersState>)", "Future<~>(SearchSupplierName,Emitter<EditSuppliersState>)", "EditSuppliersBloc(BuildContext)", "Scaffold(BuildContext,EditSuppliersState)", "GlobalKey<State<StatefulWidget>>(Widget)", "EditSuppliersState(EditSuppliersBloc)", "Center(int)", "_EditDeleteSupplier(SupplierModel)", "Future<~>(GetNotes0,Emitter<AddNoteState>)", "Null(UpdateNoteEdit,Emitter<AddNoteState>)", "Null(DiscardNoteChanges,Emitter<AddNoteState>)", "Null(SetNoteToUpdate0,Emitter<AddNoteState>)", "ImageItem0(int)", "Future<~>(DeleteNote0,Emitter<AddNoteState>)", "Null(SaveUploadImages0,Emitter<AddNoteState>)", "Future<~>(AddNoteTransaction,Emitter<AddNoteState>)", "Null(CancelUpdateNote0,Emitter<AddNoteState>)", "Null(SetNoteImagesToDelete,Emitter<AddNoteState>)", "Future<~>(AddNote0,Emitter<AddNoteState>)", "Future<~>(DiscardAllChanges,Emitter<AddNoteState>)", "AddNoteBloc<BlocBase<@>,@>(BuildContext)", "PreferredSizeWidget(BuildContext,AddNoteState)", "Widget(BuildContext,AddNoteState)", "ResponsiveBuilder(BuildContext,AddNoteState)", "@(@)(~(RequestOptions,RequestInterceptorHandler))", "InputDecorator(BuildContext,Widget?)", "Future<~>(GetExpenseData,Emitter<ExpensePaymentEntryState>)", "Null(AddExpenseToDeleteList,Emitter<ExpensePaymentEntryState>)", "Future<~>(InsertExpensePayments,Emitter<ExpensePaymentEntryState>)", "Future<~>(DeleteExpenseEntry,Emitter<ExpensePaymentEntryState>)", "Null(AddExpensePayment,Emitter<ExpensePaymentEntryState>)", "Null(UpdateEntryState,Emitter<ExpensePaymentEntryState>)", "Semantics(BuildContext,Widget?)", "ExpensePaymentEntryBloc(BuildContext)", "~(BuildContext,ExpensePaymentEntryState)", "UnmanagedRestorationScope(FormFieldState<String>)", "Scaffold(BuildContext,ExpensePaymentEntryState)", "~(ExpensePaymentsModel)", "~(ExpensePaymentsModel?)", "DropdownMenuItem<ExpensePaymentsModel>(ExpensePaymentsModel)", "ThemeDataTween(@)", "Future<~>(GetPaymentsWeeklyList,Emitter<ExpensePaymentsState>)", "ExpensePaymentsBloc(BuildContext)", "ThemeData()", "Scaffold(BuildContext,ExpensePaymentsState)", "ExpensePaymentsState(ExpensePaymentsBloc)", "MapEntry<Object,ThemeExtension<@>>(Object,ThemeExtension<@>)", "bool(MapEntry<Object,ThemeExtension<@>>)", "_ExpenseListByCurrentDay(ExpensePaymentsModel)", "Future<~>(GetListExpensePaymentsList,Emitter<ExpenseTypeState>)", "Future<~>(InsertExpensePaymentsType0,Emitter<ExpenseTypeState>)", "Future<~>(SearchTypeName,Emitter<ExpenseTypeState>)", "Scaffold(BuildContext,ExpenseTypeState)", "int(PaintRequest,PaintRequest)", "ExpenseTypeState(ExpenseTypeBloc)", "_ExpensePaymentsTypeList(ExpensePaymentsModel)", "Null(SelectCustomer,Emitter<FilterState>)", "~(List<Customer>)", "String(Customer)", "CheckboxListTile(int)", "Future<~>(ForgotPasswordLogin,Emitter<ForgotPasswordState>)", "ForgotPasswordBloc(BuildContext)", "Scaffold(BuildContext,ForgotPasswordState)", "Future<~>(GetClient,Emitter<HomeState>)", "HomeBloc(BuildContext)", "Scaffold(BuildContext,HomeState)", "bool(HomeButton)", "Widget(int)", "Future<~>(GetIapProducts,Emitter<IAPState>)", "~(int,int)", "Future<~>(BuyProduct,Emitter<IAPState>)", "Null(ChangeSelectedProduct,Emitter<IAPState>)", "Null(SkipPayment,Emitter<IAPState>)", "Null(PayWithStripe,Emitter<IAPState>)", "Future<~>(UpdateStatus1,Emitter<IAPState>)", "IAPBloc(BuildContext)", "~(BuildContext,IAPState)", "Scaffold(BuildContext,IAPState)", "Future<~>(Uri)", "IAPMobileView(BuildContext,SizingInformation)", "Future<~>(GetOtherIncomeData,Emitter<IncomeEntryState>)", "Future<~>(InitiateNavigation,Emitter<IncomeEntryState>)", "Null(PopulateSavedNote,Emitter<IncomeEntryState>)", "Future<~>(AddOtherIncomeEntry,Emitter<IncomeEntryState>)", "Future<~>(DeleteOtherIncomeEntry,Emitter<IncomeEntryState>)", "Null(UpdateIncomeState,Emitter<IncomeEntryState>)", "Null(ChangeDateIncome,Emitter<IncomeEntryState>)", "Null(AddIncomeToDeleteList,Emitter<IncomeEntryState>)", "Future<~>(InsertOtherIncomeEntry,Emitter<IncomeEntryState>)", "IncomeEntryBloc(BuildContext)", "~(BuildContext,IncomeEntryState)", "Future<Codec>(ImmutableBuffer{allowUpscaling:bool,cacheHeight:int?,cacheWidth:int?})", "Scaffold(BuildContext,IncomeEntryState)", "~(OtherIncomeModel)", "IncomeEntryState(IncomeEntryBloc)", "~(OtherIncomeModel?)", "DropdownMenuItem<OtherIncomeModel>(OtherIncomeModel)", "Future<~>(CheckAccount,Emitter<LoginState>)", "Future<~>(SetBiometricAuthLogin,Emitter<LoginState>)", "Future<Codec>(ImmutableBuffer{getTargetSize:TargetImageSize(int,int)?})", "Future<~>(SetBiometricLogin,Emitter<LoginState>)", "Future<~>(CheckUserCredentials,Emitter<LoginState>)", "Future<~>(CheckEmailPassword,Emitter<LoginState>)", "LoginBloc(BuildContext)", "~(BuildContext,LoginState)", "ReactiveForm(BuildContext,LoginState)", "Future<~>(GetLoggedUserData,Emitter<MenuState>)", "MenuBloc(BuildContext)", "Scaffold(BuildContext,MenuState)", "Widget(HomeTabs)", "ChatMessage(@)", "Null(MessagesList,Emitter<MessagesState>)", "Null(FillMessageList,Emitter<MessagesState>)", "Null(AddMessage,Emitter<MessagesState>)", "MessagesBloc(BuildContext)", "~(BuildContext,MessagesState)", "Scaffold(BuildContext,MessagesState)", "ListTile(BuildContext,int)", "Future<~>(GetClientData,Emitter<MoreState>)", "Future<~>(RemoveBiometricLogin,Emitter<MoreState>)", "Set<~>(SetRecognitionText,Emitter<MoreState>)", "MoreBloc(BuildContext)", "Scaffold(BuildContext,MoreState)", "FormGroup(MoreBloc)", "Future<~>(SupplierList,Emitter<AddNewSupplierState>)", "Future<~>(AddNewSupplier0,Emitter<AddNewSupplierState>)", "Future<~>(SearchSupplierTypeName,Emitter<AddNewSupplierState>)", "EdgeInsetsGeometry(EdgeInsetsGeometry,ShapeBorder)", "Scaffold(BuildContext,AddNewSupplierState)", "ShapeBorder(ShapeBorder)", "AddNewSupplierState(AddNewSupplierBloc)", "bool(ShapeBorder)", "_SupplierList(SupplierModel)", "Future<~>(GetTakingsType,Emitter<AddNewTakingsState>)", "Future<~>(UpdateTakingsName,Emitter<AddNewTakingsState>)", "Future<~>(DeleteTakingsTypeFull,Emitter<AddNewTakingsState>)", "Future<~>(HideTakingsType,Emitter<AddNewTakingsState>)", "Future<~>(UnHideTakingsType,Emitter<AddNewTakingsState>)", "Future<~>(ChangeEnableStatus,Emitter<AddNewTakingsState>)", "bool(TakingTypeData)", "Future<~>(AddTakingsType0,Emitter<AddNewTakingsState>)", "AddNewTakingsBloc(BuildContext)", "Scaffold(BuildContext,AddNewTakingsState)", "Widget(TakingTypeData)", "String(ShapeBorder)", "Future<~>(ListOtherIncome,Emitter<OtherIncomeState>)", "OtherIncomeBloc(BuildContext)", "Map<String,Object?>()", "Scaffold(BuildContext,OtherIncomeState)", "TotalIncomeCurrent(BuildContext)", "OtherIncomeState(OtherIncomeBloc)", "double(double,FlutterView)", "_ListOtherIncome(OtherIncomeModel)", "Future<~>(InsertOtherIncome,Emitter<OtherIncomeSelectState>)", "Null(ShowPostTo0,Emitter<OtherIncomeSelectState>)", "Future<~>(WeeklistOtherIncome,Emitter<OtherIncomeSelectState>)", "OtherIncomeSelectBloc(BuildContext)", "Scaffold(BuildContext,OtherIncomeSelectState)", "TotalIncome(BuildContext)", "bool(double)", "OtherIncomeListSelectDate(BuildContext,SizingInformation)", "FormGroup(OtherIncomeSelectBloc)", "Color(double)", "Future<~>(StripePayments,Emitter<StripeOtherPaymentsState>)", "Future<~>(UpdateStatus0,Emitter<StripeOtherPaymentsState>)", "Future<Null>(ConfirmCardPaymentSuccess)", "Null(ConfirmCardPaymentSuccess)", "StripeOtherPaymentsBloc(BuildContext)", "~(BuildContext,StripeOtherPaymentsState)", "Scaffold(BuildContext,StripeOtherPaymentsState)", "Future<~>(ExpenseWeeklyList,Emitter<PaymentsSelectDateState>)", "Null(ChangePaymentsDate,Emitter<PaymentsSelectDateState>)", "Null(ShowPostTo,Emitter<PaymentsSelectDateState>)", "Future<~>(InsertExpensePaymentsType,Emitter<PaymentsSelectDateState>)", "PaymentsSelectDateBloc(BuildContext)", "Scaffold(BuildContext,PaymentsSelectDateState)", "TotalExpense(BuildContext)", "PaymentsSelectDateList(BuildContext,int)", "FormGroup(PaymentsSelectDateBloc)", "PaymentsSelectDateState(PaymentsSelectDateBloc)", "Future<~>(GetItemList,Emitter<ProductServiceSoldState>)", "Null(SelectDate,Emitter<ProductServiceSoldState>)", "ProductServiceSoldBloc(BuildContext)", "Scaffold(BuildContext,ProductServiceSoldState)", "FormGroup(ProductServiceSoldBloc)", "DateTime?(ProductServiceSoldBloc)", "_SoldList(InvoiceItemModel)", "Future<~>(GetItemList0,Emitter<ProductsServicesState>)", "Future<~>(InsertItem,Emitter<ProductsServicesState>)", "Future<~>(ItemsDelete,Emitter<ProductsServicesState>)", "Future<~>(SearchItems,Emitter<ProductsServicesState>)", "Future<~>(UpdateItem,Emitter<ProductsServicesState>)", "ProductsServicesBloc(BuildContext)", "_LiveImage()", "~(ImageInfo?,bool)", "Null(InvoiceItemModel?)", "_ItemList(InvoiceItemModel)", "ReceiptsSelectCustomerBloc(BuildContext)", "Scaffold(BuildContext,ReceiptsSelectCustomerState)", "FormGroup(ReceiptsSelectCustomerBloc)", "Future<~>(Object,StackTrace?)", "Future<~>(GetCustomerListForSalesReceipts,Emitter<ReceiptsSelectCustomerState>)", "Future<~>(SearchSalesReceipts,Emitter<ReceiptsSelectCustomerState>)", "_ListOfCustomer(InvoiceCustomers)", "Future<~>(GetCustomerList,Emitter<ReportCustomersState>)", "Future<~>(SearchCustomersReport,Emitter<ReportCustomersState>)", "ReportCustomersBloc(BuildContext)", "Scaffold(BuildContext,ReportCustomersState)", "FormGroup(ReportCustomersBloc)", "BottomBarHomeMobile(BuildContext,SizingInformation)", "_CustomerList1(InvoiceCustomers)", "Future<~>(GetInvoiceListByCustomerId,Emitter<ReportSalesReceiptsState>)", "Null(ReportSalesReceiptsEvent,Emitter<ReportSalesReceiptsState>)", "ReportSalesReceiptsBloc(BuildContext)", "Scaffold(BuildContext,ReportSalesReceiptsState)", "FormGroup(ReportSalesReceiptsBloc)", "TotalReportSalesMobile(BuildContext)", "_InvoiceListByCustomerId(ApplyPaymentModel)", "Future<~>(GetPaymentOptions,Emitter<ReviewPlansState>)", "Future<~>(RemoveLicence,Emitter<ReviewPlansState>)", "Future<~>(UpdateStatus,Emitter<ReviewPlansState>)", "Null(UpdatePaymentChange,Emitter<ReviewPlansState>)", "ReviewPlanBLoc(BuildContext)", "Scaffold(BuildContext,ReviewPlansState)", "Widget(MapEntry<int,PackagesListModel>)", "Future<~>(GetListOtherIncome,Emitter<SelectIncomeTypeState>)", "Null(UpdateStateIncome,Emitter<SelectIncomeTypeState>)", "Future<~>(InsertOtherIncome0,Emitter<SelectIncomeTypeState>)", "Future<~>(SearchOtherIncomeType,Emitter<SelectIncomeTypeState>)", "Scaffold(BuildContext,SelectIncomeTypeState)", "int(_PersistedSurfaceMatch,_PersistedSurfaceMatch)", "SelectIncomeTypeState(SelectIncomeTypeBloc)", "_IncomeList(OtherIncomeModel)", "Future<~>(GetStatementInvoice,Emitter<StatementState>)", "Null(StatementEvent,Emitter<StatementState>)", "StatementBloc(BuildContext)", "Scaffold(BuildContext,StatementState)", "TotalStatementMobile(BuildContext)", "Null(ApplyPaymentModel)", "~(ApplyPaymentType)", "_ListOfStatement(int)", "Future<~>(GetCustomerData,Emitter<StatementCustomerListState>)", "Future<~>(SearchCustomers,Emitter<StatementCustomerListState>)", "StatementCustomerListBloc(BuildContext)", "Scaffold(BuildContext,StatementCustomerListState)", "FormGroup(StatementCustomerListBloc)", "_CustomerList(InvoiceCustomers)", "Future<~>(GetSupplierDate,Emitter<SupplierEntryState>)", "Null(AddSupplierToDeleteList,Emitter<SupplierEntryState>)", "Future<~>(InsertSupplier,Emitter<SupplierEntryState>)", "Future<~>(DeleteSupplierEntry,Emitter<SupplierEntryState>)", "Future<~>(AddSupplier,Emitter<SupplierEntryState>)", "Null(UpdateState,Emitter<SupplierEntryState>)", "SupplierEntryBloc(BuildContext)", "~(BuildContext,SupplierEntryState)", "Null(AssetManifest0)", "Scaffold(BuildContext,SupplierEntryState)", "~(SupplierModel)", "SuppliersMobile(BuildContext,SizingInformation)", "~(SupplierModel?)", "DropdownMenuItem<SupplierModel>(SupplierModel)", "Future<~>(AddNewSupplier,Emitter<SupplierSelectDateState>)", "Future<~>(WeekListSupplier,Emitter<SupplierSelectDateState>)", "SupplierSelectDateBloc(BuildContext)", "Scaffold(BuildContext,SupplierSelectDateState)", "TotalSupplier(BuildContext)", "SupplierSelectList(BuildContext,int)", "FormGroup(SupplierSelectDateBloc)", "SupplierSelectDateState(SupplierSelectDateBloc)", "Padding(BankTotal)", "Future<~>(SupplierList0,Emitter<SupplierStockState>)", "SupplierStockBloc(BuildContext)", "Scaffold(BuildContext,SupplierStockState)", "SupplierStockState(SupplierStockBloc)", "_SupplierList0(SupplierModel)", "Future<~>(GetTakingsType0,Emitter<TakingsState>)", "Future<~>(WeekList,Emitter<TakingsState>)", "Null(ShowPostTo1,Emitter<TakingsState>)", "Future<~>(AddTakingsType,Emitter<TakingsState>)", "TakingsBloc(BuildContext)", "Scaffold(BuildContext,TakingsState)", "@(@)(~(Response0<@>,ResponseInterceptorHandler))", "TakingEntryCardMobile(BuildContext,SizingInformation)", "FormGroup(TakingsBloc)", "Future<~>(GetTakingsData,Emitter<TakingsEntryState>)", "Future<~>(ChangeDate,Emitter<TakingsEntryState>)", "Future<~>(TakingsTillInsert,Emitter<TakingsEntryState>)", "TakingsEntryBloc(BuildContext)", "~(BuildContext,TakingsEntryState)", "Scaffold(BuildContext,TakingsEntryState)", "Future<~>(DateTime)", "ResponsiveBuilder(BuildContext,AsyncSnapshot<Object?>)", "TakingsEntryState(TakingsEntryBloc)", "Padding(MapEntry<int,TakingsTillModel>)", "Null(TextEditingController)", "Null(PickedImage,Emitter<TakingEntryEditState>)", "Future<~>(DeleteImage,Emitter<TakingEntryEditState>)", "Null(InitialEvent,Emitter<TakingEntryEditState>)", "Future<~>(EditNote,Emitter<TakingEntryEditState>)", "TakingEntryEditBloc(BuildContext)", "~(BuildContext,TakingEntryEditState)", "PopScope(BuildContext,TakingEntryEditState)", "DefaultButton(BuildContext,SizingInformation)", "@(Object)(~(DioException,ErrorInterceptorHandler))", "~(Object,StackTrace?)?(ImageStreamListener)", "Future<~>(GetNotes,Emitter<TakingsEntryNoteState>)", "Null(PickImages,Emitter<TakingsEntryNoteState>)", "Null(OpenTextField,Emitter<TakingsEntryNoteState>)", "Null(WriteNote,Emitter<TakingsEntryNoteState>)", "Null(CancelUpdateNote,Emitter<TakingsEntryNoteState>)", "Null(SetNoteToUpdate,Emitter<TakingsEntryNoteState>)", "ImageItem(int)", "Null(SaveUploadImages,Emitter<TakingsEntryNoteState>)", "Null(SaveNoteToLater,Emitter<TakingsEntryNoteState>)", "Future<~>(AddNote,Emitter<TakingsEntryNoteState>)", "Null(UpdateSavedNote,Emitter<TakingsEntryNoteState>)", "Future<~>(DeleteNote,Emitter<TakingsEntryNoteState>)", "TakingsEntryNoteBloc(BuildContext)", "Scaffold(BuildContext,TakingsEntryNoteState)", "Padding(BuildContext,int)", "Future<~>(SetTakingsOnlineEntryInputs,Emitter<TakingsOnlineAccEntryState>)", "Null(UpdateTakingsOnlineBankId,Emitter<TakingsOnlineAccEntryState>)", "Future<~>(SaveTakingsOnline,Emitter<TakingsOnlineAccEntryState>)", "TakingsOnlineAccEntryBloc(BuildContext)", "~(BuildContext,TakingsOnlineAccEntryState)", "Scaffold(BuildContext,TakingsOnlineAccEntryState)", "FormGroup(TakingsOnlineAccEntryBloc)", "Column(BuildContext,FormGroup,Widget?)", "Expanded(EntryBankModel)", "TakingsWeeklyReportBloc(BuildContext)", "~(BuildContext,TakingsWeeklyReportState)", "Scaffold(BuildContext,TakingsWeeklyReportState)", "Future<~>(TakingsWeeReportkList,Emitter<TakingsWeeklyReportState>)", "SingleChildScrollView(BuildContext,BoxConstraints)", "DataRow(TakingsWeekReportData)", "AnimatedBuilder(BuildContext,SizingInformation)", "StatelessWidget(BuildContext,Widget?)", "PayrollListMobile(BuildContext,int)", "Future<~>(RunVatInitial,Emitter<VatState>)", "VatBloc(BuildContext)", "Scaffold(BuildContext,VatState)", "DivElement(int)", "DataRow(WeeklyReportData)", "Future<~>(WeeklyReportList,Emitter<WeeklyReportState>)", "WeeklyReportBloc(BuildContext)", "~(BuildContext,WeeklyReportState)", "Scaffold(BuildContext,WeeklyReportState)", "Center(BuildContext,ProductsServicesState)", "~(ImageChunkEvent)?(ImageStreamListener)", "~(Codec)", "Map<String,String>(FormControl<String>)", "DropdownMenuItem<String>(BankTotal)", "GestureDetector(ApplyPaymentType)", "Dialog(BuildContext)", "~(DateRangePickerSelectionChangedArgs)", "CustomDialog(BuildContext)", "CustomShowImageDialog(BuildContext)", "SignatureDialog(BuildContext)", "InputEmailMobile(BuildContext,int)", "Center(BuildContext,AddNewItemState)", "Future<@>(Object)", "Theme(BuildContext,Widget?)", "ReactiveTextField<@>(BuildContext)", "_IosDoneButton(BuildContext,AsyncSnapshot<bool>)", "_IosDoneButton(BuildContext,AsyncSnapshot<@>)", "Widget(BuildContext,AsyncSnapshot<bool>)", "Widget(BuildContext,AsyncSnapshot<@>)", "Positioned(BuildContext)", "bool(EditSuppliersBloc)", "bool(EditOtherIncomeBloc)", "AuthBloc(BuildContext)", "DateProvider(BuildContext)", "Login(BuildContext)", "~(AppLifecycleState)", "String(String,String)", "JavaScriptObject(int{params:Object?})", "String(Object?{toEncodable:Object?(Object?)?})", "@(String{reviver:Object?(Object?,Object?)?})", "int(Comparable<@>,Comparable<@>)", "Paint(BoxShadow)", "String(String{encoding:Encoding})", "List<String>()", "List<String>(String,List<String>)", "Object?(@)", "Rect(BoxShadow)", "Size?(Size?,Size?,double)", "double?(num?,num?,double)", "Color?(Color?,Color?,double)", "bool(int?)", "int(int,@)", "RectTween(Rect?,Rect?)", "Widget(BuildContext,Size,Widget)", "Widget(BuildContext,Offset,Offset,Widget)", "~(FlutterErrorDetails{forceReport:bool})", "DiagnosticsNode(String)", "StackFrame?(String)", "double(double,double,double)", "bool?(bool?,bool?,double)", "Path(BoxShadow)", "Widget(BuildContext,Widget)", "OutlinedBorder?(OutlinedBorder?,OutlinedBorder?,double)", "EdgeInsetsGeometry?(EdgeInsetsGeometry?,EdgeInsetsGeometry?,double)", "TextStyle?(TextStyle?,TextStyle?,double)", "int(_TaskEntry<@>,_TaskEntry<@>)", "bool({priority!int,scheduler!SchedulerBinding})", "List<LicenseEntry>(String)", "Widget(Widget?,List<Widget>)", "~(FocusNode{alignment:double?,alignmentPolicy:ScrollPositionAlignmentPolicy?,curve:Curve?,duration:Duration?})", "int(Element,Element)", "IconThemeData(IconThemeData?,IconThemeData?,double)", "List<Route<@>>(NavigatorState,String)", "int(Widget,int)", "bool(int,bool)", "~()(InheritedContext<StateStreamable<@>?>,StateStreamable<@>)", "CupertinoPage<~>({arguments!Object?,child!Widget,key!LocalKey,name!String?,restorationId!String})", "MaterialPage<~>({arguments!Object?,child!Widget,key!LocalKey,name!String?,restorationId!String})", "InterceptorState<RequestOptions>()", "LineMetrics(LineMetrics)", "~(BuildContext,ChangeNotifier?)", "~()(InheritedContext<Listenable?>,Listenable?)", "MessageLookupByLibrary?(String)", "Element0(int)", "Future<1^>(1^/(0^),0^{debugLabel:String?})<Object?,Object?>", "~(String?{wrapWidth:int?})", "Future<~>(ItemDelete,Emitter<EditDeleteItemState>)"],
+    types: ["~()", "double(double)", "Future<~>()", "StatelessWidget(BuildContext,SizingInformation)", "NoSwipeTransitionPage<~>(BuildContext,GoRouterState)", "Null(@)", "~(@)", "~(JavaScriptObject)", "AppBar(BuildContext,SizingInformation)", "~(Duration)", "~(bool)", "~(AnimationStatus)", "Map<String,String>(FormControl<@>)", "Null()", "~(String?)", "Map<String,@>()", "Widget(BuildContext,SizingInformation)", "Null(Object?)", "PluralCase()", "Color(Set<MaterialState>)", "~(int)", "~(Object?)", "Widget(BuildContext)", "Null(String)", "String(@)", "StatefulWidget(BuildContext,SizingInformation)", "bool(BoxHitTestResult,Offset)", "~(DateTime)", "Null(~)", "~(PaintingContext,Offset)", "~(RenderObject)", "ResponsiveBuilder(BuildContext)", "~(DragUpdateDetails)", "~(Element)", "Widget(BuildContext,int)", "Color?(Set<MaterialState>)", "~(String)", "Map<String,@>(AccountingYear)", "bool(Element)", "~(PointerEvent)", "List<DiagnosticsNode>()", "~(String,@)", "bool(String)", "Widget(BuildContext,Widget?)", "@(@)", "~(TapDownDetails)", "bool(FocusNode)", "~(TextEditingController)", "Column(BuildContext,SizingInformation)", "~(DragStartDetails)", "Palette()", "~(Event)", "~(Object,StackTrace)", "bool(Object?)", "~(ByteData?)", "~(TapUpDetails)", "~(DragEndDetails)", "~(LayoutView)", "FormGroup(ProductsServicesBloc)", "~(RestorableProperty<Object?>,~())", "int(@,@)", "Tween<double>(@)", "bool(NotoFont)", "String(String)", "~(PointerExitEvent)", "~(bool?)", "Null(Object,StackTrace)", "~(ForcePressDetails)", "double(RenderBox)", "Future<bool>()", "bool(TakingsTillModel)", "bool(FlutterHtmlKeyboardEvent)", "Future<Null>()", "bool(int)", "FormGroup(AddNewItemBloc)", "String()", "int(FocusNode,FocusNode)", "Widget(BuildContext,Widget,ImageChunkEvent?)", "int(int)", "bool(ScrollNotification)", "~(PointerEnterEvent)", "~(@,@)", "Null(JavaScriptObject)", "~(PickerStateArgs)", "TextStyle(Set<MaterialState>)", "MaterialStateProperty<Color?>?(DatePickerThemeData?)", "~(PointerDownEvent)", "double(RenderBox,double)", "Future<~>(@)", "~(Selectable)", "BankTotal(EntryBankModel)", "SystemMouseCursor(Set<MaterialState>)", "bool(OtherIncomeModel)", "bool(ExpensePaymentsModel)", "Future<~>(bool)", "bool(SupplierModel)", "Size(RenderBox,BoxConstraints)", "~(~())", "bool(@)", "Future<Map<String,Object>>(Map<String,String>)", "bool(GestureListener)", "TextBoundary()", "Future<@>()", "Future<Map<String,@>>(Map<String,String>)", "bool(_RouteEntry)", "SizedBox(BuildContext)", "bool(RouteMatchBase)", "bool(AbstractControl<@>)", "int()", "double(double,double)", "~(LongPressStartDetails)", "bool(EntryBankModel)", "bool(BankDepositModel)", "bool(InheritedElement)", "bool(InlineSpan)", "Scaffold(BuildContext,FilterState)", "MaterialStateProperty<Color?>?(ButtonStyle?)", "~(String,AbstractControl<@>)", "String?(String?)", "Future<bool>(BuildContext,GoRouterState)", "List<_RouteEntry>()", "int(Object?)", "bool()", "bool(Route<@>)", "Widget(BuildContext)?(ActionIconThemeData?)", "ColorTween(@)", "IconData(BuildContext)", "~(LongPressMoveUpdateDetails)", "~(TapDragUpDetails)", "~(TapDragDownDetails)", "Text(BuildContext)", "String(Match)", "DropdownMenuItem<CategoryModel>(CategoryModel)", "Padding(BuildContext)", "Object?(Object?)", "Expanded(int)", "~(AbstractControl<@>)", "FilterBloc(BuildContext)", "Map<String,String>(FormControl<CategoryModel>)", "Null(InvoicesModel)", "Padding(int)", "Color(Color)", "FormGroup(CustomInvoiceBloc)", "String(MaterialLocalizations)", "int(RenderObject,RenderObject)", "~(RequestOptions,RequestInterceptorHandler)", "~(Object[StackTrace?])", "Future<@>(MethodCall0)", "~(Uint8List)", "~(Map<String,Object?>?)", "bool(PackagesListModel)", "ListView(BuildContext,int)", "~(NavigatorObserver)", "double(Point0)", "Future<int>()", "~([Intent?])", "List<CustomPainterSemantics>(Size)", "JavaScriptObject()", "bool(Object?,Object?)", "Null(ProgressEvent)", "Future<InterceptorState<@>>()", "~(JSObject)", "TextBox(TextBox)", "~({curve:Curve,descendant:RenderObject?,duration:Duration,rect:Rect?})", "~(List<FrameTiming>)", "bool(SemanticsNode)", "int(SemanticsNode,SemanticsNode)", "bool(FocusableActionDetector)", "@(String)", "Null(bool)", "bool(KeyData)", "Calendar(BuildContext,SizingInformation)", "0^?(MaterialStateProperty<0^>?(DatePickerThemeData?),Set<MaterialState>)<Object?>", "0^?(0^?(DatePickerThemeData?))<Object?>", "FormGroup(EditDeleteItemBloc)", "bool(Customer)", "SupplierModel()", "Widget(BuildContext,EditableTextState)", "MaterialStateProperty<Size?>?(ButtonStyle?)", "bool(Point<double>)", "double()", "KeyEventResult(FocusNode,KeyEvent)", "~(BankTotal)", "BankDepositModel()", "Container(BuildContext,int)", "Row(int)", "SizedBox(BuildContext,Object,StackTrace?)", "Container(int)", "Null(Uint8List?)", "DateTime?(AddStaffBloc)", "String(Object?)", "OtherIncomeModel()", "Null(JSObject)", "bool(DataRow)", "~(String,String)", "ResponsiveBuilder(BuildContext,int)", "Widget(BuildContext,Animation0<double>,Animation0<double>,Widget)", "Future<String>()", "~(ProgressEvent)", "bool(_Highlight)", "Column(BuildContext,BoxConstraints)", "String(int)", "Null(Event)", "~(PointerHoverEvent)", "ExpensePaymentsModel()", "~(LongPressEndDetails)", "bool(ScrollMetricsNotification)", "BorderSide(Set<MaterialState>)", "~(Object?,Object?)", "Color?(DatePickerThemeData?)", "Future<~>(Object?)", "Set<0^>()<Object?>", "~(PointerSignalEvent)", "EdgeInsetsGeometryTween(@)", "Rect()", "Map<String,@>?(Object?)", "List<JavaScriptObject>()", "~([Object?])", "int(_ReadingOrderSortData,_ReadingOrderSortData)", "TapGestureRecognizer()", "~(TapGestureRecognizer)", "LongPressGestureRecognizer()", "~(LongPressGestureRecognizer)", "VerticalDragGestureRecognizer()", "~(VerticalDragGestureRecognizer)", "HorizontalDragGestureRecognizer()", "~(HorizontalDragGestureRecognizer)", "PanGestureRecognizer()", "~(PanGestureRecognizer)", "ForcePressGestureRecognizer()", "~(ForcePressGestureRecognizer)", "Widget(BuildContext,Animation0<double>,HeroFlightDirection,BuildContext,BuildContext)", "MediaQuery(BuildContext,Widget?)", "~(Timer)", "AlignmentGeometryTween(@)", "TextPosition(TextPosition,bool,TextBoundary)", "DecorationTween(@)", "~([Duration?])", "MediaQuery(BuildContext)", "KeyData()", "~(NativeUint8List)", "bool(DisplayFeature)", "Future<bool>(bool)", "ViewListDiffResult?(int)", "VelocityTracker(PointerEvent)", "JSObject([JavaScriptObject?])", "Future<ServiceExtensionResponse>(String,Map<String,String>)", "bool(Selectable,double)", "~(String,Object?)", "bool(NavigationNotification)", "int(String)", "bool(Selectable)", "_SelectionToolbarWrapper(BuildContext)", "@()", "~(TapDragStartDetails)", "~(TapDragUpdateDetails)", "~(TapDragEndDetails)", "int(String?)", "bool(String?)", "Future<~>(~)", "List<RouteMatchBase>()", "RouteMatchList(RouteMatchList)", "~(String,IfdDirectory)", "bool(String,String)", "Future<File>(File)", "int(int,int)", "String(String?)", "Widget(Widget,Animation0<double>)", "~(Uint8List,String,int)", "bool(String,@)", "Color?(Color?)", "Map<Object?,Object?>()", "Map<String,Object>(Object)", "Map<String,Object>()", "~(RestorationBucket)", "~([~])", "~([TapUpDetails?])", "Null([@])", "~([@])", "Future<~>(MethodCall0)", "Future<ByteData?>(ByteData?)", "Widget?(BuildContext,int)", "~({isNeedSetState:bool})", "LoginPageFirstScreen(BuildContext,GoRouterState)", "DateTime()", "Future<~>(String)", "OtherIncomeModel(@)", "String(String,Object?)", "Map<String,@>(@)", "List<SemanticsNode>(_SemanticsSortGroup)", "Map<String,@>(TakingsTillModel)", "~(SemanticsNode)", "TakingTypeData(@)", "BankDepositModel(@)", "bool(SemanticsObject)", "~(DiagnosticsNode)", "List<@(@)>()", "~(GestureMode)", "FormGroup(AddNewCustomerBloc)", "double(_PointerPanZoomData)", "~(String,List<String>)", "_Channel()", "_ItemsList(InvoiceItemModel)", "SingleChildScrollView(BuildContext,SizingInformation)", "FormGroup(AddStaffBloc)", "~(SliverConstraints)", "bool(BoxHitTestResult)", "_InterestingSemanticsFragment(SemanticsConfiguration)", "Gender?(AddStaffBloc)", "Matrix40(double)", "~(DioException,ErrorInterceptorHandler)", "double(int)", "~(Response0<@>,ResponseInterceptorHandler)", "Indicator(BuildContext,int)", "Connector?(int)", "PaidHourly?(AddStaffBloc)", "~(double)", "Null(List<~>)", "Set<String>()", "~(SemanticsUpdate0)", "Future<JavaScriptObject>([JavaScriptObject?])", "~(ImageChunkEvent)", "MaterialStateProperty<double?>?(ButtonStyle?)", "~(ImageStreamListener)", "Column(BuildContext)", "ImageStreamCompleter()", "int(LayoutView,LayoutView)", "bool(LayoutView)", "~(NextFocusIntent)", "Align(BuildContext,Widget?)", "bool(Category)", "~(PreviousFocusIntent)", "Chip(int)", "Scaffold(BuildContext,CustomInvoiceState)", "~(DirectionalFocusIntent)", "Future<Null>(InvoiceItemModel)", "Color0(int?)", "bool(AccountingYear)", "String(DashboardDialogModel,int?)", "int(DashboardDialogModel,int?)", "Color0(DashboardDialogModel,int?)", "FormGroup(EditBankNamesBloc)", "FormGroup(EditCustomerBloc)", "Scaffold(BuildContext,EditDeleteItemState)", "~(TextSelection,SelectionChangedCause?)", "FormGroup(EditOtherIncomeBloc)", "Future<@>(@)", "~(List<int>)", "FormGroup(EditPaymentsTypeBloc)", "MarriedSingle?(AddStaffBloc)", "FormGroup(EditSuppliersBloc)", "_ZoomExitTransition(BuildContext,Animation0<double>,Widget?)", "_ZoomEnterTransition(BuildContext,Animation0<double>,Widget?)", "Icon(BuildContext,Object,StackTrace?)", "~(Size)", "bool(RenderBox)", "Container(BuildContext)", "ExpenseTypeBloc(BuildContext)", "~(ScaleEndDetails)", "Null(ExpensePaymentsModel)", "FormGroup(ExpenseTypeBloc)", "~(ScaleUpdateDetails)", "~(RenderBox?)", "Future<Null>(@,@)", "AddNewSupplierBloc(BuildContext)", "FormGroup(AddNewSupplierBloc)", "Null(SupplierModel)", "FormGroup(AddNewTakingsBloc)", "SelectIncomeTypeBloc(BuildContext)", "Null(OtherIncomeModel)", "~(ScaleStartDetails)", "~(GestureListener)", "ChildSemanticsConfigurationsResult(List<SemanticsConfiguration>)", "Scaffold(BuildContext,ProductsServicesState)", "bool(BuildContext)", "Null(InvoiceCustomers)", "FormGroup(SelectIncomeTypeBloc)", "~(FocusHighlightMode)", "GestureDetector(BuildContext,int)", "GestureDetector(int)", "~(MapEntry<String,String>)", "double(Set<MaterialState>)", "~(DateTime?)", "Container(BuildContext,Object,StackTrace?)", "DateTime(int[int,int,int,int,int,int,int])", "0^(0^,0^)<num>", "Widget(BuildContext,Animation0<double>,Animation0<double>)", "Tween<@>?(Tween<@>?,@,Tween<@>(@))", "RouteMatchList/(String?)", "DefaultSelectionStyle(BuildContext)", "Future<int>(JavaScriptObject)", "HitTestResult(Offset,int)", "String(double,double,String)", "Size()", "double?()", "~(TextSelection)", "bool(InlineSpanSemanticsInformation)", "Rect(Rect?,TextBox)", "~(Response0<@>)", "MouseCursor0(MouseTrackerAnnotation)", "~(MouseTrackerAnnotation,Matrix40)", "bool(MouseTrackerAnnotation)", "@(@,String)", "~(List<_InterestingSemanticsFragment>{isMergeUp:bool})", "Future<JavaScriptObject?>(int)", "MapEntry<int,String>(MapEntry<String,String>)", "~(_SelectableFragment)", "bool(_SelectableFragment)", "OneSequenceGestureRecognizer(Factory<OneSequenceGestureRecognizer>)", "TransformLayer?(PaintingContext,Offset)", "bool(SliverHitTestResult{crossAxisPosition!double,mainAxisPosition!double})", "Future<@>(MapEntry<String,MultipartFile>)", "MapEntry<String,List<String>>(String,List<String>)", "Stream<List<int>>()", "bool(RenderSliver)", "Null(~())", "~(FrameTiming)", "~(int,_FrameCallbackEntry)", "~(SemanticsActionEvent)", "JSObject(JavaScriptObject)", "~(Object?,String)", "SemanticsNode(_TraversalSortNode)", "DiagnosticsNode(SemanticsNode)", "JSObject(int)", "Null(@,StackTrace)", "int(SemanticsNode)", "SemanticsNode(int)", "~(SemanticsTag)", "~(SemanticsAction,~(Object?))", "ByteData(ByteData?)", "Future<_AssetManifestBin>(String)", "AssetMetadata(Map<Object?,Object?>)", "Map<String,@>?()", "~(int,@)", "Map<String,@>(TextInputConfiguration)", "TextInputConfiguration(AutofillClient)", "Stream<LicenseEntry>()", "Future<String?>(String?)", "TickerFuture({from:double?})", "Future<~>(ByteData?,~(ByteData?))", "Uint8List(ByteData)", "Future<~>(Future<Uint8List>)", "Future<~>(Uint8List)", "Future<Map<String,@>>(@)", "~(RawKeyEvent)", "Set<LogicalKeyboardKey>(LogicalKeyboardKey)", "int(_PlatformChannelStats,_PlatformChannelStats)", "~(_AnimationDirection)", "Future<Null>(ByteData?)", "RawKeyEventData()", "_Future<@>?()", "RegisteredFont?(ByteBuffer,String,String)", "String(String,Color)", "List<RestorationBucket>()", "List<RestorationBucket>(List<RestorationBucket>)", "double(num)", "List<@>(String)", "List<num>(SelectionRect)", "PlatformViewSurface(BuildContext,PlatformViewController)", "_HtmlElementViewController(PlatformViewCreationParams)", "Future<~>(PointerEvent)", "JSObject()", "Null(JavaScriptFunction,JavaScriptFunction)", "~(Action<Intent>)", "AnimatedPadding(BuildContext,BoxConstraints)", "~(_ChildEntry)", "Widget(_ChildEntry)", "bool(Widget)", "bool/()", "Route<@>?(RouteSettings)", "Route<@>(RouteSettings)", "bool(AutofillClient)", "AutofillClient()", "bool(KeepAliveNotification)", "CkCanvas(CkPictureRecorder)", "ClipPath(BuildContext)", "Rect(RenderBox)", "Hero(BuildContext)", "Future<double>()", "Future<~>(double)", "Widget(BuildContext,String?,Widget?)", "~(CkCanvas)", "Future<~>(AnimationStatus)", "_Future<@>(@)", "Rect(DisplayFeature)", "~(Layer0)", "~(@,StackTrace)", "ViewClipChain()", "Null(JSArray<Object?>,JavaScriptObject)", "~(TransposeCharactersIntent)", "~(ReplaceTextIntent)", "~(ScrollToDocumentBoundaryIntent)", "~(ScrollIntent)", "~(ExtendSelectionByPageIntent)", "~(UpdateSelectionIntent)", "Object?(DismissIntent)", "TextEditingValue(TextEditingValue,TextInputFormatter)", "String?(String)", "Future<~>(PasteTextIntent)", "~(TextEditingValue)", "bool(TextEditingValue?,TextEditingValue)", "TextEditingValue(TextEditingValue)", "CompositedTransformTarget(BuildContext,ViewportOffset)", "bool(HitTestEntry<HitTestTarget>)", "~(RenderCanvas)", "DiagnosticsNode(FocusNode)", "bool(KeyMessage)", "~(_FocusTraversalGroupInfo)", "bool(_DirectionalPolicyDataEntry)", "~(Symbol0,@)", "bool(TraversalDirection)", "Set<Directionality>(_ReadingOrderSortData)", "~(int,bool(FlutterHtmlKeyboardEvent))", "List<Directionality>(BuildContext)", "Rect(_ReadingOrderSortData)", "int(_ReadingOrderDirectionalGroupData,_ReadingOrderDirectionalGroupData)", "List<_ReadingOrderSortData>(_ReadingOrderSortData,Iterable<_ReadingOrderSortData>)", "bool(_ReadingOrderSortData)", "bool(FormFieldState<@>)", "DiagnosticsProperty<Element>(Element)", "Element?(Element)", "Object?(int,Element?)", "Center(Widget)", "Map<String,String>(Map<String,String>,String)", "DoubleTapGestureRecognizer()", "~(DoubleTapGestureRecognizer)", "~(String,int)", "~(String,int?)", "bool(int,int)", "TargetPlatform?()", "TargetPlatform()", "bool(DiagnosticsNode?)", "bool(StackFrame)", "ErrorDescription(String)", "ScaleGestureRecognizer()", "~(ScaleGestureRecognizer)", "~(String,String?)", "String(DiagnosticsNode)", "~(PointerPanZoomStartEvent)", "~(RenderSemanticsGestureHandler)", "~(StatefulElement,Object)", "Positioned(BuildContext,Widget?)", "~(_HeroFlight)", "~(int,int,int)", "bool(_HeroFlight)", "Uint8List(@,@)", "IconTheme(BuildContext)", "~(ImageInfo,bool)", "~(Object,StackTrace?)", "~(JSArray<Object?>,JavaScriptObject)", "~(Blob?)", "~(JavaScriptObject,List<PointerData>)", "_ButtonSanitizer()", "BoxConstraintsTween(@)", "Matrix4Tween(@)", "TextStyleTween(@)", "BorderRadiusTween(@)", "bool(DiagnosticsNode)", "Future<@>(_Pending)", "Map<Type,@>(List<@>)", "Map<Type,@>(Map<Type,@>)", "Null(Map<Type,@>)", "Null(BuildContext,MagnifierController,ValueNotifier<MagnifierInfo>)", "String(GestureArenaMember)", "~(RouteTransitionRecord?,bool)", "bool(Route<@>?)", "Future<Null>(@)", "bool(OverlayEntry)", "_GestureArena()", "~(CkPicture)", "_RouteEntry(Route<@>)", "double?(int)", "MapEntry<String?,List<Object>>(@,@)", "RenderBox?()", "_RenderTheaterMarker()", "RenderBox(int)", "~(BoxConstraints)", "ClipRect(BuildContext,Widget?)", "Viewport(BuildContext,ViewportOffset)", "~(Size,Offset)", "Null(RestorationBucket?)", "~(RestorableProperty<Object?>)", "SynchronousFuture<bool>(bool)", "@(@,@)", "bool(PointerData)", "RestorationScope(BuildContext,Widget?)", "Actions(BuildContext)", "IgnorePointer(BuildContext,Widget?)", "bool(PopEntry)", "IOSScrollViewFlingVelocityTracker(PointerEvent)", "MacOSScrollViewFlingVelocityTracker(PointerEvent)", "_PointerEventDescription?(PointerData)", "String(double)", "~(_TapTracker)", "Widget(BuildContext,ViewportOffset)", "bool(ScrollUpdateNotification)", "~(DragDownDetails)", "Map<~(PointerEvent),Matrix40?>()", "~(~(PointerEvent),Matrix40?)", "bool(ScrollMetrics?)", "_ThumbPressGestureRecognizer()", "~(_ThumbPressGestureRecognizer)", "bool(Node)", "_TrackTapGestureRecognizer()", "~(_TrackTapGestureRecognizer)", "Element0(Node)", "int(Selectable,Selectable)", "Rect(Rect)", "bool(Rect)", "_CombiningGestureArenaMember()", "~(ShortcutActivator,Intent)", "List<_ActivatorIntentPair>()", "_SingleChildViewport(BuildContext,ViewportOffset)", "~(RenderBox)", "Element?()", "bool(TableRow)", "Decoration?(TableRow)", "_TableElementRow(TableRow)", "Element(Widget)", "bool(_TableElementRow)", "bool(List<Element>)", "Iterable<RenderBox>(_TableElementRow)", "RenderBox(Element)", "List<Element>(_TableElementRow)", "~(Element0)", "_PointerDeviceState()", "Future<JavaScriptObject>()", "CupertinoTextSelectionToolbarButton(ContextMenuButtonItem)", "DesktopTextSelectionToolbarButton(ContextMenuButtonItem)", "TapAndHorizontalDragGestureRecognizer()", "~(TapAndHorizontalDragGestureRecognizer)", "TapAndPanGestureRecognizer()", "~(TapAndPanGestureRecognizer)", "~(UndoTextIntent)", "~(RedoTextIntent)", "_ViewScope(BuildContext,PipelineOwner)", "String(MapEntry<String,String>)", "CupertinoDesktopTextSelectionToolbarButton(ContextMenuButtonItem)", "SynchronousFuture<CupertinoLocalizations>()", "SynchronousFuture<MaterialLocalizations>()", "~(String,DateSymbols)", "SynchronousFuture<WidgetsLocalizations>()", "Future<~>(String,ByteData?,~(ByteData?)?)", "LinkedHashMap<Type,_ServiceFactory<Object,@,@>>()", "bool(Route<Object?>,Object?)", "MaterialErrorScreen(BuildContext,GoRouterState)", "CupertinoErrorScreen(BuildContext,GoRouterState)", "NoTransitionPage<~>({arguments!Object?,child!Widget,key!LocalKey,name!String?,restorationId!String})", "ErrorScreen(BuildContext,GoRouterState)", "RouteMatchList/(RouteMatchList)", "MaterialRectArcTween(Rect?,Rect?)", "Widget(BuildContext,~())", "String?/(String?)", "String(RouteMatchList)", "String(_DecorationType)", "_DecorationType(_DecorationType)", "bool(Route<Object?>,Object?,RouteMatchBase)", "@(Object?)", "MapEntry<String,String>(String,String)", "0&(BuildContext,GoRouterState)", "bool(MapEntry<String,String>)", "int(MapEntry<String,String>)", "Map<Object?,Object?>(ImperativeRouteMatch)", "JsFunction(@)", "InheritedGoRouter(BuildContext,Widget)", "bool(Page<Object?>,GoRouterState)", "bool(~)", "MediaType()", "~(ScrollNotification)", "~(int,IfdValue)", "Future<XFile>(XFile)", "JsArray<@>(@)", "XFile(File)", "XFile(@)", "Future<Object?>(MethodCall0)", "double(_Diagonal)", "DateTime(int)", "RegExp()", "DateTime(int,int,int,int,int,int,int,bool)", "bool(_DateFormatField)", "_DateFormatQuotedField(String,DateFormat)", "_DateFormatPatternField(String,DateFormat)", "_DateFormatLiteralField(String,DateFormat)", "String?(NumberSymbols)", "String(NumberSymbols)", "0^?(0^?(ButtonStyle?))<Object?>", "Logger()", "0^?(MaterialStateProperty<0^>?(ButtonStyle?))<Object?>", "JsObject(@)", "~(0^)<Object?>", "AbstractControl<@>?(Object?,String)", "~({disabled:bool?,emitEvent:bool,removeFocus:bool,updateParent:bool,value:Object?})", "MaterialStateProperty<TextStyle?>?(ButtonStyle?)", "int(OverlayGroup)", "Future<Map<String,@>?>(Future<Map<String,@>?>(AbstractControl<@>))", "~(Map<String,@>?)", "MaterialStateProperty<EdgeInsetsGeometry?>?(ButtonStyle?)", "MapEntry<String,Object?>(String,AbstractControl<@>)", "~(NotoFont)", "MaterialStateProperty<BorderSide?>?(ButtonStyle?)", "MaterialStateProperty<OutlinedBorder?>?(ButtonStyle?)", "MouseCursor0?(Set<MaterialState>)", "~(ControlStatus)", "Widget(BuildContext,AsyncSnapshot<ControlStatus>)", "Widget(BuildContext,BoxConstraints)", "MouseCursor0?(ButtonStyle?)", "_Shimmer(BuildContext,Widget?)", "~(PointerUpEvent)", "~(PointerCancelEvent)", "~(PointerMoveEvent)", "EngineLineMetrics(ParagraphLine)", "Point0(Point0)", "bool?(@[@,@])", "Color?(ButtonStyle?)", "Null(@,@)", "~(CloseEvent)", "~(MessageEvent)", "VisualDensity?(ButtonStyle?)", "~(String[@])", "~(@(@))", "~(@(String,@))", "~(PointerDataPacket)", "String?()", "int(_Line)", "MaterialTapTargetSize?(ButtonStyle?)", "Object(_Line)", "Object(_Highlight)", "int(_Highlight,_Highlight)", "List<_Line>(MapEntry<Object,List<_Highlight>>)", "SourceSpanWithContext()", "Widget(BuildContext,@)", "StatusChangeTile(BuildContext,int)", "Duration?(ButtonStyle?)", "Container(BuildContext,BoxConstraints)", "bool?(ButtonStyle?)", "AlignmentGeometry?(ButtonStyle?)", "bool(bool?)", "~(FlutterErrorDetails)", "String?(BuildContext,GoRouterState)", "InteractiveInkFeatureFactory?(ButtonStyle?)", "Future<~>([JavaScriptObject?])", "~(Object)", "Stream<@>(Stream<@>,Stream<@>(@))", "Scaffold(BuildContext,GoRouterState)", "Future<~>(_Emitter<@>)", "CompositeMessageLookup()", "AppLocalizations(bool)", "Future<~>(StreamSubscription<@>)", "Future<~>?()", "Future<+(String,FontLoadError?)>()", "Map<String,@>(UserVatPeriod)", "~(ParagraphLine)", "Map<String,@>(ApplyPaymentModel)", "Map<String,@>(InvoicesModel)", "NoteData(@)", "Map<String,@>(NoteData)", "~(LayoutFragment)", "Map<String,@>(TakingTypeData)", "WeeklyReportData(@)", "TakingsTillModel(@)", "TakingsWeekReportData(@)", "SupplierModel(@)", "BalanceModel(@)", "MouseCursor0(Set<MaterialState>)", "ExpensePaymentsModel(@)", "bool(Point<double>[double?])", "ControlAccountList(@)", "Login()", "Future<~>(GetCustomerData0,Emitter<AddInvoiceState>)", "Future<~>(SearchCustomer,Emitter<AddInvoiceState>)", "AddInvoiceBloc(BuildContext)", "Scaffold(BuildContext,AddInvoiceState)", "bool(Point<double>,double,double)", "AddInvoiceState(AddInvoiceBloc)", "Future<Null>(InvoiceCustomers)", "Ink(BuildContext,Widget?)", "_CustomerList2(InvoiceCustomers)", "Offset(Size,double)", "FormGroup(AddInvoiceBloc)", "AddNewCustomerBloc(BuildContext)", "Scaffold(BuildContext,AddNewCustomerState)", "String(int?)", "TableRow(int)", "Future<~>(GetCustomer0,Emitter<AddNewCustomerState>)", "Future<~>(AddCustomer,Emitter<AddNewCustomerState>)", "~(TextHeightStyle,TextHeightRuler)", "Container(BuildContext,AsyncSnapshot<Object?>)", "Future<~>(GetItem,Emitter<AddNewItemState>)", "Null(SelectItem,Emitter<AddNewItemState>)", "Future<~>(AddItem,Emitter<AddNewItemState>)", "Future<~>(ItemSearch,Emitter<AddNewItemState>)", "AddNewItemBloc(BuildContext)", "Scaffold(BuildContext,AddNewItemState)", "Rect()(RenderBox)", "Null(InvoiceItemModel)", "~(LineBreakType,int)", "Null(AddPayrollChangeEvent,Emitter<AddPayrollChangeState>)", "AddPayrollChangeBloc(BuildContext)", "Scaffold(BuildContext,AddPayrollChangeState)", "~(List<Object?>)", "FormGroup(AddPayrollChangeBloc)", "PaidHourly?(AddPayrollChangeBloc)", "DateTime?(AddPayrollChangeBloc)", "Null(AddStaffEvent,Emitter<AddStaffState>)", "AddStaffBloc(BuildContext)", "Scaffold(BuildContext,AddStaffState)", "CalendarDatePicker()", "Form()", "Flex(BuildContext,BoxConstraints)", "~(String,JavaScriptObject)", "Palette(Palette())", "~(EditingState?,TextEditingDeltaState?)", "FontFamily(@)", "CustomSingleChildLayout(BuildContext)", "~(ActivateIntent)", "~(ButtonActivateIntent)", "DropdownButtonHideUnderline(BuildContext)", "InputBorder?()", "Future<~>(GetDateOfBank,Emitter<ApplyPaymentState>)", "Future<~>(InsertApplyPayment,Emitter<ApplyPaymentState>)", "Null(UpDateState,Emitter<ApplyPaymentState>)", "ApplyPaymentBloc(BuildContext)", "Scaffold(BuildContext,ApplyPaymentState)", "ApplyPaymentState(ApplyPaymentBloc)", "FormGroup(ApplyPaymentBloc)", "BorderRadius?()", "_BankList2(int)", "Null(LogIn,Emitter<AuthState>)", "Null(LogOut,Emitter<AuthState>)", "Future<~>(LoginAuto,Emitter<AuthState>)", "Future<~>(GetBalancesList,Emitter<BalancesState>)", "BalancesBloc(BuildContext)", "Scaffold(BuildContext,BalancesState)", "BalancesState(BalancesBloc)", "_BankBalancesList(BalanceModel)", "Future<~>(GetDateBankDeposit,Emitter<BankDepositState>)", "num?(int?)", "Null(AddBankToDeleteList,Emitter<BankDepositState>)", "Null(AddBankDeposit,Emitter<BankDepositState>)", "Null(UpdateBanDepositEntry,Emitter<BankDepositState>)", "Future<~>(InsertAndDeleteDeposits,Emitter<BankDepositState>)", "BankDepositBloc(BuildContext)", "~(BuildContext,BankDepositState)", "bool(ChartBehavior<@>)", "bool(Color?)", "Scaffold(BuildContext,BankDepositState)", "BankDepositState(BankDepositBloc)", "BorderSide?(Set<MaterialState>)", "~(BankDepositModel)", "Rect()?(RenderBox)", "~(Intent?)", "Null(ToogleShowSplits,Emitter<BankDepositSelectDateState>)", "Future<~>(WeekListOfBankDeposit,Emitter<BankDepositSelectDateState>)", "BankTotalSplits(EntryBankModel)", "~(SelectionModelType)", "BankDepositSelectDateBloc(BuildContext)", "Scaffold(BuildContext,BankDepositSelectDateState)", "bool(InkHighlight?)", "SingleChildScrollView(BuildContext,int)", "BankSelectDateList(BuildContext,int)", "Future<~>(GetBankDeposits,Emitter<BankingState>)", "BankingBloc(BuildContext)", "Scaffold(BuildContext,BankingState)", "DepositsTotal(BuildContext)", "BankingState(BankingBloc)", "Null(BankDepositModel)", "_BankDepositsList(BankDepositModel)", "Null(ChangePassInitial,Emitter<ChangePassState>)", "Future<~>(ChangePassword,Emitter<ChangePassState>)", "ChangePasswordBloc(BuildContext)", "ResponsiveBuilder(BuildContext,ChangePassState)", "ChangePasswordMobile(BuildContext,SizingInformation)", "Visibility(BuildContext,AbstractControl<Object?>,Widget?)", "Future<~>(GetSalesDayBook,Emitter<CompleteInvoicesState>)", "CompleteInvoicesBloc(BuildContext)", "Color(_HighlightType)", "BlocBuilder<FilterBloc,FilterState>(BuildContext,CompleteInvoicesState)", "~(ChartBehavior<@>)", "TotalCompleteMobile(BuildContext)", "CompleteInvoicesState(CompleteInvoicesBloc)", "~(String,ChartBehavior0<@>)", "_ListOfInvoices(InvoicesModel)", "FormGroup(CompleteInvoicesBloc)", "~(ChartStateBehavior<ChartBehavior0<@>>,AnimationController)", "double(@)", "FontAsset(@)", "Future<~>(ControlAccountsList,Emitter<ControllAccountsState>)", "ControlAccountBloc(BuildContext)", "~(BuildContext,ControllAccountsState)", "Scaffold(BuildContext,ControllAccountsState)", "Future<~>(GetCreditNoteData,Emitter<CreditNoteState>)", "CreditNoteBloc(BuildContext)", "BlocBuilder<FilterBloc,FilterState>(BuildContext,CreditNoteState)", "Color?(Color?,Color?,Color?[Color?])", "CreditNoteState(CreditNoteBloc)", "_CreditNote(InvoicesModel)", "FormGroup(CreditNoteBloc)", "StatefulWidget?(BuildContext,MagnifierController,ValueNotifier<MagnifierInfo>)", "Future<~>(GetInvoiceData0,Emitter<CustomInvoiceState>)", "Null(AddItemList,Emitter<CustomInvoiceState>)", "Null(CustomInvoiceEvent,Emitter<CustomInvoiceState>)", "Null(UnselectCategory,Emitter<CustomInvoiceState>)", "Future<~>(DeleteItem,Emitter<CustomInvoiceState>)", "Future<~>(UpdateInvoice,Emitter<CustomInvoiceState>)", "Null(SelectCategory0,Emitter<CustomInvoiceState>)", "Future<~>(SaveInvoiceDataEvent,Emitter<CustomInvoiceState>)", "Future<~>(GetCategoryData,Emitter<CustomInvoiceState>)", "CustomInvoiceBloc(BuildContext)", "bool(LayoutChangedNotification)", "SurfaceScene()", "~(List<JavaScriptObject>,JavaScriptObject)", "_InvoicesItemList(InvoiceItemModel)", "bool(InvoiceItemModel)", "ShapeBorderTween(@)", "DateTime?(CustomInvoiceBloc)", "Future<~>(GetInvoiceData,Emitter<CustomerBalanceState>)", "Future<~>(SearchCustomers0,Emitter<CustomerBalanceState>)", "CustomerBalanceBloc(BuildContext)", "BlocBuilder<FilterBloc,FilterState>(BuildContext,CustomerBalanceState)", "FormGroup(CustomerBalanceBloc)", "_CustomerList0(InvoiceCustomers)", "Null(DashboardEvent,Emitter<DashboardState>)", "Future<~>(WeekListOfCashControll,Emitter<DashboardState>)", "Size(JavaScriptObject)", "~(AccountingYear)", "~(UserVatPeriod)", "DashboardBloc(BuildContext)", "Scaffold(BuildContext,DashboardState)", "bool(Color)", "PageTransitionsBuilder?(TargetPlatform)", "Actions(BuildContext,Widget?)", "Future<~>(GetDraftInvoice,Emitter<DraftInvoicesState>)", "DraftInvoicesBloc(BuildContext)", "BlocBuilder<FilterBloc,FilterState>(BuildContext,DraftInvoicesState)", "TotalDraftMobile(BuildContext)", "DraftInvoicesState(DraftInvoicesBloc)", "_ListOfDraft(InvoicesModel)", "FormGroup(DraftInvoicesBloc)", "Future<~>(GetBankNamesList,Emitter<EditBankNamesState>)", "Future<~>(UpdateBankName,Emitter<EditBankNamesState>)", "EditBankNamesBloc(BuildContext)", "Scaffold(BuildContext,EditBankNamesState)", "EditBankNamesState(EditBankNamesBloc)", "bool(Set<MaterialState>)", "_EditDeleteBankName(EntryBankModel)", "Future<~>(GetCustomersList,Emitter<EditCustomerState>)", "Future<~>(DeleteCustomer,Emitter<EditCustomerState>)", "Future<~>(SearchCustomers1,Emitter<EditCustomerState>)", "EditCustomerBloc(BuildContext)", "Scaffold(BuildContext,EditCustomerState)", "ChartContainerRenderObject<@>()", "EditCustomerState(EditCustomerBloc)", "EditDeleteCustomer(InvoiceCustomers)", "Future<~>(GetCustomer,Emitter<EditCustomerInvoiceState>)", "Future<~>(EditCustomer,Emitter<EditCustomerInvoiceState>)", "EditCustomerInvoiceBloc(BuildContext)", "Scaffold(BuildContext,EditCustomerInvoiceState)", "FormGroup(EditCustomerInvoiceBloc)", "Map<String,String>(FormControl<@>?)", "Future<~>(GetItemList1,Emitter<EditDeleteItemState>)", "Future<~>(ItemDelete,Emitter<EditDeleteItemState>)", "TextStyle({background:Paint?,backgroundColor:Color?,color:Color?,decoration:TextDecoration?,decorationColor:Color?,decorationStyle:TextDecorationStyle?,decorationThickness:double?,fontFeatures:List<FontFeature>?,fontSize:double?,fontStyle:FontStyle?,fontWeight:FontWeight?,foreground:Paint?,height:double?,letterSpacing:double?,locale:Locale?,shadows:List<Shadow>?,textBaseline:TextBaseline?,textStyle:TextStyle?,wordSpacing:double?})", "Future<~>(SearchItem,Emitter<EditDeleteItemState>)", "EditDeleteItemBloc(BuildContext)", "JavaScriptObject?(int)", "HotRestartCacheHandler?()", "_ItemsList0(InvoiceItemModel)", "Future<~>(GetOtherIncomeType,Emitter<EditOtherIncomeState>)", "Future<~>(DeleteOtherIncomeType,Emitter<EditOtherIncomeState>)", "Future<~>(UpdateIncomeName,Emitter<EditOtherIncomeState>)", "Future<~>(ToggleHideIncome,Emitter<EditOtherIncomeState>)", "Future<~>(ToggleUnHideIncome,Emitter<EditOtherIncomeState>)", "Future<~>(RestoreIncome,Emitter<EditOtherIncomeState>)", "Future<~>(DeleteOtherIncomeTypeFull,Emitter<EditOtherIncomeState>)", "Future<~>(SearchOtherIncome,Emitter<EditOtherIncomeState>)", "EditOtherIncomeBloc(BuildContext)", "Scaffold(BuildContext,EditOtherIncomeState)", "~(Size?)", "EditOtherIncomeState(EditOtherIncomeBloc)", "MapEntry<String,List<String>>(String,String)", "_OtherIncomeTypeName(OtherIncomeModel)", "Future<~>(GetListExpenseType,Emitter<EditPaymentsTypeState>)", "Future<~>(DeleteType,Emitter<EditPaymentsTypeState>)", "Future<~>(DeleteTypeFull,Emitter<EditPaymentsTypeState>)", "Future<~>(UpdateExpanseTypeName,Emitter<EditPaymentsTypeState>)", "Future<~>(ToggleHideExpenses,Emitter<EditPaymentsTypeState>)", "Future<~>(ToggleUnHideExpense,Emitter<EditPaymentsTypeState>)", "Future<~>(RestoreExpenses,Emitter<EditPaymentsTypeState>)", "Future<~>(SearchExpenseTypeName,Emitter<EditPaymentsTypeState>)", "EditPaymentsTypeBloc(BuildContext)", "Scaffold(BuildContext,EditPaymentsTypeState)", "EditPaymentsTypeState(EditPaymentsTypeBloc)", "~(DismissDirection)", "_EditDeletePayments(ExpensePaymentsModel)", "Object()", "bool(EditPaymentsTypeBloc)", "Null(EditPayrollEvent,Emitter<EditPayrollState>)", "EditPayrollBloc(BuildContext)", "Scaffold(BuildContext,EditPayrollState)", "FormGroup(EditPayrollBloc)", "PaidHourly?(EditPayrollBloc)", "DateTime?(EditPayrollBloc)", "Null(EditPersonalDetailsEvent,Emitter<EditPersonalDetailsState>)", "EditPersonalDetailsBloc(BuildContext)", "Scaffold(BuildContext,EditPersonalDetailsState)", "Container(BuildContext,SizingInformation)", "~(List<double>,TextDirection,double)", "MarriedSingle?(EditPersonalDetailsBloc)", "Gender?(EditPersonalDetailsBloc)", "DateTime?(EditPersonalDetailsBloc)", "PaidHourly?(EditPersonalDetailsBloc)", "Future<~>(GetSupplierList,Emitter<EditSuppliersState>)", "Future<~>(DeleteSupplierTypeFull,Emitter<EditSuppliersState>)", "Future<~>(DeleteSupplierType,Emitter<EditSuppliersState>)", "Future<~>(ToggleHide,Emitter<EditSuppliersState>)", "Future<~>(ToggleUnHide,Emitter<EditSuppliersState>)", "Future<~>(RestoreSupplier,Emitter<EditSuppliersState>)", "Future<~>(UpdateSupplierTypeName,Emitter<EditSuppliersState>)", "Future<~>(SearchSupplierName,Emitter<EditSuppliersState>)", "EditSuppliersBloc(BuildContext)", "Scaffold(BuildContext,EditSuppliersState)", "GlobalKey<State<StatefulWidget>>(Widget)", "EditSuppliersState(EditSuppliersBloc)", "Center(int)", "_EditDeleteSupplier(SupplierModel)", "Future<~>(GetNotes0,Emitter<AddNoteState>)", "Null(UpdateNoteEdit,Emitter<AddNoteState>)", "Null(DiscardNoteChanges,Emitter<AddNoteState>)", "Null(SetNoteToUpdate0,Emitter<AddNoteState>)", "ImageItem0(int)", "Future<~>(DeleteNote0,Emitter<AddNoteState>)", "Null(SaveUploadImages0,Emitter<AddNoteState>)", "Future<~>(AddNoteTransaction,Emitter<AddNoteState>)", "Null(CancelUpdateNote0,Emitter<AddNoteState>)", "Null(SetNoteImagesToDelete,Emitter<AddNoteState>)", "Future<~>(AddNote0,Emitter<AddNoteState>)", "Future<~>(DiscardAllChanges,Emitter<AddNoteState>)", "AddNoteBloc<BlocBase<@>,@>(BuildContext)", "PreferredSizeWidget(BuildContext,AddNoteState)", "Widget(BuildContext,AddNoteState)", "ResponsiveBuilder(BuildContext,AddNoteState)", "@(@)(~(RequestOptions,RequestInterceptorHandler))", "InputDecorator(BuildContext,Widget?)", "Future<~>(GetExpenseData,Emitter<ExpensePaymentEntryState>)", "Null(AddExpenseToDeleteList,Emitter<ExpensePaymentEntryState>)", "Future<~>(InsertExpensePayments,Emitter<ExpensePaymentEntryState>)", "Future<~>(DeleteExpenseEntry,Emitter<ExpensePaymentEntryState>)", "Null(AddExpensePayment,Emitter<ExpensePaymentEntryState>)", "Null(UpdateEntryState,Emitter<ExpensePaymentEntryState>)", "Semantics(BuildContext,Widget?)", "ExpensePaymentEntryBloc(BuildContext)", "~(BuildContext,ExpensePaymentEntryState)", "UnmanagedRestorationScope(FormFieldState<String>)", "Scaffold(BuildContext,ExpensePaymentEntryState)", "~(ExpensePaymentsModel)", "~(ExpensePaymentsModel?)", "DropdownMenuItem<ExpensePaymentsModel>(ExpensePaymentsModel)", "ThemeDataTween(@)", "Future<~>(GetPaymentsWeeklyList,Emitter<ExpensePaymentsState>)", "ExpensePaymentsBloc(BuildContext)", "ThemeData()", "Scaffold(BuildContext,ExpensePaymentsState)", "ExpensePaymentsState(ExpensePaymentsBloc)", "MapEntry<Object,ThemeExtension<@>>(Object,ThemeExtension<@>)", "bool(MapEntry<Object,ThemeExtension<@>>)", "_ExpenseListByCurrentDay(ExpensePaymentsModel)", "Future<~>(GetListExpensePaymentsList,Emitter<ExpenseTypeState>)", "Future<~>(InsertExpensePaymentsType0,Emitter<ExpenseTypeState>)", "Future<~>(SearchTypeName,Emitter<ExpenseTypeState>)", "Scaffold(BuildContext,ExpenseTypeState)", "int(PaintRequest,PaintRequest)", "ExpenseTypeState(ExpenseTypeBloc)", "_ExpensePaymentsTypeList(ExpensePaymentsModel)", "Null(SelectCustomer,Emitter<FilterState>)", "~(List<Customer>)", "String(Customer)", "CheckboxListTile(int)", "Future<~>(ForgotPasswordLogin,Emitter<ForgotPasswordState>)", "ForgotPasswordBloc(BuildContext)", "Scaffold(BuildContext,ForgotPasswordState)", "Future<~>(GetClient,Emitter<HomeState>)", "HomeBloc(BuildContext)", "Scaffold(BuildContext,HomeState)", "bool(HomeButton)", "Widget(int)", "Future<~>(GetIapProducts,Emitter<IAPState>)", "~(int,int)", "Future<~>(BuyProduct,Emitter<IAPState>)", "Null(ChangeSelectedProduct,Emitter<IAPState>)", "Null(SkipPayment,Emitter<IAPState>)", "Null(PayWithStripe,Emitter<IAPState>)", "Future<~>(UpdateStatus1,Emitter<IAPState>)", "IAPBloc(BuildContext)", "~(BuildContext,IAPState)", "Scaffold(BuildContext,IAPState)", "Future<~>(Uri)", "IAPMobileView(BuildContext,SizingInformation)", "Future<~>(GetOtherIncomeData,Emitter<IncomeEntryState>)", "Future<~>(InitiateNavigation,Emitter<IncomeEntryState>)", "Null(PopulateSavedNote,Emitter<IncomeEntryState>)", "Future<~>(AddOtherIncomeEntry,Emitter<IncomeEntryState>)", "Future<~>(DeleteOtherIncomeEntry,Emitter<IncomeEntryState>)", "Null(UpdateIncomeState,Emitter<IncomeEntryState>)", "Null(ChangeDateIncome,Emitter<IncomeEntryState>)", "Null(AddIncomeToDeleteList,Emitter<IncomeEntryState>)", "Future<~>(InsertOtherIncomeEntry,Emitter<IncomeEntryState>)", "IncomeEntryBloc(BuildContext)", "~(BuildContext,IncomeEntryState)", "Future<Codec>(ImmutableBuffer{allowUpscaling:bool,cacheHeight:int?,cacheWidth:int?})", "Scaffold(BuildContext,IncomeEntryState)", "~(OtherIncomeModel)", "IncomeEntryState(IncomeEntryBloc)", "~(OtherIncomeModel?)", "DropdownMenuItem<OtherIncomeModel>(OtherIncomeModel)", "Future<~>(CheckAccount,Emitter<LoginState>)", "Future<~>(SetBiometricAuthLogin,Emitter<LoginState>)", "Future<Codec>(ImmutableBuffer{getTargetSize:TargetImageSize(int,int)?})", "Future<~>(SetBiometricLogin,Emitter<LoginState>)", "Future<~>(CheckUserCredentials,Emitter<LoginState>)", "Future<~>(CheckEmailPassword,Emitter<LoginState>)", "LoginBloc(BuildContext)", "~(BuildContext,LoginState)", "ReactiveForm(BuildContext,LoginState)", "Future<~>(GetLoggedUserData,Emitter<MenuState>)", "MenuBloc(BuildContext)", "Scaffold(BuildContext,MenuState)", "Widget(HomeTabs)", "ChatMessage(@)", "Null(MessagesList,Emitter<MessagesState>)", "Null(FillMessageList,Emitter<MessagesState>)", "Null(AddMessage,Emitter<MessagesState>)", "MessagesBloc(BuildContext)", "~(BuildContext,MessagesState)", "Scaffold(BuildContext,MessagesState)", "ListTile(BuildContext,int)", "Future<~>(GetClientData,Emitter<MoreState>)", "Future<~>(RemoveBiometricLogin,Emitter<MoreState>)", "Set<~>(SetRecognitionText,Emitter<MoreState>)", "MoreBloc(BuildContext)", "Scaffold(BuildContext,MoreState)", "FormGroup(MoreBloc)", "Future<~>(SupplierList,Emitter<AddNewSupplierState>)", "Future<~>(AddNewSupplier0,Emitter<AddNewSupplierState>)", "Future<~>(SearchSupplierTypeName,Emitter<AddNewSupplierState>)", "EdgeInsetsGeometry(EdgeInsetsGeometry,ShapeBorder)", "Scaffold(BuildContext,AddNewSupplierState)", "ShapeBorder(ShapeBorder)", "AddNewSupplierState(AddNewSupplierBloc)", "bool(ShapeBorder)", "_SupplierList(SupplierModel)", "Future<~>(GetTakingsType,Emitter<AddNewTakingsState>)", "Future<~>(UpdateTakingsName,Emitter<AddNewTakingsState>)", "Future<~>(DeleteTakingsTypeFull,Emitter<AddNewTakingsState>)", "Future<~>(HideTakingsType,Emitter<AddNewTakingsState>)", "Future<~>(UnHideTakingsType,Emitter<AddNewTakingsState>)", "Future<~>(ChangeEnableStatus,Emitter<AddNewTakingsState>)", "bool(TakingTypeData)", "Future<~>(AddTakingsType0,Emitter<AddNewTakingsState>)", "AddNewTakingsBloc(BuildContext)", "Scaffold(BuildContext,AddNewTakingsState)", "Widget(TakingTypeData)", "String(ShapeBorder)", "Future<~>(ListOtherIncome,Emitter<OtherIncomeState>)", "OtherIncomeBloc(BuildContext)", "Map<String,Object?>()", "Scaffold(BuildContext,OtherIncomeState)", "TotalIncomeCurrent(BuildContext)", "OtherIncomeState(OtherIncomeBloc)", "double(double,FlutterView)", "_ListOtherIncome(OtherIncomeModel)", "Future<~>(InsertOtherIncome,Emitter<OtherIncomeSelectState>)", "Null(ShowPostTo0,Emitter<OtherIncomeSelectState>)", "Future<~>(WeeklistOtherIncome,Emitter<OtherIncomeSelectState>)", "OtherIncomeSelectBloc(BuildContext)", "Scaffold(BuildContext,OtherIncomeSelectState)", "bool(double)", "TotalIncome(BuildContext)", "Color(double)", "OtherIncomeListSelectDate(BuildContext,SizingInformation)", "FormGroup(OtherIncomeSelectBloc)", "_LiveImage()", "Future<~>(StripePayments,Emitter<StripeOtherPaymentsState>)", "Future<~>(UpdateStatus0,Emitter<StripeOtherPaymentsState>)", "Future<Null>(ConfirmCardPaymentSuccess)", "Null(ConfirmCardPaymentSuccess)", "StripeOtherPaymentsBloc(BuildContext)", "~(BuildContext,StripeOtherPaymentsState)", "Scaffold(BuildContext,StripeOtherPaymentsState)", "Future<~>(ExpenseWeeklyList,Emitter<PaymentsSelectDateState>)", "Null(ChangePaymentsDate,Emitter<PaymentsSelectDateState>)", "Null(ShowPostTo,Emitter<PaymentsSelectDateState>)", "Future<~>(InsertExpensePaymentsType,Emitter<PaymentsSelectDateState>)", "PaymentsSelectDateBloc(BuildContext)", "Scaffold(BuildContext,PaymentsSelectDateState)", "TotalExpense(BuildContext)", "PaymentsSelectDateList(BuildContext,int)", "FormGroup(PaymentsSelectDateBloc)", "PaymentsSelectDateState(PaymentsSelectDateBloc)", "Future<~>(GetItemList,Emitter<ProductServiceSoldState>)", "Null(SelectDate,Emitter<ProductServiceSoldState>)", "ProductServiceSoldBloc(BuildContext)", "Scaffold(BuildContext,ProductServiceSoldState)", "FormGroup(ProductServiceSoldBloc)", "DateTime?(ProductServiceSoldBloc)", "_SoldList(InvoiceItemModel)", "Future<~>(GetItemList0,Emitter<ProductsServicesState>)", "Future<~>(InsertItem,Emitter<ProductsServicesState>)", "Future<~>(ItemsDelete,Emitter<ProductsServicesState>)", "Future<~>(SearchItems,Emitter<ProductsServicesState>)", "Future<~>(UpdateItem,Emitter<ProductsServicesState>)", "ProductsServicesBloc(BuildContext)", "~(ImageInfo?,bool)", "Future<~>(Object,StackTrace?)", "Null(InvoiceItemModel?)", "_ItemList(InvoiceItemModel)", "ReceiptsSelectCustomerBloc(BuildContext)", "Scaffold(BuildContext,ReceiptsSelectCustomerState)", "FormGroup(ReceiptsSelectCustomerBloc)", "int(_PersistedSurfaceMatch,_PersistedSurfaceMatch)", "Future<~>(GetCustomerListForSalesReceipts,Emitter<ReceiptsSelectCustomerState>)", "Future<~>(SearchSalesReceipts,Emitter<ReceiptsSelectCustomerState>)", "_ListOfCustomer(InvoiceCustomers)", "Future<~>(GetCustomerList,Emitter<ReportCustomersState>)", "Future<~>(SearchCustomersReport,Emitter<ReportCustomersState>)", "ReportCustomersBloc(BuildContext)", "Scaffold(BuildContext,ReportCustomersState)", "FormGroup(ReportCustomersBloc)", "BottomBarHomeMobile(BuildContext,SizingInformation)", "_CustomerList1(InvoiceCustomers)", "Future<~>(GetInvoiceListByCustomerId,Emitter<ReportSalesReceiptsState>)", "Null(ReportSalesReceiptsEvent,Emitter<ReportSalesReceiptsState>)", "ReportSalesReceiptsBloc(BuildContext)", "Scaffold(BuildContext,ReportSalesReceiptsState)", "FormGroup(ReportSalesReceiptsBloc)", "TotalReportSalesMobile(BuildContext)", "_InvoiceListByCustomerId(ApplyPaymentModel)", "Future<~>(GetPaymentOptions,Emitter<ReviewPlansState>)", "Future<~>(RemoveLicence,Emitter<ReviewPlansState>)", "Future<~>(UpdateStatus,Emitter<ReviewPlansState>)", "Null(UpdatePaymentChange,Emitter<ReviewPlansState>)", "ReviewPlanBLoc(BuildContext)", "Scaffold(BuildContext,ReviewPlansState)", "Widget(MapEntry<int,PackagesListModel>)", "Future<~>(GetListOtherIncome,Emitter<SelectIncomeTypeState>)", "Null(UpdateStateIncome,Emitter<SelectIncomeTypeState>)", "Future<~>(InsertOtherIncome0,Emitter<SelectIncomeTypeState>)", "Future<~>(SearchOtherIncomeType,Emitter<SelectIncomeTypeState>)", "Scaffold(BuildContext,SelectIncomeTypeState)", "Null(AssetManifest0)", "SelectIncomeTypeState(SelectIncomeTypeBloc)", "_IncomeList(OtherIncomeModel)", "Future<~>(GetStatementInvoice,Emitter<StatementState>)", "Null(StatementEvent,Emitter<StatementState>)", "StatementBloc(BuildContext)", "Scaffold(BuildContext,StatementState)", "TotalStatementMobile(BuildContext)", "Null(ApplyPaymentModel)", "~(ApplyPaymentType)", "_ListOfStatement(int)", "Future<~>(GetCustomerData,Emitter<StatementCustomerListState>)", "Future<~>(SearchCustomers,Emitter<StatementCustomerListState>)", "StatementCustomerListBloc(BuildContext)", "Scaffold(BuildContext,StatementCustomerListState)", "FormGroup(StatementCustomerListBloc)", "_CustomerList(InvoiceCustomers)", "Future<~>(GetSupplierDate,Emitter<SupplierEntryState>)", "Null(AddSupplierToDeleteList,Emitter<SupplierEntryState>)", "Future<~>(InsertSupplier,Emitter<SupplierEntryState>)", "Future<~>(DeleteSupplierEntry,Emitter<SupplierEntryState>)", "Future<~>(AddSupplier,Emitter<SupplierEntryState>)", "Null(UpdateState,Emitter<SupplierEntryState>)", "SupplierEntryBloc(BuildContext)", "~(BuildContext,SupplierEntryState)", "@(@)(~(Response0<@>,ResponseInterceptorHandler))", "Scaffold(BuildContext,SupplierEntryState)", "~(SupplierModel)", "SuppliersMobile(BuildContext,SizingInformation)", "~(SupplierModel?)", "DropdownMenuItem<SupplierModel>(SupplierModel)", "Future<~>(AddNewSupplier,Emitter<SupplierSelectDateState>)", "Future<~>(WeekListSupplier,Emitter<SupplierSelectDateState>)", "SupplierSelectDateBloc(BuildContext)", "Scaffold(BuildContext,SupplierSelectDateState)", "TotalSupplier(BuildContext)", "SupplierSelectList(BuildContext,int)", "FormGroup(SupplierSelectDateBloc)", "SupplierSelectDateState(SupplierSelectDateBloc)", "Padding(BankTotal)", "Future<~>(SupplierList0,Emitter<SupplierStockState>)", "SupplierStockBloc(BuildContext)", "Scaffold(BuildContext,SupplierStockState)", "SupplierStockState(SupplierStockBloc)", "_SupplierList0(SupplierModel)", "Future<~>(GetTakingsType0,Emitter<TakingsState>)", "Future<~>(WeekList,Emitter<TakingsState>)", "Null(ShowPostTo1,Emitter<TakingsState>)", "Future<~>(AddTakingsType,Emitter<TakingsState>)", "TakingsBloc(BuildContext)", "Scaffold(BuildContext,TakingsState)", "@(Object)(~(DioException,ErrorInterceptorHandler))", "TakingEntryCardMobile(BuildContext,SizingInformation)", "FormGroup(TakingsBloc)", "Future<~>(GetTakingsData,Emitter<TakingsEntryState>)", "Future<~>(ChangeDate,Emitter<TakingsEntryState>)", "Future<~>(TakingsTillInsert,Emitter<TakingsEntryState>)", "TakingsEntryBloc(BuildContext)", "~(BuildContext,TakingsEntryState)", "Scaffold(BuildContext,TakingsEntryState)", "Future<~>(DateTime)", "ResponsiveBuilder(BuildContext,AsyncSnapshot<Object?>)", "TakingsEntryState(TakingsEntryBloc)", "Padding(MapEntry<int,TakingsTillModel>)", "Null(TextEditingController)", "Null(PickedImage,Emitter<TakingEntryEditState>)", "Future<~>(DeleteImage,Emitter<TakingEntryEditState>)", "Null(InitialEvent,Emitter<TakingEntryEditState>)", "Future<~>(EditNote,Emitter<TakingEntryEditState>)", "TakingEntryEditBloc(BuildContext)", "~(BuildContext,TakingEntryEditState)", "PopScope(BuildContext,TakingEntryEditState)", "DefaultButton(BuildContext,SizingInformation)", "~(Object,StackTrace?)?(ImageStreamListener)", "~(ImageChunkEvent)?(ImageStreamListener)", "Future<~>(GetNotes,Emitter<TakingsEntryNoteState>)", "Null(PickImages,Emitter<TakingsEntryNoteState>)", "Null(OpenTextField,Emitter<TakingsEntryNoteState>)", "Null(WriteNote,Emitter<TakingsEntryNoteState>)", "Null(CancelUpdateNote,Emitter<TakingsEntryNoteState>)", "Null(SetNoteToUpdate,Emitter<TakingsEntryNoteState>)", "ImageItem(int)", "Null(SaveUploadImages,Emitter<TakingsEntryNoteState>)", "Null(SaveNoteToLater,Emitter<TakingsEntryNoteState>)", "Future<~>(AddNote,Emitter<TakingsEntryNoteState>)", "Null(UpdateSavedNote,Emitter<TakingsEntryNoteState>)", "Future<~>(DeleteNote,Emitter<TakingsEntryNoteState>)", "TakingsEntryNoteBloc(BuildContext)", "Scaffold(BuildContext,TakingsEntryNoteState)", "Padding(BuildContext,int)", "Future<~>(SetTakingsOnlineEntryInputs,Emitter<TakingsOnlineAccEntryState>)", "Null(UpdateTakingsOnlineBankId,Emitter<TakingsOnlineAccEntryState>)", "Future<~>(SaveTakingsOnline,Emitter<TakingsOnlineAccEntryState>)", "TakingsOnlineAccEntryBloc(BuildContext)", "~(BuildContext,TakingsOnlineAccEntryState)", "Scaffold(BuildContext,TakingsOnlineAccEntryState)", "FormGroup(TakingsOnlineAccEntryBloc)", "Column(BuildContext,FormGroup,Widget?)", "Expanded(EntryBankModel)", "TakingsWeeklyReportBloc(BuildContext)", "~(BuildContext,TakingsWeeklyReportState)", "Scaffold(BuildContext,TakingsWeeklyReportState)", "Future<~>(TakingsWeeReportkList,Emitter<TakingsWeeklyReportState>)", "SingleChildScrollView(BuildContext,BoxConstraints)", "DataRow(TakingsWeekReportData)", "AnimatedBuilder(BuildContext,SizingInformation)", "StatelessWidget(BuildContext,Widget?)", "PayrollListMobile(BuildContext,int)", "Future<~>(RunVatInitial,Emitter<VatState>)", "VatBloc(BuildContext)", "Scaffold(BuildContext,VatState)", "DivElement(int)", "DataRow(WeeklyReportData)", "Future<~>(WeeklyReportList,Emitter<WeeklyReportState>)", "WeeklyReportBloc(BuildContext)", "~(BuildContext,WeeklyReportState)", "Scaffold(BuildContext,WeeklyReportState)", "Center(BuildContext,ProductsServicesState)", "~(Codec)", "Future<@>(Object)", "Map<String,String>(FormControl<String>)", "DropdownMenuItem<String>(BankTotal)", "GestureDetector(ApplyPaymentType)", "Dialog(BuildContext)", "~(DateRangePickerSelectionChangedArgs)", "CustomDialog(BuildContext)", "CustomShowImageDialog(BuildContext)", "SignatureDialog(BuildContext)", "InputEmailMobile(BuildContext,int)", "Center(BuildContext,AddNewItemState)", "Paint(BoxShadow)", "Theme(BuildContext,Widget?)", "ReactiveTextField<@>(BuildContext)", "_IosDoneButton(BuildContext,AsyncSnapshot<bool>)", "_IosDoneButton(BuildContext,AsyncSnapshot<@>)", "Widget(BuildContext,AsyncSnapshot<bool>)", "Widget(BuildContext,AsyncSnapshot<@>)", "Positioned(BuildContext)", "bool(EditSuppliersBloc)", "bool(EditOtherIncomeBloc)", "AuthBloc(BuildContext)", "DateProvider(BuildContext)", "Login(BuildContext)", "~(AppLifecycleState)", "String(String,String)", "JavaScriptObject(int{params:Object?})", "String(Object?{toEncodable:Object?(Object?)?})", "@(String{reviver:Object?(Object?,Object?)?})", "int(Comparable<@>,Comparable<@>)", "Rect(BoxShadow)", "String(String{encoding:Encoding})", "List<String>()", "List<String>(String,List<String>)", "Object?(@)", "Path(BoxShadow)", "Size?(Size?,Size?,double)", "double?(num?,num?,double)", "Color?(Color?,Color?,double)", "bool(int?)", "int(int,@)", "RectTween(Rect?,Rect?)", "Widget(BuildContext,Size,Widget)", "Widget(BuildContext,Offset,Offset,Widget)", "~(FlutterErrorDetails{forceReport:bool})", "DiagnosticsNode(String)", "StackFrame?(String)", "double(double,double,double)", "bool?(bool?,bool?,double)", "bool(int,bool)", "Widget(BuildContext,Widget)", "OutlinedBorder?(OutlinedBorder?,OutlinedBorder?,double)", "EdgeInsetsGeometry?(EdgeInsetsGeometry?,EdgeInsetsGeometry?,double)", "TextStyle?(TextStyle?,TextStyle?,double)", "int(_TaskEntry<@>,_TaskEntry<@>)", "bool({priority!int,scheduler!SchedulerBinding})", "List<LicenseEntry>(String)", "Widget(Widget?,List<Widget>)", "~(FocusNode{alignment:double?,alignmentPolicy:ScrollPositionAlignmentPolicy?,curve:Curve?,duration:Duration?})", "int(Element,Element)", "IconThemeData(IconThemeData?,IconThemeData?,double)", "List<Route<@>>(NavigatorState,String)", "int(Widget,int)", "InterceptorState<RequestOptions>()", "~()(InheritedContext<StateStreamable<@>?>,StateStreamable<@>)", "CupertinoPage<~>({arguments!Object?,child!Widget,key!LocalKey,name!String?,restorationId!String})", "MaterialPage<~>({arguments!Object?,child!Widget,key!LocalKey,name!String?,restorationId!String})", "LineMetrics(LineMetrics)", "DiagnosticsNode(InlineSpan)", "~(BuildContext,ChangeNotifier?)", "~()(InheritedContext<Listenable?>,Listenable?)", "MessageLookupByLibrary?(String)", "Element0(int)", "Future<1^>(1^/(0^),0^{debugLabel:String?})<Object?,Object?>", "~(String?{wrapWidth:int?})", "Future<~>(UpDate,Emitter<EditDeleteItemState>)"],
     interceptorsByTag: null,
     leafTags: null,
     arrayRti: Symbol("$ti"),
