@@ -67962,11 +67962,13 @@
       this.state = t1;
       this.context = t2;
     },
-    BankSelectDateScreen__bankDepositList_closure: function BankSelectDateScreen__bankDepositList_closure(t0) {
+    BankSelectDateScreen__bankDepositList_closure: function BankSelectDateScreen__bankDepositList_closure(t0, t1) {
       this.state = t0;
+      this.maxDate = t1;
     },
-    BankSelectDateScreen__bankDepositList__closure: function BankSelectDateScreen__bankDepositList__closure(t0) {
+    BankSelectDateScreen__bankDepositList__closure: function BankSelectDateScreen__bankDepositList__closure(t0, t1) {
       this.state = t0;
+      this.maxDate = t1;
     },
     BankSelectDateScreen__bankDepositList___closure: function BankSelectDateScreen__bankDepositList___closure(t0, t1, t2) {
       this.context = t0;
@@ -71726,9 +71728,10 @@
     ExpensePaymentsScreen__appBar_closure: function ExpensePaymentsScreen__appBar_closure(t0) {
       this.context = t0;
     },
-    ExpensePaymentsScreen__body_closure: function ExpensePaymentsScreen__body_closure(t0, t1) {
+    ExpensePaymentsScreen__body_closure: function ExpensePaymentsScreen__body_closure(t0, t1, t2) {
       this.minDate = t0;
-      this.state = t1;
+      this.maxDate = t1;
+      this.state = t2;
     },
     ExpensePaymentsScreen__body__closure2: function ExpensePaymentsScreen__body__closure2(t0) {
       this.context = t0;
@@ -285125,9 +285128,23 @@
       }
     },
     _bankDepositList$2$context$state(context, state) {
-      var _null = null,
-        t1 = $.$get$width() / 414 * 10;
-      return A.Expanded$(A.Container$(_null, A.PageView$builder(this.controller, new A.BankSelectDateScreen__bankDepositList_closure(state), _null, _null, new A.BankSelectDateScreen__bankDepositList_closure0(this, state, context)), B.Clip_0, _null, _null, _null, _null, _null, _null, new A.EdgeInsets(0, t1, 0, t1), _null, _null, _null), 1);
+      var maxDateString, maxDate, _null = null,
+        t1 = A.Provider_of(context, false, type$.AuthBloc)._bloc$_state.user;
+      if (t1 == null)
+        maxDateString = _null;
+      else {
+        t1 = t1.accountingYear;
+        if (t1 == null)
+          maxDateString = _null;
+        else {
+          t1 = B.JSArray_methods.get$last(t1).accountingYearEnd;
+          t1 = t1 == null ? _null : A._setArrayType(t1.split("T"), type$.JSArray_String);
+          maxDateString = t1;
+        }
+      }
+      maxDate = maxDateString == null ? _null : A.DateTime_parse(maxDateString[0]);
+      t1 = $.$get$width() / 414 * 10;
+      return A.Expanded$(A.Container$(_null, A.PageView$builder(this.controller, new A.BankSelectDateScreen__bankDepositList_closure(state, maxDate), _null, _null, new A.BankSelectDateScreen__bankDepositList_closure0(this, state, context)), B.Clip_0, _null, _null, _null, _null, _null, _null, new A.EdgeInsets(0, t1, 0, t1), _null, _null, _null), 1);
     },
     _bank_deposit_select_date_screen$_bottom$2$context$state(_, context, state) {
       var t1 = state.showSplits ? "Hide Splits" : "Show Splits";
@@ -285216,7 +285233,7 @@
         t1 = this.state,
         t2 = t1.weekDays;
       t2 = t2 == null ? _null : t2.length;
-      return A.SingleChildScrollView$(A.Column$(A._setArrayType([A.ListView$builder(_null, new A.BankSelectDateScreen__bankDepositList__closure(t1), t2, _null, new A.NeverScrollableScrollPhysics(_null), false, B.Axis_1, true)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), _null, B.DragStartBehavior_1, _null, _null, B.Axis_1);
+      return A.SingleChildScrollView$(A.Column$(A._setArrayType([A.ListView$builder(_null, new A.BankSelectDateScreen__bankDepositList__closure(t1, this.maxDate), t2, _null, new A.NeverScrollableScrollPhysics(_null), false, B.Axis_1, true)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), _null, B.DragStartBehavior_1, _null, _null, B.Axis_1);
     },
     $signature: 858
   };
@@ -285231,8 +285248,10 @@
       if (t4)
         valid = _null;
       else {
-        t5 = Date.now();
-        valid = current._value < t5;
+        t5 = this.maxDate;
+        if (t5 == null)
+          t5 = new A.DateTime(Date.now(), false);
+        valid = current._value < t5._value;
       }
       t5 = t1.total;
       if (t5 == null)
@@ -298050,25 +298069,40 @@
       return A.AppBar$(_null, _null, true, B.Color_4278298233, _null, true, _null, t1.primaryIconTheme, A.IconButton$(_null, A.Icon$(B.IconData_57492_MaterialIcons_null_true, _null, _null, _null), _null, new A.ExpensePaymentsScreen__appBar_closure(context), _null, _null, _null), _null, t2, _null);
     },
     _expense_payments_screen$_body$3$context$state$typeState(_, context, state, typeState) {
-      var minDateString, minDate, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, _null = null,
-        t1 = A.Provider_of(context, false, type$.AuthBloc)._bloc$_state.user;
-      if (t1 == null)
+      var minDateString, minDate, maxDateString, maxDate, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, _null = null,
+        t1 = type$.AuthBloc,
+        t2 = A.Provider_of(context, false, t1)._bloc$_state.user;
+      if (t2 == null)
         minDateString = _null;
       else {
-        t1 = t1.accountingYear;
-        if (t1 == null)
+        t2 = t2.accountingYear;
+        if (t2 == null)
           minDateString = _null;
         else {
-          t1 = B.JSArray_methods.get$first(t1).accountingYearStart;
-          t1 = t1 == null ? _null : A._setArrayType(t1.split("T"), type$.JSArray_String);
-          minDateString = t1;
+          t2 = B.JSArray_methods.get$first(t2).accountingYearStart;
+          t2 = t2 == null ? _null : A._setArrayType(t2.split("T"), type$.JSArray_String);
+          minDateString = t2;
         }
       }
       minDate = minDateString == null ? _null : A.DateTime_parse(minDateString[0]);
+      t1 = A.Provider_of(context, false, t1)._bloc$_state.user;
+      if (t1 == null)
+        maxDateString = _null;
+      else {
+        t1 = t1.accountingYear;
+        if (t1 == null)
+          maxDateString = _null;
+        else {
+          t1 = B.JSArray_methods.get$last(t1).accountingYearEnd;
+          t1 = t1 == null ? _null : A._setArrayType(t1.split("T"), type$.JSArray_String);
+          maxDateString = t1;
+        }
+      }
+      maxDate = maxDateString == null ? _null : A.DateTime_parse(maxDateString[0]);
       if (state instanceof A.ExpensePaymentsInitial)
         return A.Center$(new A.Loading(_null), _null, _null);
       else {
-        t1 = A.ResponsiveBuilder$(new A.ExpensePaymentsScreen__body_closure(minDate, state));
+        t1 = A.ResponsiveBuilder$(new A.ExpensePaymentsScreen__body_closure(minDate, maxDate, state));
         t2 = $.$get$width() / 414;
         t3 = A.SizedBox$(_null, _null, t2 * 20);
         t4 = A.Theme_of(context).textTheme.bodySmall;
@@ -298154,7 +298188,7 @@
   A.ExpensePaymentsScreen__body_closure.prototype = {
     call$2(context, sizingInformation) {
       var t1 = this.state;
-      t1 = A.Calendar$(new A.ExpensePaymentsScreen__body__closure0(t1, context), new A.ExpensePaymentsScreen__body__closure1(t1, context), t1.dateTime, null, this.minDate, new A.ExpensePaymentsScreen__body__closure2(context), false);
+      t1 = A.Calendar$(new A.ExpensePaymentsScreen__body__closure0(t1, context), new A.ExpensePaymentsScreen__body__closure1(t1, context), t1.dateTime, this.maxDate, this.minDate, new A.ExpensePaymentsScreen__body__closure2(context), false);
       return t1;
     },
     $signature: 25
