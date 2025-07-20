@@ -764,8 +764,8 @@
     control$1$z(receiver, a0) {
       return J.getInterceptor$z(receiver).control$1(receiver, a0);
     },
-    create$1$x(receiver, a0) {
-      return J.getInterceptor$x(receiver).create$1(receiver, a0);
+    create$2$x(receiver, a0, a1) {
+      return J.getInterceptor$x(receiver).create$2(receiver, a0, a1);
     },
     detach$0$z(receiver) {
       return J.getInterceptor$z(receiver).detach$0(receiver);
@@ -103837,8 +103837,8 @@
     on$2(receiver, p0, p1) {
       return receiver.on(p0, p1);
     },
-    create$1(receiver, p0) {
-      return receiver.create(p0);
+    create$2(receiver, p0, p1) {
+      return receiver.create(p0, p1);
     },
     submit$0(receiver) {
       return receiver.submit();
@@ -116076,8 +116076,8 @@
     layout$2$parentUsesSize($0, $1) {
       return this.noSuchMethod$1(this, A.createInvocationMirror("layout", "layout$2$parentUsesSize", 0, [$0, $1], ["parentUsesSize"], 0));
     },
-    create$1($receiver, $0) {
-      return this.noSuchMethod$1($receiver, A.createInvocationMirror("create", "create$1", 0, [$0], [], 0));
+    create$2($receiver, $0, $1) {
+      return this.noSuchMethod$1($receiver, A.createInvocationMirror("create", "create$2", 0, [$0, $1], [], 0));
     },
     open$0($receiver) {
       return this.noSuchMethod$1($receiver, A.createInvocationMirror("open", "open$0", 0, [], [], 0));
@@ -300044,7 +300044,7 @@
       return A.BlocProvider$(A.BlocConsumer$(new A.IAPMobileView_build_closure(this), new A.IAPMobileView_build_closure0(), t1, type$.IAPState), new A.IAPMobileView_build_closure1(this), true, t1);
     },
     _in_app_purchase_mobile$_body$2(_, context, state) {
-      var t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, t16, t17, t18, _this = this, _null = null,
+      var t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, t16, t17, _this = this, _null = null,
         t1 = A.Image$asset("assets/images/login.png", _null, _null, _null),
         t2 = $.$get$width(),
         t3 = $.$get$height();
@@ -300064,13 +300064,12 @@
         t10 = A.Provider_of(context, false, type$.AuthBloc)._bloc$_state.user;
         t11 = A.Row$(B.List_empty21, B.CrossAxisAlignment_2, (t10 == null ? _null : t10.status) === "free" ? B.MainAxisAlignment_3 : B.MainAxisAlignment_2, B.MainAxisSize_1, _null);
         t12 = A.SizedBox$(A.GestureDetector$(_null, _this._in_app_purchase_mobile$_container$3(context, "Purchase Plan", 20), B.DragStartBehavior_1, false, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, new A.IAPMobileView__body_closure(context), _null, _null, _null, _null, _null, _null, false, B.Offset_O5r), _null, _null);
-        t13 = A.Text$("(Note: This is a test mode. No actual money will be taken from your account.)", _null, _null, _null, _null, _null, A.TextStyle$(_null, _null, B.Color_4294967295, _null, _null, _null, _null, _null, _null, _null, _null, 20, _null, _null, B.FontWeight_6_700, _null, _null, true, _null, _null, _null, _null, _null, _null, _null, _null), B.TextAlign_2, _null);
-        t14 = $.$get$DynamicSize_textFieldHeight();
-        t15 = $.$get$DynamicSize_textFieldWidth();
-        t16 = A.BorderRadius$circular(10);
-        t17 = A._setArrayType([new A.BoxShadow(2, B.BlurStyle_0, A.Color$fromARGB(51, 0, 0, 0), new A.Offset(0, 5), 4)], type$.JSArray_BoxShadow);
-        t18 = A.Theme_of(context).textTheme.bodySmall;
-        t4 = A.SingleChildScrollView$(A.Column$(A._setArrayType([t4, t6, t5, new A.Padding(B.EdgeInsets_8_0_8_0, t8, _null), t9, new A.Padding(B.EdgeInsets_10_10_10_30, A.Column$(A._setArrayType([t11, t12, t13, A.SizedBox$(A.GestureDetector$(_null, new A.Padding(B.EdgeInsets_0_10_0_10, A.Container$(_null, A.Text$("Press here for Instructions", _null, _null, _null, _null, _null, t18 == null ? _null : t18.copyWith$3$color$fontSize$fontWeight(B.Color_4278220117, $.$get$width() / 414 * 20, B.FontWeight_6_700), B.TextAlign_2, _null), B.Clip_0, _null, new A.BoxConstraints(t15 / 2, 1 / 0, 0, 1 / 0), new A.BoxDecoration(B.Color_4294967295, _null, _null, t16, t17, _null, B.BoxShape_0), _null, t14 / 1.1, _null, new A.EdgeInsets(10, 12, 10, 12), _null, _null, _null), _null), B.DragStartBehavior_1, false, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, new A.IAPMobileView__body_closure0(new A.IAPMobileView__body__launchUrl()), _null, _null, _null, _null, _null, _null, false, B.Offset_O5r), _null, _null)], t7), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), _null)], t7), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), _null, B.DragStartBehavior_1, _null, _null, B.Axis_1);
+        t13 = $.$get$DynamicSize_textFieldHeight();
+        t14 = $.$get$DynamicSize_textFieldWidth();
+        t15 = A.BorderRadius$circular(10);
+        t16 = A._setArrayType([new A.BoxShadow(2, B.BlurStyle_0, A.Color$fromARGB(51, 0, 0, 0), new A.Offset(0, 5), 4)], type$.JSArray_BoxShadow);
+        t17 = A.Theme_of(context).textTheme.bodySmall;
+        t4 = A.SingleChildScrollView$(A.Column$(A._setArrayType([t4, t6, t5, new A.Padding(B.EdgeInsets_8_0_8_0, t8, _null), t9, new A.Padding(B.EdgeInsets_10_10_10_30, A.Column$(A._setArrayType([t11, t12, A.SizedBox$(A.GestureDetector$(_null, new A.Padding(B.EdgeInsets_0_10_0_10, A.Container$(_null, A.Text$("Press here for Instructions", _null, _null, _null, _null, _null, t17 == null ? _null : t17.copyWith$3$color$fontSize$fontWeight(B.Color_4278220117, $.$get$width() / 414 * 20, B.FontWeight_6_700), B.TextAlign_2, _null), B.Clip_0, _null, new A.BoxConstraints(t14 / 2, 1 / 0, 0, 1 / 0), new A.BoxDecoration(B.Color_4294967295, _null, _null, t15, t16, _null, B.BoxShape_0), _null, t13 / 1.1, _null, new A.EdgeInsets(10, 12, 10, 12), _null, _null, _null), _null), B.DragStartBehavior_1, false, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, new A.IAPMobileView__body_closure0(new A.IAPMobileView__body__launchUrl()), _null, _null, _null, _null, _null, _null, false, B.Offset_O5r), _null, _null)], t7), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), _null)], t7), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_1), _null, B.DragStartBehavior_1, _null, _null, B.Axis_1);
       }
       return A.GestureDetector$(_null, new A.Stack(B.AlignmentDirectional_m1_m1, _null, B.StackFit_0, B.Clip_1, A._setArrayType([new A.Align(B.Alignment_0_1, _null, _null, t1, _null), A.SizedBox$(t4, t3, t2)], type$.JSArray_Widget), _null), B.DragStartBehavior_1, false, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, new A.IAPMobileView__body_closure1(context), _null, _null, _null, _null, _null, _null, false, B.Offset_O5r);
     },
@@ -302666,7 +302665,7 @@
         t1 = this._framework$_element;
       t1.toString;
       t1 = A.Theme_of(t1).primaryTextTheme.bodyLarge;
-      return A.Container$(_null, A.Row$(A._setArrayType([A.Text$("App Version 2.0.1(146)", _null, _null, _null, _null, _null, t1 == null ? _null : t1.copyWith$3$fontSize$fontWeight$height($.$get$width() / 414 * 16, B.FontWeight_3_400, 1), _null, _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, _null), B.Clip_0, _null, _null, _null, _null, _null, new A.EdgeInsets(0, 20, 0, 0), _null, _null, _null, _null);
+      return A.Container$(_null, A.Row$(A._setArrayType([A.Text$("App Version 2.0.1(147)", _null, _null, _null, _null, _null, t1 == null ? _null : t1.copyWith$3$fontSize$fontWeight$height($.$get$width() / 414 * 16, B.FontWeight_3_400, 1), _null, _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, _null), B.Clip_0, _null, _null, _null, _null, _null, new A.EdgeInsets(0, 20, 0, 0), _null, _null, _null, _null);
     }
   };
   A._LoginMobileViewState_initState_closure.prototype = {
@@ -306054,7 +306053,7 @@
     _payWith_link$body$StripeOtherPaymentsBloc(amount, clientsRepo) {
       var $async$goto = 0,
         $async$completer = A._makeAsyncAwaitCompleter(type$.void),
-        $async$self = this, elements, t1, stripe, elementOption;
+        $async$self = this, elements, stripe, elementOption, t1, t2;
       var $async$_payWith_link$2 = A._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
         if ($async$errorCode === 1)
           return A._asyncRethrow($async$result, $async$completer);
@@ -306064,11 +306063,13 @@
               // Function start
               stripe = new self.Stripe(string$.pk_liv);
               elementOption = {mode: "payment", currency: "gbp", amount: amount};
-              ({layout: A.jsify(A.LinkedHashMap_LinkedHashMap$_literal(["type", "accordion", "defaultCollapsed", false, "radios", false], type$.String, type$.Object))});
+              t1 = type$.String;
+              t2 = type$.Object;
+              ({layout: A.jsify(A.LinkedHashMap_LinkedHashMap$_literal(["type", "accordion", "defaultCollapsed", false, "radios", false], t1, t2))});
               elements = J.elements$1$x(stripe, elementOption);
-              J.mount$1$x(J.create$1$x(elements, "payment"), "#link-request-button");
-              t1 = $async$self.submitController;
-              new A._ControllerStream(t1, A._instanceType(t1)._eval$1("_ControllerStream<1>")).listen$1(new A.StripeOtherPaymentsBloc__payWith_link_closure(elements, clientsRepo, amount, stripe));
+              J.mount$1$x(J.create$2$x(elements, "payment", A.jsify(A.LinkedHashMap_LinkedHashMap$_literal(["wallets", A.LinkedHashMap_LinkedHashMap$_literal(["googlePay", "always", "applePay", "always", "link", "never"], t1, t1), "paymentMethodOrder", A._setArrayType(["google_pay", "apple_pay", "card"], type$.JSArray_String)], t1, t2))), "#link-request-button");
+              t2 = $async$self.submitController;
+              new A._ControllerStream(t2, A._instanceType(t2)._eval$1("_ControllerStream<1>")).listen$1(new A.StripeOtherPaymentsBloc__payWith_link_closure(elements, clientsRepo, amount, stripe));
               // implicit return
               return A._asyncReturn(null, $async$completer);
           }
