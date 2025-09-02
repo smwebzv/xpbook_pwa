@@ -64978,7 +64978,7 @@
             case 3:
               // returning from await.
               $async$goto = 4;
-              return A._asyncAwait(A.AppEnvironment_initilize(B.Environment_0), $async$main0);
+              return A._asyncAwait(A.AppEnvironment_initilize(B.Environment_2), $async$main0);
             case 4:
               // returning from await.
               A.$call();
@@ -329536,7 +329536,7 @@
     B.EnabledState_1 = new A.EnabledState(1, "enabled");
     B.EnabledState_2 = new A.EnabledState(2, "disabled");
     B.EndDrawerButtonIcon_null = new A.EndDrawerButtonIcon(null);
-    B.Environment_0 = new A.Environment(0, "Development");
+    B.Environment_2 = new A.Environment(2, "Production");
     B.ExpandSelectionToDocumentBoundaryIntent_false_false_false_false = new A.ExpandSelectionToDocumentBoundaryIntent(false, false, false, false);
     B.ExpandSelectionToDocumentBoundaryIntent_false_false_false_true = new A.ExpandSelectionToDocumentBoundaryIntent(false, false, false, true);
     B.ExpandSelectionToLineBreakIntent_false_false_false_false = new A.ExpandSelectionToLineBreakIntent(false, false, false, false);
