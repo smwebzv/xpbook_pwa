@@ -10,6 +10,14 @@
     "description": "A new Flutter project.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
+    "launch_handler": {
+        "client_mode": "focus-existing"
+    },
+    "url_handlers": [
+        {
+            "origin": "https://xpressobooksdev-3ze7i.ondigitalocean.app"
+        }
+    ],
     "icons": [
         {
             "src": "icons/Icon-192.png",
