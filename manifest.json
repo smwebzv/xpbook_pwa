@@ -10,6 +10,7 @@
     "description": "A new Flutter project.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
+    "capture_links": "existing-client-navigate",
     "launch_handler": {
         "client_mode": "focus-existing"
     },
