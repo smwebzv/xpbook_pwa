@@ -50,6 +50,37 @@
       </div>
     </div>
   </div>
+
+  <script>
+    (async () => {
+      const u = new URL(location.href);
+      const ref = u.searchParams.get('ref'); 
+      const goCardlessAuth = u.searchParams.get('goCardlessAuth');
+      const agreementId = u.searchParams.get('agreementId');
+      const reference = u.searchParams.get('reference');
+      const clientId = u.searchParams.get('clientId');
+      if (!goCardlessAuth) { return; }
+
+      const isLocal = location.hostname === "localhost" || location.hostname === "127.0.0.1";
+      const API_BASE = isLocal 
+          ? "http://localhost:3001/"
+          : "https://api-xpressocashbook.cash/"; // prod
+    
+      const resp = await fetch(`${API_BASE}gocardles/authentification-url/callback`, {
+        method: 'POST',
+        headers: { 'content-type': 'application/json', "clientId": clientId },
+        body: JSON.stringify({ agreementId, reference })
+      });
+
+      // Signal the PWA (cover all cases)
+      try { if (window.opener) window.opener.postMessage({ type: 'gc_oauth_done' }, location.origin); } catch { }
+      try { const ch = new BroadcastChannel('gc_oauth'); ch.postMessage({ type: 'gc_oauth_done' }); ch.close(); } catch { }
+      try { localStorage.setItem('gc.oauthResult.default', 'ok:' + Date.now()); } catch { }
+
+      document.body.innerHTML = '<p>All set. You can return to Xpressobooks.</p>';
+      setTimeout(() => window.close(), 400);
+    })();
+  </script>
   <input type="text" id="input-field" style="opacity: 0" autocomplete="off" autocapitalize="off" spellcheck="false"
     tabindex="-1" />
 
@@ -57,7 +88,7 @@
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
   <script>
-    const serviceWorkerVersion = "2430338128";
+    const serviceWorkerVersion = "3712231473";
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
