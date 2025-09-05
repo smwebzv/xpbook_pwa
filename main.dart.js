@@ -64984,7 +64984,7 @@
             case 3:
               // returning from await.
               $async$goto = 4;
-              return A._asyncAwait(A.AppEnvironment_initilize(B.Environment_0), $async$main0);
+              return A._asyncAwait(A.AppEnvironment_initilize(B.Environment_2), $async$main0);
             case 4:
               // returning from await.
               A.$call();
@@ -302704,7 +302704,7 @@
         t1 = this._framework$_element;
       t1.toString;
       t1 = A.Theme_of(t1).primaryTextTheme.bodyLarge;
-      return A.Container$(_null, A.Row$(A._setArrayType([A.Text$("App Version 2.0.1(149)", _null, _null, _null, _null, _null, t1 == null ? _null : t1.copyWith$3$fontSize$fontWeight$height($.$get$width() / 414 * 16, B.FontWeight_3_400, 1), _null, _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, _null), B.Clip_0, _null, _null, _null, _null, _null, new A.EdgeInsets(0, 20, 0, 0), _null, _null, _null, _null);
+      return A.Container$(_null, A.Row$(A._setArrayType([A.Text$("App Version 2.0.1(150)", _null, _null, _null, _null, _null, t1 == null ? _null : t1.copyWith$3$fontSize$fontWeight$height($.$get$width() / 414 * 16, B.FontWeight_3_400, 1), _null, _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, _null), B.Clip_0, _null, _null, _null, _null, _null, new A.EdgeInsets(0, 20, 0, 0), _null, _null, _null, _null);
     }
   };
   A._LoginMobileViewState_initState_closure.prototype = {
@@ -304080,7 +304080,7 @@
     call$0() {
       var $async$goto = 0,
         $async$completer = A._makeAsyncAwaitCompleter(type$.void),
-        $async$handler = 1, $async$currentError, $async$next = [], $async$self = this, bloc, state, uri, t3, attemptId, csrf, t4, t5, t6, t7, t8, value, result, win, t1, t2;
+        $async$returnValue, $async$handler = 2, $async$currentError, $async$next = [], $async$self = this, bloc, state, uri, t2, t3, attemptId, csrf, t4, t5, t6, t7, t8, value, result, win, t1;
       var $async$call$0 = A._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
         if ($async$errorCode === 1) {
           $async$currentError = $async$result;
@@ -304090,37 +304090,42 @@
           switch ($async$goto) {
             case 0:
               // Function start
-              t1 = $async$self.$this;
-              t2 = $async$self.item;
-              t1.setState$1(new A._ProfileMobileState__bankButton__closure(t1, t2));
+              t1 = $async$self.item;
+              if (t1.status !== "pending") {
+                // goto return
+                $async$goto = 1;
+                break;
+              }
+              t2 = $async$self.$this;
+              t2.setState$1(new A._ProfileMobileState__bankButton__closure(t2, t1));
               bloc = A.Provider_of($async$self.context, false, type$.MoreBloc);
-              J.add$1$ax(bloc, new A.GoCardlessAuthBank(t2.gocardlessBankId));
-              t2 = bloc.get$_stateController();
-              t2 = new A._StreamIterator(A.checkNotNullable(new A._BroadcastStream(t2, A._instanceType(t2)._eval$1("_BroadcastStream<1>")), "stream", type$.Object), type$._StreamIterator_MoreState);
-              $async$handler = 2;
-            case 5:
+              J.add$1$ax(bloc, new A.GoCardlessAuthBank(t1.gocardlessBankId));
+              t1 = bloc.get$_stateController();
+              t1 = new A._StreamIterator(A.checkNotNullable(new A._BroadcastStream(t1, A._instanceType(t1)._eval$1("_BroadcastStream<1>")), "stream", type$.Object), type$._StreamIterator_MoreState);
+              $async$handler = 3;
+            case 6:
               // for condition
-              $async$goto = 7;
-              return A._asyncAwait(t2.moveNext$0(), $async$call$0);
-            case 7:
+              $async$goto = 8;
+              return A._asyncAwait(t1.moveNext$0(), $async$call$0);
+            case 8:
               // returning from await.
               if (!$async$result) {
                 // goto after for
-                $async$goto = 6;
+                $async$goto = 7;
                 break;
               }
-              state = t2.get$current(0);
-              $async$goto = state.goCardlessAuthBankUrl != null ? 8 : 9;
+              state = t1.get$current(0);
+              $async$goto = state.goCardlessAuthBankUrl != null ? 9 : 10;
               break;
-            case 8:
+            case 9:
               // then
               A.printString("Navigate to: " + A.S(state.goCardlessAuthBankUrl));
               t3 = state.goCardlessAuthBankUrl;
               t3.toString;
               uri = A.Uri_parse(t3, 0, null);
-              $async$goto = 10;
+              $async$goto = 11;
               return A._asyncAwait(A.canLaunchUrl(uri), $async$call$0);
-            case 10:
+            case 11:
               // returning from await.
               if ($async$result) {
                 t3 = A.Uri_parse(J.toString$0$(uri), 0, null);
@@ -304152,40 +304157,41 @@
                 win = window.open(value, "_blank", "noopener");
                 A._DOMWindowCrossFrame__createSafe(win);
               }
-              new A._ProfileMobileState__bankButton__closure0(t1).call$0();
-              t1._framework$_element.markNeedsBuild$0();
+              new A._ProfileMobileState__bankButton__closure0(t2).call$0();
+              t2._framework$_element.markNeedsBuild$0();
               // goto after for
-              $async$goto = 6;
+              $async$goto = 7;
               break;
-            case 9:
+            case 10:
               // join
               // goto for condition
-              $async$goto = 5;
+              $async$goto = 6;
               break;
-            case 6:
+            case 7:
               // after for
-              $async$next.push(4);
+              $async$next.push(5);
               // goto finally
-              $async$goto = 3;
+              $async$goto = 4;
               break;
-            case 2:
-              // uncaught
-              $async$next = [1];
             case 3:
+              // uncaught
+              $async$next = [2];
+            case 4:
               // finally
-              $async$handler = 1;
-              $async$goto = 11;
-              return A._asyncAwait(t2.cancel$0(0), $async$call$0);
-            case 11:
+              $async$handler = 2;
+              $async$goto = 12;
+              return A._asyncAwait(t1.cancel$0(0), $async$call$0);
+            case 12:
               // returning from await.
               // goto the next finally handler
               $async$goto = $async$next.pop();
               break;
-            case 4:
+            case 5:
               // after finally
-              // implicit return
-              return A._asyncReturn(null, $async$completer);
             case 1:
+              // return
+              return A._asyncReturn($async$returnValue, $async$completer);
+            case 2:
               // rethrow
               return A._asyncRethrow($async$currentError, $async$completer);
           }
@@ -329610,7 +329616,7 @@
     B.EnabledState_1 = new A.EnabledState(1, "enabled");
     B.EnabledState_2 = new A.EnabledState(2, "disabled");
     B.EndDrawerButtonIcon_null = new A.EndDrawerButtonIcon(null);
-    B.Environment_0 = new A.Environment(0, "Development");
+    B.Environment_2 = new A.Environment(2, "Production");
     B.ExpandSelectionToDocumentBoundaryIntent_false_false_false_false = new A.ExpandSelectionToDocumentBoundaryIntent(false, false, false, false);
     B.ExpandSelectionToDocumentBoundaryIntent_false_false_false_true = new A.ExpandSelectionToDocumentBoundaryIntent(false, false, false, true);
     B.ExpandSelectionToLineBreakIntent_false_false_false_false = new A.ExpandSelectionToLineBreakIntent(false, false, false, false);
