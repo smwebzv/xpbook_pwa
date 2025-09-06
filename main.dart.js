@@ -119276,12 +119276,6 @@
     }
   };
   A.Window.prototype = {
-    open$3(receiver, url, $name, options) {
-      return A._DOMWindowCrossFrame__createSafe(options == null ? receiver.open(url, $name) : receiver.open(url, $name, options));
-    },
-    open$2(receiver, url, $name) {
-      return this.open$3(receiver, url, $name, null);
-    },
     get$name(receiver) {
       return receiver.name;
     },
@@ -265658,7 +265652,7 @@
     launch$body$UrlLauncherPlugin(url, enableDomStorage, enableJavaScript, headers, universalLinksOnly, useSafariVC, useWebView, webOnlyWindowName) {
       var $async$goto = 0,
         $async$completer = A._makeAsyncAwaitCompleter(type$.bool),
-        $async$returnValue, $async$self = this, t1, target;
+        $async$returnValue, $async$self = this, t1, target, win;
       var $async$launch$8$enableDomStorage$enableJavaScript$headers$universalLinksOnly$useSafariVC$useWebView$webOnlyWindowName = A._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
         if ($async$errorCode === 1)
           return A._asyncRethrow($async$result, $async$completer);
@@ -265672,7 +265666,8 @@
               } else
                 t1 = false;
               target = t1 ? "_top" : "";
-              B.Window_methods.open$2($async$self._window, url, target);
+              win = $async$self._window.open(url, target);
+              A._DOMWindowCrossFrame__createSafe(win);
               $async$returnValue = true;
               // goto return
               $async$goto = 1;
@@ -304080,7 +304075,7 @@
     call$0() {
       var $async$goto = 0,
         $async$completer = A._makeAsyncAwaitCompleter(type$.void),
-        $async$returnValue, $async$handler = 2, $async$currentError, $async$next = [], $async$self = this, bloc, state, uri, t2, t3, attemptId, csrf, t4, t5, t6, t7, t8, value, result, win, t1;
+        $async$returnValue, $async$handler = 2, $async$currentError, $async$next = [], $async$self = this, bloc, state, uri, t2, t3, attemptId, csrf, t4, t5, t6, t7, t8, value, result, t1;
       var $async$call$0 = A._wrapJsFunctionForAsync(function($async$errorCode, $async$result) {
         if ($async$errorCode === 1) {
           $async$currentError = $async$result;
@@ -304154,8 +304149,7 @@
                   t5.___Uri__text_FI = result;
                   value = result;
                 }
-                win = window.open(value, "_blank", "noopener");
-                A._DOMWindowCrossFrame__createSafe(win);
+                window.location.assign(value);
               }
               new A._ProfileMobileState__bankButton__closure0(t2).call$0();
               t2._framework$_element.markNeedsBuild$0();
