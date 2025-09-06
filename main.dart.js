@@ -64984,7 +64984,7 @@
             case 3:
               // returning from await.
               $async$goto = 4;
-              return A._asyncAwait(A.AppEnvironment_initilize(B.Environment_2), $async$main0);
+              return A._asyncAwait(A.AppEnvironment_initilize(B.Environment_0), $async$main0);
             case 4:
               // returning from await.
               A.$call();
@@ -302704,7 +302704,7 @@
         t1 = this._framework$_element;
       t1.toString;
       t1 = A.Theme_of(t1).primaryTextTheme.bodyLarge;
-      return A.Container$(_null, A.Row$(A._setArrayType([A.Text$("App Version 2.0.1(150)", _null, _null, _null, _null, _null, t1 == null ? _null : t1.copyWith$3$fontSize$fontWeight$height($.$get$width() / 414 * 16, B.FontWeight_3_400, 1), _null, _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, _null), B.Clip_0, _null, _null, _null, _null, _null, new A.EdgeInsets(0, 20, 0, 0), _null, _null, _null, _null);
+      return A.Container$(_null, A.Row$(A._setArrayType([A.Text$("App Version 2.0.1(151)", _null, _null, _null, _null, _null, t1 == null ? _null : t1.copyWith$3$fontSize$fontWeight$height($.$get$width() / 414 * 16, B.FontWeight_3_400, 1), _null, _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, _null), B.Clip_0, _null, _null, _null, _null, _null, new A.EdgeInsets(0, 20, 0, 0), _null, _null, _null, _null);
     }
   };
   A._LoginMobileViewState_initState_closure.prototype = {
@@ -329616,7 +329616,7 @@
     B.EnabledState_1 = new A.EnabledState(1, "enabled");
     B.EnabledState_2 = new A.EnabledState(2, "disabled");
     B.EndDrawerButtonIcon_null = new A.EndDrawerButtonIcon(null);
-    B.Environment_2 = new A.Environment(2, "Production");
+    B.Environment_0 = new A.Environment(0, "Development");
     B.ExpandSelectionToDocumentBoundaryIntent_false_false_false_false = new A.ExpandSelectionToDocumentBoundaryIntent(false, false, false, false);
     B.ExpandSelectionToDocumentBoundaryIntent_false_false_false_true = new A.ExpandSelectionToDocumentBoundaryIntent(false, false, false, true);
     B.ExpandSelectionToLineBreakIntent_false_false_false_false = new A.ExpandSelectionToLineBreakIntent(false, false, false, false);

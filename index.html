@@ -54,23 +54,26 @@
   <script>
     (async () => {
       const u = new URL(location.href);
-      const ref = u.searchParams.get('ref'); 
+      const ref = u.searchParams.get('ref');
       const goCardlessAuth = u.searchParams.get('goCardlessAuth');
       const agreementId = u.searchParams.get('agreementId');
       const reference = u.searchParams.get('reference');
       const clientId = u.searchParams.get('clientId');
+      const error = u.searchParams.get('error');
       if (!goCardlessAuth) { return; }
 
-      const isLocal = location.hostname === "localhost" || location.hostname === "127.0.0.1";
-      const API_BASE = isLocal 
+      if (!error) {
+        const isLocal = location.hostname === "localhost" || location.hostname === "127.0.0.1";
+        const API_BASE = isLocal
           ? "http://localhost:3001/"
           : "https://api-xpressocashbook.cash/"; // prod
-    
-      const resp = await fetch(`${API_BASE}gocardles/authentification-url/callback`, {
-        method: 'POST',
-        headers: { 'content-type': 'application/json', "clientId": clientId },
-        body: JSON.stringify({ agreementId, reference })
-      });
+
+        const resp = await fetch(`${API_BASE}gocardles/authentification-url/callback`, {
+          method: 'POST',
+          headers: { 'content-type': 'application/json', "clientId": clientId },
+          body: JSON.stringify({ agreementId, reference })
+        });
+      }
 
       // Signal the PWA (cover all cases)
       try { if (window.opener) window.opener.postMessage({ type: 'gc_oauth_done' }, location.origin); } catch { }
@@ -88,7 +91,7 @@
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
   <script>
-    const serviceWorkerVersion = "3906145759";
+    const serviceWorkerVersion = "964105451";
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
