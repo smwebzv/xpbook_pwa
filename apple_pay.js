@@ -272,27 +272,3 @@ async function createPaymentIntent(amount) {
     return null;
   }
 }
-
-async function confirmPayment(clientSecret, paymentData) {
-  const response = await fetch(
-    "https://api-xpressocashbook.cash/payment/process-payment",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        id: clientSecret,
-        paymentData,
-      }),
-    }
-  );
-
-  if (response.ok) {
-    const result = await response.json();
-    return result.success;
-  } else {
-    console.error("Error processing payment");
-    return false;
-  }
-}
