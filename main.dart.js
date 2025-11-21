@@ -299929,7 +299929,7 @@
       t11 = _this._framework$_element;
       t11.toString;
       t11 = A.Theme_of(t11).textTheme.bodySmall;
-      return new A.Padding(new A.EdgeInsets(t2, t3, t2, t3), A.Container$(_null, A.InkWell$(false, t7, true, A.Column$(A._setArrayType([t8, t10, A.Text$("(Please click here for instructions)", _null, _null, _null, _null, _null, t11 == null ? _null : t11.copyWith$3$color$fontSize$fontWeight(B.Color_4294967295, $.$get$width() / 414 * 14, B.FontWeight_3_400), B.TextAlign_2, _null)], t9), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_0), _null, true, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, new A._MobileViewState__newTransactionsBox_closure0(_this), _null, _null, _null, _null, _null, _null, _null), B.Clip_0, _null, _null, new A.BoxDecoration(B.MaterialColor_Map_JNusp_4294198070, _null, _null, t5, t6, _null, B.BoxShape_0), _null, _null, _null, new A.EdgeInsets(t4, t1, t4, t1), _null, _null, 1 / 0), _null);
+      return new A.Padding(new A.EdgeInsets(t2, t3, t2, t3), A.Container$(_null, A.InkWell$(false, t7, true, A.Column$(A._setArrayType([t8, t10, A.Text$("(Please click here to Upload Statements)", _null, _null, _null, _null, _null, t11 == null ? _null : t11.copyWith$3$color$fontSize$fontWeight(B.Color_4294967295, $.$get$width() / 414 * 14, B.FontWeight_3_400), B.TextAlign_2, _null)], t9), B.CrossAxisAlignment_2, B.MainAxisAlignment_0, B.MainAxisSize_0), _null, true, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, _null, new A._MobileViewState__newTransactionsBox_closure0(_this), _null, _null, _null, _null, _null, _null, _null), B.Clip_0, _null, _null, new A.BoxDecoration(B.MaterialColor_Map_JNusp_4294198070, _null, _null, t5, t6, _null, B.BoxShape_0), _null, _null, _null, new A.EdgeInsets(t4, t1, t4, t1), _null, _null, 1 / 0), _null);
     },
     _mobile_view$_wrap$0() {
       var data, filteredHomeButtons,
@@ -303182,7 +303182,7 @@
         t1 = this._framework$_element;
       t1.toString;
       t1 = A.Theme_of(t1).primaryTextTheme.bodyLarge;
-      return A.Container$(_null, A.Row$(A._setArrayType([A.Text$("App Version 2.0.1(152)", _null, _null, _null, _null, _null, t1 == null ? _null : t1.copyWith$3$fontSize$fontWeight$height($.$get$width() / 414 * 16, B.FontWeight_3_400, 1), _null, _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, _null), B.Clip_0, _null, _null, _null, _null, _null, new A.EdgeInsets(0, 20, 0, 0), _null, _null, _null, _null);
+      return A.Container$(_null, A.Row$(A._setArrayType([A.Text$("App Version 2.0.1(153)", _null, _null, _null, _null, _null, t1 == null ? _null : t1.copyWith$3$fontSize$fontWeight$height($.$get$width() / 414 * 16, B.FontWeight_3_400, 1), _null, _null)], type$.JSArray_Widget), B.CrossAxisAlignment_2, B.MainAxisAlignment_2, B.MainAxisSize_1, _null), B.Clip_0, _null, _null, _null, _null, _null, new A.EdgeInsets(0, 20, 0, 0), _null, _null, _null, _null);
     }
   };
   A._LoginMobileViewState_initState_closure.prototype = {
